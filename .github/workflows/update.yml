@@ -1,0 +1,21 @@
+name: Fetch Finch Trial data
+
+on:
+  schedule:
+    - cron: '40 * * * *'
+  workflow_dispatch: {}
+
+jobs:
+  fetch-data:
+    name: Fetch Finch Trial data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - run: sudo apt-get install jq
+      - run: npx finch-trials > seed.json
+      - run: |
+          git config --global user.name 'Finch Trial Update Bot'
+          git config --global user.email 'ftub@users.noreply.github.com'
+          git add seed.json
+          git commit -am "Version $(jq -r .version < seed.json)" && git push || true
