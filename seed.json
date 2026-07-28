@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDcyNy0xNzAxMDQuNDk0MDAwEgQgACgB#8rSxtBGc65U=",
+  "serialNumber": "SMChYyMDI2MDcyOC0wMTAwMzAuOTk0MDAwEgQgACgB#WiWm42iR6P0=",
   "study": [
     {
       "name": "GlowUp",
@@ -15865,6 +15865,1300 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "NetTaskScheduler",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Disabled_NetTaskScheduler_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_SpdyDrainFix_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_V2_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "NetTaskScheduler",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_SpdyDrainFix_And_V2_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_HttpCache_20260707",
+          "probabilityWeight": 8,
+          "param": [
+            {
+              "name": "http_cache",
+              "value": "true"
+            },
+            {
+              "name": "http_cache_transaction",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_HostResolver_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_All_20260707",
+          "probabilityWeight": 8,
+          "param": [
+            {
+              "name": "http_cache",
+              "value": "true"
+            },
+            {
+              "name": "http_cache_transaction",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 36
+        },
+        {
+          "name": "ForcedOn_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOff_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOn_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetworkServicePerPriorityTaskQueues"
+          }
+        },
+        {
+          "name": "ForcedOff_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetworkServicePerPriorityTaskQueues"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7909.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NetTaskScheduler",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Disabled_NetTaskScheduler_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_SpdyDrainFix_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_V2_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "NetTaskScheduler",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_SpdyDrainFix_And_V2_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_HttpCache_20260707",
+          "probabilityWeight": 8,
+          "param": [
+            {
+              "name": "http_cache",
+              "value": "true"
+            },
+            {
+              "name": "http_cache_transaction",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_HostResolver_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_All_20260707",
+          "probabilityWeight": 8,
+          "param": [
+            {
+              "name": "http_cache",
+              "value": "true"
+            },
+            {
+              "name": "http_cache_transaction",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 36
+        },
+        {
+          "name": "ForcedOn_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOff_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOn_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetworkServicePerPriorityTaskQueues"
+          }
+        },
+        {
+          "name": "ForcedOff_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetworkServicePerPriorityTaskQueues"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7909.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NetTaskScheduler",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_SpdyDrainFix_20260727",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101001667",
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260727",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101001665",
+          "featureAssociation": {
+            "enableFeature": [
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOff_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOn_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetworkServicePerPriorityTaskQueues"
+          }
+        },
+        {
+          "name": "ForcedOff_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetworkServicePerPriorityTaskQueues"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7909.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NetTaskScheduler",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_SpdyDrainFix_20260727",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101001667",
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260727",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101001665",
+          "featureAssociation": {
+            "enableFeature": [
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOff_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOn_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetworkServicePerPriorityTaskQueues"
+          }
+        },
+        {
+          "name": "ForcedOff_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetworkServicePerPriorityTaskQueues"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7909.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NetTaskScheduler",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Disabled_NetTaskScheduler_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_SpdyDrainFix_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_V2_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "NetTaskScheduler",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_SpdyDrainFix_And_V2_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_HttpCache_20260707",
+          "probabilityWeight": 8,
+          "param": [
+            {
+              "name": "http_cache",
+              "value": "true"
+            },
+            {
+              "name": "http_cache_transaction",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_HostResolver_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_All_20260707",
+          "probabilityWeight": 8,
+          "param": [
+            {
+              "name": "http_cache",
+              "value": "true"
+            },
+            {
+              "name": "http_cache_transaction",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 36
+        },
+        {
+          "name": "ForcedOn_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOff_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOn_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetworkServicePerPriorityTaskQueues"
+          }
+        },
+        {
+          "name": "ForcedOff_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetworkServicePerPriorityTaskQueues"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7909.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NetTaskScheduler",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Disabled_NetTaskScheduler_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_SpdyDrainFix_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_V2_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "NetTaskScheduler",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_SpdyDrainFix_And_V2_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_HttpCache_20260707",
+          "probabilityWeight": 8,
+          "param": [
+            {
+              "name": "http_cache",
+              "value": "true"
+            },
+            {
+              "name": "http_cache_transaction",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskSchedulerHostResolver"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_HostResolver_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_All_20260707",
+          "probabilityWeight": 8,
+          "param": [
+            {
+              "name": "http_cache",
+              "value": "true"
+            },
+            {
+              "name": "http_cache_transaction",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260707",
+          "probabilityWeight": 8,
+          "featureAssociation": {
+            "enableFeature": [
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 36
+        },
+        {
+          "name": "ForcedOn_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOff_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOn_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetworkServicePerPriorityTaskQueues"
+          }
+        },
+        {
+          "name": "ForcedOff_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetworkServicePerPriorityTaskQueues"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7909.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NetTaskScheduler",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_SpdyDrainFix_20260727",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101002098",
+          "featureAssociation": {
+            "enableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260727",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101002097",
+          "featureAssociation": {
+            "enableFeature": [
+              "NetTaskScheduler"
+            ],
+            "disableFeature": [
+              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+              "NetTaskScheduler2",
+              "NetTaskSchedulerHostResolver",
+              "NetworkServicePerPriorityTaskQueues"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOff_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskScheduler2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskScheduler2"
+          }
+        },
+        {
+          "name": "ForcedOn_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOff_NetTaskSchedulerHostResolver",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetTaskSchedulerHostResolver"
+          }
+        },
+        {
+          "name": "ForcedOn_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NetworkServicePerPriorityTaskQueues"
+          }
+        },
+        {
+          "name": "ForcedOff_NetworkServicePerPriorityTaskQueues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NetworkServicePerPriorityTaskQueues"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7909.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "ConnectionKeepAliveForHttp2",
       "consistency": "SESSION",
       "experiment": [
@@ -27455,6 +28749,148 @@
       }
     },
     {
+      "name": "PromptApiTopK64Rollout",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002224",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002223",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1787529540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "PromptApiTopK64Rollout",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002224",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002223",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1787529540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "PromptApiTopK64Rollout",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_1pc",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002224",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_1pc",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002223",
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1787529540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "PromptApiTopK64Rollout",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_1pc",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002224",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_1pc",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002223",
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1787529540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "DisableU18FeedbackDesktop",
       "consistency": "PERMANENT",
       "experiment": [
@@ -27627,148 +29063,6 @@
           "PLATFORM_LINUX"
         ],
         "endDate": "1786579140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "PromptApiTopK64Rollout",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101002224",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101002223",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1787529540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "PromptApiTopK64Rollout",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101002224",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101002223",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1787529540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "PromptApiTopK64Rollout",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_1pc",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101002224",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_1pc",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101002223",
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1787529540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "PromptApiTopK64Rollout",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_1pc",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101002224",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_1pc",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101002223",
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1787529540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -29462,7 +30756,8 @@
         }
       ],
       "filter": {
-        "minVersion": "139.0.7235.0",
+        "minVersion": "142.*",
+        "maxVersion": "152.0.7971.0",
         "channel": [
           "CANARY",
           "DEV",
@@ -29474,8 +30769,7 @@
         ],
         "formFactor": [
           "DESKTOP"
-        ],
-        "endDate": "1785369540"
+        ]
       }
     },
     {
@@ -238427,924 +239721,6 @@
       }
     },
     {
-      "name": "NetTaskScheduler",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Disabled_NetTaskScheduler_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_SpdyDrainFix_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_V2_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "NetTaskScheduler",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_SpdyDrainFix_And_V2_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_HttpCache_20260707",
-          "probabilityWeight": 8,
-          "param": [
-            {
-              "name": "http_cache",
-              "value": "true"
-            },
-            {
-              "name": "http_cache_transaction",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_HostResolver_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_All_20260707",
-          "probabilityWeight": 8,
-          "param": [
-            {
-              "name": "http_cache",
-              "value": "true"
-            },
-            {
-              "name": "http_cache_transaction",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "NetTaskScheduler"
-            ],
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 36
-        },
-        {
-          "name": "ForcedOn_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
-          }
-        },
-        {
-          "name": "ForcedOff_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskScheduler",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskScheduler"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskScheduler",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskScheduler"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskScheduler2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskScheduler2"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskScheduler2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskScheduler2"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskSchedulerHostResolver",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskSchedulerHostResolver"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskSchedulerHostResolver",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskSchedulerHostResolver"
-          }
-        },
-        {
-          "name": "ForcedOn_NetworkServicePerPriorityTaskQueues",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetworkServicePerPriorityTaskQueues"
-          }
-        },
-        {
-          "name": "ForcedOff_NetworkServicePerPriorityTaskQueues",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetworkServicePerPriorityTaskQueues"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7909.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1789516740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "NetTaskScheduler",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Disabled_NetTaskScheduler_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_SpdyDrainFix_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_V2_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "NetTaskScheduler",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_SpdyDrainFix_And_V2_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_HttpCache_20260707",
-          "probabilityWeight": 8,
-          "param": [
-            {
-              "name": "http_cache",
-              "value": "true"
-            },
-            {
-              "name": "http_cache_transaction",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_HostResolver_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_All_20260707",
-          "probabilityWeight": 8,
-          "param": [
-            {
-              "name": "http_cache",
-              "value": "true"
-            },
-            {
-              "name": "http_cache_transaction",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "NetTaskScheduler"
-            ],
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 36
-        },
-        {
-          "name": "ForcedOn_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
-          }
-        },
-        {
-          "name": "ForcedOff_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskScheduler",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskScheduler"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskScheduler",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskScheduler"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskScheduler2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskScheduler2"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskScheduler2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskScheduler2"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskSchedulerHostResolver",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskSchedulerHostResolver"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskSchedulerHostResolver",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskSchedulerHostResolver"
-          }
-        },
-        {
-          "name": "ForcedOn_NetworkServicePerPriorityTaskQueues",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetworkServicePerPriorityTaskQueues"
-          }
-        },
-        {
-          "name": "ForcedOff_NetworkServicePerPriorityTaskQueues",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetworkServicePerPriorityTaskQueues"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7909.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1789516740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "NetTaskScheduler",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Disabled_NetTaskScheduler_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_SpdyDrainFix_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_V2_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "NetTaskScheduler",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_SpdyDrainFix_And_V2_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_HttpCache_20260707",
-          "probabilityWeight": 8,
-          "param": [
-            {
-              "name": "http_cache",
-              "value": "true"
-            },
-            {
-              "name": "http_cache_transaction",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_HostResolver_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_All_20260707",
-          "probabilityWeight": 8,
-          "param": [
-            {
-              "name": "http_cache",
-              "value": "true"
-            },
-            {
-              "name": "http_cache_transaction",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "NetTaskScheduler"
-            ],
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 36
-        },
-        {
-          "name": "ForcedOn_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
-          }
-        },
-        {
-          "name": "ForcedOff_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskScheduler",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskScheduler"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskScheduler",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskScheduler"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskScheduler2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskScheduler2"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskScheduler2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskScheduler2"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskSchedulerHostResolver",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskSchedulerHostResolver"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskSchedulerHostResolver",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskSchedulerHostResolver"
-          }
-        },
-        {
-          "name": "ForcedOn_NetworkServicePerPriorityTaskQueues",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetworkServicePerPriorityTaskQueues"
-          }
-        },
-        {
-          "name": "ForcedOff_NetworkServicePerPriorityTaskQueues",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetworkServicePerPriorityTaskQueues"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7909.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1789516740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "NetTaskScheduler",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Disabled_NetTaskScheduler_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_SpdyDrainFix_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_V2_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "NetTaskScheduler",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_SpdyDrainFix_And_V2_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_HttpCache_20260707",
-          "probabilityWeight": 8,
-          "param": [
-            {
-              "name": "http_cache",
-              "value": "true"
-            },
-            {
-              "name": "http_cache_transaction",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskSchedulerHostResolver"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_HostResolver_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ],
-            "disableFeature": [
-              "NetTaskScheduler2"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_All_20260707",
-          "probabilityWeight": 8,
-          "param": [
-            {
-              "name": "http_cache",
-              "value": "true"
-            },
-            {
-              "name": "http_cache_transaction",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260707",
-          "probabilityWeight": 8,
-          "featureAssociation": {
-            "enableFeature": [
-              "NetTaskScheduler"
-            ],
-            "disableFeature": [
-              "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-              "NetTaskScheduler2",
-              "NetTaskSchedulerHostResolver",
-              "NetworkServicePerPriorityTaskQueues"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 36
-        },
-        {
-          "name": "ForcedOn_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
-          }
-        },
-        {
-          "name": "ForcedOff_DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DrainSpdySessionSynchronouslyOnRemoteEndpointDisconnect"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskScheduler",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskScheduler"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskScheduler",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskScheduler"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskScheduler2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskScheduler2"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskScheduler2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskScheduler2"
-          }
-        },
-        {
-          "name": "ForcedOn_NetTaskSchedulerHostResolver",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetTaskSchedulerHostResolver"
-          }
-        },
-        {
-          "name": "ForcedOff_NetTaskSchedulerHostResolver",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetTaskSchedulerHostResolver"
-          }
-        },
-        {
-          "name": "ForcedOn_NetworkServicePerPriorityTaskQueues",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NetworkServicePerPriorityTaskQueues"
-          }
-        },
-        {
-          "name": "ForcedOff_NetworkServicePerPriorityTaskQueues",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NetworkServicePerPriorityTaskQueues"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7909.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1789516740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "NetUnusedIdleSocketTimeout",
       "consistency": "SESSION",
       "experiment": [
@@ -293788,8 +294164,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "EnabledWithSWFallback_20260715",
-          "probabilityWeight": 33,
+          "name": "EnabledWithSWFallback_20260728",
+          "probabilityWeight": 50,
           "param": [
             {
               "name": "UseLazyURLLoaderFactoryForServiceWorkerFallback",
@@ -293803,23 +294179,8 @@
           }
         },
         {
-          "name": "EnabledWithoutSWFallback_20260715",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "UseLazyURLLoaderFactoryForServiceWorkerFallback",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "ReduceMojoURLLoaderFactoryCloning"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260715",
-          "probabilityWeight": 33,
+          "name": "Control_20260728",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
               "ReduceMojoURLLoaderFactoryCloning"
@@ -293828,7 +294189,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 1
+          "probabilityWeight": 0
         },
         {
           "name": "ForcedOn_ReduceMojoURLLoaderFactoryCloning",
@@ -293846,7 +294207,7 @@
         }
       ],
       "filter": {
-        "minVersion": "152.0.7950.0",
+        "minVersion": "152.0.7954.0",
         "channel": [
           "CANARY",
           "DEV"
@@ -293856,7 +294217,8 @@
           "PLATFORM_MAC",
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
+          "PLATFORM_ANDROID",
+          "PLATFORM_ANDROID_WEBVIEW"
         ],
         "endDate": "1788739140"
       }
@@ -458587,5 +458949,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260727-170104.494000-production"
+  "version": "20260728-010030.994000-production"
 }
