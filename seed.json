@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDgwMS0wMzAwMzguMzU3MDAwEgQgACgB#8bRxYk1ikIQ=",
+  "serialNumber": "SMChYyMDI2MDgwMi0wMzAwMzguMTY1MDAwEgQgACgB#T4i/jY52DzA=",
   "study": [
     {
       "name": "GlowUp",
@@ -1537,47 +1537,6 @@
           "PLATFORM_IOS"
         ],
         "endDate": "1788134340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DiscoverInvalidStateDebuggingBling",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260702",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101000931",
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_discover_enable_invalid_state_debugging"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260702",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101000930",
-          "featureAssociation": {
-            "disableFeature": [
-              "IOSGCR_discover_enable_invalid_state_debugging"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.0.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1785628740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -3500,188 +3459,6 @@
       }
     },
     {
-      "name": "DiscoverBlingCacheAgeAndInteractivityInvalidationStudy",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260602",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101001021",
-          "featureAssociation": {
-            "disableFeature": [
-              "IOSGCR_chrome_maximum_data_cache_age",
-              "IOSGCR_dsc_cache_invalidation_strategy",
-              "IOSGCR_minimum_interactivity_invalidation_threshold",
-              "IOSGCR_scroll_index_interactivity_threshold",
-              "IOSGCR_views_interactivity_threshold"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Balanced_12h_T3_20260602",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101001022",
-          "param": [
-            {
-              "name": "chrome_maximum_data_cache_age",
-              "value": "43200"
-            },
-            {
-              "name": "dsc_cache_invalidation_strategy",
-              "value": "2"
-            },
-            {
-              "name": "minimum_interactivity_invalidation_threshold",
-              "value": "5"
-            },
-            {
-              "name": "scroll_index_interactivity_threshold",
-              "value": "3"
-            },
-            {
-              "name": "views_interactivity_threshold",
-              "value": "3"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_chrome_maximum_data_cache_age",
-              "IOSGCR_dsc_cache_invalidation_strategy",
-              "IOSGCR_minimum_interactivity_invalidation_threshold",
-              "IOSGCR_scroll_index_interactivity_threshold",
-              "IOSGCR_views_interactivity_threshold"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Balanced_24h_T3_20260602",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101001023",
-          "param": [
-            {
-              "name": "chrome_maximum_data_cache_age",
-              "value": "86400"
-            },
-            {
-              "name": "dsc_cache_invalidation_strategy",
-              "value": "2"
-            },
-            {
-              "name": "minimum_interactivity_invalidation_threshold",
-              "value": "5"
-            },
-            {
-              "name": "scroll_index_interactivity_threshold",
-              "value": "3"
-            },
-            {
-              "name": "views_interactivity_threshold",
-              "value": "3"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_chrome_maximum_data_cache_age",
-              "IOSGCR_dsc_cache_invalidation_strategy",
-              "IOSGCR_minimum_interactivity_invalidation_threshold",
-              "IOSGCR_scroll_index_interactivity_threshold",
-              "IOSGCR_views_interactivity_threshold"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Aggressive_12h_T2_20260602",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101001024",
-          "param": [
-            {
-              "name": "chrome_maximum_data_cache_age",
-              "value": "43200"
-            },
-            {
-              "name": "dsc_cache_invalidation_strategy",
-              "value": "2"
-            },
-            {
-              "name": "minimum_interactivity_invalidation_threshold",
-              "value": "5"
-            },
-            {
-              "name": "scroll_index_interactivity_threshold",
-              "value": "2"
-            },
-            {
-              "name": "views_interactivity_threshold",
-              "value": "2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_chrome_maximum_data_cache_age",
-              "IOSGCR_dsc_cache_invalidation_strategy",
-              "IOSGCR_minimum_interactivity_invalidation_threshold",
-              "IOSGCR_scroll_index_interactivity_threshold",
-              "IOSGCR_views_interactivity_threshold"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Aggressive_24h_T2_20260602",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101001025",
-          "param": [
-            {
-              "name": "chrome_maximum_data_cache_age",
-              "value": "86400"
-            },
-            {
-              "name": "dsc_cache_invalidation_strategy",
-              "value": "2"
-            },
-            {
-              "name": "minimum_interactivity_invalidation_threshold",
-              "value": "5"
-            },
-            {
-              "name": "scroll_index_interactivity_threshold",
-              "value": "2"
-            },
-            {
-              "name": "views_interactivity_threshold",
-              "value": "2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_chrome_maximum_data_cache_age",
-              "IOSGCR_dsc_cache_invalidation_strategy",
-              "IOSGCR_minimum_interactivity_invalidation_threshold",
-              "IOSGCR_scroll_index_interactivity_threshold",
-              "IOSGCR_views_interactivity_threshold"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1785628740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "ComposeboxAllFileTypes",
       "consistency": "PERMANENT",
       "experiment": [
@@ -4011,37 +3788,6 @@
           "PLATFORM_IOS"
         ],
         "endDate": "1787961540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "Discover100CardFeedBling",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_50_prestable_20260622",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101000215",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_50_prestable_20260622",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101000214",
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7680.71",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1785628740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -19849,37 +19595,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "CreatorOnBottomWithFullBleedExperienceClank",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_prestable_clank_20260429",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101000147",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_prestable_clank_20260429",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101000146",
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7680.71",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1785628740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "PqcBandwidthExperiment",
       "consistency": "PERMANENT",
       "experiment": [
@@ -20813,37 +20528,6 @@
           "va"
         ],
         "endDate": "1787270340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "Discover100CardFeedClank",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_50_prestable_20260622",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101000219",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_50_prestable_20260622",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101000218",
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7680.71",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1785628740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -41138,6 +40822,37 @@
       }
     },
     {
+      "name": "AndroidImeMediaInsertion",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "enableFeature": [
+              "AndroidMediaInsertion"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "143.0.7475.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "formFactor": [
+          "DESKTOP"
+        ],
+        "endDate": "1787529600"
+      }
+    },
+    {
       "name": "AndroidInProductHelpDataSaverDetail",
       "consistency": "PERMANENT",
       "experiment": [
@@ -44698,6 +44413,41 @@
         "platform": [
           "PLATFORM_ANDROID"
         ]
+      }
+    },
+    {
+      "name": "AndroidSpellcheckAndGrammarCheck",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "enableFeature": [
+              "AndroidGrammarCheck",
+              "AndroidSpellcheckFullApiBlink",
+              "AndroidSpellcheckNativeUi",
+              "LeftClickToHandleSuggestion",
+              "SpellCheckChunking"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "149.0.7822.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "formFactor": [
+          "DESKTOP"
+        ],
+        "endDate": "1787529600"
       }
     },
     {
@@ -137185,630 +136935,6 @@
       }
     },
     {
-      "name": "DnsOverHttpsQuad9SecureAu",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DohProviderQuad9Secure"
-          }
-        },
-        {
-          "name": "ForcedOff_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DohProviderQuad9Secure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "101.0.4937.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "country": [
-          "au"
-        ],
-        "endDate": "1785628740"
-      }
-    },
-    {
-      "name": "DnsOverHttpsQuad9SecureAu",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DohProviderQuad9Secure"
-          }
-        },
-        {
-          "name": "ForcedOff_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DohProviderQuad9Secure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "101.0.4937.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "country": [
-          "au"
-        ],
-        "endDate": "1785628740"
-      }
-    },
-    {
-      "name": "DnsOverHttpsQuad9SecureAu",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260529",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "enableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260529",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 50
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DohProviderQuad9Secure"
-          }
-        },
-        {
-          "name": "ForcedOff_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DohProviderQuad9Secure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "101.0.4937.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "country": [
-          "au"
-        ],
-        "endDate": "1785628740"
-      }
-    },
-    {
-      "name": "DnsOverHttpsQuad9Secure",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DohProviderQuad9Secure"
-          }
-        },
-        {
-          "name": "ForcedOff_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DohProviderQuad9Secure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "101.0.4937.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "country": [
-          "ke",
-          "bd",
-          "no"
-        ],
-        "endDate": "1785628740"
-      }
-    },
-    {
-      "name": "DnsOverHttpsQuad9Secure",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DohProviderQuad9Secure"
-          }
-        },
-        {
-          "name": "ForcedOff_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DohProviderQuad9Secure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "101.0.4937.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "country": [
-          "ke",
-          "bd",
-          "no"
-        ],
-        "endDate": "1785628740"
-      }
-    },
-    {
-      "name": "DnsOverHttpsQuad9Secure",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DohProviderQuad9Secure"
-          }
-        },
-        {
-          "name": "ForcedOff_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DohProviderQuad9Secure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "101.0.4937.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "country": [
-          "ke",
-          "bd",
-          "no"
-        ],
-        "endDate": "1785628740"
-      }
-    },
-    {
-      "name": "DnsOverHttpsQuad9SecureNlAt",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DohProviderQuad9Secure"
-          }
-        },
-        {
-          "name": "ForcedOff_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DohProviderQuad9Secure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "101.0.4937.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "country": [
-          "nl",
-          "at"
-        ],
-        "endDate": "1785628740"
-      }
-    },
-    {
-      "name": "DnsOverHttpsQuad9SecureNlAt",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260529",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DohProviderQuad9Secure"
-          }
-        },
-        {
-          "name": "ForcedOff_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DohProviderQuad9Secure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "101.0.4937.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "country": [
-          "nl",
-          "at"
-        ],
-        "endDate": "1785628740"
-      }
-    },
-    {
-      "name": "DnsOverHttpsQuad9SecureNlAt",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260529",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "enableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260529",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 98
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "DohProviderQuad9Secure"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DohProviderQuad9Secure"
-          }
-        },
-        {
-          "name": "ForcedOff_DohProviderQuad9Secure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DohProviderQuad9Secure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "101.0.4937.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "country": [
-          "nl",
-          "at"
-        ],
-        "endDate": "1785628740"
-      }
-    },
-    {
       "name": "DnsOverHttpsSwitch",
       "consistency": "PERMANENT",
       "experiment": [
@@ -141860,163 +140986,6 @@
           "PLATFORM_ANDROID"
         ],
         "minOsVersion": "12.0.0"
-      }
-    },
-    {
-      "name": "EnableADPFRendererMainHoldback",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Holdback",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "disableFeature": [
-              "EnableADPFRendererMain"
-            ]
-          }
-        },
-        {
-          "name": "Enabled",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableADPFRendererMain"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 50
-        },
-        {
-          "name": "ForcedOn_EnableADPFRendererMain",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EnableADPFRendererMain"
-          }
-        },
-        {
-          "name": "ForcedOff_EnableADPFRendererMain",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EnableADPFRendererMain"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7680.178",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1785628740"
-      }
-    },
-    {
-      "name": "EnableADPFRendererMainHoldback",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Holdback",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "disableFeature": [
-              "EnableADPFRendererMain"
-            ]
-          }
-        },
-        {
-          "name": "Enabled",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableADPFRendererMain"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 50
-        },
-        {
-          "name": "ForcedOn_EnableADPFRendererMain",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EnableADPFRendererMain"
-          }
-        },
-        {
-          "name": "ForcedOff_EnableADPFRendererMain",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EnableADPFRendererMain"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7680.178",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1785628740"
-      }
-    },
-    {
-      "name": "EnableADPFRendererMainHoldback",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Holdback",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "disableFeature": [
-              "EnableADPFRendererMain"
-            ]
-          }
-        },
-        {
-          "name": "Enabled",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableADPFRendererMain"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 98
-        },
-        {
-          "name": "ForcedOn_EnableADPFRendererMain",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EnableADPFRendererMain"
-          }
-        },
-        {
-          "name": "ForcedOff_EnableADPFRendererMain",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EnableADPFRendererMain"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7680.178",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1785628740"
       }
     },
     {
@@ -178464,120 +177433,6 @@
         ]
       },
       "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "GpuPersistentCache",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "PersistentCache_20260331",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "GpuPersistentCache"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260331",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "GpuPersistentCache"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_GpuPersistentCache",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "GpuPersistentCache"
-          }
-        },
-        {
-          "name": "ForcedOff_GpuPersistentCache",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "GpuPersistentCache"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "145.0.7566.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1785628740"
-      },
-      "randomizationSeed": 2216954999
-    },
-    {
-      "name": "GpuPersistentCache",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "PersistentCache_20260331",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "enableFeature": [
-              "GpuPersistentCache"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260331",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "disableFeature": [
-              "GpuPersistentCache"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 80
-        },
-        {
-          "name": "ForcedOn_GpuPersistentCache",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "GpuPersistentCache"
-          }
-        },
-        {
-          "name": "ForcedOff_GpuPersistentCache",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "GpuPersistentCache"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "145.0.7566.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1785628740"
-      },
-      "randomizationSeed": 2216954999
     },
     {
       "name": "GpuRasterizationViewportRestriction",
@@ -456247,5 +455102,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260801-030038.357000-production"
+  "version": "20260802-030038.165000-production"
 }
