@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDgwNC0xNzAxMTAuNzk3MDAwEgQgACgB#OxeTthh7Z1Y=",
+  "serialNumber": "SMChYyMDI2MDgwNS0wMTAwMzIuMjk1MDAwEgQgACgB#QI3kbQKd7aQ=",
   "study": [
     {
       "name": "GlowUp",
@@ -106087,6 +106087,55 @@
           "PLATFORM_MAC"
         ],
         "endDate": "1789171140"
+      }
+    },
+    {
+      "name": "CompositorTimelineTriggerKillSwitch",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Disabled_CompositorTimelineTrigger",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "disableFeature": [
+              "CompositorTimelineTrigger"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_CompositorTimelineTrigger",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "CompositorTimelineTrigger"
+          }
+        },
+        {
+          "name": "ForcedOff_CompositorTimelineTrigger",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "CompositorTimelineTrigger"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.0.0",
+        "maxVersion": "153.0.0.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          "PLATFORM_IOS",
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "policyRestriction": "CRITICAL"
       }
     },
     {
@@ -321439,6 +321488,82 @@
       }
     },
     {
+      "name": "SplitViewHorizontal",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledIndirectAccess_20260706",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "split_view_horizontal_direct_access",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "SplitViewHorizontal"
+            ]
+          }
+        },
+        {
+          "name": "EnabledDirectAccess_20260706",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "split_view_horizontal_direct_access",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "SplitViewHorizontal"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260706",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "SplitViewHorizontal"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 97
+        },
+        {
+          "name": "ForcedOn_SplitViewHorizontal",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SplitViewHorizontal"
+          }
+        },
+        {
+          "name": "ForcedOff_SplitViewHorizontal",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SplitViewHorizontal"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7916.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC"
+        ],
+        "endDate": "1788652740"
+      }
+    },
+    {
       "name": "SplitViewLinkOpen",
       "consistency": "PERMANENT",
       "experiment": [
@@ -333254,12 +333379,22 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Preperiod_Enabled",
-          "probabilityWeight": 50
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "TcpPortRandomizationMac"
+            ]
+          }
         },
         {
-          "name": "Preperiod_Control",
-          "probabilityWeight": 50
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "TcpPortRandomizationMac"
+            ]
+          }
         },
         {
           "name": "Default",
@@ -453939,5 +454074,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260804-170110.797000-production"
+  "version": "20260805-010032.295000-production"
 }
