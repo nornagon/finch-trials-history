@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDgwNi0xNzAwNTAuMTkxMDAwEgQgACgB#4US8xjtn7Vc=",
+  "serialNumber": "SMChYyMDI2MDgwNy0wMTAwMzAuNTQ3MDAwEgQgACgB#NDbdEWhQoC4=",
   "study": [
     {
       "name": "GlowUp",
@@ -14269,150 +14269,6 @@
         "endDate": "1790812740"
       },
       "randomizationSeed": 3004853582,
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DefaultBrowserPromoEntryPoint",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_Full_20260625",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "show_app_menu_item",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DefaultBrowserPromoEntryPoint"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_SettingsOnly_20260625",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "show_app_menu_item",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DefaultBrowserPromoEntryPoint"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260625",
-          "probabilityWeight": 33,
-          "featureAssociation": {
-            "disableFeature": [
-              "DefaultBrowserPromoEntryPoint"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 1
-        },
-        {
-          "name": "ForcedOn_DefaultBrowserPromoEntryPoint",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DefaultBrowserPromoEntryPoint"
-          }
-        },
-        {
-          "name": "ForcedOff_DefaultBrowserPromoEntryPoint",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DefaultBrowserPromoEntryPoint"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7667.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1787270340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DefaultBrowserPromoEntryPoint",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_Full_20260625",
-          "probabilityWeight": 7,
-          "googleWebExperimentId": "101001846",
-          "param": [
-            {
-              "name": "show_app_menu_item",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DefaultBrowserPromoEntryPoint"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_SettingsOnly_20260625",
-          "probabilityWeight": 7,
-          "googleWebExperimentId": "101001847",
-          "param": [
-            {
-              "name": "show_app_menu_item",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DefaultBrowserPromoEntryPoint"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260625",
-          "probabilityWeight": 7,
-          "googleWebExperimentId": "101001845",
-          "featureAssociation": {
-            "disableFeature": [
-              "DefaultBrowserPromoEntryPoint"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7667.0",
-        "maxVersion": "146.0.7680.70",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1787270340"
-      },
-      "randomizationSeed": 2934971596,
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
@@ -119461,6 +119317,55 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "DefaultBrowserPromoEntryPoint",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Launched",
+          "probabilityWeight": 100,
+          "param": [
+            {
+              "name": "show_app_menu_item",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DefaultBrowserPromoEntryPoint"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_DefaultBrowserPromoEntryPoint",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DefaultBrowserPromoEntryPoint"
+          }
+        },
+        {
+          "name": "ForcedOff_DefaultBrowserPromoEntryPoint",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DefaultBrowserPromoEntryPoint"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "146.0.7667.0",
+        "maxVersion": "153.0.7993.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "DefaultBrowserPromoIPadStudy",
       "consistency": "PERMANENT",
       "experiment": [
@@ -142509,6 +142414,67 @@
       }
     },
     {
+      "name": "EnableDlpFileSystemApi",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260720",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableDlpFileSystemApi"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260720",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "EnableDlpFileSystemApi"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "EnableDlpFileSystemApi"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_EnableDlpFileSystemApi",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableDlpFileSystemApi"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableDlpFileSystemApi",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableDlpFileSystemApi"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7871.175",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1789171140"
+      }
+    },
+    {
       "name": "EnableDrDc",
       "consistency": "PERMANENT",
       "experiment": [
@@ -162472,6 +162438,47 @@
         "platform": [
           "PLATFORM_IOS"
         ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "GeminiWebEmbeddedQuizzes",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260806",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002970",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260806",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002969",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0
+        }
+      ],
+      "filter": {
+        "minVersion": "145.*",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1793836740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -456071,5 +456078,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260806-170050.191000-production"
+  "version": "20260807-010030.547000-production"
 }
