@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDgxMC0xNzAwNTQuMTg3MDAwEgQgACgB#DZf/m7B6wsQ=",
+  "serialNumber": "SMChYyMDI2MDgxMS0wMTAwMzUuMzIyMDAwEgQgACgB#aIw8B3bUL0o=",
   "study": [
     {
       "name": "GlowUp",
@@ -1637,6 +1637,49 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "DiscoverCUI3AppFlowLoggingBling",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260629",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101001040",
+          "featureAssociation": {
+            "enableFeature": [
+              "IOSGCR_discover_wait_indicator_app_flow",
+              "IOSGCR_enable_next_page_app_flow"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260629",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101001039",
+          "featureAssociation": {
+            "disableFeature": [
+              "IOSGCR_discover_wait_indicator_app_flow",
+              "IOSGCR_enable_next_page_app_flow"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7861.1",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1790812740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "AutofillAiCrowdsourcedPredictions",
       "consistency": "PERMANENT",
       "experiment": [
@@ -1869,49 +1912,6 @@
           "PLATFORM_IOS"
         ],
         "endDate": "1790726340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DiscoverCUI3AppFlowLoggingBling",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260629",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101001040",
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_discover_wait_indicator_app_flow",
-              "IOSGCR_enable_next_page_app_flow"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260629",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101001039",
-          "featureAssociation": {
-            "disableFeature": [
-              "IOSGCR_discover_wait_indicator_app_flow",
-              "IOSGCR_enable_next_page_app_flow"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7861.1",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1788134340"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -48149,12 +48149,27 @@
           ],
           "featureAssociation": {
             "enableFeature": [
+              "AtMemoryMqlsLogging",
               "AutofillAtMemory",
               "AutofillAtMemoryTriggerShortcut",
               "AutofillKeydownEditableElement",
               "IPH_AutofillAtMemory",
               "PersonalContextForceEnablementState"
             ]
+          }
+        },
+        {
+          "name": "ForcedOn_AtMemoryMqlsLogging",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AtMemoryMqlsLogging"
+          }
+        },
+        {
+          "name": "ForcedOff_AtMemoryMqlsLogging",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AtMemoryMqlsLogging"
           }
         },
         {
@@ -48272,12 +48287,27 @@
           ],
           "featureAssociation": {
             "enableFeature": [
+              "AtMemoryMqlsLogging",
               "AutofillAtMemory",
               "AutofillAtMemoryTriggerShortcut",
               "AutofillKeydownEditableElement",
               "IPH_AutofillAtMemory",
               "PersonalContextForceEnablementState"
             ]
+          }
+        },
+        {
+          "name": "ForcedOn_AtMemoryMqlsLogging",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AtMemoryMqlsLogging"
+          }
+        },
+        {
+          "name": "ForcedOff_AtMemoryMqlsLogging",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AtMemoryMqlsLogging"
           }
         },
         {
@@ -281641,20 +281671,22 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260804",
+          "name": "Enabled_20260810",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
-              "ProfileDiscOnAllPages"
+              "ProfileDiscOnAllPages",
+              "SigninLevelUpButton"
             ]
           }
         },
         {
-          "name": "Control_20260804",
+          "name": "Control_20260810",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
-              "ProfileDiscOnAllPages"
+              "ProfileDiscOnAllPages",
+              "SigninLevelUpButton"
             ]
           }
         },
@@ -281674,6 +281706,20 @@
           "probabilityWeight": 0,
           "featureAssociation": {
             "forcingFeatureOff": "ProfileDiscOnAllPages"
+          }
+        },
+        {
+          "name": "ForcedOn_SigninLevelUpButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SigninLevelUpButton"
+          }
+        },
+        {
+          "name": "ForcedOff_SigninLevelUpButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SigninLevelUpButton"
           }
         }
       ],
@@ -281686,27 +281732,30 @@
           "PLATFORM_ANDROID"
         ],
         "endDate": "1790985540"
-      }
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "ProfileDiscOnAllPages",
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260804",
+          "name": "Enabled_20260810",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
-              "ProfileDiscOnAllPages"
+              "ProfileDiscOnAllPages",
+              "SigninLevelUpButton"
             ]
           }
         },
         {
-          "name": "Control_20260804",
+          "name": "Control_20260810",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
-              "ProfileDiscOnAllPages"
+              "ProfileDiscOnAllPages",
+              "SigninLevelUpButton"
             ]
           }
         },
@@ -281726,6 +281775,20 @@
           "probabilityWeight": 0,
           "featureAssociation": {
             "forcingFeatureOff": "ProfileDiscOnAllPages"
+          }
+        },
+        {
+          "name": "ForcedOn_SigninLevelUpButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SigninLevelUpButton"
+          }
+        },
+        {
+          "name": "ForcedOff_SigninLevelUpButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SigninLevelUpButton"
           }
         }
       ],
@@ -281739,7 +281802,8 @@
           "PLATFORM_ANDROID"
         ],
         "endDate": "1790985540"
-      }
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "ProfileLoadTracker",
@@ -316072,113 +316136,6 @@
           "PLATFORM_LINUX"
         ]
       }
-    },
-    {
-      "name": "SigninLevelUpButton",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260804",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "SigninLevelUpButton"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260804",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "SigninLevelUpButton"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_SigninLevelUpButton",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "SigninLevelUpButton"
-          }
-        },
-        {
-          "name": "ForcedOff_SigninLevelUpButton",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "SigninLevelUpButton"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7977.8",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1790985540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "SigninLevelUpButton",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260804",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "SigninLevelUpButton"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260804",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "SigninLevelUpButton"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_SigninLevelUpButton",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "SigninLevelUpButton"
-          }
-        },
-        {
-          "name": "ForcedOff_SigninLevelUpButton",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "SigninLevelUpButton"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7977.8",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1790985540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "SigninPromoOnAvatarPill",
@@ -406899,6 +406856,59 @@
       }
     },
     {
+      "name": "UserPolicyFetchRequiresAcceptance",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260810",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "UserPolicyFetchRequiresAcceptance"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260810",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "UserPolicyFetchRequiresAcceptance"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_UserPolicyFetchRequiresAcceptance",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "UserPolicyFetchRequiresAcceptance"
+          }
+        },
+        {
+          "name": "ForcedOff_UserPolicyFetchRequiresAcceptance",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "UserPolicyFetchRequiresAcceptance"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1791590340"
+      }
+    },
+    {
       "name": "UserValueDefaultBrowserStrings",
       "consistency": "PERMANENT",
       "experiment": [
@@ -455902,5 +455912,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260810-170054.187000-production"
+  "version": "20260811-010035.322000-production"
 }
