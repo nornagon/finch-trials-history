@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDgyNS0xNzA2MzQuMzIwMDAwEgQgACgB#slV9Womi5io=",
+  "serialNumber": "SMChYyMDI2MDgyNi0wMTAwMzEuNjkxMDAwEgQgACgB#yLJqgo7tAsY=",
   "study": [
     {
       "name": "ComposeboxAllFileTypes",
@@ -941,47 +941,6 @@
           "PHONE"
         ],
         "endDate": "1788652740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IOSDiscoverChromeInfiniteFeedDataSource",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260817",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003273",
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_use_infinite_feed_data_source"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260817",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003274",
-          "featureAssociation": {
-            "disableFeature": [
-              "IOSGCR_use_infinite_feed_data_source"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1793491140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -9567,6 +9526,632 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "DiskCacheBackendExperiment",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260716_BETA",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101003121",
+          "featureAssociation": {
+            "disableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "EnabledDefault_20260716_BETA",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101003122",
+          "param": [
+            {
+              "name": "backend",
+              "value": "default"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment"
+            ],
+            "disableFeature": [
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "AllOpt_20260716_BETA",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101003123",
+          "param": [
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "WalMode_20260716_BETA",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101003124",
+          "param": [
+            {
+              "name": "SqlDiskCacheWalMode",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "DbEvic_20260716_BETA",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101003125",
+          "param": [
+            {
+              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
+              "value": "false"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "PrevOptVacuum_20260716_BETA",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101003126",
+          "param": [
+            {
+              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
+              "value": "false"
+            },
+            {
+              "name": "SqlDiskCacheIncrementalVacuum",
+              "value": "true"
+            },
+            {
+              "name": "SqlDiskCacheLoadIndexOnInit",
+              "value": "true"
+            },
+            {
+              "name": "SqlDiskCacheSerialInitialize",
+              "value": "false"
+            },
+            {
+              "name": "SqlDiskCacheWalMode",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "AllOptReduceUma_20260716_BETA",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101003127",
+          "param": [
+            {
+              "name": "SqlDiskCacheReduceUma",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "WalModeReduceUma_20260716_BETA",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101003128",
+          "param": [
+            {
+              "name": "SqlDiskCacheReduceUma",
+              "value": "true"
+            },
+            {
+              "name": "SqlDiskCacheWalMode",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "DbEvicReduceUma_20260716_BETA",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101003129",
+          "param": [
+            {
+              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
+              "value": "false"
+            },
+            {
+              "name": "SqlDiskCacheReduceUma",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7954.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1792886340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DiskCacheBackendExperiment",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260716_CANARY_DEV",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101002317",
+          "featureAssociation": {
+            "disableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "EnabledDefault_20260716_CANARY_DEV",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101002318",
+          "param": [
+            {
+              "name": "backend",
+              "value": "default"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment"
+            ],
+            "disableFeature": [
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "AllOpt_20260716_CANARY_DEV",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101002319",
+          "param": [
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "WalMode_20260716_CANARY_DEV",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101002320",
+          "param": [
+            {
+              "name": "SqlDiskCacheWalMode",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "DbEvic_20260716_CANARY_DEV",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101002321",
+          "param": [
+            {
+              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
+              "value": "false"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "PrevOptVacuum_20260716_CANARY_DEV",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101002322",
+          "param": [
+            {
+              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
+              "value": "false"
+            },
+            {
+              "name": "SqlDiskCacheIncrementalVacuum",
+              "value": "true"
+            },
+            {
+              "name": "SqlDiskCacheLoadIndexOnInit",
+              "value": "true"
+            },
+            {
+              "name": "SqlDiskCacheSerialInitialize",
+              "value": "false"
+            },
+            {
+              "name": "SqlDiskCacheWalMode",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "AllOptReduceUma_20260716_CANARY_DEV",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101002323",
+          "param": [
+            {
+              "name": "SqlDiskCacheReduceUma",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "WalModeReduceUma_20260716_CANARY_DEV",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101002324",
+          "param": [
+            {
+              "name": "SqlDiskCacheReduceUma",
+              "value": "true"
+            },
+            {
+              "name": "SqlDiskCacheWalMode",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "DbEvicReduceUma_20260716_CANARY_DEV",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101002325",
+          "param": [
+            {
+              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
+              "value": "false"
+            },
+            {
+              "name": "SqlDiskCacheReduceUma",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7954.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1792886340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DiskCacheBackendExperiment",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "C_Control_20260716_STABLE",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101003602",
+          "featureAssociation": {
+            "disableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "C_EnabledDefault_20260716_STABLE",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101003603",
+          "param": [
+            {
+              "name": "backend",
+              "value": "default"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment"
+            ],
+            "disableFeature": [
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "C_WalMode_20260716_STABLE",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101003604",
+          "param": [
+            {
+              "name": "SqlDiskCacheWalMode",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "C_WalModeReduceUma_20260716_STABLE",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101003605",
+          "param": [
+            {
+              "name": "SqlDiskCacheReduceUma",
+              "value": "true"
+            },
+            {
+              "name": "SqlDiskCacheWalMode",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7954.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1792886340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DiskCacheBackendExperiment",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "L_Control_20260716_STABLE",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101003598",
+          "featureAssociation": {
+            "disableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "L_EnabledDefault_20260716_STABLE",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101003599",
+          "param": [
+            {
+              "name": "backend",
+              "value": "default"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment"
+            ],
+            "disableFeature": [
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "L_WalMode_20260716_STABLE",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101003600",
+          "param": [
+            {
+              "name": "SqlDiskCacheWalMode",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        },
+        {
+          "name": "L_WalModeReduceUma_20260716_STABLE",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101003601",
+          "param": [
+            {
+              "name": "SqlDiskCacheReduceUma",
+              "value": "true"
+            },
+            {
+              "name": "SqlDiskCacheWalMode",
+              "value": "true"
+            },
+            {
+              "name": "backend",
+              "value": "sql"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DiskCacheBackendExperiment",
+              "HttpCacheInitializeDiskCacheBackendEarly"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7954.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1792886340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "NetworkServiceIncreasedPriorityWhileLoading",
       "consistency": "PERMANENT",
       "experiment": [
@@ -13673,732 +14258,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "DiskCacheBackendExperiment",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260716_BETA",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101003121",
-          "featureAssociation": {
-            "disableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "EnabledDefault_20260716_BETA",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101003122",
-          "param": [
-            {
-              "name": "backend",
-              "value": "default"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment"
-            ],
-            "disableFeature": [
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "AllOpt_20260716_BETA",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101003123",
-          "param": [
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "WalMode_20260716_BETA",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101003124",
-          "param": [
-            {
-              "name": "SqlDiskCacheWalMode",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "DbEvic_20260716_BETA",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101003125",
-          "param": [
-            {
-              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
-              "value": "false"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "PrevOptVacuum_20260716_BETA",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101003126",
-          "param": [
-            {
-              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
-              "value": "false"
-            },
-            {
-              "name": "SqlDiskCacheIncrementalVacuum",
-              "value": "true"
-            },
-            {
-              "name": "SqlDiskCacheLoadIndexOnInit",
-              "value": "true"
-            },
-            {
-              "name": "SqlDiskCacheSerialInitialize",
-              "value": "false"
-            },
-            {
-              "name": "SqlDiskCacheWalMode",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "AllOptReduceUma_20260716_BETA",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101003127",
-          "param": [
-            {
-              "name": "SqlDiskCacheReduceUma",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "WalModeReduceUma_20260716_BETA",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101003128",
-          "param": [
-            {
-              "name": "SqlDiskCacheReduceUma",
-              "value": "true"
-            },
-            {
-              "name": "SqlDiskCacheWalMode",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "DbEvicReduceUma_20260716_BETA",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101003129",
-          "param": [
-            {
-              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
-              "value": "false"
-            },
-            {
-              "name": "SqlDiskCacheReduceUma",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7954.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1788134340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DiskCacheBackendExperiment",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260716_CANARY_DEV",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101002317",
-          "featureAssociation": {
-            "disableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "EnabledDefault_20260716_CANARY_DEV",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101002318",
-          "param": [
-            {
-              "name": "backend",
-              "value": "default"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment"
-            ],
-            "disableFeature": [
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "AllOpt_20260716_CANARY_DEV",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101002319",
-          "param": [
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "WalMode_20260716_CANARY_DEV",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101002320",
-          "param": [
-            {
-              "name": "SqlDiskCacheWalMode",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "DbEvic_20260716_CANARY_DEV",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101002321",
-          "param": [
-            {
-              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
-              "value": "false"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "PrevOptVacuum_20260716_CANARY_DEV",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101002322",
-          "param": [
-            {
-              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
-              "value": "false"
-            },
-            {
-              "name": "SqlDiskCacheIncrementalVacuum",
-              "value": "true"
-            },
-            {
-              "name": "SqlDiskCacheLoadIndexOnInit",
-              "value": "true"
-            },
-            {
-              "name": "SqlDiskCacheSerialInitialize",
-              "value": "false"
-            },
-            {
-              "name": "SqlDiskCacheWalMode",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "AllOptReduceUma_20260716_CANARY_DEV",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101002323",
-          "param": [
-            {
-              "name": "SqlDiskCacheReduceUma",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "WalModeReduceUma_20260716_CANARY_DEV",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101002324",
-          "param": [
-            {
-              "name": "SqlDiskCacheReduceUma",
-              "value": "true"
-            },
-            {
-              "name": "SqlDiskCacheWalMode",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "DbEvicReduceUma_20260716_CANARY_DEV",
-          "probabilityWeight": 5,
-          "googleWebExperimentId": "101002325",
-          "param": [
-            {
-              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
-              "value": "false"
-            },
-            {
-              "name": "SqlDiskCacheReduceUma",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7954.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1788134340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DiskCacheBackendExperiment",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "C_Control_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001916",
-          "featureAssociation": {
-            "disableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "C_EnabledDefault_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001917",
-          "param": [
-            {
-              "name": "backend",
-              "value": "default"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment"
-            ],
-            "disableFeature": [
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "C_AllOpt_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001918",
-          "param": [
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "C_WalMode_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001919",
-          "param": [
-            {
-              "name": "SqlDiskCacheWalMode",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "C_DbEvic_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001920",
-          "param": [
-            {
-              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
-              "value": "false"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "C_PrevOptVacuum_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001921",
-          "param": [
-            {
-              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
-              "value": "false"
-            },
-            {
-              "name": "SqlDiskCacheIncrementalVacuum",
-              "value": "true"
-            },
-            {
-              "name": "SqlDiskCacheLoadIndexOnInit",
-              "value": "true"
-            },
-            {
-              "name": "SqlDiskCacheSerialInitialize",
-              "value": "false"
-            },
-            {
-              "name": "SqlDiskCacheWalMode",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.10",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1788134340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DiskCacheBackendExperiment",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "L_Control_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001910",
-          "featureAssociation": {
-            "disableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "L_EnabledDefault_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001911",
-          "param": [
-            {
-              "name": "backend",
-              "value": "default"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment"
-            ],
-            "disableFeature": [
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "L_AllOpt_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001912",
-          "param": [
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "L_WalMode_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001913",
-          "param": [
-            {
-              "name": "SqlDiskCacheWalMode",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "L_DbEvic_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001914",
-          "param": [
-            {
-              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
-              "value": "false"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "L_PrevOptVacuum_20260701_STABLE",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101001915",
-          "param": [
-            {
-              "name": "SqlDiskCacheConsolidatedInMemoryIndex",
-              "value": "false"
-            },
-            {
-              "name": "SqlDiskCacheIncrementalVacuum",
-              "value": "true"
-            },
-            {
-              "name": "SqlDiskCacheLoadIndexOnInit",
-              "value": "true"
-            },
-            {
-              "name": "SqlDiskCacheSerialInitialize",
-              "value": "false"
-            },
-            {
-              "name": "SqlDiskCacheWalMode",
-              "value": "true"
-            },
-            {
-              "name": "backend",
-              "value": "sql"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DiskCacheBackendExperiment",
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.10",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1788134340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "ExactMatchFavicons",
       "consistency": "PERMANENT",
       "experiment": [
@@ -17772,6 +17631,855 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "ContextualTasksDesktop",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260813",
+          "probabilityWeight": 18,
+          "googleWebTriggerExperimentId": "101003144",
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualTasks",
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch",
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 10
+        },
+        {
+          "name": "LaunchWithSignedInSidePanelUnification_20260813",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "allow-signed-out",
+              "value": "false"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003145",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "ContextualTasksSidePanel",
+              "HappinessTrackingSurveysForDesktopNextPanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "LaunchWithAllUsersSidePanelUnification_20260813",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "allow-signed-out",
+              "value": "true"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003146",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "ContextualTasksSidePanel",
+              "HappinessTrackingSurveysForDesktopNextPanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "SignedInSidePanelUnificationOnly_20260813",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "allow-signed-out",
+              "value": "false"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003147",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasks",
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "AllUsersSidePanelUnificationOnly_20260813",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "allow-signed-out",
+              "value": "true"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003148",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasks",
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.42",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "country": [
+          "us"
+        ],
+        "endDate": "1790553540"
+      },
+      "randomizationSeed": 1637453081,
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ContextualTasksDesktop",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260817",
+          "probabilityWeight": 18,
+          "googleWebTriggerExperimentId": "101003144",
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualTasks",
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch",
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 10
+        },
+        {
+          "name": "LaunchWithSignedInSidePanelUnification_20260817",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "allow-signed-out",
+              "value": "false"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003145",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "ContextualTasksSidePanel",
+              "HappinessTrackingSurveysForDesktopNextPanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "LaunchWithAllUsersSidePanelUnification_20260817",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "allow-signed-out",
+              "value": "true"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003146",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "ContextualTasksSidePanel",
+              "HappinessTrackingSurveysForDesktopNextPanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "SignedInSidePanelUnificationOnly_20260817",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "allow-signed-out",
+              "value": "false"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003147",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasks",
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "AllUsersSidePanelUnificationOnly_20260817",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "allow-signed-out",
+              "value": "true"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003148",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasks",
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.8004.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "country": [
+          "us"
+        ],
+        "endDate": "1790553540"
+      },
+      "randomizationSeed": 1637453081,
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ContextualTasksDesktop",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260821",
+          "probabilityWeight": 20,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003508",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "HappinessTrackingSurveysForDesktopNextPanel"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch",
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ]
+          }
+        },
+        {
+          "name": "LaunchWithSignedInSidePanelUnification_20260821",
+          "probabilityWeight": 20,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "allow-signed-out",
+              "value": "false"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003509",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "ContextualTasksSidePanel",
+              "HappinessTrackingSurveysForDesktopNextPanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "LaunchWithAllUsersSidePanelUnification_20260821",
+          "probabilityWeight": 20,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "allow-signed-out",
+              "value": "true"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003510",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "ContextualTasksSidePanel",
+              "HappinessTrackingSurveysForDesktopNextPanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "SignedInSidePanelUnificationOnly_20260821",
+          "probabilityWeight": 20,
+          "param": [
+            {
+              "name": "allow-signed-out",
+              "value": "false"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003511",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasks",
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "AllUsersSidePanelUnificationOnly_20260821",
+          "probabilityWeight": 20,
+          "param": [
+            {
+              "name": "allow-signed-out",
+              "value": "true"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003512",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasks",
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.54",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "country": [
+          "us"
+        ],
+        "endDate": "1790553540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ContextualTasksDesktop",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260821",
+          "probabilityWeight": 20,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003508",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "HappinessTrackingSurveysForDesktopNextPanel"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch",
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ]
+          }
+        },
+        {
+          "name": "LaunchWithSignedInSidePanelUnification_20260821",
+          "probabilityWeight": 20,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "allow-signed-out",
+              "value": "false"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003509",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "ContextualTasksSidePanel",
+              "HappinessTrackingSurveysForDesktopNextPanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "LaunchWithAllUsersSidePanelUnification_20260821",
+          "probabilityWeight": 20,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "allow-signed-out",
+              "value": "true"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003510",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "ContextualTasksSidePanel",
+              "HappinessTrackingSurveysForDesktopNextPanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "SignedInSidePanelUnificationOnly_20260821",
+          "probabilityWeight": 20,
+          "param": [
+            {
+              "name": "allow-signed-out",
+              "value": "false"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003511",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasks",
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        },
+        {
+          "name": "AllUsersSidePanelUnificationOnly_20260821",
+          "probabilityWeight": 20,
+          "param": [
+            {
+              "name": "allow-signed-out",
+              "value": "true"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003512",
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksSidePanel",
+              "LensSidePanelUnification"
+            ],
+            "disableFeature": [
+              "ContextualTasks",
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.54",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "country": [
+          "us"
+        ],
+        "endDate": "1790553540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ContextualTasksDesktop",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Launched_M146_To_M152",
+          "probabilityWeight": 100,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "HappinessTrackingSurveysForDesktopNextPanel"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "146.0.7680.174",
+        "maxVersion": "152.0.7977.53",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "country": [
+          "us"
+        ],
+        "endDate": "1790553540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ContextualTasksDesktop",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Launched_M152_Onwards",
+          "probabilityWeight": 100,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "HappinessTrackingSurveysForDesktopNextPanel"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.54",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "country": [
+          "us"
+        ],
+        "endDate": "1790553540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ContextualTasksDesktop",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Launched_M152_Onwards",
+          "probabilityWeight": 100,
+          "param": [
+            {
+              "name": "ContextualTasksEntryPoint",
+              "value": "no-entry-point"
+            },
+            {
+              "name": "ContextualTasksExpandButtonOptions",
+              "value": "toolbar-close-button"
+            },
+            {
+              "name": "en_site_id",
+              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
+            },
+            {
+              "name": "probability",
+              "value": "1.0"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasks",
+              "HappinessTrackingSurveysForDesktopNextPanel"
+            ],
+            "disableFeature": [
+              "ContextualTasksBackButtonExpandsSidePanel",
+              "ContextualTasksCookiePrefetch"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.54",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "country": [
+          "us"
+        ],
+        "endDate": "1790553540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "ContextualTasksUploadChunking",
       "consistency": "PERMANENT",
       "experiment": [
@@ -18717,675 +19425,266 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "ContextualTasksDesktop",
+      "name": "GlicTextSelectionContextMenu",
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20260813",
-          "probabilityWeight": 18,
-          "googleWebTriggerExperimentId": "101003144",
+          "name": "Enabled_20260825",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "121889832",
+          "featureAssociation": {
+            "enableFeature": [
+              "GlicTextSelectionContextMenu"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260825",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "121889833",
           "featureAssociation": {
             "disableFeature": [
-              "ContextualTasks",
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch",
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
+              "GlicTextSelectionContextMenu"
             ]
-          }
+          },
+          "googleWebVisibility": "FIRST_PARTY"
         },
         {
           "name": "Default",
-          "probabilityWeight": 10
+          "probabilityWeight": 0
         },
         {
-          "name": "LaunchWithSignedInSidePanelUnification_20260813",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "allow-signed-out",
-              "value": "false"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003145",
+          "name": "_Activation",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasks",
-              "ContextualTasksSidePanel",
-              "HappinessTrackingSurveysForDesktopNextPanel",
-              "LensSidePanelUnification"
-            ],
             "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
+              "GlicTextSelectionContextMenu"
             ]
           }
         },
         {
-          "name": "LaunchWithAllUsersSidePanelUnification_20260813",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "allow-signed-out",
-              "value": "true"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003146",
+          "name": "ForcedOn_GlicTextSelectionContextMenu",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasks",
-              "ContextualTasksSidePanel",
-              "HappinessTrackingSurveysForDesktopNextPanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
+            "forcingFeatureOn": "GlicTextSelectionContextMenu"
           }
         },
         {
-          "name": "SignedInSidePanelUnificationOnly_20260813",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "allow-signed-out",
-              "value": "false"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003147",
+          "name": "ForcedOff_GlicTextSelectionContextMenu",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasks",
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
-          }
-        },
-        {
-          "name": "AllUsersSidePanelUnificationOnly_20260813",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "allow-signed-out",
-              "value": "true"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003148",
-          "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasks",
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
+            "forcingFeatureOff": "GlicTextSelectionContextMenu"
           }
         }
       ],
       "filter": {
-        "minVersion": "152.0.7977.42",
+        "minVersion": "151.0.7922.16",
         "channel": [
           "BETA"
         ],
         "platform": [
           "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
+          "PLATFORM_CHROMEOS",
           "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
+          "PLATFORM_MAC"
         ],
-        "country": [
-          "us"
-        ],
-        "endDate": "1790553540"
+        "endDate": "1793836740"
       },
-      "randomizationSeed": 1637453081,
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "ContextualTasksDesktop",
+      "name": "GlicTextSelectionContextMenu",
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20260817",
-          "probabilityWeight": 18,
-          "googleWebTriggerExperimentId": "101003144",
+          "name": "Enabled_20260825",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "121889832",
+          "featureAssociation": {
+            "enableFeature": [
+              "GlicTextSelectionContextMenu"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260825",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "121889833",
           "featureAssociation": {
             "disableFeature": [
-              "ContextualTasks",
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch",
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
+              "GlicTextSelectionContextMenu"
             ]
-          }
+          },
+          "googleWebVisibility": "FIRST_PARTY"
         },
         {
           "name": "Default",
-          "probabilityWeight": 10
+          "probabilityWeight": 0
         },
         {
-          "name": "LaunchWithSignedInSidePanelUnification_20260817",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "allow-signed-out",
-              "value": "false"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003145",
+          "name": "_Activation",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasks",
-              "ContextualTasksSidePanel",
-              "HappinessTrackingSurveysForDesktopNextPanel",
-              "LensSidePanelUnification"
-            ],
             "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
+              "GlicTextSelectionContextMenu"
             ]
           }
         },
         {
-          "name": "LaunchWithAllUsersSidePanelUnification_20260817",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "allow-signed-out",
-              "value": "true"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003146",
+          "name": "ForcedOn_GlicTextSelectionContextMenu",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasks",
-              "ContextualTasksSidePanel",
-              "HappinessTrackingSurveysForDesktopNextPanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
+            "forcingFeatureOn": "GlicTextSelectionContextMenu"
           }
         },
         {
-          "name": "SignedInSidePanelUnificationOnly_20260817",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "allow-signed-out",
-              "value": "false"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003147",
+          "name": "ForcedOff_GlicTextSelectionContextMenu",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasks",
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
-          }
-        },
-        {
-          "name": "AllUsersSidePanelUnificationOnly_20260817",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "allow-signed-out",
-              "value": "true"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003148",
-          "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasks",
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
+            "forcingFeatureOff": "GlicTextSelectionContextMenu"
           }
         }
       ],
       "filter": {
-        "minVersion": "153.0.8004.0",
+        "minVersion": "151.0.7922.16",
         "channel": [
           "CANARY",
           "DEV"
         ],
         "platform": [
           "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
+          "PLATFORM_CHROMEOS",
           "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
+          "PLATFORM_MAC"
         ],
-        "country": [
-          "us"
-        ],
-        "endDate": "1790553540"
+        "endDate": "1793836740"
       },
-      "randomizationSeed": 1637453081,
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "ContextualTasksDesktop",
+      "name": "GlicTextSelectionContextMenu",
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20260821",
-          "probabilityWeight": 20,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003508",
+          "name": "Enabled_20260825_50",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "121889832",
           "featureAssociation": {
             "enableFeature": [
-              "ContextualTasks",
-              "HappinessTrackingSurveysForDesktopNextPanel"
-            ],
+              "GlicTextSelectionContextMenu"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260825_50",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "121889833",
+          "featureAssociation": {
             "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch",
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
+              "GlicTextSelectionContextMenu"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "GlicTextSelectionContextMenu"
             ]
           }
         },
         {
-          "name": "LaunchWithSignedInSidePanelUnification_20260821",
-          "probabilityWeight": 20,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "allow-signed-out",
-              "value": "false"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003509",
+          "name": "ForcedOn_GlicTextSelectionContextMenu",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasks",
-              "ContextualTasksSidePanel",
-              "HappinessTrackingSurveysForDesktopNextPanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
+            "forcingFeatureOn": "GlicTextSelectionContextMenu"
           }
         },
         {
-          "name": "LaunchWithAllUsersSidePanelUnification_20260821",
-          "probabilityWeight": 20,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "allow-signed-out",
-              "value": "true"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003510",
+          "name": "ForcedOff_GlicTextSelectionContextMenu",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasks",
-              "ContextualTasksSidePanel",
-              "HappinessTrackingSurveysForDesktopNextPanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
-          }
-        },
-        {
-          "name": "SignedInSidePanelUnificationOnly_20260821",
-          "probabilityWeight": 20,
-          "param": [
-            {
-              "name": "allow-signed-out",
-              "value": "false"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003511",
-          "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasks",
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
-          }
-        },
-        {
-          "name": "AllUsersSidePanelUnificationOnly_20260821",
-          "probabilityWeight": 20,
-          "param": [
-            {
-              "name": "allow-signed-out",
-              "value": "true"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003512",
-          "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasks",
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
+            "forcingFeatureOff": "GlicTextSelectionContextMenu"
           }
         }
       ],
       "filter": {
-        "minVersion": "152.0.7977.54",
+        "minVersion": "151.0.7922.16",
         "channel": [
           "STABLE"
         ],
         "platform": [
           "PLATFORM_LINUX"
         ],
-        "country": [
-          "us"
-        ],
-        "endDate": "1790553540"
+        "endDate": "1793836740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "ContextualTasksDesktop",
+      "name": "GlicTextSelectionContextMenu",
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20260821",
-          "probabilityWeight": 20,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003508",
+          "name": "Enabled_20260825_50",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "121889832",
           "featureAssociation": {
             "enableFeature": [
-              "ContextualTasks",
-              "HappinessTrackingSurveysForDesktopNextPanel"
-            ],
+              "GlicTextSelectionContextMenu"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260825_50",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "121889833",
+          "featureAssociation": {
             "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch",
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
+              "GlicTextSelectionContextMenu"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "GlicTextSelectionContextMenu"
             ]
           }
         },
         {
-          "name": "LaunchWithSignedInSidePanelUnification_20260821",
-          "probabilityWeight": 20,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "allow-signed-out",
-              "value": "false"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003509",
+          "name": "ForcedOn_GlicTextSelectionContextMenu",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasks",
-              "ContextualTasksSidePanel",
-              "HappinessTrackingSurveysForDesktopNextPanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
+            "forcingFeatureOn": "GlicTextSelectionContextMenu"
           }
         },
         {
-          "name": "LaunchWithAllUsersSidePanelUnification_20260821",
-          "probabilityWeight": 20,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "allow-signed-out",
-              "value": "true"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003510",
+          "name": "ForcedOff_GlicTextSelectionContextMenu",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasks",
-              "ContextualTasksSidePanel",
-              "HappinessTrackingSurveysForDesktopNextPanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
-          }
-        },
-        {
-          "name": "SignedInSidePanelUnificationOnly_20260821",
-          "probabilityWeight": 20,
-          "param": [
-            {
-              "name": "allow-signed-out",
-              "value": "false"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003511",
-          "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasks",
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
-          }
-        },
-        {
-          "name": "AllUsersSidePanelUnificationOnly_20260821",
-          "probabilityWeight": 20,
-          "param": [
-            {
-              "name": "allow-signed-out",
-              "value": "true"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003512",
-          "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasksSidePanel",
-              "LensSidePanelUnification"
-            ],
-            "disableFeature": [
-              "ContextualTasks",
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
+            "forcingFeatureOff": "GlicTextSelectionContextMenu"
           }
         }
       ],
       "filter": {
-        "minVersion": "152.0.7977.54",
+        "minVersion": "151.0.7922.16",
         "channel": [
           "STABLE"
         ],
@@ -19395,173 +19694,7 @@
         "formFactor": [
           null
         ],
-        "country": [
-          "us"
-        ],
-        "endDate": "1790553540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ContextualTasksDesktop",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Launched_M146_To_M152",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasks",
-              "HappinessTrackingSurveysForDesktopNextPanel"
-            ],
-            "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7680.174",
-        "maxVersion": "152.0.7977.53",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "country": [
-          "us"
-        ],
-        "endDate": "1790553540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ContextualTasksDesktop",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Launched_M152_Onwards",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasks",
-              "HappinessTrackingSurveysForDesktopNextPanel"
-            ],
-            "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7977.54",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "country": [
-          "us"
-        ],
-        "endDate": "1790553540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ContextualTasksDesktop",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Launched_M152_Onwards",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "ContextualTasksEntryPoint",
-              "value": "no-entry-point"
-            },
-            {
-              "name": "ContextualTasksExpandButtonOptions",
-              "value": "toolbar-close-button"
-            },
-            {
-              "name": "en_site_id",
-              "value": "XWXw3UM1k0ugnJ3q1cK0PKSCtgF3"
-            },
-            {
-              "name": "probability",
-              "value": "1.0"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "ContextualTasks",
-              "HappinessTrackingSurveysForDesktopNextPanel"
-            ],
-            "disableFeature": [
-              "ContextualTasksBackButtonExpandsSidePanel",
-              "ContextualTasksCookiePrefetch"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7977.54",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "country": [
-          "us"
-        ],
-        "endDate": "1790553540"
+        "endDate": "1793836740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -39414,7 +39547,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1788220800",
+        "endDate": "1792800000",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -39479,7 +39612,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1788220800",
+        "endDate": "1792800000",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -39543,7 +39676,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1788220800",
+        "endDate": "1792800000",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -39577,7 +39710,7 @@
         "formFactor": [
           "DESKTOP"
         ],
-        "endDate": "1788220800"
+        "endDate": "1792800000"
       }
     },
     {
@@ -65541,7 +65674,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled",
+          "name": "Enabled_20260826",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -65550,7 +65683,7 @@
           }
         },
         {
-          "name": "Control",
+          "name": "Control_20260826",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -65587,73 +65720,7 @@
         }
       ],
       "filter": {
-        "minVersion": "150.0.7834.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1788307140"
-      }
-    },
-    {
-      "name": "AutofillNewSuggestionGeneration",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "AutofillNewSuggestionGeneration"
-            ]
-          }
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "AutofillNewSuggestionGeneration"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "AutofillNewSuggestionGeneration"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillNewSuggestionGeneration",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillNewSuggestionGeneration"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillNewSuggestionGeneration",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillNewSuggestionGeneration"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7834.0",
+        "minVersion": "154.0.8025.0",
         "channel": [
           "CANARY",
           "DEV"
@@ -65666,73 +65733,7 @@
           "PLATFORM_ANDROID",
           "PLATFORM_IOS"
         ],
-        "endDate": "1788307140"
-      }
-    },
-    {
-      "name": "AutofillNewSuggestionGeneration",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_10",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "enableFeature": [
-              "AutofillNewSuggestionGeneration"
-            ]
-          }
-        },
-        {
-          "name": "Control_10",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "disableFeature": [
-              "AutofillNewSuggestionGeneration"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 80
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "AutofillNewSuggestionGeneration"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillNewSuggestionGeneration",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillNewSuggestionGeneration"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillNewSuggestionGeneration",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillNewSuggestionGeneration"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7834.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1788307140"
+        "endDate": "1790899140"
       }
     },
     {
@@ -146594,6 +146595,59 @@
       }
     },
     {
+      "name": "EraseLegacyQueueOnDataLoss",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260825",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "EraseLegacyQueueOnDataLoss"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260825",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "EraseLegacyQueueOnDataLoss"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_EraseLegacyQueueOnDataLoss",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EraseLegacyQueueOnDataLoss"
+          }
+        },
+        {
+          "name": "ForcedOff_EraseLegacyQueueOnDataLoss",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EraseLegacyQueueOnDataLoss"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8023.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1792886340"
+      }
+    },
+    {
       "name": "EsbAiStringUpdate",
       "consistency": "PERMANENT",
       "experiment": [
@@ -170213,145 +170267,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "GlicTextSelectionContextMenu",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260812",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "121889832",
-          "featureAssociation": {
-            "enableFeature": [
-              "GlicTextSelectionContextMenu"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260812",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "121889833",
-          "featureAssociation": {
-            "disableFeature": [
-              "GlicTextSelectionContextMenu"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "GlicTextSelectionContextMenu"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_GlicTextSelectionContextMenu",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "GlicTextSelectionContextMenu"
-          }
-        },
-        {
-          "name": "ForcedOff_GlicTextSelectionContextMenu",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "GlicTextSelectionContextMenu"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.16",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC"
-        ],
-        "endDate": "1793836740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "GlicTextSelectionContextMenu",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260812",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "121889832",
-          "featureAssociation": {
-            "enableFeature": [
-              "GlicTextSelectionContextMenu"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260812",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "121889833",
-          "featureAssociation": {
-            "disableFeature": [
-              "GlicTextSelectionContextMenu"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "GlicTextSelectionContextMenu"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_GlicTextSelectionContextMenu",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "GlicTextSelectionContextMenu"
-          }
-        },
-        {
-          "name": "ForcedOff_GlicTextSelectionContextMenu",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "GlicTextSelectionContextMenu"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.16",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC"
-        ],
-        "endDate": "1793836740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "GlicTieredAccessMac",
       "consistency": "PERMANENT",
       "experiment": [
@@ -186571,6 +186486,47 @@
           "PLATFORM_IOS"
         ]
       }
+    },
+    {
+      "name": "IOSDiscoverChromeInfiniteFeedDataSource",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260817",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003273",
+          "featureAssociation": {
+            "enableFeature": [
+              "IOSGCR_use_infinite_feed_data_source"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260817",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003274",
+          "featureAssociation": {
+            "disableFeature": [
+              "IOSGCR_use_infinite_feed_data_source"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1793491140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "IOSDiscoverChromeOverrideProvider",
@@ -268245,6 +268201,62 @@
       "filter": {
         "minVersion": "153.*",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1792886340"
+      }
+    },
+    {
+      "name": "PervasiveSharedDictionaries",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260817",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "PervasiveSharedDictionaries"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260817",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "PervasiveSharedDictionaries"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_PervasiveSharedDictionaries",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PervasiveSharedDictionaries"
+          }
+        },
+        {
+          "name": "ForcedOff_PervasiveSharedDictionaries",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PervasiveSharedDictionaries"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.*",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -268255,7 +268267,7 @@
           "PLATFORM_MAC",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1792195140"
+        "endDate": "1792886340"
       }
     },
     {
@@ -456715,5 +456727,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260825-170634.320000-production"
+  "version": "20260826-010031.691000-production"
 }
