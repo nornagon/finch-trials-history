@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDkwMS0wMTAwMjguNzMyMDAwEgQgACgB#dyKpG5tOnXU=",
+  "serialNumber": "SMChYyMDI2MDkwMS0wOTAwNDcuNTQzMDAwEgQgACgB#2p1nOYIWT9s=",
   "study": [
     {
       "name": "DiscoverBackgroundRefreshOnBling",
@@ -1872,110 +1872,6 @@
           "PLATFORM_ANDROID_WEBVIEW"
         ],
         "endDate": "1789430340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "AIFuseboxIOSModelPicker_ROW",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_p_148_v1_non_us",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101001752",
-          "featureAssociation": {
-            "enableFeature": [
-              "ComposeboxAdditionalAdvancedTools",
-              "ComposeboxDeepSearch",
-              "ComposeboxServerSideState"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_p_148_v1_non_us",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101001751",
-          "featureAssociation": {
-            "disableFeature": [
-              "ComposeboxAdditionalAdvancedTools",
-              "ComposeboxDeepSearch",
-              "ComposeboxServerSideState"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "148.0.7778.166",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "formFactor": [
-          "PHONE"
-        ],
-        "excludeCountry": [
-          "us",
-          "at",
-          "be",
-          "bg",
-          "hr",
-          "cy",
-          "cz",
-          "dk",
-          "ee",
-          "fi",
-          "fr",
-          "de",
-          "gr",
-          "hu",
-          "ie",
-          "it",
-          "lv",
-          "lt",
-          "lu",
-          "mt",
-          "nl",
-          "pl",
-          "pt",
-          "ro",
-          "sk",
-          "si",
-          "es",
-          "se",
-          "is",
-          "li",
-          "no",
-          "bl",
-          "gf",
-          "gp",
-          "mf",
-          "mq",
-          "nc",
-          "pf",
-          "pm",
-          "re",
-          "tf",
-          "wf",
-          "yt",
-          "aw",
-          "bq",
-          "cw",
-          "sx",
-          "fo",
-          "gl",
-          "ax",
-          "tr",
-          "jp",
-          "va",
-          "gb"
-        ],
-        "endDate": "1789948740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -27403,7 +27299,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_Launched_US",
+          "name": "Enabled_Launched_Phone",
           "probabilityWeight": 100,
           "featureAssociation": {
             "enableFeature": [
@@ -27428,10 +27324,61 @@
         "formFactor": [
           "PHONE"
         ],
-        "country": [
-          "us"
+        "excludeCountry": [
+          "at",
+          "be",
+          "bg",
+          "hr",
+          "cy",
+          "cz",
+          "dk",
+          "ee",
+          "fi",
+          "fr",
+          "de",
+          "gr",
+          "hu",
+          "ie",
+          "it",
+          "lv",
+          "lt",
+          "lu",
+          "mt",
+          "nl",
+          "pl",
+          "pt",
+          "ro",
+          "sk",
+          "si",
+          "es",
+          "se",
+          "is",
+          "li",
+          "no",
+          "bl",
+          "gf",
+          "gp",
+          "mf",
+          "mq",
+          "nc",
+          "pf",
+          "pm",
+          "re",
+          "tf",
+          "wf",
+          "yt",
+          "aw",
+          "bq",
+          "cw",
+          "sx",
+          "fo",
+          "gl",
+          "ax",
+          "tr",
+          "jp",
+          "va"
         ],
-        "endDate": "1789948740"
+        "endDate": "1790639940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -46650,9 +46597,15 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003317",
+          "name": "Enabled_FastFailFalse_20260830",
+          "probabilityWeight": 32,
+          "googleWebExperimentId": "101003781",
+          "param": [
+            {
+              "name": "AsyncDnsQuicJobFastFail",
+              "value": "false"
+            }
+          ],
           "featureAssociation": {
             "enableFeature": [
               "AsyncDnsQuicJob"
@@ -46661,9 +46614,26 @@
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003316",
+          "name": "Enabled_FastFailTrue_20260830",
+          "probabilityWeight": 32,
+          "googleWebExperimentId": "101003782",
+          "param": [
+            {
+              "name": "AsyncDnsQuicJobFastFail",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AsyncDnsQuicJob"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260830",
+          "probabilityWeight": 32,
+          "googleWebExperimentId": "101003780",
           "featureAssociation": {
             "disableFeature": [
               "AsyncDnsQuicJob"
@@ -46673,7 +46643,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 0
+          "probabilityWeight": 4
         },
         {
           "name": "ForcedOn_AsyncDnsQuicJob",
@@ -46691,7 +46661,7 @@
         }
       ],
       "filter": {
-        "minVersion": "153.0.8010.0",
+        "minVersion": "154.0.8030.0",
         "channel": [
           "CANARY",
           "DEV"
@@ -46712,9 +46682,15 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled_WebView",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003323",
+          "name": "Enabled_FastFailFalse_WebView_20260830",
+          "probabilityWeight": 32,
+          "googleWebExperimentId": "101003790",
+          "param": [
+            {
+              "name": "AsyncDnsQuicJobFastFail",
+              "value": "false"
+            }
+          ],
           "featureAssociation": {
             "enableFeature": [
               "AsyncDnsQuicJob"
@@ -46722,9 +46698,25 @@
           }
         },
         {
-          "name": "Control_WebView",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003322",
+          "name": "Enabled_FastFailTrue_WebView_20260830",
+          "probabilityWeight": 32,
+          "googleWebExperimentId": "101003791",
+          "param": [
+            {
+              "name": "AsyncDnsQuicJobFastFail",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AsyncDnsQuicJob"
+            ]
+          }
+        },
+        {
+          "name": "Control_WebView_20260830",
+          "probabilityWeight": 32,
+          "googleWebExperimentId": "101003789",
           "featureAssociation": {
             "disableFeature": [
               "AsyncDnsQuicJob"
@@ -46733,7 +46725,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 0
+          "probabilityWeight": 4
         },
         {
           "name": "ForcedOn_AsyncDnsQuicJob",
@@ -46751,7 +46743,7 @@
         }
       ],
       "filter": {
-        "minVersion": "153.0.8010.0",
+        "minVersion": "154.0.8030.0",
         "channel": [
           "CANARY",
           "DEV"
@@ -61576,8 +61568,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "enabled_sticky_20260813",
-          "probabilityWeight": 1,
+          "name": "enabled_sticky_20260813_5",
+          "probabilityWeight": 5,
           "featureAssociation": {
             "enableFeature": [
               "YourSavedInfoSettingsPageAndroid"
@@ -61585,8 +61577,8 @@
           }
         },
         {
-          "name": "disabled_sticky_20260813",
-          "probabilityWeight": 1,
+          "name": "disabled_sticky_20260813_5",
+          "probabilityWeight": 5,
           "featureAssociation": {
             "disableFeature": [
               "YourSavedInfoSettingsPageAndroid"
@@ -61595,7 +61587,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 98
+          "probabilityWeight": 90
         },
         {
           "name": "_Activation",
@@ -65013,6 +65005,71 @@
         "channel": [
           "CANARY",
           "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1792367940"
+      }
+    },
+    {
+      "name": "AutofillKeydownEditableElement",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillKeydownEditableElement"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillKeydownEditableElement"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillKeydownEditableElement"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillKeydownEditableElement",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillKeydownEditableElement"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillKeydownEditableElement",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillKeydownEditableElement"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7949.0",
+        "channel": [
+          "STABLE"
         ],
         "platform": [
           "PLATFORM_WINDOWS",
@@ -76948,26 +77005,60 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260406",
-          "probabilityWeight": 50,
+          "name": "Enabled_20260901",
+          "probabilityWeight": 33,
           "featureAssociation": {
             "enableFeature": [
+              "BackForwardCacheCCNSIgnoreUnchangedCookies"
+            ],
+            "disableFeature": [
+              "BackForwardCacheCCNSAllowlist"
+            ]
+          }
+        },
+        {
+          "name": "IgnoreUnchangedCookiesAndAllowlistJSNetworkRequest_20260901",
+          "probabilityWeight": 33,
+          "param": [
+            {
+              "name": "BackForwardCacheCCNSAllowedDomains",
+              "value": "www.google-analytics.com,analytics.google.com,www.google.com,ad.doubleclick.net,googleads.g.doubleclick.net,fundingchoicesmessages.google.com"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "BackForwardCacheCCNSAllowlist",
               "BackForwardCacheCCNSIgnoreUnchangedCookies"
             ]
           }
         },
         {
-          "name": "Control_20260406",
-          "probabilityWeight": 50,
+          "name": "Control_20260901",
+          "probabilityWeight": 33,
           "featureAssociation": {
             "disableFeature": [
+              "BackForwardCacheCCNSAllowlist",
               "BackForwardCacheCCNSIgnoreUnchangedCookies"
             ]
           }
         },
         {
           "name": "Default",
-          "probabilityWeight": 0
+          "probabilityWeight": 1
+        },
+        {
+          "name": "ForcedOn_BackForwardCacheCCNSAllowlist",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "BackForwardCacheCCNSAllowlist"
+          }
+        },
+        {
+          "name": "ForcedOff_BackForwardCacheCCNSAllowlist",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "BackForwardCacheCCNSAllowlist"
+          }
         },
         {
           "name": "ForcedOn_BackForwardCacheCCNSIgnoreUnchangedCookies",
@@ -76985,7 +77076,7 @@
         }
       ],
       "filter": {
-        "minVersion": "148.0.7766.0",
+        "minVersion": "154.0.8028.0",
         "channel": [
           "CANARY",
           "DEV"
@@ -77309,188 +77400,6 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ]
-      }
-    },
-    {
-      "name": "BackForwardCacheJSNetworkRequestCCNS",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Preperiod_Enabled_20260824",
-          "probabilityWeight": 50
-        },
-        {
-          "name": "Preperiod_Control_20260824",
-          "probabilityWeight": 50
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "BackForwardCacheCCNSAllowlist"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_BackForwardCacheCCNSAllowlist",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "BackForwardCacheCCNSAllowlist"
-          }
-        },
-        {
-          "name": "ForcedOff_BackForwardCacheCCNSAllowlist",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "BackForwardCacheCCNSAllowlist"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8022.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1792886340"
-      }
-    },
-    {
-      "name": "BackForwardCacheJSNetworkRequestCCNS",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260824",
-          "probabilityWeight": 50,
-          "param": [
-            {
-              "name": "BackForwardCacheCCNSAllowedDomains",
-              "value": "www.google-analytics.com,analytics.google.com,www.google.com,ad.doubleclick.net,googleads.g.doubleclick.net,fundingchoicesmessages.google.com"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "BackForwardCacheCCNSAllowlist"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260824",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "BackForwardCacheCCNSAllowlist"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "BackForwardCacheCCNSAllowlist"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_BackForwardCacheCCNSAllowlist",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "BackForwardCacheCCNSAllowlist"
-          }
-        },
-        {
-          "name": "ForcedOff_BackForwardCacheCCNSAllowlist",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "BackForwardCacheCCNSAllowlist"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8022.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1792886340"
-      }
-    },
-    {
-      "name": "BackForwardCacheJSNetworkRequestCCNS",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Preperiod_Enabled_20260824",
-          "probabilityWeight": 1
-        },
-        {
-          "name": "Preperiod_Control_20260824",
-          "probabilityWeight": 1
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 98
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "BackForwardCacheCCNSAllowlist"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_BackForwardCacheCCNSAllowlist",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "BackForwardCacheCCNSAllowlist"
-          }
-        },
-        {
-          "name": "ForcedOff_BackForwardCacheCCNSAllowlist",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "BackForwardCacheCCNSAllowlist"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8022.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1792886340"
       }
     },
     {
@@ -141620,7 +141529,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260825",
+          "name": "Enabled_20260901",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -141629,7 +141538,7 @@
           }
         },
         {
-          "name": "Control_20260825",
+          "name": "Control_20260901",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -141675,7 +141584,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260825",
+          "name": "Enabled_20260901",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -141684,7 +141593,7 @@
           }
         },
         {
-          "name": "Control_20260825",
+          "name": "Control_20260901",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -141731,8 +141640,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260825",
-          "probabilityWeight": 10,
+          "name": "Enabled_20260901",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
               "EnableCancelUploadOnContentAnalysis"
@@ -141740,8 +141649,8 @@
           }
         },
         {
-          "name": "Control_20260825",
-          "probabilityWeight": 10,
+          "name": "Control_20260901",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
               "EnableCancelUploadOnContentAnalysis"
@@ -141750,7 +141659,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 80
+          "probabilityWeight": 0
         },
         {
           "name": "ForcedOn_EnableCancelUploadOnContentAnalysis",
@@ -175897,13 +175806,65 @@
       "filter": {
         "minVersion": "153.0.8005.1",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1793491140"
+      }
+    },
+    {
+      "name": "HandleMdmErrorsForDasherAccounts",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "HandleMdmErrorsForDasherAccounts"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "HandleMdmErrorsForDasherAccounts"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_HandleMdmErrorsForDasherAccounts",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "HandleMdmErrorsForDasherAccounts"
+          }
+        },
+        {
+          "name": "ForcedOff_HandleMdmErrorsForDasherAccounts",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "HandleMdmErrorsForDasherAccounts"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.8005.1",
+        "channel": [
           "CANARY",
           "DEV"
         ],
         "platform": [
           "PLATFORM_IOS"
         ],
-        "endDate": "1792799940"
+        "endDate": "1793491140"
       }
     },
     {
@@ -179061,70 +179022,6 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "VisualRich_20260825",
-          "probabilityWeight": 1500,
-          "param": [
-            {
-              "name": "variant",
-              "value": "visual-rich"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "GeminiFREExperiment",
-              "GeminiFRERefactor"
-            ]
-          }
-        },
-        {
-          "name": "LightweightConvenience_20260825",
-          "probabilityWeight": 1500,
-          "param": [
-            {
-              "name": "variant",
-              "value": "lightweight-convenience"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "GeminiFREExperiment",
-              "GeminiFRERefactor"
-            ]
-          }
-        },
-        {
-          "name": "LightweightPageSharing_20260825",
-          "probabilityWeight": 1500,
-          "param": [
-            {
-              "name": "variant",
-              "value": "lightweight-page-sharing"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "GeminiFREExperiment",
-              "GeminiFRERefactor"
-            ]
-          }
-        },
-        {
-          "name": "LightweightDiverse_20260825",
-          "probabilityWeight": 1500,
-          "param": [
-            {
-              "name": "variant",
-              "value": "lightweight-diverse"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "GeminiFREExperiment",
-              "GeminiFRERefactor"
-            ]
-          }
-        },
-        {
           "name": "Control_20260825",
           "probabilityWeight": 1500,
           "featureAssociation": {
@@ -179134,62 +179031,6 @@
             ]
           }
         },
-        {
-          "name": "Default",
-          "probabilityWeight": 500
-        },
-        {
-          "name": "ForcedOn_GeminiFREExperiment",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "GeminiFREExperiment"
-          }
-        },
-        {
-          "name": "ForcedOff_GeminiFREExperiment",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "GeminiFREExperiment"
-          }
-        },
-        {
-          "name": "ForcedOn_GeminiFRERefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "GeminiFRERefactor"
-          }
-        },
-        {
-          "name": "ForcedOff_GeminiFRERefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "GeminiFRERefactor"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.*",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "locale": [
-          "en",
-          "en-US",
-          "en-CA",
-          "en-GB",
-          "en-IN",
-          "en-AU"
-        ],
-        "endDate": "1794787140"
-      }
-    },
-    {
-      "name": "HeliosFREExperiment",
-      "consistency": "PERMANENT",
-      "experiment": [
         {
           "name": "VisualRich_20260825",
           "probabilityWeight": 1500,
@@ -179249,16 +179090,6 @@
           ],
           "featureAssociation": {
             "enableFeature": [
-              "GeminiFREExperiment",
-              "GeminiFRERefactor"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260825",
-          "probabilityWeight": 1500,
-          "featureAssociation": {
-            "disableFeature": [
               "GeminiFREExperiment",
               "GeminiFRERefactor"
             ]
@@ -179301,7 +179132,138 @@
         "minVersion": "153.*",
         "channel": [
           "CANARY",
-          "DEV"
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "locale": [
+          "en",
+          "en-US",
+          "en-CA",
+          "en-GB",
+          "en-IN",
+          "en-AU"
+        ],
+        "endDate": "1794787140"
+      }
+    },
+    {
+      "name": "HeliosFREExperiment",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_1Pct",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "GeminiFREExperiment",
+              "GeminiFRERefactor"
+            ]
+          }
+        },
+        {
+          "name": "VisualRich_1Pct",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "variant",
+              "value": "visual-rich"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "GeminiFREExperiment",
+              "GeminiFRERefactor"
+            ]
+          }
+        },
+        {
+          "name": "LightweightConvenience_1Pct",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "variant",
+              "value": "lightweight-convenience"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "GeminiFREExperiment",
+              "GeminiFRERefactor"
+            ]
+          }
+        },
+        {
+          "name": "LightweightPageSharing_1Pct",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "variant",
+              "value": "lightweight-page-sharing"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "GeminiFREExperiment",
+              "GeminiFRERefactor"
+            ]
+          }
+        },
+        {
+          "name": "LightweightDiverse_1Pct",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "variant",
+              "value": "lightweight-diverse"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "GeminiFREExperiment",
+              "GeminiFRERefactor"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 95
+        },
+        {
+          "name": "ForcedOn_GeminiFREExperiment",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GeminiFREExperiment"
+          }
+        },
+        {
+          "name": "ForcedOff_GeminiFREExperiment",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GeminiFREExperiment"
+          }
+        },
+        {
+          "name": "ForcedOn_GeminiFRERefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GeminiFRERefactor"
+          }
+        },
+        {
+          "name": "ForcedOff_GeminiFRERefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GeminiFRERefactor"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.*",
+        "channel": [
+          "STABLE"
         ],
         "platform": [
           "PLATFORM_IOS"
@@ -295574,6 +295536,70 @@
       }
     },
     {
+      "name": "SPCLocaleValidation",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "SPCLocaleValidation"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "SPCLocaleValidation"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "SPCLocaleValidation"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SPCLocaleValidation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SPCLocaleValidation"
+          }
+        },
+        {
+          "name": "ForcedOff_SPCLocaleValidation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SPCLocaleValidation"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8029.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_MAC",
+          "PLATFORM_WINDOWS"
+        ],
+        "endDate": "1795046340"
+      }
+    },
+    {
       "name": "SSOWithWKWebView",
       "consistency": "PERMANENT",
       "experiment": [
@@ -331786,7 +331812,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1792454340",
+        "endDate": "1793491140",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -331842,7 +331868,62 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1792454340",
+        "endDate": "1793491140",
+        "excludeFormFactor": [
+          "DESKTOP"
+        ]
+      }
+    },
+    {
+      "name": "TabAndroidGracefulShutdown",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260818",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "TabAndroidGracefulShutdown"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260818",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "TabAndroidGracefulShutdown"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "ForcedOn_TabAndroidGracefulShutdown",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "TabAndroidGracefulShutdown"
+          }
+        },
+        {
+          "name": "ForcedOff_TabAndroidGracefulShutdown",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "TabAndroidGracefulShutdown"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.42",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1793491140",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -392026,7 +392107,7 @@
             },
             {
               "name": "PerformanceAPI.LongAnimationFrame",
-              "value": "3"
+              "value": "4"
             },
             {
               "name": "PerformanceAPI.Memory.Legacy",
@@ -392562,7 +392643,7 @@
             },
             {
               "name": "PerformanceAPI.LongAnimationFrame",
-              "value": "3"
+              "value": "4"
             },
             {
               "name": "PerformanceAPI.Memory.Legacy",
@@ -458350,5 +458431,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260901-010028.732000-production"
+  "version": "20260901-090047.543000-production"
 }
