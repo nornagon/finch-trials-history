@@ -1,2279 +1,6 @@
 {
-  "serialNumber": "SMChYyMDI2MDkwMy0wMTAwMjcuNTEyMDAwEgQgACgB#L2OgK1Xuyso=",
+  "serialNumber": "SMChYyMDI2MDkwMy0wOTAwNDIuMDc4MDAwEgQgACgB#TyWQXP2HqkA=",
   "study": [
-    {
-      "name": "DiscoverBackgroundRefreshOnBling",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260817",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101003235",
-          "featureAssociation": {
-            "disableFeature": [
-              "EnableAppBackgroundRefresh",
-              "EnableDiscoverBackgroundRefresh",
-              "EnableFeedBackgroundRefresh",
-              "IOSGCR_dsc_enable_background_app_refresh",
-              "IOSGCR_enable_app_close_refresh",
-              "IOSGCR_enable_background_refresh_for_discover_feed_on_bling",
-              "IOSGCR_enable_refresh_schedule_capability",
-              "MigrateIOSKeychainAccessibility"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "BlingBgRefreshOnly_20260817",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101003236",
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableAppBackgroundRefresh",
-              "EnableFeedBackgroundRefresh",
-              "MigrateIOSKeychainAccessibility"
-            ],
-            "disableFeature": [
-              "EnableDiscoverBackgroundRefresh",
-              "IOSGCR_dsc_enable_background_app_refresh",
-              "IOSGCR_enable_app_close_refresh",
-              "IOSGCR_enable_background_refresh_for_discover_feed_on_bling",
-              "IOSGCR_enable_refresh_schedule_capability"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "DiscoverBgRefreshDefault_20260817",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101003237",
-          "param": [
-            {
-              "name": "app_close_refresh_delay",
-              "value": "600"
-            },
-            {
-              "name": "dsc_background_app_refresh_max_age",
-              "value": "3600"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableAppBackgroundRefresh",
-              "EnableDiscoverBackgroundRefresh",
-              "EnableFeedBackgroundRefresh",
-              "IOSGCR_app_close_refresh_delay",
-              "IOSGCR_dsc_background_app_refresh_max_age",
-              "IOSGCR_dsc_enable_background_app_refresh",
-              "IOSGCR_enable_app_close_refresh",
-              "IOSGCR_enable_background_refresh_for_discover_feed_on_bling",
-              "IOSGCR_enable_refresh_schedule_capability",
-              "MigrateIOSKeychainAccessibility"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "DiscoverBgRefreshRelaxed_20260817",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101003238",
-          "param": [
-            {
-              "name": "DiscoverFeedBackgroundRefreshMinBuffer",
-              "value": "30m"
-            },
-            {
-              "name": "app_close_refresh_delay",
-              "value": "1800"
-            },
-            {
-              "name": "dsc_background_app_refresh_max_age",
-              "value": "7200"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableAppBackgroundRefresh",
-              "EnableDiscoverBackgroundRefresh",
-              "EnableFeedBackgroundRefresh",
-              "IOSGCR_app_close_refresh_delay",
-              "IOSGCR_dsc_background_app_refresh_max_age",
-              "IOSGCR_dsc_enable_background_app_refresh",
-              "IOSGCR_enable_app_close_refresh",
-              "IOSGCR_enable_background_refresh_for_discover_feed_on_bling",
-              "IOSGCR_enable_refresh_schedule_capability",
-              "MigrateIOSKeychainAccessibility"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "DiscoverBgRefreshAggressive_20260817",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101003239",
-          "param": [
-            {
-              "name": "DiscoverFeedBackgroundRefreshMinBuffer",
-              "value": "10m"
-            },
-            {
-              "name": "DiscoverFeedBackgroundRefreshNoDateInterval",
-              "value": "6h"
-            },
-            {
-              "name": "DiscoverFeedBackgroundRefreshNoServiceInterval",
-              "value": "6h"
-            },
-            {
-              "name": "app_close_refresh_delay",
-              "value": "300"
-            },
-            {
-              "name": "dsc_background_app_refresh_max_age",
-              "value": "300"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableAppBackgroundRefresh",
-              "EnableDiscoverBackgroundRefresh",
-              "EnableFeedBackgroundRefresh",
-              "IOSGCR_app_close_refresh_delay",
-              "IOSGCR_dsc_background_app_refresh_max_age",
-              "IOSGCR_dsc_enable_background_app_refresh",
-              "IOSGCR_enable_app_close_refresh",
-              "IOSGCR_enable_background_refresh_for_discover_feed_on_bling",
-              "IOSGCR_enable_refresh_schedule_capability",
-              "MigrateIOSKeychainAccessibility"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "151.*",
-        "maxVersion": "151.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1790812740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "WebRTC-MediaTaskQueuePriorities",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Enabled_20260803",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "AomVpxUsePresentationThreadType",
-              "UseHighPriorityThreadGroup",
-              "WebRTCBoostMediaIOThreads",
-              "WebRtcUseMediaThreadTypes"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260803",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "AomVpxUsePresentationThreadType",
-              "UseHighPriorityThreadGroup",
-              "WebRTCBoostMediaIOThreads",
-              "WebRtcUseMediaThreadTypes"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.34",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_IOS",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1790812740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "WebRTC-MediaTaskQueuePriorities",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260901",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003871",
-          "featureAssociation": {
-            "enableFeature": [
-              "AomVpxUsePresentationThreadType",
-              "UseHighPriorityThreadGroup",
-              "WebRTCBoostMediaIOThreads",
-              "WebRtcUseMediaThreadTypes"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260901",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003872",
-          "featureAssociation": {
-            "disableFeature": [
-              "AomVpxUsePresentationThreadType",
-              "UseHighPriorityThreadGroup",
-              "WebRTCBoostMediaIOThreads",
-              "WebRtcUseMediaThreadTypes"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.34",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1790812740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "WebRTC-MediaTaskQueuePriorities",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260901",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003873",
-          "featureAssociation": {
-            "enableFeature": [
-              "AomVpxUsePresentationThreadType",
-              "UseHighPriorityThreadGroup",
-              "WebRTCBoostMediaIOThreads",
-              "WebRtcUseMediaThreadTypes"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260901",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003874",
-          "featureAssociation": {
-            "disableFeature": [
-              "AomVpxUsePresentationThreadType",
-              "UseHighPriorityThreadGroup",
-              "WebRTCBoostMediaIOThreads",
-              "WebRtcUseMediaThreadTypes"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.34",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1790812740"
-      },
-      "randomizationSeed": 1092035633,
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "WebRTC-MediaTaskQueuePriorities",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260825",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "enableFeature": [
-              "AomVpxUsePresentationThreadType",
-              "UseHighPriorityThreadGroup",
-              "WebRTCBoostMediaIOThreads",
-              "WebRtcUseMediaThreadTypes"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260825",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "disableFeature": [
-              "AomVpxUsePresentationThreadType",
-              "UseHighPriorityThreadGroup",
-              "WebRTCBoostMediaIOThreads",
-              "WebRtcUseMediaThreadTypes"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.34",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1790812740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "AIFuseboxModelPickerFakeboxEvolutionTablet",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_p_v1",
-          "probabilityWeight": 25,
-          "googleWebExperimentId": "101002401",
-          "featureAssociation": {
-            "enableFeature": [
-              "AIOmniboxAskPlaceholder",
-              "ComposeboxAdditionalAdvancedTools",
-              "ComposeboxDeepSearch",
-              "ComposeboxPlusButtonBottomSheet",
-              "ComposeboxServerSideState",
-              "PlusButtonInFakebox"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "EnabledWithoutTextChange_p_v1",
-          "probabilityWeight": 25,
-          "googleWebExperimentId": "101002402",
-          "featureAssociation": {
-            "enableFeature": [
-              "ComposeboxAdditionalAdvancedTools",
-              "ComposeboxDeepSearch",
-              "ComposeboxPlusButtonBottomSheet",
-              "ComposeboxServerSideState",
-              "PlusButtonInFakebox"
-            ],
-            "disableFeature": [
-              "AIOmniboxAskPlaceholder"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "EnabledBottomSheetOnly_p_v1",
-          "probabilityWeight": 25,
-          "googleWebExperimentId": "101002403",
-          "featureAssociation": {
-            "enableFeature": [
-              "ComposeboxAdditionalAdvancedTools",
-              "ComposeboxDeepSearch",
-              "ComposeboxPlusButtonBottomSheet",
-              "ComposeboxServerSideState"
-            ],
-            "disableFeature": [
-              "AIOmniboxAskPlaceholder",
-              "PlusButtonInFakebox"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_p_v1",
-          "probabilityWeight": 25,
-          "googleWebExperimentId": "101002400",
-          "featureAssociation": {
-            "disableFeature": [
-              "AIOmniboxAskPlaceholder",
-              "ComposeboxAdditionalAdvancedTools",
-              "ComposeboxDeepSearch",
-              "ComposeboxPlusButtonBottomSheet",
-              "ComposeboxServerSideState",
-              "PlusButtonInFakebox"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_AIOmniboxAskPlaceholder",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AIOmniboxAskPlaceholder"
-          }
-        },
-        {
-          "name": "ForcedOff_AIOmniboxAskPlaceholder",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AIOmniboxAskPlaceholder"
-          }
-        },
-        {
-          "name": "ForcedOn_ComposeboxAdditionalAdvancedTools",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ComposeboxAdditionalAdvancedTools"
-          }
-        },
-        {
-          "name": "ForcedOff_ComposeboxAdditionalAdvancedTools",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ComposeboxAdditionalAdvancedTools"
-          }
-        },
-        {
-          "name": "ForcedOn_ComposeboxDeepSearch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ComposeboxDeepSearch"
-          }
-        },
-        {
-          "name": "ForcedOff_ComposeboxDeepSearch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ComposeboxDeepSearch"
-          }
-        },
-        {
-          "name": "ForcedOn_ComposeboxPlusButtonBottomSheet",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ComposeboxPlusButtonBottomSheet"
-          }
-        },
-        {
-          "name": "ForcedOff_ComposeboxPlusButtonBottomSheet",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ComposeboxPlusButtonBottomSheet"
-          }
-        },
-        {
-          "name": "ForcedOn_ComposeboxServerSideState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ComposeboxServerSideState"
-          }
-        },
-        {
-          "name": "ForcedOff_ComposeboxServerSideState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ComposeboxServerSideState"
-          }
-        },
-        {
-          "name": "ForcedOn_PlusButtonInFakebox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PlusButtonInFakebox"
-          }
-        },
-        {
-          "name": "ForcedOff_PlusButtonInFakebox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PlusButtonInFakebox"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.9",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "formFactor": [
-          "TABLET"
-        ],
-        "excludeCountry": [
-          "at",
-          "be",
-          "bg",
-          "hr",
-          "cy",
-          "cz",
-          "dk",
-          "ee",
-          "fi",
-          "fr",
-          "de",
-          "gr",
-          "hu",
-          "ie",
-          "it",
-          "lv",
-          "lt",
-          "lu",
-          "mt",
-          "nl",
-          "pl",
-          "pt",
-          "ro",
-          "sk",
-          "si",
-          "es",
-          "se",
-          "is",
-          "li",
-          "no",
-          "bl",
-          "gf",
-          "gp",
-          "mf",
-          "mq",
-          "nc",
-          "pf",
-          "pm",
-          "re",
-          "tf",
-          "wf",
-          "yt",
-          "aw",
-          "bq",
-          "cw",
-          "sx",
-          "fo",
-          "gl",
-          "ax",
-          "tr",
-          "jp",
-          "va",
-          "gb"
-        ],
-        "endDate": "1789948740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IOSDefaultBrowserPromoPropensityStudy",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260821",
-          "probabilityWeight": 50,
-          "param": [
-            {
-              "name": "cooldown-days",
-              "value": "14"
-            }
-          ],
-          "googleWebTriggerExperimentId": "101003506",
-          "featureAssociation": {
-            "enableFeature": [
-              "DefaultBrowserPromoPropensityModel"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260821",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003504",
-          "featureAssociation": {
-            "disableFeature": [
-              "DefaultBrowserPromoPropensityModel"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_DefaultBrowserPromoPropensityModel",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DefaultBrowserPromoPropensityModel"
-          }
-        },
-        {
-          "name": "ForcedOff_DefaultBrowserPromoPropensityModel",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DefaultBrowserPromoPropensityModel"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7258.25",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1793750340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "AIFuseboxFakeboxEvolution",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_p_v5",
-          "probabilityWeight": 15,
-          "googleWebExperimentId": "101002996",
-          "featureAssociation": {
-            "enableFeature": [
-              "AIOmniboxAskPlaceholder",
-              "ComposeboxPlusButtonBottomSheet",
-              "PlusButtonInFakebox"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "EnabledWithoutTextChange_p_v5",
-          "probabilityWeight": 15,
-          "googleWebExperimentId": "101002997",
-          "featureAssociation": {
-            "enableFeature": [
-              "ComposeboxPlusButtonBottomSheet",
-              "PlusButtonInFakebox"
-            ],
-            "disableFeature": [
-              "AIOmniboxAskPlaceholder"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "EnabledBottomSheetOnly_p_v5",
-          "probabilityWeight": 15,
-          "googleWebExperimentId": "101002998",
-          "featureAssociation": {
-            "enableFeature": [
-              "ComposeboxPlusButtonBottomSheet"
-            ],
-            "disableFeature": [
-              "AIOmniboxAskPlaceholder",
-              "PlusButtonInFakebox"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "EnabledPlusButtonOnly_p_v5",
-          "probabilityWeight": 15,
-          "googleWebExperimentId": "101002999",
-          "featureAssociation": {
-            "enableFeature": [
-              "PlusButtonInFakebox"
-            ],
-            "disableFeature": [
-              "AIOmniboxAskPlaceholder",
-              "ComposeboxPlusButtonBottomSheet"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_p_v5",
-          "probabilityWeight": 15,
-          "googleWebExperimentId": "101002995",
-          "featureAssociation": {
-            "disableFeature": [
-              "AIOmniboxAskPlaceholder",
-              "ComposeboxPlusButtonBottomSheet",
-              "PlusButtonInFakebox"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 25
-        },
-        {
-          "name": "ForcedOn_AIOmniboxAskPlaceholder",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AIOmniboxAskPlaceholder"
-          }
-        },
-        {
-          "name": "ForcedOff_AIOmniboxAskPlaceholder",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AIOmniboxAskPlaceholder"
-          }
-        },
-        {
-          "name": "ForcedOn_ComposeboxPlusButtonBottomSheet",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ComposeboxPlusButtonBottomSheet"
-          }
-        },
-        {
-          "name": "ForcedOff_ComposeboxPlusButtonBottomSheet",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ComposeboxPlusButtonBottomSheet"
-          }
-        },
-        {
-          "name": "ForcedOn_PlusButtonInFakebox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PlusButtonInFakebox"
-          }
-        },
-        {
-          "name": "ForcedOff_PlusButtonInFakebox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PlusButtonInFakebox"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.9",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "formFactor": [
-          "PHONE"
-        ],
-        "endDate": "1788652740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "MPAViewTransitionsOptimizationDisabled",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003156",
-          "featureAssociation": {
-            "enableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003155",
-          "featureAssociation": {
-            "disableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_SendEarlyFinalBeginMainFrame",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "SendEarlyFinalBeginMainFrame"
-          }
-        },
-        {
-          "name": "ForcedOff_SendEarlyFinalBeginMainFrame",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "SendEarlyFinalBeginMainFrame"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1791244740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "MPAViewTransitionsOptimizationDisabled",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003156",
-          "featureAssociation": {
-            "enableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003155",
-          "featureAssociation": {
-            "disableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_SendEarlyFinalBeginMainFrame",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "SendEarlyFinalBeginMainFrame"
-          }
-        },
-        {
-          "name": "ForcedOff_SendEarlyFinalBeginMainFrame",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "SendEarlyFinalBeginMainFrame"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1791244740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "MPAViewTransitionsOptimizationDisabled",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003867",
-          "featureAssociation": {
-            "enableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003866",
-          "featureAssociation": {
-            "disableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_SendEarlyFinalBeginMainFrame",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "SendEarlyFinalBeginMainFrame"
-          }
-        },
-        {
-          "name": "ForcedOff_SendEarlyFinalBeginMainFrame",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "SendEarlyFinalBeginMainFrame"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1791244740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "MPAViewTransitionsOptimizationDisabled",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003867",
-          "featureAssociation": {
-            "enableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003866",
-          "featureAssociation": {
-            "disableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "SendEarlyFinalBeginMainFrame"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_SendEarlyFinalBeginMainFrame",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "SendEarlyFinalBeginMainFrame"
-          }
-        },
-        {
-          "name": "ForcedOff_SendEarlyFinalBeginMainFrame",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "SendEarlyFinalBeginMainFrame"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1791244740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DiscoverCUI3AppFlowLoggingBling",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260818",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003224",
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_discover_wait_indicator_app_flow",
-              "IOSGCR_enable_next_page_app_flow"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260818",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003223",
-          "featureAssociation": {
-            "disableFeature": [
-              "IOSGCR_discover_wait_indicator_app_flow",
-              "IOSGCR_enable_next_page_app_flow"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7861.1",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1790812740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "OmniboxShortSuggestPath",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260831_Beta",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "OmniboxSuggestPathClient",
-              "value": "chrome-omni,chrome,chrome-ntp-action,chrome-cobrowse-compose,chrome-multimodal,chrome-contextual,chrome-android-search-resumption-module,chrome-compose,chrome-mobile-aim"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "OmniboxUseShortSuggestPathV1"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.9",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1790639940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "OmniboxShortSuggestPath",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260831_CanaryDev",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "OmniboxSuggestPathClient",
-              "value": "chrome-omni,chrome,chrome-ntp-action,chrome-cobrowse-compose,chrome-multimodal,chrome-contextual,chrome-android-search-resumption-module,chrome-compose,chrome-mobile-aim"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "OmniboxUseShortSuggestPathV1"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.9",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1790639940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "OmniboxShortSuggestPath",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260831_Stable_Desktop",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003858",
-          "featureAssociation": {
-            "disableFeature": [
-              "OmniboxUseShortSuggestPathV1"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_20260831_Stable_Desktop",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003859",
-          "param": [
-            {
-              "name": "OmniboxSuggestPathClient",
-              "value": "chrome-omni,chrome,chrome-ntp-action,chrome-cobrowse-compose,chrome-multimodal,chrome-contextual,chrome-android-search-resumption-module,chrome-compose,chrome-mobile-aim"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "OmniboxUseShortSuggestPathV1"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_OmniboxUseShortSuggestPathV1",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OmniboxUseShortSuggestPathV1"
-          }
-        },
-        {
-          "name": "ForcedOff_OmniboxUseShortSuggestPathV1",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OmniboxUseShortSuggestPathV1"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.9",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1790639940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "OmniboxShortSuggestPath",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260831_Stable_Desktop",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003858",
-          "featureAssociation": {
-            "disableFeature": [
-              "OmniboxUseShortSuggestPathV1"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_20260831_Stable_Desktop",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003859",
-          "param": [
-            {
-              "name": "OmniboxSuggestPathClient",
-              "value": "chrome-omni,chrome,chrome-ntp-action,chrome-cobrowse-compose,chrome-multimodal,chrome-contextual,chrome-android-search-resumption-module,chrome-compose,chrome-mobile-aim"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "OmniboxUseShortSuggestPathV1"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_OmniboxUseShortSuggestPathV1",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OmniboxUseShortSuggestPathV1"
-          }
-        },
-        {
-          "name": "ForcedOff_OmniboxUseShortSuggestPathV1",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OmniboxUseShortSuggestPathV1"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.9",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1790639940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ChromeNextIaHiddenInFullscreenWithLabels",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260819",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          }
-        },
-        {
-          "name": "HiddenInFullscreenWithLabels_20260819",
-          "probabilityWeight": 10,
-          "param": [
-            {
-              "name": "chrome_next_ia_lens_icon_visible",
-              "value": "false"
-            },
-            {
-              "name": "chrome_next_ia_share_icon_visible",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AppBarHideInFullscreen",
-              "ChromeNextIa",
-              "FullscreenRefactoring",
-              "OverflowMenuNTPRefactor",
-              "UseSceneViewController"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AppBarHideInFullscreen",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AppBarHideInFullscreen"
-          }
-        },
-        {
-          "name": "ForcedOff_AppBarHideInFullscreen",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AppBarHideInFullscreen"
-          }
-        },
-        {
-          "name": "ForcedOn_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOff_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOn_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOff_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOn_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOff_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOn_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "UseSceneViewController"
-          }
-        },
-        {
-          "name": "ForcedOff_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "UseSceneViewController"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.43",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1792108740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ChromeNextIaHiddenInFullscreenWithLabels",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260819",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          }
-        },
-        {
-          "name": "HiddenInFullscreenWithLabels_20260819",
-          "probabilityWeight": 10,
-          "param": [
-            {
-              "name": "chrome_next_ia_lens_icon_visible",
-              "value": "false"
-            },
-            {
-              "name": "chrome_next_ia_share_icon_visible",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AppBarHideInFullscreen",
-              "ChromeNextIa",
-              "FullscreenRefactoring",
-              "OverflowMenuNTPRefactor",
-              "UseSceneViewController"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AppBarHideInFullscreen",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AppBarHideInFullscreen"
-          }
-        },
-        {
-          "name": "ForcedOff_AppBarHideInFullscreen",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AppBarHideInFullscreen"
-          }
-        },
-        {
-          "name": "ForcedOn_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOff_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOn_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOff_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOn_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOff_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOn_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "UseSceneViewController"
-          }
-        },
-        {
-          "name": "ForcedOff_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "UseSceneViewController"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.43",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1792108740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ChromeNextIaNextOldDesign",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260819",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          }
-        },
-        {
-          "name": "NextOldDesign_20260819",
-          "probabilityWeight": 10,
-          "param": [
-            {
-              "name": "chrome_next_ia_lens_icon_visible",
-              "value": "false"
-            },
-            {
-              "name": "chrome_next_ia_share_icon_visible",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "ChromeNextIa",
-              "FullscreenRefactoring",
-              "NextOldDesign",
-              "OverflowMenuNTPRefactor",
-              "UseSceneViewController"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOff_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOn_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOff_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOn_NextOldDesign",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NextOldDesign"
-          }
-        },
-        {
-          "name": "ForcedOff_NextOldDesign",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NextOldDesign"
-          }
-        },
-        {
-          "name": "ForcedOn_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOff_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOn_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "UseSceneViewController"
-          }
-        },
-        {
-          "name": "ForcedOff_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "UseSceneViewController"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.105",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1792108740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ChromeNextIaNextOldDesign",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260819",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          }
-        },
-        {
-          "name": "NextOldDesign_20260819",
-          "probabilityWeight": 10,
-          "param": [
-            {
-              "name": "chrome_next_ia_lens_icon_visible",
-              "value": "false"
-            },
-            {
-              "name": "chrome_next_ia_share_icon_visible",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "ChromeNextIa",
-              "FullscreenRefactoring",
-              "NextOldDesign",
-              "OverflowMenuNTPRefactor",
-              "UseSceneViewController"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOff_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOn_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOff_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOn_NextOldDesign",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NextOldDesign"
-          }
-        },
-        {
-          "name": "ForcedOff_NextOldDesign",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NextOldDesign"
-          }
-        },
-        {
-          "name": "ForcedOn_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOff_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOn_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "UseSceneViewController"
-          }
-        },
-        {
-          "name": "ForcedOff_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "UseSceneViewController"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.105",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1792108740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ChromeNextIa",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002485",
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Neutral1_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002486",
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Neutral2_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002488",
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Neutral3_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002489",
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Neutral4_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002490",
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "BottomOmnibox_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002491",
-          "param": [
-            {
-              "name": "chrome_next_ia_lens_icon_visible",
-              "value": "false"
-            },
-            {
-              "name": "chrome_next_ia_share_icon_visible",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "ChromeNextIa",
-              "DefaultBottomOmniboxOnIOS",
-              "FullscreenRefactoring",
-              "OverflowMenuNTPRefactor",
-              "UseSceneViewController"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOff_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOn_DefaultBottomOmniboxOnIOS",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DefaultBottomOmniboxOnIOS"
-          }
-        },
-        {
-          "name": "ForcedOff_DefaultBottomOmniboxOnIOS",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DefaultBottomOmniboxOnIOS"
-          }
-        },
-        {
-          "name": "ForcedOn_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOff_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOn_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOff_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOn_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "UseSceneViewController"
-          }
-        },
-        {
-          "name": "ForcedOff_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "UseSceneViewController"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.43",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1792108740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ChromeNextIa",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002477",
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Neutral1_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002478",
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Neutral2_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002480",
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Neutral3_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002481",
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Neutral4_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002482",
-          "featureAssociation": {
-            "enableFeature": [
-              "UseSceneViewController"
-            ],
-            "disableFeature": [
-              "ChromeNextIa"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "BottomOmnibox_20260819",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002483",
-          "param": [
-            {
-              "name": "chrome_next_ia_lens_icon_visible",
-              "value": "false"
-            },
-            {
-              "name": "chrome_next_ia_share_icon_visible",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "ChromeNextIa",
-              "DefaultBottomOmniboxOnIOS",
-              "FullscreenRefactoring",
-              "OverflowMenuNTPRefactor",
-              "UseSceneViewController"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOff_ChromeNextIa",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ChromeNextIa"
-          }
-        },
-        {
-          "name": "ForcedOn_DefaultBottomOmniboxOnIOS",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DefaultBottomOmniboxOnIOS"
-          }
-        },
-        {
-          "name": "ForcedOff_DefaultBottomOmniboxOnIOS",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DefaultBottomOmniboxOnIOS"
-          }
-        },
-        {
-          "name": "ForcedOn_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOff_FullscreenRefactoring",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "FullscreenRefactoring"
-          }
-        },
-        {
-          "name": "ForcedOn_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOff_OverflowMenuNTPRefactor",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OverflowMenuNTPRefactor"
-          }
-        },
-        {
-          "name": "ForcedOn_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "UseSceneViewController"
-          }
-        },
-        {
-          "name": "ForcedOff_UseSceneViewController",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "UseSceneViewController"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.43",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1792108740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DiscoverBlingCacheAgeAndInteractivityInvalidationStudy",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260820",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003695",
-          "featureAssociation": {
-            "disableFeature": [
-              "IOSGCR_chrome_maximum_data_cache_age",
-              "IOSGCR_dsc_cache_invalidation_strategy",
-              "IOSGCR_minimum_interactivity_invalidation_threshold",
-              "IOSGCR_scroll_index_interactivity_threshold",
-              "IOSGCR_views_interactivity_threshold"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Balanced_24h_T3_20260820",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003696",
-          "param": [
-            {
-              "name": "chrome_maximum_data_cache_age",
-              "value": "86400"
-            },
-            {
-              "name": "dsc_cache_invalidation_strategy",
-              "value": "2"
-            },
-            {
-              "name": "minimum_interactivity_invalidation_threshold",
-              "value": "5"
-            },
-            {
-              "name": "scroll_index_interactivity_threshold",
-              "value": "3"
-            },
-            {
-              "name": "views_interactivity_threshold",
-              "value": "3"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_chrome_maximum_data_cache_age",
-              "IOSGCR_dsc_cache_invalidation_strategy",
-              "IOSGCR_minimum_interactivity_invalidation_threshold",
-              "IOSGCR_scroll_index_interactivity_threshold",
-              "IOSGCR_views_interactivity_threshold"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1793491140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IOSLensOmnientShaderV2",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260602",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101000860",
-          "featureAssociation": {
-            "disableFeature": [
-              "LensOmnientShaderV2Enabled"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Experiment_20260602",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101000861",
-          "featureAssociation": {
-            "enableFeature": [
-              "LensOmnientShaderV2Enabled"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "146.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "formFactor": [
-          "PHONE",
-          "TABLET"
-        ],
-        "endDate": "1791331140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
     {
       "name": "AndroidTipsNotifications",
       "consistency": "PERMANENT",
@@ -7574,6 +5301,240 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "IgnoreQuicCryptoConfigMemoryPressure",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260902",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "IgnoreQuicCryptoConfigMemoryPressure"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260902",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "IgnoreQuicCryptoConfigMemoryPressure"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_IgnoreQuicCryptoConfigMemoryPressure",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IgnoreQuicCryptoConfigMemoryPressure"
+          }
+        },
+        {
+          "name": "ForcedOff_IgnoreQuicCryptoConfigMemoryPressure",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IgnoreQuicCryptoConfigMemoryPressure"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "149.0.7809.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1793404740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IgnoreQuicCryptoConfigMemoryPressure",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260902",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "IgnoreQuicCryptoConfigMemoryPressure"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260902",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "IgnoreQuicCryptoConfigMemoryPressure"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_IgnoreQuicCryptoConfigMemoryPressure",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IgnoreQuicCryptoConfigMemoryPressure"
+          }
+        },
+        {
+          "name": "ForcedOff_IgnoreQuicCryptoConfigMemoryPressure",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IgnoreQuicCryptoConfigMemoryPressure"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "149.0.7809.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1793404740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IgnoreQuicCryptoConfigMemoryPressure",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260902",
+          "probabilityWeight": 30,
+          "googleWebExperimentId": "101003943",
+          "featureAssociation": {
+            "enableFeature": [
+              "IgnoreQuicCryptoConfigMemoryPressure"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260902",
+          "probabilityWeight": 30,
+          "googleWebExperimentId": "101003942",
+          "featureAssociation": {
+            "disableFeature": [
+              "IgnoreQuicCryptoConfigMemoryPressure"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_IgnoreQuicCryptoConfigMemoryPressure",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IgnoreQuicCryptoConfigMemoryPressure"
+          }
+        },
+        {
+          "name": "ForcedOff_IgnoreQuicCryptoConfigMemoryPressure",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IgnoreQuicCryptoConfigMemoryPressure"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "149.0.7809.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1793404740"
+      },
+      "randomizationSeed": 3004853582,
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IgnoreQuicCryptoConfigMemoryPressure",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260902",
+          "probabilityWeight": 40,
+          "googleWebExperimentId": "101003907",
+          "featureAssociation": {
+            "enableFeature": [
+              "IgnoreQuicCryptoConfigMemoryPressure"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260902",
+          "probabilityWeight": 40,
+          "googleWebExperimentId": "101003906",
+          "featureAssociation": {
+            "disableFeature": [
+              "IgnoreQuicCryptoConfigMemoryPressure"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_IgnoreQuicCryptoConfigMemoryPressure",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IgnoreQuicCryptoConfigMemoryPressure"
+          }
+        },
+        {
+          "name": "ForcedOff_IgnoreQuicCryptoConfigMemoryPressure",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IgnoreQuicCryptoConfigMemoryPressure"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "149.0.7809.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1793404740"
+      },
+      "randomizationSeed": 3004853582,
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "DiskCacheBackendExperiment",
       "consistency": "PERMANENT",
       "experiment": [
@@ -8961,239 +6922,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "IgnoreQuicCryptoConfigMemoryPressure",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260722",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "IgnoreQuicCryptoConfigMemoryPressure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260722",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "IgnoreQuicCryptoConfigMemoryPressure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_IgnoreQuicCryptoConfigMemoryPressure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IgnoreQuicCryptoConfigMemoryPressure"
-          }
-        },
-        {
-          "name": "ForcedOff_IgnoreQuicCryptoConfigMemoryPressure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IgnoreQuicCryptoConfigMemoryPressure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "149.0.7809.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1790812740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IgnoreQuicCryptoConfigMemoryPressure",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260722",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "IgnoreQuicCryptoConfigMemoryPressure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260722",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "IgnoreQuicCryptoConfigMemoryPressure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_IgnoreQuicCryptoConfigMemoryPressure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IgnoreQuicCryptoConfigMemoryPressure"
-          }
-        },
-        {
-          "name": "ForcedOff_IgnoreQuicCryptoConfigMemoryPressure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IgnoreQuicCryptoConfigMemoryPressure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "149.0.7809.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1790812740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IgnoreQuicCryptoConfigMemoryPressure",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260722",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002435",
-          "featureAssociation": {
-            "enableFeature": [
-              "IgnoreQuicCryptoConfigMemoryPressure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260722",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002434",
-          "featureAssociation": {
-            "disableFeature": [
-              "IgnoreQuicCryptoConfigMemoryPressure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_IgnoreQuicCryptoConfigMemoryPressure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IgnoreQuicCryptoConfigMemoryPressure"
-          }
-        },
-        {
-          "name": "ForcedOff_IgnoreQuicCryptoConfigMemoryPressure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IgnoreQuicCryptoConfigMemoryPressure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "149.0.7809.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1790812740"
-      },
-      "randomizationSeed": 3004853582,
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IgnoreQuicCryptoConfigMemoryPressure",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260722",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002435",
-          "featureAssociation": {
-            "enableFeature": [
-              "IgnoreQuicCryptoConfigMemoryPressure"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260722",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101002434",
-          "featureAssociation": {
-            "disableFeature": [
-              "IgnoreQuicCryptoConfigMemoryPressure"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_IgnoreQuicCryptoConfigMemoryPressure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IgnoreQuicCryptoConfigMemoryPressure"
-          }
-        },
-        {
-          "name": "ForcedOff_IgnoreQuicCryptoConfigMemoryPressure",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IgnoreQuicCryptoConfigMemoryPressure"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "149.0.7809.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1790812740"
-      },
-      "randomizationSeed": 3004853582,
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "EagerStorageAccessPermissionCheck",
       "consistency": "PERMANENT",
       "experiment": [
@@ -9799,6 +7527,190 @@
         "endDate": "1789430340"
       },
       "randomizationSeed": 1011600881,
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "WebRTC-MediaTaskQueuePriorities",
+      "consistency": "SESSION",
+      "experiment": [
+        {
+          "name": "Enabled_20260803",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "AomVpxUsePresentationThreadType",
+              "UseHighPriorityThreadGroup",
+              "WebRTCBoostMediaIOThreads",
+              "WebRtcUseMediaThreadTypes"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260803",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "AomVpxUsePresentationThreadType",
+              "UseHighPriorityThreadGroup",
+              "WebRTCBoostMediaIOThreads",
+              "WebRtcUseMediaThreadTypes"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.34",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          "PLATFORM_IOS",
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1790812740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "WebRTC-MediaTaskQueuePriorities",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260901",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101003871",
+          "featureAssociation": {
+            "enableFeature": [
+              "AomVpxUsePresentationThreadType",
+              "UseHighPriorityThreadGroup",
+              "WebRTCBoostMediaIOThreads",
+              "WebRtcUseMediaThreadTypes"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260901",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101003872",
+          "featureAssociation": {
+            "disableFeature": [
+              "AomVpxUsePresentationThreadType",
+              "UseHighPriorityThreadGroup",
+              "WebRTCBoostMediaIOThreads",
+              "WebRtcUseMediaThreadTypes"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.34",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1790812740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "WebRTC-MediaTaskQueuePriorities",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260901",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101003873",
+          "featureAssociation": {
+            "enableFeature": [
+              "AomVpxUsePresentationThreadType",
+              "UseHighPriorityThreadGroup",
+              "WebRTCBoostMediaIOThreads",
+              "WebRtcUseMediaThreadTypes"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260901",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101003874",
+          "featureAssociation": {
+            "disableFeature": [
+              "AomVpxUsePresentationThreadType",
+              "UseHighPriorityThreadGroup",
+              "WebRTCBoostMediaIOThreads",
+              "WebRtcUseMediaThreadTypes"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.34",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1790812740"
+      },
+      "randomizationSeed": 1092035633,
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "WebRTC-MediaTaskQueuePriorities",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260825",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "AomVpxUsePresentationThreadType",
+              "UseHighPriorityThreadGroup",
+              "WebRTCBoostMediaIOThreads",
+              "WebRtcUseMediaThreadTypes"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260825",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "AomVpxUsePresentationThreadType",
+              "UseHighPriorityThreadGroup",
+              "WebRTCBoostMediaIOThreads",
+              "WebRtcUseMediaThreadTypes"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.34",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1790812740"
+      },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
@@ -12164,6 +10076,284 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "MPAViewTransitionsOptimizationDisabled",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003156",
+          "featureAssociation": {
+            "enableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003155",
+          "featureAssociation": {
+            "disableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SendEarlyFinalBeginMainFrame",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SendEarlyFinalBeginMainFrame"
+          }
+        },
+        {
+          "name": "ForcedOff_SendEarlyFinalBeginMainFrame",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SendEarlyFinalBeginMainFrame"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1791244740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "MPAViewTransitionsOptimizationDisabled",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003156",
+          "featureAssociation": {
+            "enableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003155",
+          "featureAssociation": {
+            "disableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SendEarlyFinalBeginMainFrame",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SendEarlyFinalBeginMainFrame"
+          }
+        },
+        {
+          "name": "ForcedOff_SendEarlyFinalBeginMainFrame",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SendEarlyFinalBeginMainFrame"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1791244740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "MPAViewTransitionsOptimizationDisabled",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003867",
+          "featureAssociation": {
+            "enableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003866",
+          "featureAssociation": {
+            "disableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SendEarlyFinalBeginMainFrame",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SendEarlyFinalBeginMainFrame"
+          }
+        },
+        {
+          "name": "ForcedOff_SendEarlyFinalBeginMainFrame",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SendEarlyFinalBeginMainFrame"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1791244740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "MPAViewTransitionsOptimizationDisabled",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003867",
+          "featureAssociation": {
+            "enableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003866",
+          "featureAssociation": {
+            "disableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "SendEarlyFinalBeginMainFrame"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SendEarlyFinalBeginMainFrame",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SendEarlyFinalBeginMainFrame"
+          }
+        },
+        {
+          "name": "ForcedOff_SendEarlyFinalBeginMainFrame",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SendEarlyFinalBeginMainFrame"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1791244740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "EarlyTopAppForSandboxedRenderer",
       "consistency": "PERMANENT",
       "experiment": [
@@ -12344,6 +10534,202 @@
           "PLATFORM_ANDROID"
         ],
         "endDate": "1788825540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "OmniboxShortSuggestPath",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260831_Beta",
+          "probabilityWeight": 100,
+          "param": [
+            {
+              "name": "OmniboxSuggestPathClient",
+              "value": "chrome-omni,chrome,chrome-ntp-action,chrome-cobrowse-compose,chrome-multimodal,chrome-contextual,chrome-android-search-resumption-module,chrome-compose,chrome-mobile-aim"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "OmniboxUseShortSuggestPathV1"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7871.9",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1790639940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "OmniboxShortSuggestPath",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260831_CanaryDev",
+          "probabilityWeight": 100,
+          "param": [
+            {
+              "name": "OmniboxSuggestPathClient",
+              "value": "chrome-omni,chrome,chrome-ntp-action,chrome-cobrowse-compose,chrome-multimodal,chrome-contextual,chrome-android-search-resumption-module,chrome-compose,chrome-mobile-aim"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "OmniboxUseShortSuggestPathV1"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7871.9",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1790639940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "OmniboxShortSuggestPath",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260831_Stable_Desktop",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003858",
+          "featureAssociation": {
+            "disableFeature": [
+              "OmniboxUseShortSuggestPathV1"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_20260831_Stable_Desktop",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003859",
+          "param": [
+            {
+              "name": "OmniboxSuggestPathClient",
+              "value": "chrome-omni,chrome,chrome-ntp-action,chrome-cobrowse-compose,chrome-multimodal,chrome-contextual,chrome-android-search-resumption-module,chrome-compose,chrome-mobile-aim"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "OmniboxUseShortSuggestPathV1"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_OmniboxUseShortSuggestPathV1",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OmniboxUseShortSuggestPathV1"
+          }
+        },
+        {
+          "name": "ForcedOff_OmniboxUseShortSuggestPathV1",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OmniboxUseShortSuggestPathV1"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7871.9",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1790639940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "OmniboxShortSuggestPath",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260831_Stable_Desktop",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003858",
+          "featureAssociation": {
+            "disableFeature": [
+              "OmniboxUseShortSuggestPathV1"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_20260831_Stable_Desktop",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003859",
+          "param": [
+            {
+              "name": "OmniboxSuggestPathClient",
+              "value": "chrome-omni,chrome,chrome-ntp-action,chrome-cobrowse-compose,chrome-multimodal,chrome-contextual,chrome-android-search-resumption-module,chrome-compose,chrome-mobile-aim"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "OmniboxUseShortSuggestPathV1"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_OmniboxUseShortSuggestPathV1",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OmniboxUseShortSuggestPathV1"
+          }
+        },
+        {
+          "name": "ForcedOff_OmniboxUseShortSuggestPathV1",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OmniboxUseShortSuggestPathV1"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7871.9",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1790639940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -25326,6 +23712,1249 @@
       "randomizationSeed": 3393155717
     },
     {
+      "name": "DiscoverBackgroundRefreshOnBling",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260817",
+          "probabilityWeight": 20,
+          "googleWebExperimentId": "101003235",
+          "featureAssociation": {
+            "disableFeature": [
+              "EnableAppBackgroundRefresh",
+              "EnableDiscoverBackgroundRefresh",
+              "EnableFeedBackgroundRefresh",
+              "IOSGCR_dsc_enable_background_app_refresh",
+              "IOSGCR_enable_app_close_refresh",
+              "IOSGCR_enable_background_refresh_for_discover_feed_on_bling",
+              "IOSGCR_enable_refresh_schedule_capability",
+              "MigrateIOSKeychainAccessibility"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "BlingBgRefreshOnly_20260817",
+          "probabilityWeight": 20,
+          "googleWebExperimentId": "101003236",
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableAppBackgroundRefresh",
+              "EnableFeedBackgroundRefresh",
+              "MigrateIOSKeychainAccessibility"
+            ],
+            "disableFeature": [
+              "EnableDiscoverBackgroundRefresh",
+              "IOSGCR_dsc_enable_background_app_refresh",
+              "IOSGCR_enable_app_close_refresh",
+              "IOSGCR_enable_background_refresh_for_discover_feed_on_bling",
+              "IOSGCR_enable_refresh_schedule_capability"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "DiscoverBgRefreshDefault_20260817",
+          "probabilityWeight": 20,
+          "googleWebExperimentId": "101003237",
+          "param": [
+            {
+              "name": "app_close_refresh_delay",
+              "value": "600"
+            },
+            {
+              "name": "dsc_background_app_refresh_max_age",
+              "value": "3600"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableAppBackgroundRefresh",
+              "EnableDiscoverBackgroundRefresh",
+              "EnableFeedBackgroundRefresh",
+              "IOSGCR_app_close_refresh_delay",
+              "IOSGCR_dsc_background_app_refresh_max_age",
+              "IOSGCR_dsc_enable_background_app_refresh",
+              "IOSGCR_enable_app_close_refresh",
+              "IOSGCR_enable_background_refresh_for_discover_feed_on_bling",
+              "IOSGCR_enable_refresh_schedule_capability",
+              "MigrateIOSKeychainAccessibility"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "DiscoverBgRefreshRelaxed_20260817",
+          "probabilityWeight": 20,
+          "googleWebExperimentId": "101003238",
+          "param": [
+            {
+              "name": "DiscoverFeedBackgroundRefreshMinBuffer",
+              "value": "30m"
+            },
+            {
+              "name": "app_close_refresh_delay",
+              "value": "1800"
+            },
+            {
+              "name": "dsc_background_app_refresh_max_age",
+              "value": "7200"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableAppBackgroundRefresh",
+              "EnableDiscoverBackgroundRefresh",
+              "EnableFeedBackgroundRefresh",
+              "IOSGCR_app_close_refresh_delay",
+              "IOSGCR_dsc_background_app_refresh_max_age",
+              "IOSGCR_dsc_enable_background_app_refresh",
+              "IOSGCR_enable_app_close_refresh",
+              "IOSGCR_enable_background_refresh_for_discover_feed_on_bling",
+              "IOSGCR_enable_refresh_schedule_capability",
+              "MigrateIOSKeychainAccessibility"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "DiscoverBgRefreshAggressive_20260817",
+          "probabilityWeight": 20,
+          "googleWebExperimentId": "101003239",
+          "param": [
+            {
+              "name": "DiscoverFeedBackgroundRefreshMinBuffer",
+              "value": "10m"
+            },
+            {
+              "name": "DiscoverFeedBackgroundRefreshNoDateInterval",
+              "value": "6h"
+            },
+            {
+              "name": "DiscoverFeedBackgroundRefreshNoServiceInterval",
+              "value": "6h"
+            },
+            {
+              "name": "app_close_refresh_delay",
+              "value": "300"
+            },
+            {
+              "name": "dsc_background_app_refresh_max_age",
+              "value": "300"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableAppBackgroundRefresh",
+              "EnableDiscoverBackgroundRefresh",
+              "EnableFeedBackgroundRefresh",
+              "IOSGCR_app_close_refresh_delay",
+              "IOSGCR_dsc_background_app_refresh_max_age",
+              "IOSGCR_dsc_enable_background_app_refresh",
+              "IOSGCR_enable_app_close_refresh",
+              "IOSGCR_enable_background_refresh_for_discover_feed_on_bling",
+              "IOSGCR_enable_refresh_schedule_capability",
+              "MigrateIOSKeychainAccessibility"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "151.*",
+        "maxVersion": "151.*",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1790812740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IOSDefaultBrowserPromoPropensityStudy",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260821",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "cooldown-days",
+              "value": "14"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101003506",
+          "featureAssociation": {
+            "enableFeature": [
+              "DefaultBrowserPromoPropensityModel"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260821",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003504",
+          "featureAssociation": {
+            "disableFeature": [
+              "DefaultBrowserPromoPropensityModel"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_DefaultBrowserPromoPropensityModel",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DefaultBrowserPromoPropensityModel"
+          }
+        },
+        {
+          "name": "ForcedOff_DefaultBrowserPromoPropensityModel",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DefaultBrowserPromoPropensityModel"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "146.0.7258.25",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1793750340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DiscoverCUI3AppFlowLoggingBling",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260818",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003224",
+          "featureAssociation": {
+            "enableFeature": [
+              "IOSGCR_discover_wait_indicator_app_flow",
+              "IOSGCR_enable_next_page_app_flow"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260818",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003223",
+          "featureAssociation": {
+            "disableFeature": [
+              "IOSGCR_discover_wait_indicator_app_flow",
+              "IOSGCR_enable_next_page_app_flow"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7861.1",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1790812740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ChromeNextIaHiddenInFullscreenWithLabels",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260819",
+          "probabilityWeight": 10,
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          }
+        },
+        {
+          "name": "HiddenInFullscreenWithLabels_20260819",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "chrome_next_ia_lens_icon_visible",
+              "value": "false"
+            },
+            {
+              "name": "chrome_next_ia_share_icon_visible",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AppBarHideInFullscreen",
+              "ChromeNextIa",
+              "FullscreenRefactoring",
+              "OverflowMenuNTPRefactor",
+              "UseSceneViewController"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AppBarHideInFullscreen",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AppBarHideInFullscreen"
+          }
+        },
+        {
+          "name": "ForcedOff_AppBarHideInFullscreen",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AppBarHideInFullscreen"
+          }
+        },
+        {
+          "name": "ForcedOn_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOff_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOn_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOff_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOn_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOff_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOn_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "UseSceneViewController"
+          }
+        },
+        {
+          "name": "ForcedOff_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "UseSceneViewController"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.43",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ChromeNextIaHiddenInFullscreenWithLabels",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260819",
+          "probabilityWeight": 10,
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          }
+        },
+        {
+          "name": "HiddenInFullscreenWithLabels_20260819",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "chrome_next_ia_lens_icon_visible",
+              "value": "false"
+            },
+            {
+              "name": "chrome_next_ia_share_icon_visible",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AppBarHideInFullscreen",
+              "ChromeNextIa",
+              "FullscreenRefactoring",
+              "OverflowMenuNTPRefactor",
+              "UseSceneViewController"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AppBarHideInFullscreen",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AppBarHideInFullscreen"
+          }
+        },
+        {
+          "name": "ForcedOff_AppBarHideInFullscreen",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AppBarHideInFullscreen"
+          }
+        },
+        {
+          "name": "ForcedOn_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOff_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOn_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOff_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOn_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOff_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOn_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "UseSceneViewController"
+          }
+        },
+        {
+          "name": "ForcedOff_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "UseSceneViewController"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.43",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ChromeNextIaNextOldDesign",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260819",
+          "probabilityWeight": 10,
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          }
+        },
+        {
+          "name": "NextOldDesign_20260819",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "chrome_next_ia_lens_icon_visible",
+              "value": "false"
+            },
+            {
+              "name": "chrome_next_ia_share_icon_visible",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ChromeNextIa",
+              "FullscreenRefactoring",
+              "NextOldDesign",
+              "OverflowMenuNTPRefactor",
+              "UseSceneViewController"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOff_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOn_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOff_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOn_NextOldDesign",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NextOldDesign"
+          }
+        },
+        {
+          "name": "ForcedOff_NextOldDesign",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NextOldDesign"
+          }
+        },
+        {
+          "name": "ForcedOn_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOff_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOn_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "UseSceneViewController"
+          }
+        },
+        {
+          "name": "ForcedOff_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "UseSceneViewController"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.105",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ChromeNextIaNextOldDesign",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260819",
+          "probabilityWeight": 10,
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          }
+        },
+        {
+          "name": "NextOldDesign_20260819",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "chrome_next_ia_lens_icon_visible",
+              "value": "false"
+            },
+            {
+              "name": "chrome_next_ia_share_icon_visible",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ChromeNextIa",
+              "FullscreenRefactoring",
+              "NextOldDesign",
+              "OverflowMenuNTPRefactor",
+              "UseSceneViewController"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOff_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOn_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOff_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOn_NextOldDesign",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NextOldDesign"
+          }
+        },
+        {
+          "name": "ForcedOff_NextOldDesign",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NextOldDesign"
+          }
+        },
+        {
+          "name": "ForcedOn_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOff_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOn_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "UseSceneViewController"
+          }
+        },
+        {
+          "name": "ForcedOff_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "UseSceneViewController"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.105",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ChromeNextIa",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002485",
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Neutral1_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002486",
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Neutral2_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002488",
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Neutral3_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002489",
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Neutral4_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002490",
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "BottomOmnibox_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002491",
+          "param": [
+            {
+              "name": "chrome_next_ia_lens_icon_visible",
+              "value": "false"
+            },
+            {
+              "name": "chrome_next_ia_share_icon_visible",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ChromeNextIa",
+              "DefaultBottomOmniboxOnIOS",
+              "FullscreenRefactoring",
+              "OverflowMenuNTPRefactor",
+              "UseSceneViewController"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOff_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOn_DefaultBottomOmniboxOnIOS",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DefaultBottomOmniboxOnIOS"
+          }
+        },
+        {
+          "name": "ForcedOff_DefaultBottomOmniboxOnIOS",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DefaultBottomOmniboxOnIOS"
+          }
+        },
+        {
+          "name": "ForcedOn_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOff_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOn_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOff_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOn_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "UseSceneViewController"
+          }
+        },
+        {
+          "name": "ForcedOff_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "UseSceneViewController"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.43",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ChromeNextIa",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002477",
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Neutral1_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002478",
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Neutral2_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002480",
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Neutral3_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002481",
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Neutral4_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002482",
+          "featureAssociation": {
+            "enableFeature": [
+              "UseSceneViewController"
+            ],
+            "disableFeature": [
+              "ChromeNextIa"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "BottomOmnibox_20260819",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101002483",
+          "param": [
+            {
+              "name": "chrome_next_ia_lens_icon_visible",
+              "value": "false"
+            },
+            {
+              "name": "chrome_next_ia_share_icon_visible",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ChromeNextIa",
+              "DefaultBottomOmniboxOnIOS",
+              "FullscreenRefactoring",
+              "OverflowMenuNTPRefactor",
+              "UseSceneViewController"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOff_ChromeNextIa",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ChromeNextIa"
+          }
+        },
+        {
+          "name": "ForcedOn_DefaultBottomOmniboxOnIOS",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DefaultBottomOmniboxOnIOS"
+          }
+        },
+        {
+          "name": "ForcedOff_DefaultBottomOmniboxOnIOS",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DefaultBottomOmniboxOnIOS"
+          }
+        },
+        {
+          "name": "ForcedOn_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOff_FullscreenRefactoring",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "FullscreenRefactoring"
+          }
+        },
+        {
+          "name": "ForcedOn_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOff_OverflowMenuNTPRefactor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OverflowMenuNTPRefactor"
+          }
+        },
+        {
+          "name": "ForcedOn_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "UseSceneViewController"
+          }
+        },
+        {
+          "name": "ForcedOff_UseSceneViewController",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "UseSceneViewController"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.43",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DiscoverBlingCacheAgeAndInteractivityInvalidationStudy",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260820",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003695",
+          "featureAssociation": {
+            "disableFeature": [
+              "IOSGCR_chrome_maximum_data_cache_age",
+              "IOSGCR_dsc_cache_invalidation_strategy",
+              "IOSGCR_minimum_interactivity_invalidation_threshold",
+              "IOSGCR_scroll_index_interactivity_threshold",
+              "IOSGCR_views_interactivity_threshold"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Balanced_24h_T3_20260820",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003696",
+          "param": [
+            {
+              "name": "chrome_maximum_data_cache_age",
+              "value": "86400"
+            },
+            {
+              "name": "dsc_cache_invalidation_strategy",
+              "value": "2"
+            },
+            {
+              "name": "minimum_interactivity_invalidation_threshold",
+              "value": "5"
+            },
+            {
+              "name": "scroll_index_interactivity_threshold",
+              "value": "3"
+            },
+            {
+              "name": "views_interactivity_threshold",
+              "value": "3"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IOSGCR_chrome_maximum_data_cache_age",
+              "IOSGCR_dsc_cache_invalidation_strategy",
+              "IOSGCR_minimum_interactivity_invalidation_threshold",
+              "IOSGCR_scroll_index_interactivity_threshold",
+              "IOSGCR_views_interactivity_threshold"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1793491140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IOSLensOmnientShaderV2",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260602",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101000860",
+          "featureAssociation": {
+            "disableFeature": [
+              "LensOmnientShaderV2Enabled"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Experiment_20260602",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101000861",
+          "featureAssociation": {
+            "enableFeature": [
+              "LensOmnientShaderV2Enabled"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "146.*",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "formFactor": [
+          "PHONE",
+          "TABLET"
+        ],
+        "endDate": "1791331140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "AAPMBlocksWebGPU",
       "consistency": "PERMANENT",
       "experiment": [
@@ -31703,6 +31332,115 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
+        ],
+        "locale": [
+          "en-US",
+          "en-CA",
+          "en-UK",
+          "en-GB",
+          "en-AU",
+          "en-IN",
+          "en"
+        ],
+        "endDate": "1790812740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "AmbientAutofillDogfood",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 100,
+          "param": [
+            {
+              "name": "ambient_autofill_eligible_tiers",
+              "value": "0,1,2,3,4"
+            },
+            {
+              "name": "ambient_autofill_enabled_devices",
+              "value": "Pixel 11"
+            },
+            {
+              "name": "ambient_autofill_supported_entity_types",
+              "value": "Passport,Driver's license,Vehicle,Flight Reservation,Order,Shipment"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillAiAlwaysTriggerServerModel",
+              "AutofillAmbientAutofill",
+              "AutofillAmbientAutofillSkipEligibilityChecks",
+              "AutofillSupportStandaloneZipCodeGlobally"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillAiAlwaysTriggerServerModel",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillAiAlwaysTriggerServerModel"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillAiAlwaysTriggerServerModel",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillAiAlwaysTriggerServerModel"
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillAmbientAutofill",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillAmbientAutofill"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillAmbientAutofill",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillAmbientAutofill"
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillAmbientAutofillSkipEligibilityChecks",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillAmbientAutofillSkipEligibilityChecks"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillAmbientAutofillSkipEligibilityChecks",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillAmbientAutofillSkipEligibilityChecks"
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillSupportStandaloneZipCodeGlobally",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillSupportStandaloneZipCodeGlobally"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillSupportStandaloneZipCodeGlobally",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillSupportStandaloneZipCodeGlobally"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.8010.1",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
         ],
         "locale": [
           "en-US",
@@ -45277,7 +45015,7 @@
           "PLATFORM_ANDROID",
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1788739140"
+        "endDate": "1793663940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -45336,7 +45074,7 @@
           "PLATFORM_ANDROID",
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1788739140"
+        "endDate": "1793663940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -45389,7 +45127,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1788739140"
+        "endDate": "1793663940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -45445,7 +45183,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS"
         ],
-        "endDate": "1788739140"
+        "endDate": "1793663940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -45498,7 +45236,7 @@
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1788739140"
+        "endDate": "1793663940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -49702,12 +49440,22 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Preperiod_Enabled_20260827",
-          "probabilityWeight": 50
+          "name": "Enabled_20260827",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillAiEditEntitiesFromSaveUpdatePrompt"
+            ]
+          }
         },
         {
-          "name": "Preperiod_Control_20260827",
-          "probabilityWeight": 50
+          "name": "Control_20260827",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillAiEditEntitiesFromSaveUpdatePrompt"
+            ]
+          }
         },
         {
           "name": "Default",
@@ -52159,7 +51907,7 @@
           "PLATFORM_ANDROID",
           "PLATFORM_IOS"
         ],
-        "endDate": "1790812740"
+        "endDate": "1793404740"
       }
     },
     {
@@ -52243,7 +51991,7 @@
           "PLATFORM_ANDROID",
           "PLATFORM_IOS"
         ],
-        "endDate": "1790812740"
+        "endDate": "1793404740"
       }
     },
     {
@@ -52251,12 +51999,24 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Preperiod_Enabled",
-          "probabilityWeight": 1
+          "name": "Enabled",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillAiWalletPrivatePassesCapability",
+              "ReadSupportsWalletPrivatePassesInAutofillCapability"
+            ]
+          }
         },
         {
-          "name": "Preperiod_Control",
-          "probabilityWeight": 1
+          "name": "Control",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillAiWalletPrivatePassesCapability",
+              "ReadSupportsWalletPrivatePassesInAutofillCapability"
+            ]
+          }
         },
         {
           "name": "Default",
@@ -52314,7 +52074,7 @@
           "PLATFORM_ANDROID",
           "PLATFORM_IOS"
         ],
-        "endDate": "1790812740"
+        "endDate": "1793404740"
       }
     },
     {
@@ -95550,7 +95310,7 @@
           "PLATFORM_WINDOWS",
           "PLATFORM_MAC"
         ],
-        "endDate": "1788652740"
+        "endDate": "1792540740"
       }
     },
     {
@@ -173096,6 +172856,87 @@
       "filter": {
         "minVersion": "154.0.8025.0",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1793491140"
+      }
+    },
+    {
+      "name": "GmailOtpBackendInfrastructure",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "GmailOtpRetrievalService",
+              "OneTimeTokenBackendNotification"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "GmailOtpRetrievalService",
+              "OneTimeTokenBackendNotification"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "GmailOtpRetrievalService",
+              "OneTimeTokenBackendNotification"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_GmailOtpRetrievalService",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GmailOtpRetrievalService"
+          }
+        },
+        {
+          "name": "ForcedOff_GmailOtpRetrievalService",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GmailOtpRetrievalService"
+          }
+        },
+        {
+          "name": "ForcedOn_OneTimeTokenBackendNotification",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OneTimeTokenBackendNotification"
+          }
+        },
+        {
+          "name": "ForcedOff_OneTimeTokenBackendNotification",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OneTimeTokenBackendNotification"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8025.0",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -174206,13 +174047,65 @@
       "filter": {
         "minVersion": "152.*",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1793663940"
+      }
+    },
+    {
+      "name": "GooglePayViaAndroidIntents",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260827",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "GooglePayViaAndroidIntents"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260827",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "GooglePayViaAndroidIntents"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_GooglePayViaAndroidIntents",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GooglePayViaAndroidIntents"
+          }
+        },
+        {
+          "name": "ForcedOff_GooglePayViaAndroidIntents",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GooglePayViaAndroidIntents"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.*",
+        "channel": [
           "CANARY",
           "DEV"
         ],
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1793059140"
+        "endDate": "1793663940"
       }
     },
     {
@@ -187504,6 +187397,71 @@
           "PLATFORM_IOS"
         ]
       }
+    },
+    {
+      "name": "IOSDefaultBrowserPipTextVideo",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260902",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "DefaultBrowserPipTextVideo"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260902",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "DefaultBrowserPipTextVideo"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_DefaultBrowserPipTextVideo",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DefaultBrowserPipTextVideo"
+          }
+        },
+        {
+          "name": "ForcedOff_DefaultBrowserPipTextVideo",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DefaultBrowserPipTextVideo"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8031.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "locale": [
+          "en-US",
+          "en-GB",
+          "en-AU",
+          "en-CA",
+          "en-IN"
+        ],
+        "formFactor": [
+          "PHONE",
+          "TABLET"
+        ],
+        "endDate": "1793577540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "IOSDefaultBrowserPromoMagicStackCard",
@@ -209250,11 +209208,12 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "EnabledWithFastFollows_20260826",
+          "name": "EnabledWithFastFollows_20260902",
           "probabilityWeight": 33,
           "featureAssociation": {
             "enableFeature": [
               "IPH_SendTabToSelfOmnibox",
+              "IPH_SendTabToSelfTutorial",
               "SendTabToSelfAutoOpen",
               "SendTabToSelfDynamicShortcuts",
               "SendTabToSelfEnhancedBottomsheet",
@@ -209275,7 +209234,7 @@
           }
         },
         {
-          "name": "Enabled_20260826",
+          "name": "Enabled_20260902",
           "probabilityWeight": 33,
           "featureAssociation": {
             "enableFeature": [
@@ -209293,6 +209252,7 @@
             ],
             "disableFeature": [
               "IPH_SendTabToSelfOmnibox",
+              "IPH_SendTabToSelfTutorial",
               "SendTabToSelfDynamicShortcuts",
               "SendTabToSelfEnhancedDesktopUIv2",
               "SendTabToSelfOpenNativeApp",
@@ -209302,11 +209262,12 @@
           }
         },
         {
-          "name": "Control_20260826",
+          "name": "Control_20260902",
           "probabilityWeight": 33,
           "featureAssociation": {
             "disableFeature": [
               "IPH_SendTabToSelfOmnibox",
+              "IPH_SendTabToSelfTutorial",
               "SendTabToSelfAutoOpen",
               "SendTabToSelfDynamicShortcuts",
               "SendTabToSelfEnhancedBottomsheet",
@@ -209342,6 +209303,20 @@
           "probabilityWeight": 0,
           "featureAssociation": {
             "forcingFeatureOff": "IPH_SendTabToSelfOmnibox"
+          }
+        },
+        {
+          "name": "ForcedOn_IPH_SendTabToSelfTutorial",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPH_SendTabToSelfTutorial"
+          }
+        },
+        {
+          "name": "ForcedOff_IPH_SendTabToSelfTutorial",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPH_SendTabToSelfTutorial"
           }
         },
         {
@@ -306859,7 +306834,7 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "PreflightForDSE_Beta_20260605",
+          "name": "PreflightForDSE_Beta_20260903",
           "probabilityWeight": 1500,
           "featureAssociation": {
             "enableFeature": [
@@ -306872,7 +306847,7 @@
           }
         },
         {
-          "name": "BackgroundUpdateForScopeCache_Beta_20260605",
+          "name": "BackgroundUpdateForScopeCache_Beta_20260903",
           "probabilityWeight": 1500,
           "featureAssociation": {
             "enableFeature": [
@@ -306885,7 +306860,7 @@
           }
         },
         {
-          "name": "BackgroundUpdateForRegistration_Beta_20260605",
+          "name": "BackgroundUpdateForRegistration_Beta_20260903",
           "probabilityWeight": 1500,
           "featureAssociation": {
             "enableFeature": [
@@ -306899,7 +306874,7 @@
           }
         },
         {
-          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Beta_20260605",
+          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Beta_20260903",
           "probabilityWeight": 1500,
           "featureAssociation": {
             "enableFeature": [
@@ -306913,7 +306888,7 @@
           }
         },
         {
-          "name": "Control_Beta_20260605",
+          "name": "Control_Beta_20260903",
           "probabilityWeight": 1500,
           "featureAssociation": {
             "disableFeature": [
@@ -306985,7 +306960,7 @@
         }
       ],
       "filter": {
-        "minVersion": "143.0.7486.0",
+        "minVersion": "150.0.7871.125",
         "channel": [
           "BETA"
         ],
@@ -306996,7 +306971,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1788652740"
+        "endDate": "1793663940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -307005,7 +306980,7 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "PreflightForDSE_Dev_Canary_20260605",
+          "name": "PreflightForDSE_Dev_Canary_20260903",
           "probabilityWeight": 1500,
           "featureAssociation": {
             "enableFeature": [
@@ -307018,7 +306993,7 @@
           }
         },
         {
-          "name": "BackgroundUpdateForScopeCache_Dev_Canary_20260605",
+          "name": "BackgroundUpdateForScopeCache_Dev_Canary_20260903",
           "probabilityWeight": 1500,
           "featureAssociation": {
             "enableFeature": [
@@ -307031,7 +307006,7 @@
           }
         },
         {
-          "name": "BackgroundUpdateForRegistration_Dev_Canary_20260605",
+          "name": "BackgroundUpdateForRegistration_Dev_Canary_20260903",
           "probabilityWeight": 1500,
           "featureAssociation": {
             "enableFeature": [
@@ -307045,7 +307020,7 @@
           }
         },
         {
-          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Dev_Canary_20260605",
+          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Dev_Canary_20260903",
           "probabilityWeight": 1500,
           "featureAssociation": {
             "enableFeature": [
@@ -307059,7 +307034,7 @@
           }
         },
         {
-          "name": "Control_Dev_Canary_20260605",
+          "name": "Control_Dev_Canary_20260903",
           "probabilityWeight": 1500,
           "featureAssociation": {
             "disableFeature": [
@@ -307131,7 +307106,7 @@
         }
       ],
       "filter": {
-        "minVersion": "143.0.7486.0",
+        "minVersion": "150.0.7871.125",
         "channel": [
           "CANARY",
           "DEV"
@@ -307143,7 +307118,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1788652740"
+        "endDate": "1793663940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -307152,7 +307127,7 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Stable_Android_20260605",
+          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Stable_Android_20260903",
           "probabilityWeight": 80,
           "featureAssociation": {
             "enableFeature": [
@@ -307166,7 +307141,7 @@
           }
         },
         {
-          "name": "Control_Stable_Android_20260605",
+          "name": "Control_Stable_Android_20260903",
           "probabilityWeight": 80,
           "featureAssociation": {
             "disableFeature": [
@@ -307238,14 +307213,14 @@
         }
       ],
       "filter": {
-        "minVersion": "143.0.7486.0",
+        "minVersion": "150.0.7871.125",
         "channel": [
           "STABLE"
         ],
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1788652740"
+        "endDate": "1793663940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -307254,7 +307229,7 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Stable_Desktop_20260605",
+          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Stable_Desktop_20260903",
           "probabilityWeight": 80,
           "featureAssociation": {
             "enableFeature": [
@@ -307268,7 +307243,7 @@
           }
         },
         {
-          "name": "Control_Stable_Desktop_20260605",
+          "name": "Control_Stable_Desktop_20260903",
           "probabilityWeight": 80,
           "featureAssociation": {
             "disableFeature": [
@@ -307340,7 +307315,7 @@
         }
       ],
       "filter": {
-        "minVersion": "143.0.7486.0",
+        "minVersion": "150.0.7871.125",
         "channel": [
           "STABLE"
         ],
@@ -307350,7 +307325,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS"
         ],
-        "endDate": "1788652740"
+        "endDate": "1793663940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -391129,83 +391104,103 @@
           "param": [
             {
               "name": "Accessibility.Canvas",
-              "value": "4"
+              "value": "12"
             },
             {
               "name": "AdFrameLoad",
-              "value": "6"
-            },
-            {
-              "name": "Autofill.FieldFillStatus",
-              "value": "10"
-            },
-            {
-              "name": "Autofill.FieldTypeValidation",
-              "value": "40"
-            },
-            {
-              "name": "Autofill.FormEvent",
-              "value": "5"
-            },
-            {
-              "name": "Blink.FrameLoader",
-              "value": "120"
-            },
-            {
-              "name": "Blink.HTMLParsing",
-              "value": "4"
-            },
-            {
-              "name": "Blink.PageLoad",
-              "value": "5"
-            },
-            {
-              "name": "Blink.PaintTiming",
-              "value": "3"
-            },
-            {
-              "name": "Blink.UpdateTime",
-              "value": "10"
-            },
-            {
-              "name": "ClientHints.AcceptCHFrameUsage",
               "value": "18"
             },
             {
-              "name": "ClientHints.AcceptCHHeaderUsage",
-              "value": "14"
-            },
-            {
-              "name": "ClientRenderingAPI",
-              "value": "100"
-            },
-            {
-              "name": "ContentManagementSystemPageLoad",
-              "value": "4"
-            },
-            {
-              "name": "Cookies.Blocked.DueToOriginMismatch",
-              "value": "14"
-            },
-            {
-              "name": "CrossOriginSubframeWithoutEmbeddingControl",
-              "value": "18"
-            },
-            {
-              "name": "DocumentCreated",
-              "value": "25"
-            },
-            {
-              "name": "DomDistiller.Android.DistillabilityLatency",
+              "name": "Android.MultiWindowState",
               "value": "2"
             },
             {
+              "name": "Autofill.FieldFillStatus",
+              "value": "40"
+            },
+            {
+              "name": "Autofill.FieldTypeValidation",
+              "value": "140"
+            },
+            {
+              "name": "Autofill.FormEvent",
+              "value": "14"
+            },
+            {
+              "name": "BackgroundSyncRegistered",
+              "value": "2"
+            },
+            {
+              "name": "Blink.FrameLoader",
+              "value": "420"
+            },
+            {
+              "name": "Blink.HTMLParsing",
+              "value": "12"
+            },
+            {
+              "name": "Blink.PageLoad",
+              "value": "16"
+            },
+            {
+              "name": "Blink.PaintTiming",
+              "value": "10"
+            },
+            {
+              "name": "Blink.UpdateTime",
+              "value": "30"
+            },
+            {
+              "name": "ChromeOSApp.InstalledApp",
+              "value": "ChromeOSApp"
+            },
+            {
+              "name": "ClientHints.AcceptCHFrameUsage",
+              "value": "50"
+            },
+            {
+              "name": "ClientHints.AcceptCHHeaderUsage",
+              "value": "45"
+            },
+            {
+              "name": "ClientHints.DelegateCHMetaUsage",
+              "value": "2"
+            },
+            {
+              "name": "ClientRenderingAPI",
+              "value": "330"
+            },
+            {
+              "name": "ContentManagementSystemPageLoad",
+              "value": "12"
+            },
+            {
+              "name": "ContextualCueing.NudgeDecision",
+              "value": "6"
+            },
+            {
+              "name": "Cookies.Blocked.DueToOriginMismatch",
+              "value": "45"
+            },
+            {
+              "name": "CrossOriginSubframeWithoutEmbeddingControl",
+              "value": "50"
+            },
+            {
+              "name": "DocumentCreated",
+              "value": "80"
+            },
+            {
+              "name": "DomDistiller.Android.DistillabilityLatency",
+              "value": "6"
+            },
+            {
               "name": "DomDistiller.Android.DistillabilityResult",
-              "value": "3"
+              "value": "8"
             },
             {
               "name": "DomDistiller.ModelResult.Distillable",
-              "value": "4"
+              "value": "12"
             },
             {
               "name": "Download.Completed",
@@ -391225,39 +391220,43 @@
             },
             {
               "name": "Extensions.OnNavigation",
-              "value": "20"
+              "value": "60"
             },
             {
               "name": "Extensions.WebRequest.KeepaliveRequestFinished",
-              "value": "30"
+              "value": "90"
             },
             {
               "name": "GoogleDocsOfflineExtension",
-              "value": "2"
+              "value": "8"
             },
             {
               "name": "HistoryApi.PushState",
-              "value": "2"
+              "value": "6"
             },
             {
-              "name": "JavascriptFrameworkPageLoad",
+              "name": "InstalledRelatedApps",
               "value": "4"
             },
             {
+              "name": "JavascriptFrameworkPageLoad",
+              "value": "12"
+            },
+            {
               "name": "LoadCountsPerTopLevelDocument",
-              "value": "5"
+              "value": "16"
             },
             {
               "name": "LoadingPredictor",
-              "value": "2"
+              "value": "8"
             },
             {
               "name": "Media",
-              "value": "10"
+              "value": "30"
             },
             {
               "name": "Media.Autoplay.Attempt",
-              "value": "3"
+              "value": "10"
             },
             {
               "name": "Media.BasicPlayback",
@@ -391265,11 +391264,11 @@
             },
             {
               "name": "Media.EME.GetStatusForPolicy",
-              "value": "8"
+              "value": "20"
             },
             {
               "name": "Media.VideoDecodePerfRecord",
-              "value": "2"
+              "value": "5"
             },
             {
               "name": "Media.WebAudio.AudioContext.AudibleTime",
@@ -391281,23 +391280,23 @@
             },
             {
               "name": "Memory.Experimental",
-              "value": "20"
+              "value": "60"
             },
             {
               "name": "Memory.TabFootprint",
-              "value": "5"
+              "value": "16"
             },
             {
               "name": "MobileFriendliness.TappedBadTargets",
-              "value": "3"
+              "value": "8"
             },
             {
               "name": "Navigation.ReceivedResponse",
-              "value": "5"
+              "value": "16"
             },
             {
               "name": "NavigationPredictor",
-              "value": "16"
+              "value": "50"
             },
             {
               "name": "NavigationPredictorAnchorElementMetrics",
@@ -391321,59 +391320,75 @@
             },
             {
               "name": "NavigationTiming",
-              "value": "3"
+              "value": "10"
             },
             {
               "name": "Network.DataUrls",
-              "value": "20"
+              "value": "70"
+            },
+            {
+              "name": "OmniboxSecurityIndicator.FormSubmission",
+              "value": "5"
             },
             {
               "name": "OptimizationGuide",
-              "value": "14"
+              "value": "45"
             },
             {
               "name": "OptimizationGuide.AnnotatedPageContent",
-              "value": "4"
+              "value": "12"
             },
             {
               "name": "OptimizationGuide.PageContentExtraction",
-              "value": "6"
+              "value": "20"
             },
             {
               "name": "PageContentAnnotations2",
-              "value": "8"
+              "value": "25"
             },
             {
               "name": "PageForegroundSession",
-              "value": "8"
+              "value": "25"
             },
             {
               "name": "PageLifecycleMetricsOnNewPageCommit",
-              "value": "6"
+              "value": "18"
             },
             {
               "name": "PageLoadInitiatorForAdTagging",
-              "value": "4"
+              "value": "12"
             },
             {
               "name": "PaidContentPageLoad",
+              "value": "16"
+            },
+            {
+              "name": "PartitionedCookiePresentV3",
               "value": "5"
             },
             {
               "name": "PerformanceAPI.LongAnimationFrame",
-              "value": "100"
+              "value": "330"
             },
             {
               "name": "PerformanceAPI.LongTask",
-              "value": "3"
+              "value": "10"
             },
             {
               "name": "PerformanceAPI.Memory.Legacy",
-              "value": "480"
+              "value": "1600"
+            },
+            {
+              "name": "PerformanceManager.FreezingEligibility",
+              "value": "2"
             },
             {
               "name": "PerformanceManager.PageResourceUsage2",
-              "value": "35"
+              "value": "100"
+            },
+            {
+              "name": "PermissionUsage",
+              "value": "3"
             },
             {
               "name": "Popup.Closed",
@@ -391385,7 +391400,11 @@
             },
             {
               "name": "PowerUsageScenariosIntervalData",
-              "value": "5"
+              "value": "16"
+            },
+            {
+              "name": "PrefetchProxy.PrefetchedResource",
+              "value": "3"
             },
             {
               "name": "Preloading.Attempt",
@@ -391397,59 +391416,83 @@
             },
             {
               "name": "Preloading.Prediction",
-              "value": "45"
+              "value": "140"
             },
             {
               "name": "Preloading.Prediction.PreviousPrimaryPage",
-              "value": "60"
+              "value": "200"
             },
             {
               "name": "Responsiveness.UserInteraction",
-              "value": "20"
+              "value": "70"
             },
             {
               "name": "SamesiteRedirectContextDowngrade",
-              "value": "2"
+              "value": "8"
             },
             {
               "name": "Security.SiteEngagement",
-              "value": "3"
+              "value": "10"
             },
             {
-              "name": "SiteFamiliarityHeuristicResult",
-              "value": "4"
-            },
-            {
-              "name": "SubresourceFilter",
-              "value": "4"
-            },
-            {
-              "name": "SubresourceLoad.ZstdContentEncoding",
-              "value": "100"
-            },
-            {
-              "name": "TabRevisitTracker.TabStateChange",
-              "value": "6"
-            },
-            {
-              "name": "Translate",
+              "name": "ServiceWorker.MainResourceLoadCompleted",
               "value": "5"
             },
             {
-              "name": "TranslatePageLoad",
-              "value": "6"
+              "name": "Site.Install",
+              "value": "2"
             },
             {
-              "name": "Unload",
+              "name": "Site.Manifest",
+              "value": "2"
+            },
+            {
+              "name": "Site.Quality",
+              "value": "2"
+            },
+            {
+              "name": "SiteFamiliarityHeuristicResult",
+              "value": "14"
+            },
+            {
+              "name": "SubresourceFilter",
+              "value": "14"
+            },
+            {
+              "name": "SubresourceLoad.ZstdContentEncoding",
+              "value": "300"
+            },
+            {
+              "name": "TabManager.TabLifetime",
               "value": "3"
             },
             {
+              "name": "TabRevisitTracker.TabStateChange",
+              "value": "25"
+            },
+            {
+              "name": "Translate",
+              "value": "16"
+            },
+            {
+              "name": "TranslatePageLoad",
+              "value": "18"
+            },
+            {
+              "name": "Unload",
+              "value": "10"
+            },
+            {
               "name": "UserPerceivedPageVisit",
-              "value": "12"
+              "value": "35"
             },
             {
               "name": "V8.GC.FullCycle",
-              "value": "10"
+              "value": "30"
+            },
+            {
+              "name": "V8.Wasm",
+              "value": "5"
             },
             {
               "name": "V8.Wasm.ModuleCompiled",
@@ -391465,7 +391508,7 @@
             },
             {
               "name": "WebOTPImpact",
-              "value": "2"
+              "value": "6"
             },
             {
               "name": "_default_sampling",
@@ -391665,83 +391708,103 @@
           "param": [
             {
               "name": "Accessibility.Canvas",
-              "value": "4"
+              "value": "12"
             },
             {
               "name": "AdFrameLoad",
-              "value": "6"
-            },
-            {
-              "name": "Autofill.FieldFillStatus",
-              "value": "10"
-            },
-            {
-              "name": "Autofill.FieldTypeValidation",
-              "value": "40"
-            },
-            {
-              "name": "Autofill.FormEvent",
-              "value": "5"
-            },
-            {
-              "name": "Blink.FrameLoader",
-              "value": "120"
-            },
-            {
-              "name": "Blink.HTMLParsing",
-              "value": "4"
-            },
-            {
-              "name": "Blink.PageLoad",
-              "value": "5"
-            },
-            {
-              "name": "Blink.PaintTiming",
-              "value": "3"
-            },
-            {
-              "name": "Blink.UpdateTime",
-              "value": "10"
-            },
-            {
-              "name": "ClientHints.AcceptCHFrameUsage",
               "value": "18"
             },
             {
-              "name": "ClientHints.AcceptCHHeaderUsage",
-              "value": "14"
-            },
-            {
-              "name": "ClientRenderingAPI",
-              "value": "100"
-            },
-            {
-              "name": "ContentManagementSystemPageLoad",
-              "value": "4"
-            },
-            {
-              "name": "Cookies.Blocked.DueToOriginMismatch",
-              "value": "14"
-            },
-            {
-              "name": "CrossOriginSubframeWithoutEmbeddingControl",
-              "value": "18"
-            },
-            {
-              "name": "DocumentCreated",
-              "value": "25"
-            },
-            {
-              "name": "DomDistiller.Android.DistillabilityLatency",
+              "name": "Android.MultiWindowState",
               "value": "2"
             },
             {
+              "name": "Autofill.FieldFillStatus",
+              "value": "40"
+            },
+            {
+              "name": "Autofill.FieldTypeValidation",
+              "value": "140"
+            },
+            {
+              "name": "Autofill.FormEvent",
+              "value": "14"
+            },
+            {
+              "name": "BackgroundSyncRegistered",
+              "value": "2"
+            },
+            {
+              "name": "Blink.FrameLoader",
+              "value": "420"
+            },
+            {
+              "name": "Blink.HTMLParsing",
+              "value": "12"
+            },
+            {
+              "name": "Blink.PageLoad",
+              "value": "16"
+            },
+            {
+              "name": "Blink.PaintTiming",
+              "value": "10"
+            },
+            {
+              "name": "Blink.UpdateTime",
+              "value": "30"
+            },
+            {
+              "name": "ChromeOSApp.InstalledApp",
+              "value": "ChromeOSApp"
+            },
+            {
+              "name": "ClientHints.AcceptCHFrameUsage",
+              "value": "50"
+            },
+            {
+              "name": "ClientHints.AcceptCHHeaderUsage",
+              "value": "45"
+            },
+            {
+              "name": "ClientHints.DelegateCHMetaUsage",
+              "value": "2"
+            },
+            {
+              "name": "ClientRenderingAPI",
+              "value": "330"
+            },
+            {
+              "name": "ContentManagementSystemPageLoad",
+              "value": "12"
+            },
+            {
+              "name": "ContextualCueing.NudgeDecision",
+              "value": "6"
+            },
+            {
+              "name": "Cookies.Blocked.DueToOriginMismatch",
+              "value": "45"
+            },
+            {
+              "name": "CrossOriginSubframeWithoutEmbeddingControl",
+              "value": "50"
+            },
+            {
+              "name": "DocumentCreated",
+              "value": "80"
+            },
+            {
+              "name": "DomDistiller.Android.DistillabilityLatency",
+              "value": "6"
+            },
+            {
               "name": "DomDistiller.Android.DistillabilityResult",
-              "value": "3"
+              "value": "8"
             },
             {
               "name": "DomDistiller.ModelResult.Distillable",
-              "value": "4"
+              "value": "12"
             },
             {
               "name": "Download.Completed",
@@ -391761,39 +391824,43 @@
             },
             {
               "name": "Extensions.OnNavigation",
-              "value": "20"
+              "value": "60"
             },
             {
               "name": "Extensions.WebRequest.KeepaliveRequestFinished",
-              "value": "30"
+              "value": "90"
             },
             {
               "name": "GoogleDocsOfflineExtension",
-              "value": "2"
+              "value": "8"
             },
             {
               "name": "HistoryApi.PushState",
-              "value": "2"
+              "value": "6"
             },
             {
-              "name": "JavascriptFrameworkPageLoad",
+              "name": "InstalledRelatedApps",
               "value": "4"
             },
             {
+              "name": "JavascriptFrameworkPageLoad",
+              "value": "12"
+            },
+            {
               "name": "LoadCountsPerTopLevelDocument",
-              "value": "5"
+              "value": "16"
             },
             {
               "name": "LoadingPredictor",
-              "value": "2"
+              "value": "8"
             },
             {
               "name": "Media",
-              "value": "10"
+              "value": "30"
             },
             {
               "name": "Media.Autoplay.Attempt",
-              "value": "3"
+              "value": "10"
             },
             {
               "name": "Media.BasicPlayback",
@@ -391801,11 +391868,11 @@
             },
             {
               "name": "Media.EME.GetStatusForPolicy",
-              "value": "8"
+              "value": "20"
             },
             {
               "name": "Media.VideoDecodePerfRecord",
-              "value": "2"
+              "value": "5"
             },
             {
               "name": "Media.WebAudio.AudioContext.AudibleTime",
@@ -391817,23 +391884,23 @@
             },
             {
               "name": "Memory.Experimental",
-              "value": "20"
+              "value": "60"
             },
             {
               "name": "Memory.TabFootprint",
-              "value": "5"
+              "value": "16"
             },
             {
               "name": "MobileFriendliness.TappedBadTargets",
-              "value": "3"
+              "value": "8"
             },
             {
               "name": "Navigation.ReceivedResponse",
-              "value": "5"
+              "value": "16"
             },
             {
               "name": "NavigationPredictor",
-              "value": "16"
+              "value": "50"
             },
             {
               "name": "NavigationPredictorAnchorElementMetrics",
@@ -391857,59 +391924,75 @@
             },
             {
               "name": "NavigationTiming",
-              "value": "3"
+              "value": "10"
             },
             {
               "name": "Network.DataUrls",
-              "value": "20"
+              "value": "70"
+            },
+            {
+              "name": "OmniboxSecurityIndicator.FormSubmission",
+              "value": "5"
             },
             {
               "name": "OptimizationGuide",
-              "value": "14"
+              "value": "45"
             },
             {
               "name": "OptimizationGuide.AnnotatedPageContent",
-              "value": "4"
+              "value": "12"
             },
             {
               "name": "OptimizationGuide.PageContentExtraction",
-              "value": "6"
+              "value": "20"
             },
             {
               "name": "PageContentAnnotations2",
-              "value": "8"
+              "value": "25"
             },
             {
               "name": "PageForegroundSession",
-              "value": "8"
+              "value": "25"
             },
             {
               "name": "PageLifecycleMetricsOnNewPageCommit",
-              "value": "6"
+              "value": "18"
             },
             {
               "name": "PageLoadInitiatorForAdTagging",
-              "value": "4"
+              "value": "12"
             },
             {
               "name": "PaidContentPageLoad",
+              "value": "16"
+            },
+            {
+              "name": "PartitionedCookiePresentV3",
               "value": "5"
             },
             {
               "name": "PerformanceAPI.LongAnimationFrame",
-              "value": "100"
+              "value": "330"
             },
             {
               "name": "PerformanceAPI.LongTask",
-              "value": "3"
+              "value": "10"
             },
             {
               "name": "PerformanceAPI.Memory.Legacy",
-              "value": "480"
+              "value": "1600"
+            },
+            {
+              "name": "PerformanceManager.FreezingEligibility",
+              "value": "2"
             },
             {
               "name": "PerformanceManager.PageResourceUsage2",
-              "value": "35"
+              "value": "100"
+            },
+            {
+              "name": "PermissionUsage",
+              "value": "3"
             },
             {
               "name": "Popup.Closed",
@@ -391921,7 +392004,11 @@
             },
             {
               "name": "PowerUsageScenariosIntervalData",
-              "value": "5"
+              "value": "16"
+            },
+            {
+              "name": "PrefetchProxy.PrefetchedResource",
+              "value": "3"
             },
             {
               "name": "Preloading.Attempt",
@@ -391933,59 +392020,83 @@
             },
             {
               "name": "Preloading.Prediction",
-              "value": "45"
+              "value": "140"
             },
             {
               "name": "Preloading.Prediction.PreviousPrimaryPage",
-              "value": "60"
+              "value": "200"
             },
             {
               "name": "Responsiveness.UserInteraction",
-              "value": "20"
+              "value": "70"
             },
             {
               "name": "SamesiteRedirectContextDowngrade",
-              "value": "2"
+              "value": "8"
             },
             {
               "name": "Security.SiteEngagement",
-              "value": "3"
+              "value": "10"
             },
             {
-              "name": "SiteFamiliarityHeuristicResult",
-              "value": "4"
-            },
-            {
-              "name": "SubresourceFilter",
-              "value": "4"
-            },
-            {
-              "name": "SubresourceLoad.ZstdContentEncoding",
-              "value": "100"
-            },
-            {
-              "name": "TabRevisitTracker.TabStateChange",
-              "value": "6"
-            },
-            {
-              "name": "Translate",
+              "name": "ServiceWorker.MainResourceLoadCompleted",
               "value": "5"
             },
             {
-              "name": "TranslatePageLoad",
-              "value": "6"
+              "name": "Site.Install",
+              "value": "2"
             },
             {
-              "name": "Unload",
+              "name": "Site.Manifest",
+              "value": "2"
+            },
+            {
+              "name": "Site.Quality",
+              "value": "2"
+            },
+            {
+              "name": "SiteFamiliarityHeuristicResult",
+              "value": "14"
+            },
+            {
+              "name": "SubresourceFilter",
+              "value": "14"
+            },
+            {
+              "name": "SubresourceLoad.ZstdContentEncoding",
+              "value": "300"
+            },
+            {
+              "name": "TabManager.TabLifetime",
               "value": "3"
             },
             {
+              "name": "TabRevisitTracker.TabStateChange",
+              "value": "25"
+            },
+            {
+              "name": "Translate",
+              "value": "16"
+            },
+            {
+              "name": "TranslatePageLoad",
+              "value": "18"
+            },
+            {
+              "name": "Unload",
+              "value": "10"
+            },
+            {
               "name": "UserPerceivedPageVisit",
-              "value": "12"
+              "value": "35"
             },
             {
               "name": "V8.GC.FullCycle",
-              "value": "10"
+              "value": "30"
+            },
+            {
+              "name": "V8.Wasm",
+              "value": "5"
             },
             {
               "name": "V8.Wasm.ModuleCompiled",
@@ -392001,7 +392112,7 @@
             },
             {
               "name": "WebOTPImpact",
-              "value": "2"
+              "value": "6"
             },
             {
               "name": "_default_sampling",
@@ -422647,15 +422758,52 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled,_20260920",
+          "name": "Enabled,_20260902",
           "probabilityWeight": 50,
-          "googleWebExperimentId": "101003446",
+          "googleWebExperimentId": "101003922",
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Control,_20260920",
+          "name": "Control,_20260902",
           "probabilityWeight": 50,
-          "googleWebExperimentId": "101003447",
+          "googleWebExperimentId": "101003923",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7871.46",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1793491140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "WebRTC-RFC8888CongestionControlFeedback",
+      "consistency": "SESSION",
+      "experiment": [
+        {
+          "name": "Enabled,_20260902",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003920",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control,_20260902",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003921",
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
@@ -422674,10 +422822,40 @@
           "PLATFORM_MAC",
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1793491140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "WebRTC-RFC8888CongestionControlFeedback",
+      "consistency": "SESSION",
+      "experiment": [
+        {
+          "name": "Enabled,_20260902",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "Control,_20260902",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7871.46",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1792540740"
+        "endDate": "1793491140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -428690,6 +428868,78 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "WebViewPrefetchIntegrationAblation",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260827",
+          "probabilityWeight": 15,
+          "featureAssociation": {
+            "enableFeature": [
+              "NetworkQualityEstimatorAsyncNotifyStartTransaction",
+              "WebViewAddQuicHints",
+              "WebViewCacheSizeLimitDerivedFromAppCacheQuota"
+            ]
+          }
+        },
+        {
+          "name": "AblateQuicHints_20260827",
+          "probabilityWeight": 15,
+          "featureAssociation": {
+            "enableFeature": [
+              "NetworkQualityEstimatorAsyncNotifyStartTransaction",
+              "WebViewCacheSizeLimitDerivedFromAppCacheQuota"
+            ],
+            "disableFeature": [
+              "WebViewAddQuicHints"
+            ]
+          }
+        },
+        {
+          "name": "AblateHttpCacheSize_20260827",
+          "probabilityWeight": 15,
+          "featureAssociation": {
+            "enableFeature": [
+              "NetworkQualityEstimatorAsyncNotifyStartTransaction",
+              "WebViewAddQuicHints"
+            ],
+            "disableFeature": [
+              "WebViewCacheSizeLimitDerivedFromAppCacheQuota"
+            ]
+          }
+        },
+        {
+          "name": "AblateNqeAsync_20260827",
+          "probabilityWeight": 15,
+          "featureAssociation": {
+            "enableFeature": [
+              "WebViewAddQuicHints",
+              "WebViewCacheSizeLimitDerivedFromAppCacheQuota"
+            ],
+            "disableFeature": [
+              "NetworkQualityEstimatorAsyncNotifyStartTransaction"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 40
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8028.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1790553540"
+      }
+    },
+    {
       "name": "WebViewPrefetchNativeLibrary",
       "consistency": "PERMANENT",
       "experiment": [
@@ -428938,7 +429188,7 @@
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1791935940"
+        "endDate": "1793231940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -428947,9 +429197,9 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260818",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003299",
+          "name": "Enabled_20260903",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101003999",
           "featureAssociation": {
             "enableFeature": [
               "WebViewPrefetchOnRendererReuse"
@@ -428957,9 +429207,9 @@
           }
         },
         {
-          "name": "Control_20260818",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003300",
+          "name": "Control_20260903",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101004000",
           "featureAssociation": {
             "disableFeature": [
               "WebViewPrefetchOnRendererReuse"
@@ -428975,9 +429225,9 @@
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1791935940"
+        "endDate": "1793231940"
       },
-      "randomizationSeed": 3378318096,
+      "randomizationSeed": 2538619244,
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
@@ -429053,183 +429303,6 @@
       },
       "randomizationSeed": 1126424675,
       "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "WebViewPurgeMemoryInBackground",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_30s_20260811",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "purge_delay",
-              "value": "30s"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "WebViewPurgeMemoryInBackground"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_2m_20260811",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "purge_delay",
-              "value": "2m"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "WebViewPurgeMemoryInBackground"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_4m_20260811",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "purge_delay",
-              "value": "4m"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "WebViewPurgeMemoryInBackground"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260811",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "disableFeature": [
-              "WebViewPurgeMemoryInBackground"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_WebViewPurgeMemoryInBackground",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "WebViewPurgeMemoryInBackground"
-          }
-        },
-        {
-          "name": "ForcedOff_WebViewPurgeMemoryInBackground",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "WebViewPurgeMemoryInBackground"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.8001.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1792281540"
-      }
-    },
-    {
-      "name": "WebViewPurgeMemoryInBackground",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_30s_20260811",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "purge_delay",
-              "value": "30s"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "WebViewPurgeMemoryInBackground"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_2m_20260811",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "purge_delay",
-              "value": "2m"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "WebViewPurgeMemoryInBackground"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_4m_20260811",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "purge_delay",
-              "value": "4m"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "WebViewPurgeMemoryInBackground"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260811",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "disableFeature": [
-              "WebViewPurgeMemoryInBackground"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_WebViewPurgeMemoryInBackground",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "WebViewPurgeMemoryInBackground"
-          }
-        },
-        {
-          "name": "ForcedOff_WebViewPurgeMemoryInBackground",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "WebViewPurgeMemoryInBackground"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.8001.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1792281540"
-      }
     },
     {
       "name": "WebViewQuicConnectionTimeout",
@@ -457429,5 +457502,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260903-010027.512000-production"
+  "version": "20260903-090042.078000-production"
 }
