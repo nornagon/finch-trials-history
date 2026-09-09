@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDkwOC0xNzAwNTIuNDc2MDAwEgQgACgB#POG4NQ2I7mE=",
+  "serialNumber": "SMChYyMDI2MDkwOS0wMTAwMzQuNTQxMDAwEgQgACgB#okz5Q6GDdfM=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -2222,337 +2222,6 @@
           null
         ],
         "endDate": "1790812740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "PartitionAllocBackupRefPtrAndroid",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_AllProcesses_V1",
-          "probabilityWeight": 50,
-          "param": [
-            {
-              "name": "enabled-processes",
-              "value": "all-processes"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocBackupRefPtr"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_NonRenderer_V1",
-          "probabilityWeight": 50,
-          "param": [
-            {
-              "name": "enabled-processes",
-              "value": "non-renderer"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocBackupRefPtr"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "149.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1790812740"
-      }
-    },
-    {
-      "name": "PartitionAllocBackupRefPtrAndroidWebView",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_AllProcesses_WebView_Stable_V2",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101002279",
-          "param": [
-            {
-              "name": "enabled-processes",
-              "value": "all-processes"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocBackupRefPtr"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_NonRenderer_WebView_Stable_V2",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101002280",
-          "param": [
-            {
-              "name": "enabled-processes",
-              "value": "non-renderer"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocBackupRefPtr"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "149.*",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1790812740"
-      },
-      "randomizationSeed": 1319067697,
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ClientSideDetectionScamScore",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "EnabledWithUrl_20260828",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003766",
-          "featureAssociation": {
-            "enableFeature": [
-              "ClientSideDetectionScamScore"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260828",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003765",
-          "featureAssociation": {
-            "disableFeature": [
-              "ClientSideDetectionScamScore"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_ClientSideDetectionScamScore",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ClientSideDetectionScamScore"
-          }
-        },
-        {
-          "name": "ForcedOff_ClientSideDetectionScamScore",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ClientSideDetectionScamScore"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID",
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1789948740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ClientSideDetectionScamScore",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "EnabledWithUrl_20260828",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003764",
-          "featureAssociation": {
-            "enableFeature": [
-              "ClientSideDetectionScamScore"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260828",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003763",
-          "featureAssociation": {
-            "disableFeature": [
-              "ClientSideDetectionScamScore"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_ClientSideDetectionScamScore",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ClientSideDetectionScamScore"
-          }
-        },
-        {
-          "name": "ForcedOff_ClientSideDetectionScamScore",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ClientSideDetectionScamScore"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID",
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1789948740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ClientSideDetectionScamScore",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "EnabledWithUrl_20260828",
-          "probabilityWeight": 1,
-          "googleWebTriggerExperimentId": "101003768",
-          "featureAssociation": {
-            "enableFeature": [
-              "ClientSideDetectionScamScore"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260828",
-          "probabilityWeight": 1,
-          "googleWebTriggerExperimentId": "101003767",
-          "featureAssociation": {
-            "disableFeature": [
-              "ClientSideDetectionScamScore"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_ClientSideDetectionScamScore",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ClientSideDetectionScamScore"
-          }
-        },
-        {
-          "name": "ForcedOff_ClientSideDetectionScamScore",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ClientSideDetectionScamScore"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1789948740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ClientSideDetectionScamScore",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "EnabledWithUrl_20260828",
-          "probabilityWeight": 1,
-          "googleWebTriggerExperimentId": "101003768",
-          "featureAssociation": {
-            "enableFeature": [
-              "ClientSideDetectionScamScore"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260828",
-          "probabilityWeight": 1,
-          "googleWebTriggerExperimentId": "101003767",
-          "featureAssociation": {
-            "disableFeature": [
-              "ClientSideDetectionScamScore"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_ClientSideDetectionScamScore",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ClientSideDetectionScamScore"
-          }
-        },
-        {
-          "name": "ForcedOff_ClientSideDetectionScamScore",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ClientSideDetectionScamScore"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7922.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1789948740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -5124,8 +4793,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Launch",
-          "probabilityWeight": 100,
+          "name": "Launch_20260908",
+          "probabilityWeight": 98,
           "param": [
             {
               "name": "availability",
@@ -5202,6 +4871,218 @@
             {
               "name": "session_rate_impact",
               "value": "none"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ],
+            "disableFeature": [
+              "AndroidBottomBar",
+              "AndroidPageInfoAsAppMenuItem",
+              "GlicDefaultToLastActiveConversation",
+              "GlicTieredRolloutV2",
+              "IPH_AndroidBottomBarGlic",
+              "IPH_AndroidBottomBarNewTab",
+              "IPH_AndroidBottomBarPromoDialog",
+              "IPH_SiteControls"
+            ]
+          }
+        },
+        {
+          "name": "Launch_control_20260908",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "availability",
+              "value": "any"
+            },
+            {
+              "name": "blocked_by",
+              "value": "none"
+            },
+            {
+              "name": "blocking",
+              "value": "none"
+            },
+            {
+              "name": "dont_show_fusebox",
+              "value": "true"
+            },
+            {
+              "name": "enabled_countries",
+              "value": "us"
+            },
+            {
+              "name": "enabled_locales",
+              "value": "en-US"
+            },
+            {
+              "name": "event_1",
+              "value": "name:adaptive_toolbar_customization_new_tab_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "event_2",
+              "value": "name:adaptive_toolbar_customization_open_in_browser_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "event_3",
+              "value": "name:adaptive_toolbar_customization_share_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "event_4",
+              "value": "name:adaptive_toolbar_customization_voice_search_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "event_5",
+              "value": "name:adaptive_toolbar_customization_translate_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "event_6",
+              "value": "name:adaptive_toolbar_customization_read_aloud_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "event_7",
+              "value": "name:adaptive_toolbar_customization_add_to_bookmarks_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "event_trigger",
+              "value": "name:adaptive_toolbar_glic_iph_trigger;comparator:==0;window:3650;storage:3650"
+            },
+            {
+              "name": "event_used",
+              "value": "name:adaptive_toolbar_customization_glic_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "glic-bottom-sheet-promo",
+              "value": "false"
+            },
+            {
+              "name": "glic-min-required-ram-mb",
+              "value": "3600"
+            },
+            {
+              "name": "session_rate",
+              "value": "any"
+            },
+            {
+              "name": "session_rate_impact",
+              "value": "none"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ],
+            "disableFeature": [
+              "AndroidBottomBar",
+              "AndroidPageInfoAsAppMenuItem",
+              "GlicDefaultToLastActiveConversation",
+              "GlicTieredRolloutV2",
+              "IPH_AndroidBottomBarGlic",
+              "IPH_AndroidBottomBarNewTab",
+              "IPH_AndroidBottomBarPromoDialog",
+              "IPH_SiteControls"
+            ]
+          }
+        },
+        {
+          "name": "Launch_prefixed_20260908",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_availability",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocked_by",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocking",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_1",
+              "value": "name:adaptive_toolbar_customization_new_tab_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_2",
+              "value": "name:adaptive_toolbar_customization_open_in_browser_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_3",
+              "value": "name:adaptive_toolbar_customization_share_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_4",
+              "value": "name:adaptive_toolbar_customization_voice_search_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_5",
+              "value": "name:adaptive_toolbar_customization_translate_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_6",
+              "value": "name:adaptive_toolbar_customization_read_aloud_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_7",
+              "value": "name:adaptive_toolbar_customization_add_to_bookmarks_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_trigger",
+              "value": "name:adaptive_toolbar_glic_iph_trigger;comparator:==0;window:3650;storage:3650"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_used",
+              "value": "name:adaptive_toolbar_customization_glic_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate_impact",
+              "value": "none"
+            },
+            {
+              "name": "dont_show_fusebox",
+              "value": "true"
+            },
+            {
+              "name": "enabled_countries",
+              "value": "us"
+            },
+            {
+              "name": "enabled_locales",
+              "value": "en-US"
+            },
+            {
+              "name": "glic-bottom-sheet-promo",
+              "value": "false"
+            },
+            {
+              "name": "glic-min-required-ram-mb",
+              "value": "3600"
             }
           ],
           "featureAssociation": {
@@ -8210,6 +8091,238 @@
           "PLATFORM_ANDROID_WEBVIEW"
         ],
         "endDate": "1790812740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ClientSideDetectionScamScore",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledWithoutUrl_20260908",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101004194",
+          "featureAssociation": {
+            "enableFeature": [
+              "ClientSideDetectionScamScore"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260908",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101004193",
+          "featureAssociation": {
+            "disableFeature": [
+              "ClientSideDetectionScamScore"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_ClientSideDetectionScamScore",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ClientSideDetectionScamScore"
+          }
+        },
+        {
+          "name": "ForcedOff_ClientSideDetectionScamScore",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ClientSideDetectionScamScore"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1792540740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ClientSideDetectionScamScore",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledWithoutUrl_20260908",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101004192",
+          "featureAssociation": {
+            "enableFeature": [
+              "ClientSideDetectionScamScore"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260908",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101004191",
+          "featureAssociation": {
+            "disableFeature": [
+              "ClientSideDetectionScamScore"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_ClientSideDetectionScamScore",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ClientSideDetectionScamScore"
+          }
+        },
+        {
+          "name": "ForcedOff_ClientSideDetectionScamScore",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ClientSideDetectionScamScore"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1792540740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ClientSideDetectionScamScore",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledWithoutUrl_20260908",
+          "probabilityWeight": 1,
+          "googleWebTriggerExperimentId": "101004196",
+          "featureAssociation": {
+            "enableFeature": [
+              "ClientSideDetectionScamScore"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260908",
+          "probabilityWeight": 1,
+          "googleWebTriggerExperimentId": "101004195",
+          "featureAssociation": {
+            "disableFeature": [
+              "ClientSideDetectionScamScore"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_ClientSideDetectionScamScore",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ClientSideDetectionScamScore"
+          }
+        },
+        {
+          "name": "ForcedOff_ClientSideDetectionScamScore",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ClientSideDetectionScamScore"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1792540740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ClientSideDetectionScamScore",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledWithoutUrl_20260908",
+          "probabilityWeight": 1,
+          "googleWebTriggerExperimentId": "101004196",
+          "featureAssociation": {
+            "enableFeature": [
+              "ClientSideDetectionScamScore"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260908",
+          "probabilityWeight": 1,
+          "googleWebTriggerExperimentId": "101004195",
+          "featureAssociation": {
+            "disableFeature": [
+              "ClientSideDetectionScamScore"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_ClientSideDetectionScamScore",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ClientSideDetectionScamScore"
+          }
+        },
+        {
+          "name": "ForcedOff_ClientSideDetectionScamScore",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ClientSideDetectionScamScore"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7922.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1792540740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -57779,7 +57892,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1792886340"
+        "endDate": "1794355140"
       }
     },
     {
@@ -57845,7 +57958,72 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1792886340"
+        "endDate": "1794355140"
+      }
+    },
+    {
+      "name": "AutofillEnableExpandIbanRegexPattern",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillEnableExpandIbanRegexPattern"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillEnableExpandIbanRegexPattern"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillEnableExpandIbanRegexPattern"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillEnableExpandIbanRegexPattern",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillEnableExpandIbanRegexPattern"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillEnableExpandIbanRegexPattern",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillEnableExpandIbanRegexPattern"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.8003.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1794355140"
       }
     },
     {
@@ -59662,6 +59840,68 @@
           "CANARY",
           "DEV",
           "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1795046340"
+      }
+    },
+    {
+      "name": "AutofillEnableResurrectingPaymentsUsers",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Security",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "autofill_enable_resurrecting_payments_churned_users_treatment",
+              "value": "1"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillEnableResurrectingPaymentsUsers"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillEnableResurrectingPaymentsUsers"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 97
+        },
+        {
+          "name": "Enabled_Convenience",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "autofill_enable_resurrecting_payments_churned_users_treatment",
+              "value": "2"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillEnableResurrectingPaymentsUsers"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.8010.0",
+        "channel": [
+          "STABLE"
         ],
         "platform": [
           "PLATFORM_WINDOWS",
@@ -122660,8 +122900,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_pct=80_1",
-          "probabilityWeight": 1,
+          "name": "Enabled_pct=80_10",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "allowlist",
@@ -122680,8 +122920,8 @@
           }
         },
         {
-          "name": "Control_pct=80_1",
-          "probabilityWeight": 1,
+          "name": "Control_pct=80_10",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "allowlist",
@@ -122700,8 +122940,8 @@
           }
         },
         {
-          "name": "Default_pct=80_1",
-          "probabilityWeight": 98,
+          "name": "Default_pct=80_10",
+          "probabilityWeight": 80,
           "param": [
             {
               "name": "allowlist",
@@ -188356,6 +188596,70 @@
       "filter": {
         "minVersion": "154.0.8031.0",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "locale": [
+          "en-US",
+          "en-GB",
+          "en-AU",
+          "en-CA",
+          "en-IN"
+        ],
+        "formFactor": [
+          "PHONE",
+          "TABLET"
+        ],
+        "endDate": "1794095940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IOSDefaultBrowserPipTextVideo",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260902",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "DefaultBrowserPipTextVideo"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260902",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "DefaultBrowserPipTextVideo"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_DefaultBrowserPipTextVideo",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DefaultBrowserPipTextVideo"
+          }
+        },
+        {
+          "name": "ForcedOff_DefaultBrowserPipTextVideo",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DefaultBrowserPipTextVideo"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8031.0",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -188373,7 +188677,7 @@
           "PHONE",
           "TABLET"
         ],
-        "endDate": "1793577540"
+        "endDate": "1794095940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -205532,8 +205836,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_threshold_3s_20260824",
-          "probabilityWeight": 50,
+          "name": "Enabled_threshold_3sLaunch",
+          "probabilityWeight": 100,
           "param": [
             {
               "name": "duplicate_nav_threshold",
@@ -205545,29 +205849,6 @@
               "IgnoreDuplicateNavs"
             ]
           }
-        },
-        {
-          "name": "Control_20260824",
-          "probabilityWeight": 50,
-          "param": [
-            {
-              "name": "duplicate_nav_threshold",
-              "value": "3s"
-            },
-            {
-              "name": "ignore_duplicate_navs_origins",
-              "value": "https://google.com,http://google.com,https://www.google.com,http://www.google.com"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IgnoreDuplicateNavs"
-            ]
-          }
-        },
-        {
-          "name": "Default_20260824",
-          "probabilityWeight": 0
         },
         {
           "name": "ForcedOn_IgnoreDuplicateNavs",
@@ -205586,169 +205867,11 @@
       ],
       "filter": {
         "minVersion": "151.0.7899.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1790639940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IgnoreDuplicateNavs",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_threshold_3s_20260824",
-          "probabilityWeight": 50,
-          "param": [
-            {
-              "name": "duplicate_nav_threshold",
-              "value": "3s"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IgnoreDuplicateNavs"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260824",
-          "probabilityWeight": 50,
-          "param": [
-            {
-              "name": "duplicate_nav_threshold",
-              "value": "3s"
-            },
-            {
-              "name": "ignore_duplicate_navs_origins",
-              "value": "https://google.com,http://google.com,https://www.google.com,http://www.google.com"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IgnoreDuplicateNavs"
-            ]
-          }
-        },
-        {
-          "name": "Default_20260824",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_IgnoreDuplicateNavs",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IgnoreDuplicateNavs"
-          }
-        },
-        {
-          "name": "ForcedOff_IgnoreDuplicateNavs",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IgnoreDuplicateNavs"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7899.0",
+        "maxVersion": "152.0.7977.65",
         "channel": [
           "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1790639940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IgnoreDuplicateNavs",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_threshold_3s_20260824",
-          "probabilityWeight": 40,
-          "param": [
-            {
-              "name": "duplicate_nav_threshold",
-              "value": "3s"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IgnoreDuplicateNavs"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260824",
-          "probabilityWeight": 40,
-          "param": [
-            {
-              "name": "duplicate_nav_threshold",
-              "value": "3s"
-            },
-            {
-              "name": "ignore_duplicate_navs_origins",
-              "value": "https://google.com,http://google.com,https://www.google.com,http://www.google.com"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IgnoreDuplicateNavs"
-            ]
-          }
-        },
-        {
-          "name": "Default_20260824",
-          "probabilityWeight": 20,
-          "param": [
-            {
-              "name": "duplicate_nav_threshold",
-              "value": "3s"
-            },
-            {
-              "name": "ignore_duplicate_navs_origins",
-              "value": "https://google.com,http://google.com,https://www.google.com,http://www.google.com"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IgnoreDuplicateNavs"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_IgnoreDuplicateNavs",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IgnoreDuplicateNavs"
-          }
-        },
-        {
-          "name": "ForcedOff_IgnoreDuplicateNavs",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IgnoreDuplicateNavs"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7899.0",
-        "channel": [
+          "DEV",
+          "BETA",
           "STABLE"
         ],
         "platform": [
@@ -205757,8 +205880,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
-        ],
-        "endDate": "1790639940"
+        ]
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -256147,6 +256269,61 @@
       "filter": {
         "minVersion": "153.*",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC"
+        ],
+        "endDate": "1794095940"
+      }
+    },
+    {
+      "name": "PMLoadingPageVoter",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260902",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "PMLoadingPageVoter"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260902",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "PMLoadingPageVoter"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_PMLoadingPageVoter",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PMLoadingPageVoter"
+          }
+        },
+        {
+          "name": "ForcedOff_PMLoadingPageVoter",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PMLoadingPageVoter"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.*",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -256156,7 +256333,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_MAC"
         ],
-        "endDate": "1793577540"
+        "endDate": "1794095940"
       }
     },
     {
@@ -259750,6 +259927,55 @@
           "PLATFORM_ANDROID"
         ],
         "isLowEndDevice": false
+      }
+    },
+    {
+      "name": "PartitionAllocBackupRefPtrAndroid",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_AllProcesses_V1",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "enabled-processes",
+              "value": "all-processes"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocBackupRefPtr"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_NonRenderer_V1",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "enabled-processes",
+              "value": "non-renderer"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocBackupRefPtr"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "149.*",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1790812740"
       }
     },
     {
@@ -324895,6 +325121,63 @@
       }
     },
     {
+      "name": "SplitViewHorizontalDirectTabAccess",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledDirectTabAccess_20260902",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "split_view_horizontal_direct_tab_access",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "SplitViewHorizontal"
+            ]
+          }
+        },
+        {
+          "name": "EnabledIndirectAccess_20260902",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_SplitViewHorizontal",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SplitViewHorizontal"
+          }
+        },
+        {
+          "name": "ForcedOff_SplitViewHorizontal",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SplitViewHorizontal"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8039.1",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC"
+        ],
+        "endDate": "1793663940"
+      }
+    },
+    {
       "name": "SplitViewLinkOpen",
       "consistency": "PERMANENT",
       "experiment": [
@@ -338432,6 +338715,78 @@
         ]
       },
       "randomizationSeed": 897819447
+    },
+    {
+      "name": "ThemeChangeOptimization",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260904",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "ColorIdCssStyleSheetOptimization",
+              "ThemeChangeOptimization"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260904",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "ColorIdCssStyleSheetOptimization",
+              "ThemeChangeOptimization"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_ColorIdCssStyleSheetOptimization",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ColorIdCssStyleSheetOptimization"
+          }
+        },
+        {
+          "name": "ForcedOff_ColorIdCssStyleSheetOptimization",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ColorIdCssStyleSheetOptimization"
+          }
+        },
+        {
+          "name": "ForcedOn_ThemeChangeOptimization",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ThemeChangeOptimization"
+          }
+        },
+        {
+          "name": "ForcedOff_ThemeChangeOptimization",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ThemeChangeOptimization"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8038.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1791071940"
+      }
     },
     {
       "name": "ThirdPartyCookieDeprecationMetadataGrants",
@@ -428479,174 +428834,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "EnabledWithSurfaceSyncWithPrewarmWebUI_20260908",
-          "probabilityWeight": 1,
-          "param": [
-            {
-              "name": "WebUIReloadButtonDeferBrowserViewShow",
-              "value": "false"
-            },
-            {
-              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonPrewarmWebUI",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonPrewarmWebUIPreNavigate",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonProfilePrewarming",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonRestartUnresponsive",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
-              "value": "5s"
-            },
-            {
-              "name": "config",
-              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
-            },
-            {
-              "name": "deadline_in_frames",
-              "value": "12000"
-            },
-            {
-              "name": "high_stream_priority",
-              "value": "true"
-            },
-            {
-              "name": "renderer_commit_delay_ms",
-              "value": "100000"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "BypassOutdatedSurfaceActivation",
-              "InitialWebUI",
-              "InitialWebUISurfaceSync",
-              "InitialWebUISyncNavStartToCommit",
-              "InitialWebUIWithoutExtensions",
-              "SendGPUChannelEarly",
-              "SkipIPCChannelPausingForNonGuests",
-              "WebUIBackForwardButton",
-              "WebUIBundledCodeCache",
-              "WebUIHomeButton",
-              "WebUIInProcessResourceLoadingV2",
-              "WebUIReloadButton",
-              "WebUISplitTabsButton",
-              "WebUIToolbarFrameEvictionOptOut",
-              "WebiumMetricsMapping"
-            ]
-          }
-        },
-        {
-          "name": "EnabledWithSurfaceSync_20260908",
-          "probabilityWeight": 1,
-          "param": [
-            {
-              "name": "WebUIReloadButtonDeferBrowserViewShow",
-              "value": "false"
-            },
-            {
-              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonRestartUnresponsive",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
-              "value": "5s"
-            },
-            {
-              "name": "config",
-              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
-            },
-            {
-              "name": "deadline_in_frames",
-              "value": "12000"
-            },
-            {
-              "name": "high_stream_priority",
-              "value": "true"
-            },
-            {
-              "name": "renderer_commit_delay_ms",
-              "value": "100000"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "BypassOutdatedSurfaceActivation",
-              "InitialWebUI",
-              "InitialWebUISurfaceSync",
-              "InitialWebUISyncNavStartToCommit",
-              "InitialWebUIWithoutExtensions",
-              "SendGPUChannelEarly",
-              "SkipIPCChannelPausingForNonGuests",
-              "WebUIBackForwardButton",
-              "WebUIBundledCodeCache",
-              "WebUIHomeButton",
-              "WebUIInProcessResourceLoadingV2",
-              "WebUIReloadButton",
-              "WebUISplitTabsButton",
-              "WebUIToolbarFrameEvictionOptOut",
-              "WebiumMetricsMapping"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260908",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "disableFeature": [
-              "BypassOutdatedSurfaceActivation",
-              "InitialWebUI",
-              "InitialWebUISurfaceSync",
-              "InitialWebUISyncNavStartToCommit",
-              "InitialWebUIWithoutExtensions",
-              "SendGPUChannelEarly",
-              "SkipIPCChannelPausingForNonGuests",
-              "WebUIBackForwardButton",
-              "WebUIBundledCodeCache",
-              "WebUIHomeButton",
-              "WebUIInProcessResourceLoadingV2",
-              "WebUIReloadButton",
-              "WebUISplitTabsButton",
-              "WebUIToolbarFrameEvictionOptOut",
-              "WebiumMetricsMapping"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8045.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1793059140"
-      }
-    },
-    {
-      "name": "WebUIReloadButtonStudy",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260908",
+          "name": "Enabled_20260909",
           "probabilityWeight": 1,
           "param": [
             {
@@ -428698,65 +428886,7 @@
           }
         },
         {
-          "name": "EnabledWithSurfaceSync_20260908",
-          "probabilityWeight": 1,
-          "param": [
-            {
-              "name": "WebUIReloadButtonDeferBrowserViewShow",
-              "value": "false"
-            },
-            {
-              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonRestartUnresponsive",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
-              "value": "5s"
-            },
-            {
-              "name": "config",
-              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
-            },
-            {
-              "name": "deadline_in_frames",
-              "value": "12000"
-            },
-            {
-              "name": "high_stream_priority",
-              "value": "true"
-            },
-            {
-              "name": "renderer_commit_delay_ms",
-              "value": "100000"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "BypassOutdatedSurfaceActivation",
-              "InitialWebUI",
-              "InitialWebUISurfaceSync",
-              "InitialWebUISyncNavStartToCommit",
-              "InitialWebUIWithoutExtensions",
-              "PrioritizeResizeTaskRunnerOnStartup",
-              "SendGPUChannelEarly",
-              "SkipIPCChannelPausingForNonGuests",
-              "WebUIBackForwardButton",
-              "WebUIBundledCodeCache",
-              "WebUIHomeButton",
-              "WebUIInProcessResourceLoadingV2",
-              "WebUIReloadButton",
-              "WebUISplitTabsButton",
-              "WebUIToolbarFrameEvictionOptOut",
-              "WebiumMetricsMapping"
-            ]
-          }
-        },
-        {
-          "name": "EnabledWithSurfaceSyncWithPrewarmWebUI_20260908",
+          "name": "EnabledWithSurfaceSyncWithPrewarmWebUI_20260909",
           "probabilityWeight": 1,
           "param": [
             {
@@ -428826,7 +428956,65 @@
           }
         },
         {
-          "name": "Control_20260908",
+          "name": "EnabledWithSurfaceSync_20260909",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "WebUIReloadButtonDeferBrowserViewShow",
+              "value": "false"
+            },
+            {
+              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsive",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
+              "value": "5s"
+            },
+            {
+              "name": "config",
+              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
+            },
+            {
+              "name": "deadline_in_frames",
+              "value": "12000"
+            },
+            {
+              "name": "high_stream_priority",
+              "value": "true"
+            },
+            {
+              "name": "renderer_commit_delay_ms",
+              "value": "100000"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "BypassOutdatedSurfaceActivation",
+              "InitialWebUI",
+              "InitialWebUISurfaceSync",
+              "InitialWebUISyncNavStartToCommit",
+              "InitialWebUIWithoutExtensions",
+              "PrioritizeResizeTaskRunnerOnStartup",
+              "SendGPUChannelEarly",
+              "SkipIPCChannelPausingForNonGuests",
+              "WebUIBackForwardButton",
+              "WebUIBundledCodeCache",
+              "WebUIHomeButton",
+              "WebUIInProcessResourceLoadingV2",
+              "WebUIReloadButton",
+              "WebUISplitTabsButton",
+              "WebUIToolbarFrameEvictionOptOut",
+              "WebiumMetricsMapping"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260909",
           "probabilityWeight": 1,
           "featureAssociation": {
             "disableFeature": [
@@ -428842,6 +429030,232 @@
               "WebUIBundledCodeCache",
               "WebUIHomeButton",
               "WebUIInProcessResourceLoadingV2",
+              "WebUIReloadButton",
+              "WebUISplitTabsButton",
+              "WebUIToolbarFrameEvictionOptOut",
+              "WebiumMetricsMapping"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8045.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1793059140"
+      }
+    },
+    {
+      "name": "WebUIReloadButtonStudy",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260909",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "WebUIReloadButtonDeferBrowserViewShow",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsive",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
+              "value": "5s"
+            },
+            {
+              "name": "config",
+              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
+            },
+            {
+              "name": "high_stream_priority",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "InitialWebUI",
+              "InitialWebUISyncNavStartToCommit",
+              "InitialWebUIWithoutExtensions",
+              "PrioritizeResizeTaskRunnerOnStartup",
+              "SendGPUChannelEarly",
+              "SkipIPCChannelPausingForNonGuests",
+              "WebUIBackForwardButton",
+              "WebUIBundledCodeCache",
+              "WebUIHomeButton",
+              "WebUIInProcessResourceLoadingV2",
+              "WebUILocationBar",
+              "WebUIReloadButton",
+              "WebUISplitTabsButton",
+              "WebUIToolbarFrameEvictionOptOut",
+              "WebiumMetricsMapping"
+            ],
+            "disableFeature": [
+              "BypassOutdatedSurfaceActivation",
+              "InitialWebUISurfaceSync"
+            ]
+          }
+        },
+        {
+          "name": "EnabledWithSurfaceSync_20260909",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "WebUIReloadButtonDeferBrowserViewShow",
+              "value": "false"
+            },
+            {
+              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsive",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
+              "value": "5s"
+            },
+            {
+              "name": "config",
+              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
+            },
+            {
+              "name": "deadline_in_frames",
+              "value": "12000"
+            },
+            {
+              "name": "high_stream_priority",
+              "value": "true"
+            },
+            {
+              "name": "renderer_commit_delay_ms",
+              "value": "100000"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "BypassOutdatedSurfaceActivation",
+              "InitialWebUI",
+              "InitialWebUISurfaceSync",
+              "InitialWebUISyncNavStartToCommit",
+              "InitialWebUIWithoutExtensions",
+              "PrioritizeResizeTaskRunnerOnStartup",
+              "SendGPUChannelEarly",
+              "SkipIPCChannelPausingForNonGuests",
+              "WebUIBackForwardButton",
+              "WebUIBundledCodeCache",
+              "WebUIHomeButton",
+              "WebUIInProcessResourceLoadingV2",
+              "WebUILocationBar",
+              "WebUIReloadButton",
+              "WebUISplitTabsButton",
+              "WebUIToolbarFrameEvictionOptOut",
+              "WebiumMetricsMapping"
+            ]
+          }
+        },
+        {
+          "name": "EnabledWithSurfaceSyncWithPrewarmWebUI_20260909",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "WebUIReloadButtonDeferBrowserViewShow",
+              "value": "false"
+            },
+            {
+              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonPrewarmWebUI",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonPrewarmWebUIPreNavigate",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonProfilePrewarming",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsive",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
+              "value": "5s"
+            },
+            {
+              "name": "config",
+              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
+            },
+            {
+              "name": "deadline_in_frames",
+              "value": "12000"
+            },
+            {
+              "name": "high_stream_priority",
+              "value": "true"
+            },
+            {
+              "name": "renderer_commit_delay_ms",
+              "value": "100000"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "BypassOutdatedSurfaceActivation",
+              "InitialWebUI",
+              "InitialWebUISurfaceSync",
+              "InitialWebUISyncNavStartToCommit",
+              "InitialWebUIWithoutExtensions",
+              "PrioritizeResizeTaskRunnerOnStartup",
+              "SendGPUChannelEarly",
+              "SkipIPCChannelPausingForNonGuests",
+              "WebUIBackForwardButton",
+              "WebUIBundledCodeCache",
+              "WebUIHomeButton",
+              "WebUIInProcessResourceLoadingV2",
+              "WebUILocationBar",
+              "WebUIReloadButton",
+              "WebUISplitTabsButton",
+              "WebUIToolbarFrameEvictionOptOut",
+              "WebiumMetricsMapping"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260909",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "BypassOutdatedSurfaceActivation",
+              "InitialWebUI",
+              "InitialWebUISurfaceSync",
+              "InitialWebUISyncNavStartToCommit",
+              "InitialWebUIWithoutExtensions",
+              "PrioritizeResizeTaskRunnerOnStartup",
+              "SendGPUChannelEarly",
+              "SkipIPCChannelPausingForNonGuests",
+              "WebUIBackForwardButton",
+              "WebUIBundledCodeCache",
+              "WebUIHomeButton",
+              "WebUIInProcessResourceLoadingV2",
+              "WebUILocationBar",
               "WebUIReloadButton",
               "WebUISplitTabsButton",
               "WebUIToolbarFrameEvictionOptOut",
@@ -433922,6 +434336,81 @@
           "PLATFORM_ANDROID_WEBVIEW"
         ]
       },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "WebViewStaticMethodsNotTriggerStartup",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260708",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "WebViewStaticMethodsNotTriggerStartup"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_20260708",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "WebViewStaticMethodsNotTriggerStartup"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7828.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1793750340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "WebViewStaticMethodsNotTriggerStartup",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260902",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101003918",
+          "featureAssociation": {
+            "disableFeature": [
+              "WebViewStaticMethodsNotTriggerStartup"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_20260902",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101003919",
+          "featureAssociation": {
+            "enableFeature": [
+              "WebViewStaticMethodsNotTriggerStartup"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7828.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1793750340"
+      },
+      "randomizationSeed": 801876287,
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
@@ -461446,5 +461935,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260908-170052.476000-production"
+  "version": "20260909-010034.541000-production"
 }
