@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDkxNC0wMTAwNDQuMjIwMDAwEgQgACgB#TDBG9SGecQQ=",
+  "serialNumber": "SMChYyMDI2MDkxNC0wOTAxMDEuMTc4MDAwEgQgACgB#VGrrnp4EsW8=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -9147,6 +9147,1209 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "PartitionAllocMiracleObject",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "leak_sanitized_object_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "browser_enabled_unlimited_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "gpu_all_threads_enabled_512K_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "gpu_all_threads_enabled_unlimited_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "renderer_enabled_unlimited_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "mo_holdback_disabled_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "current_large_ram_launch_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 16
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1790812740"
+      }
+    },
+    {
+      "name": "PartitionAllocMiracleObject",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "leak_sanitized_object_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "browser_enabled_512K_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "browser_enabled_unlimited_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "gpu_all_threads_enabled_512K_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "gpu_all_threads_enabled_unlimited_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "renderer_enabled_unlimited_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "disabled_20260825",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 16
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_ANDROID_WEBVIEW",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1790812740"
+      }
+    },
+    {
+      "name": "PartitionAllocMiracleObject",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "leak_sanitized_object_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "browser_enabled_unlimited_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "gpu_all_threads_enabled_512K_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "gpu_all_threads_enabled_unlimited_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "renderer_enabled_unlimited_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "mo_holdback_disabled_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "current_large_ram_launch_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 16
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1790812740"
+      }
+    },
+    {
+      "name": "PartitionAllocMiracleObject",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "leak_sanitized_object_20260814",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "browser_enabled_512K_20260814",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "browser_enabled_unlimited_20260814",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "disabled_20260814",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1790812740"
+      }
+    },
+    {
+      "name": "PartitionAllocMiracleObject",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "leak_sanitized_object_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "browser_enabled_512K_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "browser_enabled_unlimited_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "gpu_all_threads_enabled_512K_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "gpu_all_threads_enabled_unlimited_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "renderer_enabled_unlimited_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "disabled_20260814",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 16
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_ANDROID_WEBVIEW",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1790812740"
+      }
+    },
+    {
+      "name": "PartitionAllocMiracleObject",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "leak_sanitized_object_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004120",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "browser_enabled_unlimited_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004121",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "gpu_all_threads_enabled_unlimited_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004122",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "renderer_enabled_unlimited_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004123",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "mo_holdback_disabled_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004124",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "current_large_ram_launch_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004125",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1790812740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "PartitionAllocMiracleObject",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "leak_sanitized_object_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004149",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "browser_enabled_unlimited_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004150",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "gpu_all_threads_enabled_unlimited_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004151",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "renderer_enabled_unlimited_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004152",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "disabled_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004119",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1790812740"
+      },
+      "randomizationSeed": 3609164670,
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "PartitionAllocMiracleObject",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "leak_sanitized_object_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004175",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "browser_enabled_unlimited_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004176",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "renderer_enabled_unlimited_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004177",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "disabled_20260908",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004178",
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7977.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1790812740"
+      },
+      "randomizationSeed": 2554282542,
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "PrefetchCancelUnrelatedPrefetch",
       "consistency": "PERMANENT",
       "experiment": [
@@ -13147,6 +14350,66 @@
         ],
         "endDate": "1792367940"
       },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DisablePersistBrokenAlternativeServices",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Disabled_WebView",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004276",
+          "featureAssociation": {
+            "disableFeature": [
+              "PersistBrokenAlternativeServices"
+            ]
+          }
+        },
+        {
+          "name": "Control_WebView",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004275"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "PersistBrokenAlternativeServices"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_PersistBrokenAlternativeServices",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PersistBrokenAlternativeServices"
+          }
+        },
+        {
+          "name": "ForcedOff_PersistBrokenAlternativeServices",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PersistBrokenAlternativeServices"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.7992.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1792367940"
+      },
+      "randomizationSeed": 1480133956,
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
@@ -23680,121 +24943,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "Discover100CardFeedBlingHoldback",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_prestable_20260702",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101002029",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Holdback_prestable_20260702",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101002030",
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7680.71",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1791071940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DiscoverBlingEnableUploadActionsIRPC",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260908",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101002723",
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_enable_upload_actions_irpc"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260908",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101002722",
-          "featureAssociation": {
-            "disableFeature": [
-              "IOSGCR_enable_upload_actions_irpc"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1793577540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DiscoverCUI3AppFlowLoggingBling",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260818",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003224",
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_discover_wait_indicator_app_flow",
-              "IOSGCR_enable_next_page_app_flow"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260818",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003223",
-          "featureAssociation": {
-            "disableFeature": [
-              "IOSGCR_discover_wait_indicator_app_flow",
-              "IOSGCR_enable_next_page_app_flow"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7861.1",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1790812740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "DiscoverBackgroundRefreshOnBling",
       "consistency": "PERMANENT",
       "experiment": [
@@ -24020,6 +25168,49 @@
           "PLATFORM_IOS"
         ],
         "endDate": "1793750340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DiscoverCUI3AppFlowLoggingBling",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260818",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003224",
+          "featureAssociation": {
+            "enableFeature": [
+              "IOSGCR_discover_wait_indicator_app_flow",
+              "IOSGCR_enable_next_page_app_flow"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260818",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003223",
+          "featureAssociation": {
+            "disableFeature": [
+              "IOSGCR_discover_wait_indicator_app_flow",
+              "IOSGCR_enable_next_page_app_flow"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7861.1",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1790812740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -24875,6 +26066,78 @@
           "PLATFORM_IOS"
         ],
         "endDate": "1792108740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DiscoverBlingEnableUploadActionsIRPC",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260908",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101002723",
+          "featureAssociation": {
+            "enableFeature": [
+              "IOSGCR_enable_upload_actions_irpc"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260908",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101002722",
+          "featureAssociation": {
+            "disableFeature": [
+              "IOSGCR_enable_upload_actions_irpc"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1793577540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "Discover100CardFeedBlingHoldback",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_prestable_20260702",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002029",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Holdback_prestable_20260702",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101002030",
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "146.0.7680.71",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1791071940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -26182,41 +27445,6 @@
           "CANARY",
           "DEV",
           "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS"
-        ],
-        "endDate": "1791503940"
-      }
-    },
-    {
-      "name": "DeviceBoundSessionsForGoogle",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "L1Enabled",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "enableFeature": [
-              "DeviceBoundSessionsForRestrictedSites"
-            ]
-          }
-        },
-        {
-          "name": "L1Control",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "disableFeature": [
-              "DeviceBoundSessionsForRestrictedSites"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7668.0",
-        "maxVersion": "146.0.7680.70",
-        "channel": [
-          "STABLE"
         ],
         "platform": [
           "PLATFORM_WINDOWS"
@@ -119915,7 +121143,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260714",
+          "name": "Enabled_20260911",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -119924,7 +121152,7 @@
           }
         },
         {
-          "name": "Control_20260714",
+          "name": "Control_20260911",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -119971,7 +121199,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260714",
+          "name": "Enabled_20260911",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -119980,7 +121208,7 @@
           }
         },
         {
-          "name": "Control_20260714",
+          "name": "Control_20260911",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -120028,8 +121256,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260714",
-          "probabilityWeight": 1,
+          "name": "Enabled_20260911",
+          "probabilityWeight": 10,
           "featureAssociation": {
             "enableFeature": [
               "DecodeScriptsInBlink"
@@ -120037,8 +121265,8 @@
           }
         },
         {
-          "name": "Control_20260714",
-          "probabilityWeight": 1,
+          "name": "Control_20260911",
+          "probabilityWeight": 10,
           "featureAssociation": {
             "disableFeature": [
               "DecodeScriptsInBlink"
@@ -120047,7 +121275,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 98
+          "probabilityWeight": 80
         },
         {
           "name": "ForcedOn_DecodeScriptsInBlink",
@@ -120870,7 +122098,7 @@
           "en-CA",
           "en-IN"
         ],
-        "endDate": "1790553540",
+        "endDate": "1794268740",
         "minOsVersion": "10.0.22000"
       }
     },
@@ -120879,8 +122107,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "BubbleDialog_20260707",
-          "probabilityWeight": 50,
+          "name": "BubbleDialog_20260825",
+          "probabilityWeight": 25,
           "param": [
             {
               "name": "prompt_surface",
@@ -120897,8 +122125,26 @@
           }
         },
         {
-          "name": "Control_20260707",
-          "probabilityWeight": 50,
+          "name": "ModalDialog_20260825",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "prompt_surface",
+              "value": "modal_dialog_with_settings_illustration"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DefaultBrowserChangedOsNotification",
+              "DefaultBrowserFramework",
+              "DefaultBrowserPromptSurfaces",
+              "PerformDefaultBrowserCheckValidations"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260825",
+          "probabilityWeight": 25,
           "featureAssociation": {
             "disableFeature": [
               "DefaultBrowserChangedOsNotification",
@@ -120910,7 +122156,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 0
+          "probabilityWeight": 25
         },
         {
           "name": "ForcedOn_DefaultBrowserChangedOsNotification",
@@ -120970,7 +122216,7 @@
         }
       ],
       "filter": {
-        "minVersion": "149.0.7827.16",
+        "minVersion": "153.0.8003.0",
         "channel": [
           "BETA"
         ],
@@ -120984,7 +122230,7 @@
           "en-CA",
           "en-IN"
         ],
-        "endDate": "1790553540",
+        "endDate": "1794268740",
         "minOsVersion": "10.0.22000"
       }
     },
@@ -121117,7 +122363,7 @@
           "en-CA",
           "en-IN"
         ],
-        "endDate": "1790553540",
+        "endDate": "1794268740",
         "minOsVersion": "10.0.22000"
       }
     },
@@ -121250,7 +122496,7 @@
           "en-CA",
           "en-IN"
         ],
-        "endDate": "1790553540",
+        "endDate": "1794268740",
         "minOsVersion": "10.0.22000"
       }
     },
@@ -121348,7 +122594,7 @@
           "en-CA",
           "en-IN"
         ],
-        "endDate": "1790553540",
+        "endDate": "1794268740",
         "minOsVersion": "10.0.22000"
       }
     },
@@ -121446,7 +122692,7 @@
           "en-CA",
           "en-IN"
         ],
-        "endDate": "1790553540",
+        "endDate": "1794268740",
         "minOsVersion": "10.0.22000"
       }
     },
@@ -136325,6 +137571,53 @@
         "country": [
           "us"
         ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DiscoverActionUploadOptimisationsBling",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260907",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004144",
+          "featureAssociation": {
+            "enableFeature": [
+              "IOSGCR_disable_action_upload_post_refresh",
+              "IOSGCR_enable_full_reload_check_fix",
+              "IOSGCR_enable_pending_actions_check_fix",
+              "IOSGCR_enable_view_action_provider_fix"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260907",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004143",
+          "featureAssociation": {
+            "disableFeature": [
+              "IOSGCR_disable_action_upload_post_refresh",
+              "IOSGCR_enable_full_reload_check_fix",
+              "IOSGCR_enable_pending_actions_check_fix",
+              "IOSGCR_enable_view_action_provider_fix"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7861.1",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1794009540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -238247,6 +239540,66 @@
       }
     },
     {
+      "name": "NoAccountsWebSignin",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Postperiod_Enabled_20260903",
+          "probabilityWeight": 5
+        },
+        {
+          "name": "Postperiod_Control_20260903",
+          "probabilityWeight": 5
+        },
+        {
+          "name": "Enabled_Sticky_20260903",
+          "probabilityWeight": 5,
+          "featureAssociation": {
+            "enableFeature": [
+              "NoAccountWebSignin"
+            ]
+          }
+        },
+        {
+          "name": "Control_Sticky_20260903",
+          "probabilityWeight": 5,
+          "featureAssociation": {
+            "disableFeature": [
+              "NoAccountWebSignin"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 80
+        },
+        {
+          "name": "ForcedOn_NoAccountWebSignin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NoAccountWebSignin"
+          }
+        },
+        {
+          "name": "ForcedOff_NoAccountWebSignin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NoAccountWebSignin"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "149.0.7804.1",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1792540740"
+      }
+    },
+    {
       "name": "NoOpParentalControlsV2",
       "consistency": "PERMANENT",
       "experiment": [
@@ -262532,806 +263885,6 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "leak_sanitized_object_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "browser_enabled_unlimited_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "gpu_all_threads_enabled_512K_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "gpu_all_threads_enabled_unlimited_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "renderer_enabled_unlimited_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "mo_holdback_disabled_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "current_large_ram_launch_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 16
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7977.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1790812740"
-      }
-    },
-    {
-      "name": "PartitionAllocMiracleObject",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "leak_sanitized_object_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "browser_enabled_512K_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "browser_enabled_unlimited_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "gpu_all_threads_enabled_512K_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "gpu_all_threads_enabled_unlimited_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "renderer_enabled_unlimited_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "disabled_20260825",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 16
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7977.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1790812740"
-      }
-    },
-    {
-      "name": "PartitionAllocMiracleObject",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "leak_sanitized_object_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "browser_enabled_unlimited_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "gpu_all_threads_enabled_512K_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "gpu_all_threads_enabled_unlimited_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "renderer_enabled_unlimited_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "mo_holdback_disabled_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "current_large_ram_launch_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 16
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7977.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1790812740"
-      }
-    },
-    {
-      "name": "PartitionAllocMiracleObject",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "leak_sanitized_object_20260814",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "browser_enabled_512K_20260814",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "browser_enabled_unlimited_20260814",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "disabled_20260814",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7977.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1790812740"
-      }
-    },
-    {
-      "name": "PartitionAllocMiracleObject",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "leak_sanitized_object_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "browser_enabled_512K_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "browser_enabled_unlimited_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "gpu_all_threads_enabled_512K_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "gpu_all_threads_enabled_unlimited_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "renderer_enabled_unlimited_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "disabled_20260814",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 16
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7977.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1790812740"
-      }
-    },
-    {
-      "name": "PartitionAllocMiracleObject",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
           "name": "sanitized_object_and_miracle_object_enabled_512K_large_ram_Launch",
           "probabilityWeight": 100,
           "param": [
@@ -267792,6 +268345,132 @@
         }
       ],
       "filter": {
+        "minVersion": "155.0.8052.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1791763140"
+      }
+    },
+    {
+      "name": "PasswordSaveInContextErrorResolution",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "PasswordSaveInContextErrorResolution"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "PasswordSaveInContextErrorResolution"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "PasswordSaveInContextErrorResolution"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_PasswordSaveInContextErrorResolution",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PasswordSaveInContextErrorResolution"
+          }
+        },
+        {
+          "name": "ForcedOff_PasswordSaveInContextErrorResolution",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PasswordSaveInContextErrorResolution"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8037.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1793404740"
+      }
+    },
+    {
+      "name": "PasswordSaveInContextErrorResolution",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "PasswordSaveInContextErrorResolution"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "PasswordSaveInContextErrorResolution"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "PasswordSaveInContextErrorResolution"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_PasswordSaveInContextErrorResolution",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PasswordSaveInContextErrorResolution"
+          }
+        },
+        {
+          "name": "ForcedOff_PasswordSaveInContextErrorResolution",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PasswordSaveInContextErrorResolution"
+          }
+        }
+      ],
+      "filter": {
         "minVersion": "154.0.8037.0",
         "channel": [
           "CANARY",
@@ -267803,7 +268482,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS"
         ],
-        "endDate": "1790812740"
+        "endDate": "1793404740"
       }
     },
     {
@@ -307080,7 +307759,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_2d_20260908",
+          "name": "Enabled_2d_20260914",
           "probabilityWeight": 50,
           "param": [
             {
@@ -307107,7 +307786,7 @@
           }
         },
         {
-          "name": "Enabled_10d_20260908",
+          "name": "Enabled_10d_20260914",
           "probabilityWeight": 50,
           "param": [
             {
@@ -307173,7 +307852,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_IOS"
         ],
-        "endDate": "1791331140"
+        "endDate": "1793491140"
       }
     },
     {
@@ -307181,7 +307860,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_2d_20260908",
+          "name": "Enabled_2d_20260914",
           "probabilityWeight": 50,
           "param": [
             {
@@ -307208,7 +307887,7 @@
           }
         },
         {
-          "name": "Enabled_10d_20260908",
+          "name": "Enabled_10d_20260914",
           "probabilityWeight": 50,
           "param": [
             {
@@ -307275,7 +307954,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_IOS"
         ],
-        "endDate": "1791331140"
+        "endDate": "1793491140"
       }
     },
     {
@@ -307283,8 +307962,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_2d_20260908_60",
-          "probabilityWeight": 60,
+          "name": "Enabled_2d_20260914_70",
+          "probabilityWeight": 70,
           "param": [
             {
               "name": "background-password-check-interval",
@@ -307310,8 +307989,8 @@
           }
         },
         {
-          "name": "Enabled_10d_20260908_40",
-          "probabilityWeight": 40,
+          "name": "Enabled_10d_20260914_30",
+          "probabilityWeight": 30,
           "param": [
             {
               "name": "background-password-check-interval",
@@ -307363,7 +308042,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_IOS"
         ],
-        "endDate": "1791331140"
+        "endDate": "1793491140"
       }
     },
     {
@@ -342120,6 +342799,7 @@
       ],
       "filter": {
         "minVersion": "151.0.7888.0",
+        "maxVersion": "155.0.8051.0",
         "channel": [
           "CANARY",
           "DEV",
@@ -342131,8 +342811,7 @@
         ],
         "formFactor": [
           "DESKTOP"
-        ],
-        "endDate": "1796515140"
+        ]
       },
       "randomizationSeed": 2249785837
     },
@@ -397649,40 +398328,84 @@
           "probabilityWeight": 100,
           "param": [
             {
+              "name": "Accessibility.Canvas",
+              "value": "4"
+            },
+            {
+              "name": "AdFrameLoad",
+              "value": "6"
+            },
+            {
               "name": "Autofill.FieldFillStatus",
-              "value": "2"
+              "value": "10"
             },
             {
               "name": "Autofill.FieldTypeValidation",
-              "value": "8"
+              "value": "40"
+            },
+            {
+              "name": "Autofill.FormEvent",
+              "value": "5"
             },
             {
               "name": "Blink.FrameLoader",
-              "value": "18"
+              "value": "120"
+            },
+            {
+              "name": "Blink.HTMLParsing",
+              "value": "4"
+            },
+            {
+              "name": "Blink.PageLoad",
+              "value": "5"
+            },
+            {
+              "name": "Blink.PaintTiming",
+              "value": "3"
+            },
+            {
+              "name": "Blink.UpdateTime",
+              "value": "10"
             },
             {
               "name": "ClientHints.AcceptCHFrameUsage",
-              "value": "2"
-            },
-            {
-              "name": "ClientHints.AcceptCHHeaderUsage",
-              "value": "2"
-            },
-            {
-              "name": "ClientRenderingAPI",
               "value": "16"
             },
             {
+              "name": "ClientHints.AcceptCHHeaderUsage",
+              "value": "16"
+            },
+            {
+              "name": "ClientRenderingAPI",
+              "value": "100"
+            },
+            {
+              "name": "ContentManagementSystemPageLoad",
+              "value": "4"
+            },
+            {
               "name": "Cookies.Blocked.DueToOriginMismatch",
-              "value": "3"
+              "value": "14"
             },
             {
               "name": "CrossOriginSubframeWithoutEmbeddingControl",
-              "value": "2"
+              "value": "18"
             },
             {
               "name": "DocumentCreated",
+              "value": "25"
+            },
+            {
+              "name": "DomDistiller.Android.DistillabilityLatency",
+              "value": "2"
+            },
+            {
+              "name": "DomDistiller.Android.DistillabilityResult",
               "value": "3"
+            },
+            {
+              "name": "DomDistiller.ModelResult.Distillable",
+              "value": "4"
             },
             {
               "name": "Download.Completed",
@@ -397702,15 +398425,51 @@
             },
             {
               "name": "Extensions.OnNavigation",
-              "value": "3"
+              "value": "20"
             },
             {
               "name": "Extensions.WebRequest.KeepaliveRequestFinished",
+              "value": "25"
+            },
+            {
+              "name": "GoogleDocsOfflineExtension",
+              "value": "2"
+            },
+            {
+              "name": "HistoryApi.PushState",
+              "value": "2"
+            },
+            {
+              "name": "JavascriptFrameworkPageLoad",
+              "value": "4"
+            },
+            {
+              "name": "LoadCountsPerTopLevelDocument",
               "value": "5"
+            },
+            {
+              "name": "LoadingPredictor",
+              "value": "2"
+            },
+            {
+              "name": "Media",
+              "value": "10"
+            },
+            {
+              "name": "Media.Autoplay.Attempt",
+              "value": "3"
             },
             {
               "name": "Media.BasicPlayback",
               "value": "Media"
+            },
+            {
+              "name": "Media.EME.GetStatusForPolicy",
+              "value": "8"
+            },
+            {
+              "name": "Media.VideoDecodePerfRecord",
+              "value": "2"
             },
             {
               "name": "Media.WebAudio.AudioContext.AudibleTime",
@@ -397722,7 +398481,23 @@
             },
             {
               "name": "Memory.Experimental",
-              "value": "3"
+              "value": "20"
+            },
+            {
+              "name": "Memory.TabFootprint",
+              "value": "5"
+            },
+            {
+              "name": "MobileFriendliness.TappedBadTargets",
+              "value": "2"
+            },
+            {
+              "name": "Navigation.ReceivedResponse",
+              "value": "5"
+            },
+            {
+              "name": "NavigationPredictor",
+              "value": "16"
             },
             {
               "name": "NavigationPredictorAnchorElementMetrics",
@@ -397745,24 +398520,60 @@
               "value": "NavigationPredictor"
             },
             {
-              "name": "Network.DataUrls",
+              "name": "NavigationTiming",
               "value": "3"
             },
             {
-              "name": "OptimizationGuide",
-              "value": "2"
+              "name": "Network.DataUrls",
+              "value": "20"
             },
             {
-              "name": "PerformanceAPI.LongAnimationFrame",
+              "name": "OptimizationGuide",
               "value": "14"
             },
             {
-              "name": "PerformanceAPI.Memory.Legacy",
+              "name": "OptimizationGuide.AnnotatedPageContent",
+              "value": "4"
+            },
+            {
+              "name": "OptimizationGuide.PageContentExtraction",
+              "value": "6"
+            },
+            {
+              "name": "PageContentAnnotations2",
+              "value": "8"
+            },
+            {
+              "name": "PageForegroundSession",
+              "value": "8"
+            },
+            {
+              "name": "PageLifecycleMetricsOnNewPageCommit",
+              "value": "6"
+            },
+            {
+              "name": "PageLoadInitiatorForAdTagging",
+              "value": "4"
+            },
+            {
+              "name": "PaidContentPageLoad",
+              "value": "5"
+            },
+            {
+              "name": "PerformanceAPI.LongAnimationFrame",
               "value": "100"
             },
             {
+              "name": "PerformanceAPI.LongTask",
+              "value": "3"
+            },
+            {
+              "name": "PerformanceAPI.Memory.Legacy",
+              "value": "500"
+            },
+            {
               "name": "PerformanceManager.PageResourceUsage2",
-              "value": "6"
+              "value": "35"
             },
             {
               "name": "Popup.Closed",
@@ -397771,6 +398582,10 @@
             {
               "name": "Popup.Page",
               "value": "Popup"
+            },
+            {
+              "name": "PowerUsageScenariosIntervalData",
+              "value": "5"
             },
             {
               "name": "Preloading.Attempt",
@@ -397782,19 +398597,59 @@
             },
             {
               "name": "Preloading.Prediction",
-              "value": "5"
+              "value": "45"
             },
             {
               "name": "Preloading.Prediction.PreviousPrimaryPage",
-              "value": "8"
+              "value": "60"
             },
             {
               "name": "Responsiveness.UserInteraction",
+              "value": "20"
+            },
+            {
+              "name": "SamesiteRedirectContextDowngrade",
+              "value": "2"
+            },
+            {
+              "name": "Security.SiteEngagement",
+              "value": "3"
+            },
+            {
+              "name": "SiteFamiliarityHeuristicResult",
+              "value": "4"
+            },
+            {
+              "name": "SubresourceFilter",
               "value": "4"
             },
             {
               "name": "SubresourceLoad.ZstdContentEncoding",
-              "value": "16"
+              "value": "100"
+            },
+            {
+              "name": "TabRevisitTracker.TabStateChange",
+              "value": "6"
+            },
+            {
+              "name": "Translate",
+              "value": "5"
+            },
+            {
+              "name": "TranslatePageLoad",
+              "value": "6"
+            },
+            {
+              "name": "Unload",
+              "value": "3"
+            },
+            {
+              "name": "UserPerceivedPageVisit",
+              "value": "12"
+            },
+            {
+              "name": "V8.GC.FullCycle",
+              "value": "10"
             },
             {
               "name": "V8.Wasm.ModuleCompiled",
@@ -397807,6 +398662,10 @@
             {
               "name": "V8.Wasm.ModuleInstantiated",
               "value": "V8.Wasm"
+            },
+            {
+              "name": "WebOTPImpact",
+              "value": "2"
             },
             {
               "name": "_default_sampling",
@@ -398005,40 +398864,84 @@
           "probabilityWeight": 100,
           "param": [
             {
+              "name": "Accessibility.Canvas",
+              "value": "4"
+            },
+            {
+              "name": "AdFrameLoad",
+              "value": "6"
+            },
+            {
               "name": "Autofill.FieldFillStatus",
-              "value": "2"
+              "value": "10"
             },
             {
               "name": "Autofill.FieldTypeValidation",
-              "value": "8"
+              "value": "40"
+            },
+            {
+              "name": "Autofill.FormEvent",
+              "value": "5"
             },
             {
               "name": "Blink.FrameLoader",
-              "value": "18"
+              "value": "120"
+            },
+            {
+              "name": "Blink.HTMLParsing",
+              "value": "4"
+            },
+            {
+              "name": "Blink.PageLoad",
+              "value": "5"
+            },
+            {
+              "name": "Blink.PaintTiming",
+              "value": "3"
+            },
+            {
+              "name": "Blink.UpdateTime",
+              "value": "10"
             },
             {
               "name": "ClientHints.AcceptCHFrameUsage",
-              "value": "2"
-            },
-            {
-              "name": "ClientHints.AcceptCHHeaderUsage",
-              "value": "2"
-            },
-            {
-              "name": "ClientRenderingAPI",
               "value": "16"
             },
             {
+              "name": "ClientHints.AcceptCHHeaderUsage",
+              "value": "16"
+            },
+            {
+              "name": "ClientRenderingAPI",
+              "value": "100"
+            },
+            {
+              "name": "ContentManagementSystemPageLoad",
+              "value": "4"
+            },
+            {
               "name": "Cookies.Blocked.DueToOriginMismatch",
-              "value": "3"
+              "value": "14"
             },
             {
               "name": "CrossOriginSubframeWithoutEmbeddingControl",
-              "value": "2"
+              "value": "18"
             },
             {
               "name": "DocumentCreated",
+              "value": "25"
+            },
+            {
+              "name": "DomDistiller.Android.DistillabilityLatency",
+              "value": "2"
+            },
+            {
+              "name": "DomDistiller.Android.DistillabilityResult",
               "value": "3"
+            },
+            {
+              "name": "DomDistiller.ModelResult.Distillable",
+              "value": "4"
             },
             {
               "name": "Download.Completed",
@@ -398058,15 +398961,51 @@
             },
             {
               "name": "Extensions.OnNavigation",
-              "value": "3"
+              "value": "20"
             },
             {
               "name": "Extensions.WebRequest.KeepaliveRequestFinished",
+              "value": "25"
+            },
+            {
+              "name": "GoogleDocsOfflineExtension",
+              "value": "2"
+            },
+            {
+              "name": "HistoryApi.PushState",
+              "value": "2"
+            },
+            {
+              "name": "JavascriptFrameworkPageLoad",
+              "value": "4"
+            },
+            {
+              "name": "LoadCountsPerTopLevelDocument",
               "value": "5"
+            },
+            {
+              "name": "LoadingPredictor",
+              "value": "2"
+            },
+            {
+              "name": "Media",
+              "value": "10"
+            },
+            {
+              "name": "Media.Autoplay.Attempt",
+              "value": "3"
             },
             {
               "name": "Media.BasicPlayback",
               "value": "Media"
+            },
+            {
+              "name": "Media.EME.GetStatusForPolicy",
+              "value": "8"
+            },
+            {
+              "name": "Media.VideoDecodePerfRecord",
+              "value": "2"
             },
             {
               "name": "Media.WebAudio.AudioContext.AudibleTime",
@@ -398078,7 +399017,23 @@
             },
             {
               "name": "Memory.Experimental",
-              "value": "3"
+              "value": "20"
+            },
+            {
+              "name": "Memory.TabFootprint",
+              "value": "5"
+            },
+            {
+              "name": "MobileFriendliness.TappedBadTargets",
+              "value": "2"
+            },
+            {
+              "name": "Navigation.ReceivedResponse",
+              "value": "5"
+            },
+            {
+              "name": "NavigationPredictor",
+              "value": "16"
             },
             {
               "name": "NavigationPredictorAnchorElementMetrics",
@@ -398101,24 +399056,60 @@
               "value": "NavigationPredictor"
             },
             {
-              "name": "Network.DataUrls",
+              "name": "NavigationTiming",
               "value": "3"
             },
             {
-              "name": "OptimizationGuide",
-              "value": "2"
+              "name": "Network.DataUrls",
+              "value": "20"
             },
             {
-              "name": "PerformanceAPI.LongAnimationFrame",
+              "name": "OptimizationGuide",
               "value": "14"
             },
             {
-              "name": "PerformanceAPI.Memory.Legacy",
+              "name": "OptimizationGuide.AnnotatedPageContent",
+              "value": "4"
+            },
+            {
+              "name": "OptimizationGuide.PageContentExtraction",
+              "value": "6"
+            },
+            {
+              "name": "PageContentAnnotations2",
+              "value": "8"
+            },
+            {
+              "name": "PageForegroundSession",
+              "value": "8"
+            },
+            {
+              "name": "PageLifecycleMetricsOnNewPageCommit",
+              "value": "6"
+            },
+            {
+              "name": "PageLoadInitiatorForAdTagging",
+              "value": "4"
+            },
+            {
+              "name": "PaidContentPageLoad",
+              "value": "5"
+            },
+            {
+              "name": "PerformanceAPI.LongAnimationFrame",
               "value": "100"
             },
             {
+              "name": "PerformanceAPI.LongTask",
+              "value": "3"
+            },
+            {
+              "name": "PerformanceAPI.Memory.Legacy",
+              "value": "500"
+            },
+            {
               "name": "PerformanceManager.PageResourceUsage2",
-              "value": "6"
+              "value": "35"
             },
             {
               "name": "Popup.Closed",
@@ -398127,6 +399118,10 @@
             {
               "name": "Popup.Page",
               "value": "Popup"
+            },
+            {
+              "name": "PowerUsageScenariosIntervalData",
+              "value": "5"
             },
             {
               "name": "Preloading.Attempt",
@@ -398138,19 +399133,59 @@
             },
             {
               "name": "Preloading.Prediction",
-              "value": "5"
+              "value": "45"
             },
             {
               "name": "Preloading.Prediction.PreviousPrimaryPage",
-              "value": "8"
+              "value": "60"
             },
             {
               "name": "Responsiveness.UserInteraction",
+              "value": "20"
+            },
+            {
+              "name": "SamesiteRedirectContextDowngrade",
+              "value": "2"
+            },
+            {
+              "name": "Security.SiteEngagement",
+              "value": "3"
+            },
+            {
+              "name": "SiteFamiliarityHeuristicResult",
+              "value": "4"
+            },
+            {
+              "name": "SubresourceFilter",
               "value": "4"
             },
             {
               "name": "SubresourceLoad.ZstdContentEncoding",
-              "value": "16"
+              "value": "100"
+            },
+            {
+              "name": "TabRevisitTracker.TabStateChange",
+              "value": "6"
+            },
+            {
+              "name": "Translate",
+              "value": "5"
+            },
+            {
+              "name": "TranslatePageLoad",
+              "value": "6"
+            },
+            {
+              "name": "Unload",
+              "value": "3"
+            },
+            {
+              "name": "UserPerceivedPageVisit",
+              "value": "12"
+            },
+            {
+              "name": "V8.GC.FullCycle",
+              "value": "10"
             },
             {
               "name": "V8.Wasm.ModuleCompiled",
@@ -398163,6 +399198,10 @@
             {
               "name": "V8.Wasm.ModuleInstantiated",
               "value": "V8.Wasm"
+            },
+            {
+              "name": "WebOTPImpact",
+              "value": "2"
             },
             {
               "name": "_default_sampling",
@@ -430268,36 +431307,10 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled_20260824",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003561",
+          "name": "EnabledLaunch",
+          "probabilityWeight": 100,
           "featureAssociation": {
             "enableFeature": [
-              "WebRTCColorAccuracy"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260824",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003560",
-          "featureAssociation": {
-            "disableFeature": [
-              "WebRTCColorAccuracy"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
               "WebRTCColorAccuracy"
             ]
           }
@@ -430319,146 +431332,16 @@
       ],
       "filter": {
         "minVersion": "149.0.7826.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1792886340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "WebRTCColorAccuracy",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Enabled_20260824",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003559",
-          "featureAssociation": {
-            "enableFeature": [
-              "WebRTCColorAccuracy"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260824",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003558",
-          "featureAssociation": {
-            "disableFeature": [
-              "WebRTCColorAccuracy"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "WebRTCColorAccuracy"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_WebRTCColorAccuracy",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "WebRTCColorAccuracy"
-          }
-        },
-        {
-          "name": "ForcedOff_WebRTCColorAccuracy",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "WebRTCColorAccuracy"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "149.0.7826.0",
+        "maxVersion": "155.0.8053.0",
         "channel": [
           "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1792886340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "WebRTCColorAccuracy",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Enabled_20260824",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003563",
-          "featureAssociation": {
-            "enableFeature": [
-              "WebRTCColorAccuracy"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260824",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003562",
-          "featureAssociation": {
-            "disableFeature": [
-              "WebRTCColorAccuracy"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "WebRTCColorAccuracy"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_WebRTCColorAccuracy",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "WebRTCColorAccuracy"
-          }
-        },
-        {
-          "name": "ForcedOff_WebRTCColorAccuracy",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "WebRTCColorAccuracy"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "149.0.7826.0",
-        "channel": [
+          "DEV",
+          "BETA",
           "STABLE"
         ],
         "platform": [
           "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1792886340"
+        ]
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -465029,5 +465912,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260914-010044.220000-production"
+  "version": "20260914-090101.178000-production"
 }
