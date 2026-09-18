@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDkxNy0wMTAwMzYuMDExMDAwEgQgACgB#4i9ZviDsXBI=",
+  "serialNumber": "SMChYyMDI2MDkxNy0wOTAwNTYuNzMzMDAwEgQgACgB#Hu5n5hXUxtU=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -8551,7 +8551,7 @@
           "PLATFORM_MAC",
           "PLATFORM_LINUX"
         ],
-        "endDate": "1790812740"
+        "endDate": "1794873540"
       }
     },
     {
@@ -8724,7 +8724,7 @@
           "PLATFORM_ANDROID_WEBVIEW",
           "PLATFORM_CHROMEOS"
         ],
-        "endDate": "1790812740"
+        "endDate": "1794873540"
       }
     },
     {
@@ -8896,7 +8896,7 @@
           "PLATFORM_MAC",
           "PLATFORM_LINUX"
         ],
-        "endDate": "1790812740"
+        "endDate": "1794873540"
       }
     },
     {
@@ -9006,7 +9006,7 @@
         "platform": [
           "PLATFORM_IOS"
         ],
-        "endDate": "1790812740"
+        "endDate": "1794873540"
       }
     },
     {
@@ -9180,7 +9180,7 @@
           "PLATFORM_ANDROID_WEBVIEW",
           "PLATFORM_CHROMEOS"
         ],
-        "endDate": "1790812740"
+        "endDate": "1794873540"
       }
     },
     {
@@ -9336,7 +9336,7 @@
         "platform": [
           "PLATFORM_LINUX"
         ],
-        "endDate": "1790812740"
+        "endDate": "1794873540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -9473,7 +9473,7 @@
         "formFactor": [
           null
         ],
-        "endDate": "1790812740"
+        "endDate": "1794873540"
       },
       "randomizationSeed": 3609164670,
       "activationType": "ACTIVATE_ON_STARTUP"
@@ -9581,7 +9581,7 @@
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1790812740"
+        "endDate": "1794873540"
       },
       "randomizationSeed": 2554282542,
       "activationType": "ACTIVATE_ON_STARTUP"
@@ -17669,9 +17669,9 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "EnabledNoPrivateInsightsLogging_20260901",
+          "name": "EnabledWithPrivateInsightsLogging_20260910",
           "probabilityWeight": 33,
-          "googleWebExperimentId": "101003898",
+          "googleWebExperimentId": "101004380",
           "param": [
             {
               "name": "ContextualCueingV2EduClassifierThreshold",
@@ -17679,21 +17679,38 @@
             },
             {
               "name": "ContextualCueingV2EnablePrivateInsightsLogging",
-              "value": "false"
+              "value": "true"
+            },
+            {
+              "name": "fcp_population_name_contextual_cues",
+              "value": "chrome/private_insights/contextual_cues"
+            },
+            {
+              "name": "fcp_server_uri",
+              "value": "https://federatedcompute-pa.googleapis.com/"
+            },
+            {
+              "name": "fcp_use_attestation_transparency_verifier",
+              "value": "true"
+            },
+            {
+              "name": "upload_interval",
+              "value": "10m"
             }
           ],
           "featureAssociation": {
             "enableFeature": [
               "ContextualCueingV2",
-              "GlicContextualCueingV2AutoSubmit"
+              "GlicContextualCueingV2AutoSubmit",
+              "PrivateInsightsFeature"
             ]
           },
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "EnabledNoPrivateInsightsLoggingLE2_20260901",
+          "name": "EnabledWithPrivateInsightsLoggingLE2_20260910",
           "probabilityWeight": 33,
-          "googleWebExperimentId": "101003899",
+          "googleWebExperimentId": "101004381",
           "param": [
             {
               "name": "ContextualCueingV2ClickBackoffTime",
@@ -17705,29 +17722,47 @@
             },
             {
               "name": "ContextualCueingV2EnablePrivateInsightsLogging",
-              "value": "false"
+              "value": "true"
             },
             {
               "name": "ContextualCueingV2MinTimeBetweenNudges",
               "value": "24h"
+            },
+            {
+              "name": "fcp_population_name_contextual_cues",
+              "value": "chrome/private_insights/contextual_cues"
+            },
+            {
+              "name": "fcp_server_uri",
+              "value": "https://federatedcompute-pa.googleapis.com/"
+            },
+            {
+              "name": "fcp_use_attestation_transparency_verifier",
+              "value": "true"
+            },
+            {
+              "name": "upload_interval",
+              "value": "10m"
             }
           ],
           "featureAssociation": {
             "enableFeature": [
               "ContextualCueingV2",
-              "GlicContextualCueingV2AutoSubmit"
+              "GlicContextualCueingV2AutoSubmit",
+              "PrivateInsightsFeature"
             ]
           },
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Control_20260901",
+          "name": "Control_20260910",
           "probabilityWeight": 33,
-          "googleWebExperimentId": "101003897",
+          "googleWebExperimentId": "101004379",
           "featureAssociation": {
             "disableFeature": [
               "ContextualCueingV2",
-              "GlicContextualCueingV2AutoSubmit"
+              "GlicContextualCueingV2AutoSubmit",
+              "PrivateInsightsFeature"
             ]
           },
           "googleWebVisibility": "FIRST_PARTY"
@@ -17738,7 +17773,7 @@
         }
       ],
       "filter": {
-        "minVersion": "150.0.7871.7",
+        "minVersion": "151.0.7922.19",
         "channel": [
           "BETA"
         ],
@@ -29492,28 +29527,14 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260819",
-          "probabilityWeight": 50,
+          "name": "EnabledLaunch",
+          "probabilityWeight": 100,
           "featureAssociation": {
             "enableFeature": [
               "AccessibilityExtendedSelection",
               "AccessibilitySetSelectableOnAllNodesWithText"
             ]
           }
-        },
-        {
-          "name": "Control_20260819",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "AccessibilityExtendedSelection",
-              "AccessibilitySetSelectableOnAllNodesWithText"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
         },
         {
           "name": "ForcedOn_AccessibilityExtendedSelection",
@@ -29546,153 +29567,17 @@
       ],
       "filter": {
         "minVersion": "153.0.8010.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1793577540"
-      }
-    },
-    {
-      "name": "AccessibilityExtendedSelection",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260819",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "AccessibilityExtendedSelection",
-              "AccessibilitySetSelectableOnAllNodesWithText"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260819",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "AccessibilityExtendedSelection",
-              "AccessibilitySetSelectableOnAllNodesWithText"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_AccessibilityExtendedSelection",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AccessibilityExtendedSelection"
-          }
-        },
-        {
-          "name": "ForcedOff_AccessibilityExtendedSelection",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AccessibilityExtendedSelection"
-          }
-        },
-        {
-          "name": "ForcedOn_AccessibilitySetSelectableOnAllNodesWithText",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AccessibilitySetSelectableOnAllNodesWithText"
-          }
-        },
-        {
-          "name": "ForcedOff_AccessibilitySetSelectableOnAllNodesWithText",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AccessibilitySetSelectableOnAllNodesWithText"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.8010.0",
+        "maxVersion": "156.0.8063.0",
         "channel": [
           "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1793577540"
-      }
-    },
-    {
-      "name": "AccessibilityExtendedSelection",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260819",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "enableFeature": [
-              "AccessibilityExtendedSelection",
-              "AccessibilitySetSelectableOnAllNodesWithText"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260819",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "disableFeature": [
-              "AccessibilityExtendedSelection",
-              "AccessibilitySetSelectableOnAllNodesWithText"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 98
-        },
-        {
-          "name": "ForcedOn_AccessibilityExtendedSelection",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AccessibilityExtendedSelection"
-          }
-        },
-        {
-          "name": "ForcedOff_AccessibilityExtendedSelection",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AccessibilityExtendedSelection"
-          }
-        },
-        {
-          "name": "ForcedOn_AccessibilitySetSelectableOnAllNodesWithText",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AccessibilitySetSelectableOnAllNodesWithText"
-          }
-        },
-        {
-          "name": "ForcedOff_AccessibilitySetSelectableOnAllNodesWithText",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AccessibilitySetSelectableOnAllNodesWithText"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.8010.0",
-        "channel": [
+          "DEV",
+          "BETA",
           "STABLE"
         ],
         "platform": [
           "PLATFORM_ANDROID",
           "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1793577540"
+        ]
       }
     },
     {
@@ -33490,26 +33375,13 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260903",
-          "probabilityWeight": 50,
+          "name": "EnabledLaunch",
+          "probabilityWeight": 100,
           "featureAssociation": {
             "enableFeature": [
               "AlwaysRegisterSessionsInvalidationsAndroid"
             ]
           }
-        },
-        {
-          "name": "Control_20260903",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "AlwaysRegisterSessionsInvalidationsAndroid"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
         },
         {
           "name": "ForcedOn_AlwaysRegisterSessionsInvalidationsAndroid",
@@ -33528,118 +33400,16 @@
       ],
       "filter": {
         "minVersion": "150.0.7838.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1790639940"
-      }
-    },
-    {
-      "name": "AlwaysRegisterSessionsInvalidationsAndroid",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260903",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "AlwaysRegisterSessionsInvalidationsAndroid"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260903",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "AlwaysRegisterSessionsInvalidationsAndroid"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_AlwaysRegisterSessionsInvalidationsAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AlwaysRegisterSessionsInvalidationsAndroid"
-          }
-        },
-        {
-          "name": "ForcedOff_AlwaysRegisterSessionsInvalidationsAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AlwaysRegisterSessionsInvalidationsAndroid"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7838.0",
+        "maxVersion": "155.0.8050.0",
         "channel": [
           "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1790639940"
-      }
-    },
-    {
-      "name": "AlwaysRegisterSessionsInvalidationsAndroid",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260909",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "AlwaysRegisterSessionsInvalidationsAndroid"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260909",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "AlwaysRegisterSessionsInvalidationsAndroid"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "ForcedOn_AlwaysRegisterSessionsInvalidationsAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AlwaysRegisterSessionsInvalidationsAndroid"
-          }
-        },
-        {
-          "name": "ForcedOff_AlwaysRegisterSessionsInvalidationsAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AlwaysRegisterSessionsInvalidationsAndroid"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7838.0",
-        "channel": [
+          "DEV",
+          "BETA",
           "STABLE"
         ],
         "platform": [
           "PLATFORM_ANDROID"
-        ],
-        "endDate": "1790639940"
+        ]
       }
     },
     {
@@ -48886,7 +48656,7 @@
           "en-IN",
           "en"
         ],
-        "endDate": "1790812740",
+        "endDate": "1794873540",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -49087,7 +48857,7 @@
           "en-IN",
           "en"
         ],
-        "endDate": "1790812740"
+        "endDate": "1794873540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -49282,7 +49052,7 @@
           "en-IN",
           "en"
         ],
-        "endDate": "1790812740"
+        "endDate": "1794873540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -117138,7 +116908,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_with_new_badge_20260825",
+          "name": "Enabled_with_new_badge_20260917",
           "probabilityWeight": 50,
           "param": [
             {
@@ -117157,7 +116927,7 @@
           }
         },
         {
-          "name": "Control_20260825",
+          "name": "Control_20260917",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -117200,7 +116970,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_with_new_badge_20260825",
+          "name": "Enabled_with_new_badge_20260917",
           "probabilityWeight": 50,
           "param": [
             {
@@ -117219,7 +116989,7 @@
           }
         },
         {
-          "name": "Control_20260825",
+          "name": "Control_20260917",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -117263,8 +117033,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_with_new_badge_20260825",
-          "probabilityWeight": 5,
+          "name": "Enabled_with_new_badge_20260917",
+          "probabilityWeight": 50,
           "param": [
             {
               "name": "show_new_badge",
@@ -117282,8 +117052,8 @@
           }
         },
         {
-          "name": "Control_20260825",
-          "probabilityWeight": 5,
+          "name": "Control_20260917",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
               "CrossDeviceSigninFromDesktop"
@@ -117292,7 +117062,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 90
+          "probabilityWeight": 0
         },
         {
           "name": "ForcedOn_CrossDeviceSigninFromDesktop",
@@ -117325,7 +117095,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_with_new_badge_20260825",
+          "name": "Enabled_with_new_badge_20260917",
           "probabilityWeight": 50,
           "param": [
             {
@@ -117344,7 +117114,7 @@
           }
         },
         {
-          "name": "Control_20260825",
+          "name": "Control_20260917",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -117388,7 +117158,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_with_new_badge_20260825",
+          "name": "Enabled_with_new_badge_20260917",
           "probabilityWeight": 50,
           "param": [
             {
@@ -117407,7 +117177,7 @@
           }
         },
         {
-          "name": "Control_20260825",
+          "name": "Control_20260917",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -117452,8 +117222,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_with_new_badge_20260825",
-          "probabilityWeight": 5,
+          "name": "Enabled_with_new_badge_20260917",
+          "probabilityWeight": 50,
           "param": [
             {
               "name": "show_new_badge",
@@ -117471,8 +117241,8 @@
           }
         },
         {
-          "name": "Control_20260825",
-          "probabilityWeight": 5,
+          "name": "Control_20260917",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
               "CrossDeviceSigninFromDesktop"
@@ -117481,7 +117251,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 90
+          "probabilityWeight": 0
         },
         {
           "name": "ForcedOn_CrossDeviceSigninFromDesktop",
@@ -148989,6 +148759,76 @@
           "PLATFORM_ANDROID",
           "PLATFORM_IOS"
         ]
+      }
+    },
+    {
+      "name": "EncryptSessionStorage_Phase2",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Phase2",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "stage",
+              "value": "write_both_read_prefer_encrypted"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EncryptSessionStorage"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "stage",
+              "value": "write_both_read_only_clear"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EncryptSessionStorage"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_EncryptSessionStorage",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EncryptSessionStorage"
+          }
+        },
+        {
+          "name": "ForcedOff_EncryptSessionStorage",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EncryptSessionStorage"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8064.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1793491140"
       }
     },
     {
@@ -253664,7 +253504,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260916",
+          "name": "Enabled_20260917",
           "probabilityWeight": 50,
           "param": [
             {
@@ -253683,7 +253523,7 @@
           }
         },
         {
-          "name": "Control_20260916",
+          "name": "Control_20260917",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -253732,7 +253572,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260916",
+          "name": "Enabled_20260917",
           "probabilityWeight": 50,
           "param": [
             {
@@ -253751,7 +253591,7 @@
           }
         },
         {
-          "name": "Control_20260916",
+          "name": "Control_20260917",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -253783,6 +253623,74 @@
         "channel": [
           "CANARY",
           "DEV"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "locale": [
+          "en-US"
+        ],
+        "country": [
+          "us"
+        ],
+        "endDate": "1793059140"
+      }
+    },
+    {
+      "name": "OnDevicePageClassification",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260917",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "allow_gpu_execution",
+              "value": "false"
+            },
+            {
+              "name": "enable_on_device_classifier",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "GeminiContextualSuggestionsCues"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260917",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "GeminiContextualSuggestionsCues"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "ForcedOn_GeminiContextualSuggestionsCues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GeminiContextualSuggestionsCues"
+          }
+        },
+        {
+          "name": "ForcedOff_GeminiContextualSuggestionsCues",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GeminiContextualSuggestionsCues"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.8007.1",
+        "channel": [
+          "STABLE"
         ],
         "platform": [
           "PLATFORM_IOS"
@@ -400498,83 +400406,87 @@
           "param": [
             {
               "name": "Accessibility.Canvas",
-              "value": "4"
+              "value": "8"
             },
             {
               "name": "AdFrameLoad",
-              "value": "6"
+              "value": "12"
             },
             {
               "name": "Autofill.FieldFillStatus",
-              "value": "10"
-            },
-            {
-              "name": "Autofill.FieldTypeValidation",
-              "value": "40"
-            },
-            {
-              "name": "Autofill.FormEvent",
-              "value": "5"
-            },
-            {
-              "name": "Blink.FrameLoader",
-              "value": "120"
-            },
-            {
-              "name": "Blink.HTMLParsing",
-              "value": "4"
-            },
-            {
-              "name": "Blink.PageLoad",
-              "value": "5"
-            },
-            {
-              "name": "Blink.PaintTiming",
-              "value": "3"
-            },
-            {
-              "name": "Blink.UpdateTime",
-              "value": "10"
-            },
-            {
-              "name": "ClientHints.AcceptCHFrameUsage",
-              "value": "16"
-            },
-            {
-              "name": "ClientHints.AcceptCHHeaderUsage",
-              "value": "16"
-            },
-            {
-              "name": "ClientRenderingAPI",
-              "value": "100"
-            },
-            {
-              "name": "ContentManagementSystemPageLoad",
-              "value": "4"
-            },
-            {
-              "name": "Cookies.Blocked.DueToOriginMismatch",
-              "value": "14"
-            },
-            {
-              "name": "CrossOriginSubframeWithoutEmbeddingControl",
-              "value": "18"
-            },
-            {
-              "name": "DocumentCreated",
               "value": "25"
             },
             {
-              "name": "DomDistiller.Android.DistillabilityLatency",
-              "value": "2"
+              "name": "Autofill.FieldTypeValidation",
+              "value": "90"
             },
             {
-              "name": "DomDistiller.Android.DistillabilityResult",
+              "name": "Autofill.FormEvent",
+              "value": "10"
+            },
+            {
+              "name": "Blink.FrameLoader",
+              "value": "240"
+            },
+            {
+              "name": "Blink.HTMLParsing",
+              "value": "8"
+            },
+            {
+              "name": "Blink.PageLoad",
+              "value": "10"
+            },
+            {
+              "name": "Blink.PaintTiming",
+              "value": "6"
+            },
+            {
+              "name": "Blink.UpdateTime",
+              "value": "20"
+            },
+            {
+              "name": "ClientHints.AcceptCHFrameUsage",
+              "value": "30"
+            },
+            {
+              "name": "ClientHints.AcceptCHHeaderUsage",
+              "value": "30"
+            },
+            {
+              "name": "ClientRenderingAPI",
+              "value": "200"
+            },
+            {
+              "name": "ContentManagementSystemPageLoad",
+              "value": "8"
+            },
+            {
+              "name": "ContextualCueing.NudgeDecision",
               "value": "3"
             },
             {
-              "name": "DomDistiller.ModelResult.Distillable",
+              "name": "Cookies.Blocked.DueToOriginMismatch",
+              "value": "30"
+            },
+            {
+              "name": "CrossOriginSubframeWithoutEmbeddingControl",
+              "value": "35"
+            },
+            {
+              "name": "DocumentCreated",
+              "value": "50"
+            },
+            {
+              "name": "DomDistiller.Android.DistillabilityLatency",
               "value": "4"
+            },
+            {
+              "name": "DomDistiller.Android.DistillabilityResult",
+              "value": "6"
+            },
+            {
+              "name": "DomDistiller.ModelResult.Distillable",
+              "value": "8"
             },
             {
               "name": "Download.Completed",
@@ -400594,39 +400506,43 @@
             },
             {
               "name": "Extensions.OnNavigation",
-              "value": "20"
+              "value": "35"
             },
             {
               "name": "Extensions.WebRequest.KeepaliveRequestFinished",
-              "value": "25"
+              "value": "50"
             },
             {
               "name": "GoogleDocsOfflineExtension",
-              "value": "2"
+              "value": "5"
             },
             {
               "name": "HistoryApi.PushState",
+              "value": "5"
+            },
+            {
+              "name": "InstalledRelatedApps",
               "value": "2"
             },
             {
               "name": "JavascriptFrameworkPageLoad",
-              "value": "4"
+              "value": "8"
             },
             {
               "name": "LoadCountsPerTopLevelDocument",
-              "value": "5"
-            },
-            {
-              "name": "LoadingPredictor",
-              "value": "2"
-            },
-            {
-              "name": "Media",
               "value": "10"
             },
             {
+              "name": "LoadingPredictor",
+              "value": "5"
+            },
+            {
+              "name": "Media",
+              "value": "18"
+            },
+            {
               "name": "Media.Autoplay.Attempt",
-              "value": "3"
+              "value": "6"
             },
             {
               "name": "Media.BasicPlayback",
@@ -400634,11 +400550,11 @@
             },
             {
               "name": "Media.EME.GetStatusForPolicy",
-              "value": "8"
+              "value": "12"
             },
             {
               "name": "Media.VideoDecodePerfRecord",
-              "value": "2"
+              "value": "3"
             },
             {
               "name": "Media.WebAudio.AudioContext.AudibleTime",
@@ -400650,23 +400566,23 @@
             },
             {
               "name": "Memory.Experimental",
-              "value": "20"
+              "value": "45"
             },
             {
               "name": "Memory.TabFootprint",
-              "value": "5"
+              "value": "10"
             },
             {
               "name": "MobileFriendliness.TappedBadTargets",
-              "value": "2"
+              "value": "6"
             },
             {
               "name": "Navigation.ReceivedResponse",
-              "value": "5"
+              "value": "10"
             },
             {
               "name": "NavigationPredictor",
-              "value": "16"
+              "value": "35"
             },
             {
               "name": "NavigationPredictorAnchorElementMetrics",
@@ -400690,59 +400606,75 @@
             },
             {
               "name": "NavigationTiming",
-              "value": "3"
+              "value": "6"
             },
             {
               "name": "Network.DataUrls",
-              "value": "20"
+              "value": "45"
             },
             {
-              "name": "OptimizationGuide",
-              "value": "14"
-            },
-            {
-              "name": "OptimizationGuide.AnnotatedPageContent",
-              "value": "4"
-            },
-            {
-              "name": "OptimizationGuide.PageContentExtraction",
-              "value": "6"
-            },
-            {
-              "name": "PageContentAnnotations2",
-              "value": "8"
-            },
-            {
-              "name": "PageForegroundSession",
-              "value": "8"
-            },
-            {
-              "name": "PageLifecycleMetricsOnNewPageCommit",
-              "value": "6"
-            },
-            {
-              "name": "PageLoadInitiatorForAdTagging",
-              "value": "4"
-            },
-            {
-              "name": "PaidContentPageLoad",
-              "value": "5"
-            },
-            {
-              "name": "PerformanceAPI.LongAnimationFrame",
-              "value": "100"
-            },
-            {
-              "name": "PerformanceAPI.LongTask",
+              "name": "OmniboxSecurityIndicator.FormSubmission",
               "value": "3"
             },
             {
+              "name": "OptimizationGuide",
+              "value": "30"
+            },
+            {
+              "name": "OptimizationGuide.AnnotatedPageContent",
+              "value": "8"
+            },
+            {
+              "name": "OptimizationGuide.PageContentExtraction",
+              "value": "14"
+            },
+            {
+              "name": "PageContentAnnotations2",
+              "value": "20"
+            },
+            {
+              "name": "PageForegroundSession",
+              "value": "16"
+            },
+            {
+              "name": "PageLifecycleMetricsOnNewPageCommit",
+              "value": "12"
+            },
+            {
+              "name": "PageLoadInitiatorForAdTagging",
+              "value": "8"
+            },
+            {
+              "name": "PaidContentPageLoad",
+              "value": "10"
+            },
+            {
+              "name": "PartitionedCookiePresentV3",
+              "value": "3"
+            },
+            {
+              "name": "PerformanceAPI.LongAnimationFrame",
+              "value": "220"
+            },
+            {
+              "name": "PerformanceAPI.LongTask",
+              "value": "6"
+            },
+            {
               "name": "PerformanceAPI.Memory.Legacy",
-              "value": "500"
+              "value": "1000"
+            },
+            {
+              "name": "PerformanceManager.FreezingEligibility",
+              "value": "2"
             },
             {
               "name": "PerformanceManager.PageResourceUsage2",
-              "value": "35"
+              "value": "80"
+            },
+            {
+              "name": "PermissionUsage",
+              "value": "2"
             },
             {
               "name": "Popup.Closed",
@@ -400754,7 +400686,11 @@
             },
             {
               "name": "PowerUsageScenariosIntervalData",
-              "value": "5"
+              "value": "10"
+            },
+            {
+              "name": "PrefetchProxy.PrefetchedResource",
+              "value": "2"
             },
             {
               "name": "Preloading.Attempt",
@@ -400766,59 +400702,71 @@
             },
             {
               "name": "Preloading.Prediction",
-              "value": "45"
+              "value": "90"
             },
             {
               "name": "Preloading.Prediction.PreviousPrimaryPage",
-              "value": "60"
+              "value": "120"
             },
             {
               "name": "Responsiveness.UserInteraction",
-              "value": "20"
+              "value": "45"
             },
             {
               "name": "SamesiteRedirectContextDowngrade",
-              "value": "2"
+              "value": "5"
             },
             {
               "name": "Security.SiteEngagement",
+              "value": "6"
+            },
+            {
+              "name": "ServiceWorker.MainResourceLoadCompleted",
               "value": "3"
             },
             {
               "name": "SiteFamiliarityHeuristicResult",
-              "value": "4"
+              "value": "8"
             },
             {
               "name": "SubresourceFilter",
-              "value": "4"
+              "value": "8"
             },
             {
               "name": "SubresourceLoad.ZstdContentEncoding",
-              "value": "100"
+              "value": "200"
+            },
+            {
+              "name": "TabManager.TabLifetime",
+              "value": "2"
             },
             {
               "name": "TabRevisitTracker.TabStateChange",
-              "value": "6"
+              "value": "16"
             },
             {
               "name": "Translate",
-              "value": "5"
+              "value": "10"
             },
             {
               "name": "TranslatePageLoad",
-              "value": "6"
-            },
-            {
-              "name": "Unload",
-              "value": "3"
-            },
-            {
-              "name": "UserPerceivedPageVisit",
               "value": "12"
             },
             {
+              "name": "Unload",
+              "value": "6"
+            },
+            {
+              "name": "UserPerceivedPageVisit",
+              "value": "25"
+            },
+            {
               "name": "V8.GC.FullCycle",
-              "value": "10"
+              "value": "20"
+            },
+            {
+              "name": "V8.Wasm",
+              "value": "3"
             },
             {
               "name": "V8.Wasm.ModuleCompiled",
@@ -400834,7 +400782,7 @@
             },
             {
               "name": "WebOTPImpact",
-              "value": "2"
+              "value": "5"
             },
             {
               "name": "_default_sampling",
@@ -401034,83 +400982,87 @@
           "param": [
             {
               "name": "Accessibility.Canvas",
-              "value": "4"
+              "value": "8"
             },
             {
               "name": "AdFrameLoad",
-              "value": "6"
+              "value": "12"
             },
             {
               "name": "Autofill.FieldFillStatus",
-              "value": "10"
-            },
-            {
-              "name": "Autofill.FieldTypeValidation",
-              "value": "40"
-            },
-            {
-              "name": "Autofill.FormEvent",
-              "value": "5"
-            },
-            {
-              "name": "Blink.FrameLoader",
-              "value": "120"
-            },
-            {
-              "name": "Blink.HTMLParsing",
-              "value": "4"
-            },
-            {
-              "name": "Blink.PageLoad",
-              "value": "5"
-            },
-            {
-              "name": "Blink.PaintTiming",
-              "value": "3"
-            },
-            {
-              "name": "Blink.UpdateTime",
-              "value": "10"
-            },
-            {
-              "name": "ClientHints.AcceptCHFrameUsage",
-              "value": "16"
-            },
-            {
-              "name": "ClientHints.AcceptCHHeaderUsage",
-              "value": "16"
-            },
-            {
-              "name": "ClientRenderingAPI",
-              "value": "100"
-            },
-            {
-              "name": "ContentManagementSystemPageLoad",
-              "value": "4"
-            },
-            {
-              "name": "Cookies.Blocked.DueToOriginMismatch",
-              "value": "14"
-            },
-            {
-              "name": "CrossOriginSubframeWithoutEmbeddingControl",
-              "value": "18"
-            },
-            {
-              "name": "DocumentCreated",
               "value": "25"
             },
             {
-              "name": "DomDistiller.Android.DistillabilityLatency",
-              "value": "2"
+              "name": "Autofill.FieldTypeValidation",
+              "value": "90"
             },
             {
-              "name": "DomDistiller.Android.DistillabilityResult",
+              "name": "Autofill.FormEvent",
+              "value": "10"
+            },
+            {
+              "name": "Blink.FrameLoader",
+              "value": "240"
+            },
+            {
+              "name": "Blink.HTMLParsing",
+              "value": "8"
+            },
+            {
+              "name": "Blink.PageLoad",
+              "value": "10"
+            },
+            {
+              "name": "Blink.PaintTiming",
+              "value": "6"
+            },
+            {
+              "name": "Blink.UpdateTime",
+              "value": "20"
+            },
+            {
+              "name": "ClientHints.AcceptCHFrameUsage",
+              "value": "30"
+            },
+            {
+              "name": "ClientHints.AcceptCHHeaderUsage",
+              "value": "30"
+            },
+            {
+              "name": "ClientRenderingAPI",
+              "value": "200"
+            },
+            {
+              "name": "ContentManagementSystemPageLoad",
+              "value": "8"
+            },
+            {
+              "name": "ContextualCueing.NudgeDecision",
               "value": "3"
             },
             {
-              "name": "DomDistiller.ModelResult.Distillable",
+              "name": "Cookies.Blocked.DueToOriginMismatch",
+              "value": "30"
+            },
+            {
+              "name": "CrossOriginSubframeWithoutEmbeddingControl",
+              "value": "35"
+            },
+            {
+              "name": "DocumentCreated",
+              "value": "50"
+            },
+            {
+              "name": "DomDistiller.Android.DistillabilityLatency",
               "value": "4"
+            },
+            {
+              "name": "DomDistiller.Android.DistillabilityResult",
+              "value": "6"
+            },
+            {
+              "name": "DomDistiller.ModelResult.Distillable",
+              "value": "8"
             },
             {
               "name": "Download.Completed",
@@ -401130,39 +401082,43 @@
             },
             {
               "name": "Extensions.OnNavigation",
-              "value": "20"
+              "value": "35"
             },
             {
               "name": "Extensions.WebRequest.KeepaliveRequestFinished",
-              "value": "25"
+              "value": "50"
             },
             {
               "name": "GoogleDocsOfflineExtension",
-              "value": "2"
+              "value": "5"
             },
             {
               "name": "HistoryApi.PushState",
+              "value": "5"
+            },
+            {
+              "name": "InstalledRelatedApps",
               "value": "2"
             },
             {
               "name": "JavascriptFrameworkPageLoad",
-              "value": "4"
+              "value": "8"
             },
             {
               "name": "LoadCountsPerTopLevelDocument",
-              "value": "5"
-            },
-            {
-              "name": "LoadingPredictor",
-              "value": "2"
-            },
-            {
-              "name": "Media",
               "value": "10"
             },
             {
+              "name": "LoadingPredictor",
+              "value": "5"
+            },
+            {
+              "name": "Media",
+              "value": "18"
+            },
+            {
               "name": "Media.Autoplay.Attempt",
-              "value": "3"
+              "value": "6"
             },
             {
               "name": "Media.BasicPlayback",
@@ -401170,11 +401126,11 @@
             },
             {
               "name": "Media.EME.GetStatusForPolicy",
-              "value": "8"
+              "value": "12"
             },
             {
               "name": "Media.VideoDecodePerfRecord",
-              "value": "2"
+              "value": "3"
             },
             {
               "name": "Media.WebAudio.AudioContext.AudibleTime",
@@ -401186,23 +401142,23 @@
             },
             {
               "name": "Memory.Experimental",
-              "value": "20"
+              "value": "45"
             },
             {
               "name": "Memory.TabFootprint",
-              "value": "5"
+              "value": "10"
             },
             {
               "name": "MobileFriendliness.TappedBadTargets",
-              "value": "2"
+              "value": "6"
             },
             {
               "name": "Navigation.ReceivedResponse",
-              "value": "5"
+              "value": "10"
             },
             {
               "name": "NavigationPredictor",
-              "value": "16"
+              "value": "35"
             },
             {
               "name": "NavigationPredictorAnchorElementMetrics",
@@ -401226,59 +401182,75 @@
             },
             {
               "name": "NavigationTiming",
-              "value": "3"
+              "value": "6"
             },
             {
               "name": "Network.DataUrls",
-              "value": "20"
+              "value": "45"
             },
             {
-              "name": "OptimizationGuide",
-              "value": "14"
-            },
-            {
-              "name": "OptimizationGuide.AnnotatedPageContent",
-              "value": "4"
-            },
-            {
-              "name": "OptimizationGuide.PageContentExtraction",
-              "value": "6"
-            },
-            {
-              "name": "PageContentAnnotations2",
-              "value": "8"
-            },
-            {
-              "name": "PageForegroundSession",
-              "value": "8"
-            },
-            {
-              "name": "PageLifecycleMetricsOnNewPageCommit",
-              "value": "6"
-            },
-            {
-              "name": "PageLoadInitiatorForAdTagging",
-              "value": "4"
-            },
-            {
-              "name": "PaidContentPageLoad",
-              "value": "5"
-            },
-            {
-              "name": "PerformanceAPI.LongAnimationFrame",
-              "value": "100"
-            },
-            {
-              "name": "PerformanceAPI.LongTask",
+              "name": "OmniboxSecurityIndicator.FormSubmission",
               "value": "3"
             },
             {
+              "name": "OptimizationGuide",
+              "value": "30"
+            },
+            {
+              "name": "OptimizationGuide.AnnotatedPageContent",
+              "value": "8"
+            },
+            {
+              "name": "OptimizationGuide.PageContentExtraction",
+              "value": "14"
+            },
+            {
+              "name": "PageContentAnnotations2",
+              "value": "20"
+            },
+            {
+              "name": "PageForegroundSession",
+              "value": "16"
+            },
+            {
+              "name": "PageLifecycleMetricsOnNewPageCommit",
+              "value": "12"
+            },
+            {
+              "name": "PageLoadInitiatorForAdTagging",
+              "value": "8"
+            },
+            {
+              "name": "PaidContentPageLoad",
+              "value": "10"
+            },
+            {
+              "name": "PartitionedCookiePresentV3",
+              "value": "3"
+            },
+            {
+              "name": "PerformanceAPI.LongAnimationFrame",
+              "value": "220"
+            },
+            {
+              "name": "PerformanceAPI.LongTask",
+              "value": "6"
+            },
+            {
               "name": "PerformanceAPI.Memory.Legacy",
-              "value": "500"
+              "value": "1000"
+            },
+            {
+              "name": "PerformanceManager.FreezingEligibility",
+              "value": "2"
             },
             {
               "name": "PerformanceManager.PageResourceUsage2",
-              "value": "35"
+              "value": "80"
+            },
+            {
+              "name": "PermissionUsage",
+              "value": "2"
             },
             {
               "name": "Popup.Closed",
@@ -401290,7 +401262,11 @@
             },
             {
               "name": "PowerUsageScenariosIntervalData",
-              "value": "5"
+              "value": "10"
+            },
+            {
+              "name": "PrefetchProxy.PrefetchedResource",
+              "value": "2"
             },
             {
               "name": "Preloading.Attempt",
@@ -401302,59 +401278,71 @@
             },
             {
               "name": "Preloading.Prediction",
-              "value": "45"
+              "value": "90"
             },
             {
               "name": "Preloading.Prediction.PreviousPrimaryPage",
-              "value": "60"
+              "value": "120"
             },
             {
               "name": "Responsiveness.UserInteraction",
-              "value": "20"
+              "value": "45"
             },
             {
               "name": "SamesiteRedirectContextDowngrade",
-              "value": "2"
+              "value": "5"
             },
             {
               "name": "Security.SiteEngagement",
+              "value": "6"
+            },
+            {
+              "name": "ServiceWorker.MainResourceLoadCompleted",
               "value": "3"
             },
             {
               "name": "SiteFamiliarityHeuristicResult",
-              "value": "4"
+              "value": "8"
             },
             {
               "name": "SubresourceFilter",
-              "value": "4"
+              "value": "8"
             },
             {
               "name": "SubresourceLoad.ZstdContentEncoding",
-              "value": "100"
+              "value": "200"
+            },
+            {
+              "name": "TabManager.TabLifetime",
+              "value": "2"
             },
             {
               "name": "TabRevisitTracker.TabStateChange",
-              "value": "6"
+              "value": "16"
             },
             {
               "name": "Translate",
-              "value": "5"
+              "value": "10"
             },
             {
               "name": "TranslatePageLoad",
-              "value": "6"
-            },
-            {
-              "name": "Unload",
-              "value": "3"
-            },
-            {
-              "name": "UserPerceivedPageVisit",
               "value": "12"
             },
             {
+              "name": "Unload",
+              "value": "6"
+            },
+            {
+              "name": "UserPerceivedPageVisit",
+              "value": "25"
+            },
+            {
               "name": "V8.GC.FullCycle",
-              "value": "10"
+              "value": "20"
+            },
+            {
+              "name": "V8.Wasm",
+              "value": "3"
             },
             {
               "name": "V8.Wasm.ModuleCompiled",
@@ -401370,7 +401358,7 @@
             },
             {
               "name": "WebOTPImpact",
-              "value": "2"
+              "value": "5"
             },
             {
               "name": "_default_sampling",
@@ -421874,9 +421862,9 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled_20260817",
+          "name": "Enabled_20260917",
           "probabilityWeight": 50,
-          "googleWebExperimentId": "101003255",
+          "googleWebExperimentId": "101004625",
           "featureAssociation": {
             "enableFeature": [
               "VTVideoEncodeAcceleratorCalculatePSNR"
@@ -421885,9 +421873,9 @@
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Control_20260817",
+          "name": "Control_20260917",
           "probabilityWeight": 50,
-          "googleWebExperimentId": "101003256",
+          "googleWebExperimentId": "101004626",
           "featureAssociation": {
             "disableFeature": [
               "VTVideoEncodeAcceleratorCalculatePSNR"
@@ -421931,7 +421919,7 @@
         "platform": [
           "PLATFORM_MAC"
         ],
-        "endDate": "1790380740"
+        "endDate": "1792972740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -421940,9 +421928,9 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled_20260817",
+          "name": "Enabled_20260917",
           "probabilityWeight": 50,
-          "googleWebExperimentId": "101003253",
+          "googleWebExperimentId": "101004623",
           "featureAssociation": {
             "enableFeature": [
               "VTVideoEncodeAcceleratorCalculatePSNR"
@@ -421951,9 +421939,9 @@
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Control_20260817",
+          "name": "Control_20260917",
           "probabilityWeight": 50,
-          "googleWebExperimentId": "101003254",
+          "googleWebExperimentId": "101004624",
           "featureAssociation": {
             "disableFeature": [
               "VTVideoEncodeAcceleratorCalculatePSNR"
@@ -421998,7 +421986,73 @@
         "platform": [
           "PLATFORM_MAC"
         ],
-        "endDate": "1790380740"
+        "endDate": "1792972740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "VTVideoEncodeAcceleratorCalculatePSNR",
+      "consistency": "SESSION",
+      "experiment": [
+        {
+          "name": "Enabled_20260917",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004627",
+          "featureAssociation": {
+            "enableFeature": [
+              "VTVideoEncodeAcceleratorCalculatePSNR"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260917",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004628",
+          "featureAssociation": {
+            "disableFeature": [
+              "VTVideoEncodeAcceleratorCalculatePSNR"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "VTVideoEncodeAcceleratorCalculatePSNR"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_VTVideoEncodeAcceleratorCalculatePSNR",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "VTVideoEncodeAcceleratorCalculatePSNR"
+          }
+        },
+        {
+          "name": "ForcedOff_VTVideoEncodeAcceleratorCalculatePSNR",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "VTVideoEncodeAcceleratorCalculatePSNR"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7898.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_MAC"
+        ],
+        "endDate": "1792972740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -467848,5 +467902,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260917-010036.011000-production"
+  "version": "20260917-090056.733000-production"
 }
