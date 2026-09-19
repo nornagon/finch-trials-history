@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDkxOC0xNzAwNTMuNDY3MDAwEgQgACgB#zhBLNKD/guE=",
+  "serialNumber": "SMChYyMDI2MDkxOS0wMzAwMzUuMTcyMDAwEgQgACgB#b9HkaR9rzdo=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -14915,51 +14915,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "HeliosExpansionV4",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260911",
-          "probabilityWeight": 100,
-          "featureAssociation": {
-            "enableFeature": [
-              "PageActionMenu"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "country": [
-          "ai",
-          "bm",
-          "fk",
-          "gb",
-          "gg",
-          "gi",
-          "gs",
-          "im",
-          "io",
-          "je",
-          "ky",
-          "ms",
-          "sh",
-          "tc",
-          "vg"
-        ],
-        "endDate": "1794355140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "IOSSettingsDefaultBrowserPromoV2",
       "consistency": "PERMANENT",
       "experiment": [
@@ -15105,6 +15060,51 @@
         ],
         "endDate": "1793145540"
       }
+    },
+    {
+      "name": "HeliosExpansionV4",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260911",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "enableFeature": [
+              "PageActionMenu"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.*",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "country": [
+          "ai",
+          "bm",
+          "fk",
+          "gb",
+          "gg",
+          "gi",
+          "gs",
+          "im",
+          "io",
+          "je",
+          "ky",
+          "ms",
+          "sh",
+          "tc",
+          "vg"
+        ],
+        "endDate": "1794355140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "IOSDefaultBrowserPromoPropensityStudy",
@@ -35364,7 +35364,7 @@
         "formFactor": [
           "DESKTOP"
         ],
-        "endDate": "1790553540"
+        "endDate": "1794873540"
       }
     },
     {
@@ -106598,7 +106598,49 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_M155",
+          "name": "Control",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101001880",
+          "featureAssociation": {
+            "disableFeature": [
+              "ComposeboxDriveContextMenuOption",
+              "ComposeboxDriveContextMenuOptionDisclaimer"
+            ]
+          }
+        },
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101001881",
+          "featureAssociation": {
+            "enableFeature": [
+              "ComposeboxDriveContextMenuOption",
+              "ComposeboxDriveContextMenuOptionDisclaimer"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8037.34",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1794700740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ComposeboxDriveContextMenuOptionDesktop",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control",
           "probabilityWeight": 50,
           "googleWebExperimentId": "101001878",
           "featureAssociation": {
@@ -106609,7 +106651,7 @@
           }
         },
         {
-          "name": "Enabled_M155",
+          "name": "Enabled",
           "probabilityWeight": 50,
           "googleWebExperimentId": "101001879",
           "featureAssociation": {
@@ -130359,6 +130401,256 @@
           "PLATFORM_CHROMEOS"
         ]
       }
+    },
+    {
+      "name": "DesktopWebUIOmniboxAskGAboutThisPage",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "CobrowseAndLensEntrypoint",
+          "probabilityWeight": 15,
+          "param": [
+            {
+              "name": "Omnibox_AskGBypassPrivacyNotice",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGCoBrowse",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensChipRoute",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensIcon",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensSearchHintText",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGSwapIcon",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "WebUIOmniboxAskGAboutThisPage"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 10
+        },
+        {
+          "name": "CobrowsePlusVisualSelection",
+          "probabilityWeight": 15,
+          "param": [
+            {
+              "name": "Omnibox_AskGBypassPrivacyNotice",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGCoBrowseWithVisualSelection",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensSearchHintText",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGSwapIcon",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "WebUIOmniboxAskGAboutThisPage"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 15,
+          "featureAssociation": {
+            "disableFeature": [
+              "WebUIOmniboxAskGAboutThisPage"
+            ]
+          }
+        },
+        {
+          "name": "OmniboxChipComposeboxAndLensEntrypoint",
+          "probabilityWeight": 15,
+          "param": [
+            {
+              "name": "Omnibox_AskGBlockAutoTabZeroStateSuggestions",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGBypassPrivacyNotice",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGComposeboxPlaceholder",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGCurrentTabChip",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensChipRoute",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensIcon",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensSearchHintText",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGShowChip",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGShowFirstDescription",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGSwapIcon",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGSwapSuggestionIcon",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "WebUIOmniboxAskGAboutThisPage"
+            ]
+          }
+        },
+        {
+          "name": "OmniboxComposebox",
+          "probabilityWeight": 15,
+          "param": [
+            {
+              "name": "Omnibox_AskGBlockAutoTabZeroStateSuggestions",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGBypassPrivacyNotice",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGComposeBox",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGComposeboxLensChip",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGComposeboxPlaceholder",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensChipRoute",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensSearchHintText",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGSwapIcon",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "WebUIOmniboxAskGAboutThisPage"
+            ]
+          }
+        },
+        {
+          "name": "OmniboxComposeboxAndLensEntrypoint",
+          "probabilityWeight": 15,
+          "param": [
+            {
+              "name": "Omnibox_AskGBlockAutoTabZeroStateSuggestions",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGBypassPrivacyNotice",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGComposeBox",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGComposeboxPlaceholder",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensChipRoute",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensIcon",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGLensSearchHintText",
+              "value": "true"
+            },
+            {
+              "name": "Omnibox_AskGSwapIcon",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "WebUIOmniboxAskGAboutThisPage"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_WebUIOmniboxAskGAboutThisPage",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "WebUIOmniboxAskGAboutThisPage"
+          }
+        },
+        {
+          "name": "ForcedOff_WebUIOmniboxAskGAboutThisPage",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "WebUIOmniboxAskGAboutThisPage"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8031.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1797379140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "DesktopWebUIOmniboxAskGAboutThisPage",
@@ -466636,5 +466928,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260918-170053.467000-production"
+  "version": "20260919-030035.172000-production"
 }
