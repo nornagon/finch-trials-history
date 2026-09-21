@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MDkyMC0wMzAwNDQuMzczMDAwEgQgACgB#o7gkA40EIug=",
+  "serialNumber": "SMChYyMDI2MDkyMS0wMTAwMzkuMzE5MDAwEgQgACgB#txRZHONJ24s=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -185237,92 +185237,6 @@
       }
     },
     {
-      "name": "HttpCacheInitializeDiskCacheBackendEarly",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260730",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "EnabledCheckDisk_20260730",
-          "probabilityWeight": 50,
-          "param": [
-            {
-              "name": "check_disk",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7848.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1789948740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "HttpCacheInitializeDiskCacheBackendEarly",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260730",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101002695",
-          "featureAssociation": {
-            "disableFeature": [
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        },
-        {
-          "name": "EnabledCheckDisk_20260730",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101002696",
-          "param": [
-            {
-              "name": "check_disk",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "HttpCacheInitializeDiskCacheBackendEarly"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7848.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1789948740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "HttpCacheNoVarySearch",
       "consistency": "PERMANENT",
       "experiment": [
@@ -187316,7 +187230,7 @@
         "platform": [
           "PLATFORM_IOS"
         ],
-        "endDate": "1794009540"
+        "endDate": "1795132740"
       }
     },
     {
@@ -187378,7 +187292,68 @@
         "platform": [
           "PLATFORM_IOS"
         ],
-        "endDate": "1794009540"
+        "endDate": "1795132740"
+      }
+    },
+    {
+      "name": "IOSAppSwitcherAISummarization",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_5",
+          "probabilityWeight": 5,
+          "featureAssociation": {
+            "enableFeature": [
+              "AppSwitcherAISummarization"
+            ]
+          }
+        },
+        {
+          "name": "Control_5",
+          "probabilityWeight": 5,
+          "featureAssociation": {
+            "disableFeature": [
+              "AppSwitcherAISummarization"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 90
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AppSwitcherAISummarization"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AppSwitcherAISummarization",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AppSwitcherAISummarization"
+          }
+        },
+        {
+          "name": "ForcedOff_AppSwitcherAISummarization",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AppSwitcherAISummarization"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.*",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1795132740"
       }
     },
     {
@@ -342707,6 +342682,77 @@
       "filter": {
         "minVersion": "155.0.8038.0",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1792799940"
+      }
+    },
+    {
+      "name": "ThemeChangeOptimization",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260904",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "ColorIdCssStyleSheetOptimization",
+              "ThemeChangeOptimization"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260904",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "ColorIdCssStyleSheetOptimization",
+              "ThemeChangeOptimization"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_ColorIdCssStyleSheetOptimization",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ColorIdCssStyleSheetOptimization"
+          }
+        },
+        {
+          "name": "ForcedOff_ColorIdCssStyleSheetOptimization",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ColorIdCssStyleSheetOptimization"
+          }
+        },
+        {
+          "name": "ForcedOn_ThemeChangeOptimization",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ThemeChangeOptimization"
+          }
+        },
+        {
+          "name": "ForcedOff_ThemeChangeOptimization",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ThemeChangeOptimization"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8038.0",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -342716,7 +342762,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS"
         ],
-        "endDate": "1791071940"
+        "endDate": "1792799940"
       }
     },
     {
@@ -466742,5 +466788,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20260920-030044.373000-production"
+  "version": "20260921-010039.319000-production"
 }
