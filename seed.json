@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTAwMi0xNzAyMDYuMzMxMDAwEgQgACgB#ZALa1J2Zc3g=",
+  "serialNumber": "SMChYyMDI2MTAwMy0wMzAwMzcuMjMwMDAwEgQgACgB#vBhIY6Cp33I=",
   "study": [
     {
       "name": "IOSSettingsDefaultBrowserPromoV2",
@@ -130871,8 +130871,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled",
-          "probabilityWeight": 1,
+          "name": "Enabled_5",
+          "probabilityWeight": 5,
           "featureAssociation": {
             "enableFeature": [
               "NtpDriveModuleLink"
@@ -130880,8 +130880,8 @@
           }
         },
         {
-          "name": "Control",
-          "probabilityWeight": 1,
+          "name": "Control_5",
+          "probabilityWeight": 5,
           "featureAssociation": {
             "disableFeature": [
               "NtpDriveModuleLink"
@@ -130890,7 +130890,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 98
+          "probabilityWeight": 90
         },
         {
           "name": "_Activation",
@@ -140646,6 +140646,85 @@
           "PLATFORM_MAC",
           "PLATFORM_ANDROID"
         ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DomStorageSqliteNewDatabases",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control",
+          "probabilityWeight": 33,
+          "featureAssociation": {
+            "disableFeature": [
+              "DomStorageSqliteNewDatabases"
+            ]
+          }
+        },
+        {
+          "name": "EnabledLevelDB",
+          "probabilityWeight": 33,
+          "param": [
+            {
+              "name": "DomStorageSqliteNewDatabasesStage",
+              "value": "UseLevelDbAsControl"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DomStorageSqliteNewDatabases"
+            ]
+          }
+        },
+        {
+          "name": "EnabledSQLite",
+          "probabilityWeight": 33,
+          "param": [
+            {
+              "name": "DomStorageSqliteNewDatabasesStage",
+              "value": "UseSqliteForNewDatabases"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DomStorageSqliteNewDatabases"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 1
+        },
+        {
+          "name": "ForcedOn_DomStorageSqliteNewDatabases",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DomStorageSqliteNewDatabases"
+          }
+        },
+        {
+          "name": "ForcedOff_DomStorageSqliteNewDatabases",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DomStorageSqliteNewDatabases"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7976.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_ANDROID",
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1793145540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -179737,6 +179816,109 @@
           "PLATFORM_MAC",
           "PLATFORM_LINUX"
         ]
+      }
+    },
+    {
+      "name": "GlowUp",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261001",
+          "probabilityWeight": 13,
+          "featureAssociation": {
+            "enableFeature": [
+              "RoundedIcons",
+              "TabStripDeclutter",
+              "ToolbarGlowUp",
+              "WebuiRefresh2026"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261001",
+          "probabilityWeight": 13,
+          "featureAssociation": {
+            "disableFeature": [
+              "RoundedIcons",
+              "TabStripDeclutter",
+              "ToolbarGlowUp",
+              "WebuiRefresh2026"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_RoundedIcons",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "RoundedIcons"
+          }
+        },
+        {
+          "name": "ForcedOff_RoundedIcons",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "RoundedIcons"
+          }
+        },
+        {
+          "name": "ForcedOn_TabStripDeclutter",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "TabStripDeclutter"
+          }
+        },
+        {
+          "name": "ForcedOff_TabStripDeclutter",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "TabStripDeclutter"
+          }
+        },
+        {
+          "name": "ForcedOn_ToolbarGlowUp",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ToolbarGlowUp"
+          }
+        },
+        {
+          "name": "ForcedOff_ToolbarGlowUp",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ToolbarGlowUp"
+          }
+        },
+        {
+          "name": "ForcedOn_WebuiRefresh2026",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "WebuiRefresh2026"
+          }
+        },
+        {
+          "name": "ForcedOff_WebuiRefresh2026",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "WebuiRefresh2026"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC"
+        ],
+        "endDate": "1792195140"
       }
     },
     {
@@ -471715,5 +471897,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261002-170206.331000-production"
+  "version": "20261003-030037.230000-production"
 }
