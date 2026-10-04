@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTAwNC0wMzAwNDAuODM5MDAwEgQgACgB#g0yE5LCJHLE=",
+  "serialNumber": "SMChYyMDI2MTAwNC0wODM3NTcuNTUxMDAwEgQgACgB#s+bQ94nnw/c=",
   "study": [
     {
       "name": "IOSSettingsDefaultBrowserPromoV2",
@@ -440825,6 +440825,48 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "WebViewDisconnectWebSocketOnBFCacheKillSwitch",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Disabled_EmergencyKillSwitch",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "disableFeature": [
+              "DisconnectWebSocketOnBFCache"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_DisconnectWebSocketOnBFCache",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DisconnectWebSocketOnBFCache"
+          }
+        },
+        {
+          "name": "ForcedOff_DisconnectWebSocketOnBFCache",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DisconnectWebSocketOnBFCache"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7921.0",
+        "maxVersion": "157.*",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ]
+      }
+    },
+    {
       "name": "WebViewEnableADPF",
       "consistency": "PERMANENT",
       "experiment": [
@@ -471897,5 +471939,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261004-030040.839000-production"
+  "version": "20261004-083757.551000-production"
 }
