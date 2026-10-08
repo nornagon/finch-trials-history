@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTAwNy0xNzAxMDQuMzUwMDAwEgQgACgB#hT7/y4s7SGI=",
+  "serialNumber": "SMChYyMDI2MTAwOC0wMTAwMzEuNTQ4MDAwEgQgACgB#VcQC0WVz+OU=",
   "study": [
     {
       "name": "AIFuseboxAndroidModelPicker",
@@ -2477,6 +2477,165 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "SpeculationRulesPrefetchLimitsForEagerModerateAndroid",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_6_20261007",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "max_number_of_eager_prefetches_per_page",
+              "value": "6"
+            },
+            {
+              "name": "max_number_of_moderate_prefetches_per_page",
+              "value": "6"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PrefetchEagerLimit",
+              "PrefetchModerateLimit"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261007",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "PrefetchEagerLimit",
+              "PrefetchModerateLimit"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_PrefetchEagerLimit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PrefetchEagerLimit"
+          }
+        },
+        {
+          "name": "ForcedOff_PrefetchEagerLimit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PrefetchEagerLimit"
+          }
+        },
+        {
+          "name": "ForcedOn_PrefetchModerateLimit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PrefetchModerateLimit"
+          }
+        },
+        {
+          "name": "ForcedOff_PrefetchModerateLimit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PrefetchModerateLimit"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7842.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1793318340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "SpeculationRulesPrefetchLimitsForEagerModerateAndroid",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_6_20261007",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "max_number_of_eager_prefetches_per_page",
+              "value": "6"
+            },
+            {
+              "name": "max_number_of_moderate_prefetches_per_page",
+              "value": "6"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PrefetchEagerLimit",
+              "PrefetchModerateLimit"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261007",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "PrefetchEagerLimit",
+              "PrefetchModerateLimit"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_PrefetchEagerLimit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PrefetchEagerLimit"
+          }
+        },
+        {
+          "name": "ForcedOff_PrefetchEagerLimit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PrefetchEagerLimit"
+          }
+        },
+        {
+          "name": "ForcedOn_PrefetchModerateLimit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PrefetchModerateLimit"
+          }
+        },
+        {
+          "name": "ForcedOff_PrefetchModerateLimit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PrefetchModerateLimit"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7842.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1793318340"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -5505,205 +5664,6 @@
           "PLATFORM_ANDROID"
         ],
         "endDate": "1792799940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "SpeculationRulesPrefetchLimitsForEagerModerateAndroid",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_4_20260909",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "max_number_of_eager_prefetches_per_page",
-              "value": "4"
-            },
-            {
-              "name": "max_number_of_moderate_prefetches_per_page",
-              "value": "4"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PrefetchEagerLimit",
-              "PrefetchModerateLimit"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_6_20260909",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "max_number_of_eager_prefetches_per_page",
-              "value": "6"
-            },
-            {
-              "name": "max_number_of_moderate_prefetches_per_page",
-              "value": "6"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PrefetchEagerLimit",
-              "PrefetchModerateLimit"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260909",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "disableFeature": [
-              "PrefetchEagerLimit",
-              "PrefetchModerateLimit"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 25
-        },
-        {
-          "name": "ForcedOn_PrefetchEagerLimit",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PrefetchEagerLimit"
-          }
-        },
-        {
-          "name": "ForcedOff_PrefetchEagerLimit",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PrefetchEagerLimit"
-          }
-        },
-        {
-          "name": "ForcedOn_PrefetchModerateLimit",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PrefetchModerateLimit"
-          }
-        },
-        {
-          "name": "ForcedOff_PrefetchModerateLimit",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PrefetchModerateLimit"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7842.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793318340"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "SpeculationRulesPrefetchLimitsForEagerModerateAndroid",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_4_20260909",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "max_number_of_eager_prefetches_per_page",
-              "value": "4"
-            },
-            {
-              "name": "max_number_of_moderate_prefetches_per_page",
-              "value": "4"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PrefetchEagerLimit",
-              "PrefetchModerateLimit"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_6_20260909",
-          "probabilityWeight": 25,
-          "param": [
-            {
-              "name": "max_number_of_eager_prefetches_per_page",
-              "value": "6"
-            },
-            {
-              "name": "max_number_of_moderate_prefetches_per_page",
-              "value": "6"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PrefetchEagerLimit",
-              "PrefetchModerateLimit"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260909",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "disableFeature": [
-              "PrefetchEagerLimit",
-              "PrefetchModerateLimit"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 25
-        },
-        {
-          "name": "ForcedOn_PrefetchEagerLimit",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PrefetchEagerLimit"
-          }
-        },
-        {
-          "name": "ForcedOff_PrefetchEagerLimit",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PrefetchEagerLimit"
-          }
-        },
-        {
-          "name": "ForcedOn_PrefetchModerateLimit",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PrefetchModerateLimit"
-          }
-        },
-        {
-          "name": "ForcedOff_PrefetchModerateLimit",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PrefetchModerateLimit"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7842.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793318340"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -19458,6 +19418,7 @@
       ],
       "filter": {
         "minVersion": "155.0.8043.0",
+        "maxVersion": "157.0.8082.*",
         "channel": [
           "CANARY",
           "DEV"
@@ -19574,6 +19535,7 @@
       ],
       "filter": {
         "minVersion": "155.0.8043.0",
+        "maxVersion": "157.0.8082.*",
         "channel": [
           "CANARY",
           "DEV"
@@ -20667,6 +20629,859 @@
           "PLATFORM_CHROMEOS"
         ],
         "endDate": "1792540740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NewVoiceSearchUiInNtpRealbox",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Arm1_WaveOnly_ManualSubmit_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm2_WaveOnly_AutoEndpoint_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm3_Transcript_ManualSubmit_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm4_Transcript_AutoEndpoint_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260923",
+          "probabilityWeight": 18,
+          "featureAssociation": {
+            "disableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 10
+        },
+        {
+          "name": "ForcedOn_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "VoiceSearchCoherenceSearchbox"
+          }
+        },
+        {
+          "name": "ForcedOff_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "VoiceSearchCoherenceSearchbox"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8059.12",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "formFactor": [
+          "DESKTOP"
+        ],
+        "endDate": "1800057540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NewVoiceSearchUiInNtpRealbox",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Arm1_WaveOnly_ManualSubmit_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm2_WaveOnly_AutoEndpoint_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm3_Transcript_ManualSubmit_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm4_Transcript_AutoEndpoint_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260923",
+          "probabilityWeight": 18,
+          "featureAssociation": {
+            "disableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 10
+        },
+        {
+          "name": "ForcedOn_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "VoiceSearchCoherenceSearchbox"
+          }
+        },
+        {
+          "name": "ForcedOff_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "VoiceSearchCoherenceSearchbox"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8059.12",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "formFactor": [
+          "DESKTOP"
+        ],
+        "endDate": "1800057540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NewVoiceSearchUiInNtpRealbox",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Arm1_WaveOnly_ManualSubmit_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm2_WaveOnly_AutoEndpoint_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm3_Transcript_ManualSubmit_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm4_Transcript_AutoEndpoint_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260923",
+          "probabilityWeight": 18,
+          "featureAssociation": {
+            "disableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 10
+        },
+        {
+          "name": "ForcedOn_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "VoiceSearchCoherenceSearchbox"
+          }
+        },
+        {
+          "name": "ForcedOff_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "VoiceSearchCoherenceSearchbox"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8059.12",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC"
+        ],
+        "endDate": "1800057540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NewVoiceSearchUiInNtpRealbox",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Arm1_WaveOnly_ManualSubmit_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm2_WaveOnly_AutoEndpoint_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm3_Transcript_ManualSubmit_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Arm4_Transcript_AutoEndpoint_20260923",
+          "probabilityWeight": 18,
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260923",
+          "probabilityWeight": 18,
+          "featureAssociation": {
+            "disableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 10
+        },
+        {
+          "name": "ForcedOn_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "VoiceSearchCoherenceSearchbox"
+          }
+        },
+        {
+          "name": "ForcedOff_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "VoiceSearchCoherenceSearchbox"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8059.12",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC"
+        ],
+        "endDate": "1800057540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NewVoiceSearchUiInNtpRealbox",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Arm1_WaveOnly_ManualSubmit_20260923",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005224",
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Arm2_WaveOnly_AutoEndpoint_20260923",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005225",
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Arm3_Transcript_ManualSubmit_20260923",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005226",
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Arm4_Transcript_AutoEndpoint_20260923",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005227",
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260923",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005223",
+          "featureAssociation": {
+            "disableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "VoiceSearchCoherenceSearchbox"
+          }
+        },
+        {
+          "name": "ForcedOff_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "VoiceSearchCoherenceSearchbox"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8059.26",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1800057540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NewVoiceSearchUiInNtpRealbox",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Arm1_WaveOnly_ManualSubmit_20260923",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005224",
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Arm2_WaveOnly_AutoEndpoint_20260923",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005225",
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Arm3_Transcript_ManualSubmit_20260923",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005226",
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "false"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Arm4_Transcript_AutoEndpoint_20260923",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005227",
+          "param": [
+            {
+              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceRealboxHelperText",
+              "value": "true"
+            },
+            {
+              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260923",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005223",
+          "featureAssociation": {
+            "disableFeature": [
+              "VoiceSearchCoherenceSearchbox"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "ForcedOn_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "VoiceSearchCoherenceSearchbox"
+          }
+        },
+        {
+          "name": "ForcedOff_VoiceSearchCoherenceSearchbox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "VoiceSearchCoherenceSearchbox"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8059.26",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1800057540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -43189,32 +44004,10 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled",
-          "probabilityWeight": 50,
+          "name": "EnabledLaunch",
+          "probabilityWeight": 100,
           "featureAssociation": {
             "enableFeature": [
-              "AndroidSurfaceControlPartialDamage"
-            ]
-          }
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "AndroidSurfaceControlPartialDamage"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
               "AndroidSurfaceControlPartialDamage"
             ]
           }
@@ -43236,136 +44029,16 @@
       ],
       "filter": {
         "minVersion": "153.0.7981.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793577540"
-      }
-    },
-    {
-      "name": "AndroidSurfaceControlPartialDamage",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "AndroidSurfaceControlPartialDamage"
-            ]
-          }
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "AndroidSurfaceControlPartialDamage"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "AndroidSurfaceControlPartialDamage"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AndroidSurfaceControlPartialDamage",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AndroidSurfaceControlPartialDamage"
-          }
-        },
-        {
-          "name": "ForcedOff_AndroidSurfaceControlPartialDamage",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AndroidSurfaceControlPartialDamage"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.7981.0",
+        "maxVersion": "157.0.8091.0",
         "channel": [
           "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793577540"
-      }
-    },
-    {
-      "name": "AndroidSurfaceControlPartialDamage",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_10",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "enableFeature": [
-              "AndroidSurfaceControlPartialDamage"
-            ]
-          }
-        },
-        {
-          "name": "Control_10",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "disableFeature": [
-              "AndroidSurfaceControlPartialDamage"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 80
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "AndroidSurfaceControlPartialDamage"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AndroidSurfaceControlPartialDamage",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AndroidSurfaceControlPartialDamage"
-          }
-        },
-        {
-          "name": "ForcedOff_AndroidSurfaceControlPartialDamage",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AndroidSurfaceControlPartialDamage"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.7981.0",
-        "channel": [
+          "DEV",
+          "BETA",
           "STABLE"
         ],
         "platform": [
           "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793577540"
+        ]
       }
     },
     {
@@ -109663,6 +110336,86 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "ComposeboxDriveContextMenuOptionSigninPromo",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004912",
+          "featureAssociation": {
+            "enableFeature": [
+              "ComposeboxDriveContextMenuOption",
+              "ComposeboxDriveContextMenuOptionDisclaimer"
+            ],
+            "disableFeature": [
+              "ComposeboxDriveContextMenuOptionSigninPromo"
+            ]
+          }
+        },
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004913",
+          "featureAssociation": {
+            "enableFeature": [
+              "ComposeboxDriveContextMenuOption",
+              "ComposeboxDriveContextMenuOptionDisclaimer",
+              "ComposeboxDriveContextMenuOptionSigninPromo"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8083.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1794700740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ComposeboxDriveContextMenuOptionSigninPromoDesktop_AimTeamfood",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Aim_Teamfood",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "enableFeature": [
+              "ComposeboxDriveContextMenuOption",
+              "ComposeboxDriveContextMenuOptionDisclaimer",
+              "ComposeboxDriveContextMenuOptionSigninPromo",
+              "ForceDriveDisclaimerAccepted"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8083.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1794700740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "ComposeboxUrlInput",
       "consistency": "PERMANENT",
       "experiment": [
@@ -168416,16 +169169,8 @@
           "probabilityWeight": 100,
           "param": [
             {
-              "name": "glic-actor-eligible-tiers",
-              "value": "0,1,2,3"
-            },
-            {
               "name": "glic-min-required-ram-mb",
               "value": "3600"
-            },
-            {
-              "name": "glic_actor_enterprise_pref_default",
-              "value": "enabled_by_default"
             }
           ],
           "featureAssociation": {
@@ -168434,7 +169179,9 @@
               "EnableAndroidSidePanel",
               "Glic",
               "GlicActor",
+              "GlicActorPolicyControlExemption",
               "GlicAndroidSidePanel",
+              "GlicAndroidTablet",
               "GlicRollout"
             ],
             "disableFeature": [
@@ -168500,6 +169247,20 @@
           }
         },
         {
+          "name": "ForcedOn_GlicActorPolicyControlExemption",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicActorPolicyControlExemption"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicActorPolicyControlExemption",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicActorPolicyControlExemption"
+          }
+        },
+        {
           "name": "ForcedOn_GlicAndroidSidePanel",
           "probabilityWeight": 0,
           "featureAssociation": {
@@ -168511,6 +169272,20 @@
           "probabilityWeight": 0,
           "featureAssociation": {
             "forcingFeatureOff": "GlicAndroidSidePanel"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicAndroidTablet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicAndroidTablet"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicAndroidTablet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicAndroidTablet"
           }
         },
         {
@@ -168587,16 +169362,8 @@
               "value": "true"
             },
             {
-              "name": "glic-actor-eligible-tiers",
-              "value": "0,1,2,3"
-            },
-            {
               "name": "glic-min-required-ram-mb",
               "value": "3600"
-            },
-            {
-              "name": "glic_actor_enterprise_pref_default",
-              "value": "enabled_by_default"
             }
           ],
           "featureAssociation": {
@@ -168605,6 +169372,7 @@
               "FedCmEmbedderInitiatedLogin",
               "Glic",
               "GlicActor",
+              "GlicActorPolicyControlExemption",
               "GlicRollout",
               "IPH_GlicPromoAndroid",
               "TabBottomSheet"
@@ -168670,6 +169438,20 @@
           "probabilityWeight": 0,
           "featureAssociation": {
             "forcingFeatureOff": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicActorPolicyControlExemption",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicActorPolicyControlExemption"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicActorPolicyControlExemption",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicActorPolicyControlExemption"
           }
         },
         {
@@ -168809,16 +169591,8 @@
               "value": "true"
             },
             {
-              "name": "glic-actor-eligible-tiers",
-              "value": "0,1,2,3"
-            },
-            {
               "name": "glic-min-required-ram-mb",
               "value": "3600"
-            },
-            {
-              "name": "glic_actor_enterprise_pref_default",
-              "value": "enabled_by_default"
             }
           ],
           "featureAssociation": {
@@ -168830,6 +169604,7 @@
               "FedCmEmbedderInitiatedLogin",
               "Glic",
               "GlicActor",
+              "GlicActorPolicyControlExemption",
               "GlicBackgroundActuation",
               "GlicBackgroundActuationTabGroupSync",
               "GlicRollout",
@@ -168942,6 +169717,20 @@
           "probabilityWeight": 0,
           "featureAssociation": {
             "forcingFeatureOff": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicActorPolicyControlExemption",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicActorPolicyControlExemption"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicActorPolicyControlExemption",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicActorPolicyControlExemption"
           }
         },
         {
@@ -169155,16 +169944,8 @@
               "value": "0.95"
             },
             {
-              "name": "glic-actor-eligible-tiers",
-              "value": "0,1,2,3"
-            },
-            {
               "name": "glic-min-required-ram-mb",
               "value": "3600"
-            },
-            {
-              "name": "glic_actor_enterprise_pref_default",
-              "value": "enabled_by_default"
             },
             {
               "name": "resizing_placeholder",
@@ -169186,6 +169967,7 @@
               "FedCmEmbedderInitiatedLogin",
               "Glic",
               "GlicActor",
+              "GlicActorPolicyControlExemption",
               "GlicAndroidOffscreenRendering",
               "GlicBackgroundActuation",
               "GlicBackgroundActuationTabGroupSync",
@@ -169331,6 +170113,20 @@
           "probabilityWeight": 0,
           "featureAssociation": {
             "forcingFeatureOff": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicActorPolicyControlExemption",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicActorPolicyControlExemption"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicActorPolicyControlExemption",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicActorPolicyControlExemption"
           }
         },
         {
@@ -244052,564 +244848,6 @@
         ]
       },
       "randomizationSeed": 99099989
-    },
-    {
-      "name": "NewVoiceSearchUiInNtpRealbox",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Arm1_WaveOnly_ManualSubmit_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "false"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm2_WaveOnly_AutoEndpoint_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm3_Transcript_ManualSubmit_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "false"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm4_Transcript_AutoEndpoint_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260923",
-          "probabilityWeight": 18,
-          "featureAssociation": {
-            "disableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 10
-        },
-        {
-          "name": "ForcedOn_VoiceSearchCoherenceSearchbox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "VoiceSearchCoherenceSearchbox"
-          }
-        },
-        {
-          "name": "ForcedOff_VoiceSearchCoherenceSearchbox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "VoiceSearchCoherenceSearchbox"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8059.12",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "formFactor": [
-          "DESKTOP"
-        ],
-        "endDate": "1800057540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "NewVoiceSearchUiInNtpRealbox",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Arm1_WaveOnly_ManualSubmit_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "false"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm2_WaveOnly_AutoEndpoint_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm3_Transcript_ManualSubmit_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "false"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm4_Transcript_AutoEndpoint_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260923",
-          "probabilityWeight": 18,
-          "featureAssociation": {
-            "disableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 10
-        },
-        {
-          "name": "ForcedOn_VoiceSearchCoherenceSearchbox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "VoiceSearchCoherenceSearchbox"
-          }
-        },
-        {
-          "name": "ForcedOff_VoiceSearchCoherenceSearchbox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "VoiceSearchCoherenceSearchbox"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8059.12",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "formFactor": [
-          "DESKTOP"
-        ],
-        "endDate": "1800057540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "NewVoiceSearchUiInNtpRealbox",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Arm1_WaveOnly_ManualSubmit_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "false"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm2_WaveOnly_AutoEndpoint_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm3_Transcript_ManualSubmit_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "false"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm4_Transcript_AutoEndpoint_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260923",
-          "probabilityWeight": 18,
-          "featureAssociation": {
-            "disableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 10
-        },
-        {
-          "name": "ForcedOn_VoiceSearchCoherenceSearchbox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "VoiceSearchCoherenceSearchbox"
-          }
-        },
-        {
-          "name": "ForcedOff_VoiceSearchCoherenceSearchbox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "VoiceSearchCoherenceSearchbox"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8059.12",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC"
-        ],
-        "endDate": "1800057540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "NewVoiceSearchUiInNtpRealbox",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Arm1_WaveOnly_ManualSubmit_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "false"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm2_WaveOnly_AutoEndpoint_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm3_Transcript_ManualSubmit_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "false"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Arm4_Transcript_AutoEndpoint_20260923",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "VoiceSearchCoherenceRealboxAutoEndpoint",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceRealboxHelperText",
-              "value": "true"
-            },
-            {
-              "name": "VoiceSearchCoherenceSearchboxWithLiveTranscription",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260923",
-          "probabilityWeight": 18,
-          "featureAssociation": {
-            "disableFeature": [
-              "VoiceSearchCoherenceSearchbox"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 10
-        },
-        {
-          "name": "ForcedOn_VoiceSearchCoherenceSearchbox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "VoiceSearchCoherenceSearchbox"
-          }
-        },
-        {
-          "name": "ForcedOff_VoiceSearchCoherenceSearchbox",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "VoiceSearchCoherenceSearchbox"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8059.12",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC"
-        ],
-        "endDate": "1800057540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "NewWebstoreURL",
@@ -474875,5 +475113,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261007-170104.350000-production"
+  "version": "20261008-010031.548000-production"
 }
