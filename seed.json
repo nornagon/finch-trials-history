@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTAwOS0wMTAwMzAuMTAwMDAwEgQgACgB#PnaDaA2/+xU=",
+  "serialNumber": "SMChYyMDI2MTAwOS0wOTAwMzUuNDAzMDAwEgQgACgB#h+QjF1EjUVg=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -25769,6 +25769,52 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "ShortFirstPageWithFullBleedAndCoBInBling",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_prestable_20260930",
+          "probabilityWeight": 25,
+          "googleWebTriggerExperimentId": "101001555",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_PeekMod_prestable_20260930",
+          "probabilityWeight": 25,
+          "googleWebTriggerExperimentId": "101005239",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_LpcAblation_prestable_20260930",
+          "probabilityWeight": 25,
+          "googleWebTriggerExperimentId": "101005240",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_prestable_20260930",
+          "probabilityWeight": 25,
+          "googleWebTriggerExperimentId": "101001554",
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "147.*",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "formFactor": [
+          "PHONE"
+        ],
+        "endDate": "1800057540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "IOSComposeboxPhysicalKeyboardReturnKeys",
       "consistency": "PERMANENT",
       "experiment": [
@@ -26806,52 +26852,6 @@
           "PLATFORM_IOS"
         ],
         "endDate": "1792108740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ShortFirstPageWithFullBleedAndCoBInBling",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_prestable_20260930",
-          "probabilityWeight": 25,
-          "googleWebTriggerExperimentId": "101001555",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_PeekMod_prestable_20260930",
-          "probabilityWeight": 25,
-          "googleWebTriggerExperimentId": "101005239",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_LpcAblation_prestable_20260930",
-          "probabilityWeight": 25,
-          "googleWebTriggerExperimentId": "101005240",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_prestable_20260930",
-          "probabilityWeight": 25,
-          "googleWebTriggerExperimentId": "101001554",
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "147.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "formFactor": [
-          "PHONE"
-        ],
-        "endDate": "1800057540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -87054,6 +87054,60 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "BuildTFLiteModelExecutionTaskOnLoadingThread",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261009",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "BuildTFLiteModelExecutionTaskOnLoadingThread"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261009",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "BuildTFLiteModelExecutionTaskOnLoadingThread"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_BuildTFLiteModelExecutionTaskOnLoadingThread",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "BuildTFLiteModelExecutionTaskOnLoadingThread"
+          }
+        },
+        {
+          "name": "ForcedOff_BuildTFLiteModelExecutionTaskOnLoadingThread",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "BuildTFLiteModelExecutionTaskOnLoadingThread"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8090.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_IOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_WINDOWS"
+        ],
+        "endDate": "1796342340"
+      }
+    },
+    {
       "name": "BundledConnectionHelp",
       "consistency": "PERMANENT",
       "experiment": [
@@ -144862,6 +144916,7 @@
       ],
       "filter": {
         "minVersion": "150.*",
+        "maxVersion": "157.0.8081.*",
         "channel": [
           "CANARY",
           "DEV",
@@ -144873,8 +144928,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_LINUX",
           "PLATFORM_MAC"
-        ],
-        "endDate": "1792195140"
+        ]
       }
     },
     {
@@ -192476,6 +192530,44 @@
       }
     },
     {
+      "name": "IOSAutofillIgnoreTabIndexForFocusability",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillIgnoreTabIndexForFocusabilityIos"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillIgnoreTabIndexForFocusabilityIos"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8068.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1796515140"
+      }
+    },
+    {
       "name": "IOSAutofillPaymentsSheetV3",
       "consistency": "PERMANENT",
       "experiment": [
@@ -234145,7 +234237,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260909",
+          "name": "Enabled_20261009",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -234154,7 +234246,7 @@
           }
         },
         {
-          "name": "Control_20260909",
+          "name": "Control_20261009",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -234191,14 +234283,14 @@
         }
       ],
       "filter": {
-        "minVersion": "146.0.0.0",
+        "minVersion": "156.0.8078.12",
         "channel": [
           "BETA"
         ],
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1793750340",
+        "endDate": "1796342340",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -234211,7 +234303,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260909",
+          "name": "Enabled_20261009",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -234220,7 +234312,7 @@
           }
         },
         {
-          "name": "Control_20260909",
+          "name": "Control_20261009",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -234257,7 +234349,7 @@
         }
       ],
       "filter": {
-        "minVersion": "146.0.0.0",
+        "minVersion": "156.0.8078.12",
         "channel": [
           "CANARY",
           "DEV"
@@ -234265,7 +234357,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1793750340",
+        "endDate": "1796342340",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -234278,7 +234370,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_0_1",
+          "name": "Enabled_20261009",
           "probabilityWeight": 1,
           "featureAssociation": {
             "enableFeature": [
@@ -234287,7 +234379,7 @@
           }
         },
         {
-          "name": "Control_0_1",
+          "name": "Control_20261009",
           "probabilityWeight": 1,
           "featureAssociation": {
             "disableFeature": [
@@ -234297,7 +234389,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 998
+          "probabilityWeight": 98
         },
         {
           "name": "_Activation",
@@ -234324,14 +234416,14 @@
         }
       ],
       "filter": {
-        "minVersion": "146.0.0.0",
+        "minVersion": "156.0.8078.12",
         "channel": [
           "STABLE"
         ],
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1793750340",
+        "endDate": "1796342340",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -238012,7 +238104,7 @@
         "formFactor": [
           "DESKTOP"
         ],
-        "endDate": "1792454340"
+        "endDate": "1795132740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -238065,7 +238157,7 @@
         "formFactor": [
           "DESKTOP"
         ],
-        "endDate": "1792454340"
+        "endDate": "1795132740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -238074,8 +238166,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260909",
-          "probabilityWeight": 1,
+          "name": "Enabled_20261009",
+          "probabilityWeight": 10,
           "featureAssociation": {
             "enableFeature": [
               "PMLoadingPageVoter"
@@ -238083,8 +238175,8 @@
           }
         },
         {
-          "name": "Control_20260909",
-          "probabilityWeight": 1,
+          "name": "Control_20261009",
+          "probabilityWeight": 10,
           "featureAssociation": {
             "disableFeature": [
               "PMLoadingPageVoter"
@@ -238093,7 +238185,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 98
+          "probabilityWeight": 80
         },
         {
           "name": "ForcedOn_PMLoadingPageVoter",
@@ -238121,7 +238213,7 @@
         "formFactor": [
           "DESKTOP"
         ],
-        "endDate": "1792454340"
+        "endDate": "1795132740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -315550,6 +315642,76 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "SearchPrefetchHighPriorityPrefetches",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Dev_Canary_20261009",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "3396122",
+          "featureAssociation": {
+            "enableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_Dev_Canary_20261009",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "3396121",
+          "featureAssociation": {
+            "disableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SearchNavigationPrefetch"
+          }
+        },
+        {
+          "name": "ForcedOff_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SearchNavigationPrefetch"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8077.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1797379140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "KillSwitch_SearchNavigationPrefetch",
       "consistency": "PERMANENT",
       "experiment": [
@@ -332484,6 +332646,12 @@
         {
           "name": "Enabled",
           "probabilityWeight": 100,
+          "param": [
+            {
+              "name": "only_on_side_panel",
+              "value": "false"
+            }
+          ],
           "featureAssociation": {
             "enableFeature": [
               "GlicSelectionOverlayPrompt",
@@ -343252,19 +343420,10 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260922",
-          "probabilityWeight": 50,
+          "name": "EnabledLaunch",
+          "probabilityWeight": 100,
           "featureAssociation": {
             "enableFeature": [
-              "TabAndroidGracefulShutdown"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260922",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
               "TabAndroidGracefulShutdown"
             ]
           }
@@ -343286,122 +343445,16 @@
       ],
       "filter": {
         "minVersion": "152.0.7977.42",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793491140",
-        "excludeFormFactor": [
-          "DESKTOP"
-        ]
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "TabAndroidGracefulShutdown",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260922",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "TabAndroidGracefulShutdown"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260922",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "TabAndroidGracefulShutdown"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_TabAndroidGracefulShutdown",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "TabAndroidGracefulShutdown"
-          }
-        },
-        {
-          "name": "ForcedOff_TabAndroidGracefulShutdown",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "TabAndroidGracefulShutdown"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7977.42",
+        "maxVersion": "157.0.8092.0",
         "channel": [
           "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793491140",
-        "excludeFormFactor": [
-          "DESKTOP"
-        ]
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "TabAndroidGracefulShutdown",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260922",
-          "probabilityWeight": 5,
-          "featureAssociation": {
-            "enableFeature": [
-              "TabAndroidGracefulShutdown"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260922",
-          "probabilityWeight": 5,
-          "featureAssociation": {
-            "disableFeature": [
-              "TabAndroidGracefulShutdown"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 90
-        },
-        {
-          "name": "ForcedOn_TabAndroidGracefulShutdown",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "TabAndroidGracefulShutdown"
-          }
-        },
-        {
-          "name": "ForcedOff_TabAndroidGracefulShutdown",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "TabAndroidGracefulShutdown"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7977.42",
-        "channel": [
+          "DEV",
+          "BETA",
           "STABLE"
         ],
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1793491140",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -438101,15 +438154,15 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled,_20260922",
+          "name": "Enabled,_20261008",
           "probabilityWeight": 50,
-          "googleWebExperimentId": "101004814",
+          "googleWebExperimentId": "101005289",
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Control,_20260922",
+          "name": "Control,_20261008",
           "probabilityWeight": 50,
-          "googleWebExperimentId": "101004815",
+          "googleWebExperimentId": "101005290",
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
@@ -438129,7 +438182,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794787140"
+        "endDate": "1796601540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -438138,15 +438191,15 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled,_20260922",
+          "name": "Enabled,_20261008",
           "probabilityWeight": 50,
-          "googleWebExperimentId": "101004812",
+          "googleWebExperimentId": "101005287",
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Control,_20260922",
+          "name": "Control,_20261008",
           "probabilityWeight": 50,
-          "googleWebExperimentId": "101004813",
+          "googleWebExperimentId": "101005288",
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
@@ -438167,7 +438220,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794787140"
+        "endDate": "1796601540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -438176,20 +438229,20 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled,_20260922",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004816",
+          "name": "Enabled,_20261008",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005291",
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Control,_20260922",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004817",
+          "name": "Control,_20261008",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005292",
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
           "name": "Default",
-          "probabilityWeight": 98
+          "probabilityWeight": 80
         }
       ],
       "filter": {
@@ -438204,7 +438257,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794787140"
+        "endDate": "1796601540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -438213,11 +438266,11 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled,_20260922",
+          "name": "Enabled,_20261008",
           "probabilityWeight": 50
         },
         {
-          "name": "Control,_20260922",
+          "name": "Control,_20261008",
           "probabilityWeight": 50
         },
         {
@@ -438235,7 +438288,7 @@
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1794787140"
+        "endDate": "1796601540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -438244,16 +438297,16 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled,_20260922",
-          "probabilityWeight": 1
+          "name": "Enabled,_20261008",
+          "probabilityWeight": 10
         },
         {
-          "name": "Control,_20260922",
-          "probabilityWeight": 1
+          "name": "Control,_20261008",
+          "probabilityWeight": 10
         },
         {
           "name": "Default",
-          "probabilityWeight": 98
+          "probabilityWeight": 80
         }
       ],
       "filter": {
@@ -438264,7 +438317,7 @@
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1794787140"
+        "endDate": "1796601540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -473366,5 +473419,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261009-010030.100000-production"
+  "version": "20261009-090035.403000-production"
 }
