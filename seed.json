@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTAxOC0wMzAwNDEuOTY5MDAwEgQgACgB#TaoS/FtzJgg=",
+  "serialNumber": "SMChYyMDI2MTAxOS0wMTAwNDQuMjY5MDAwEgQgACgB#0Wfqjx6UOWE=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -3785,6 +3785,973 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "OptimisticDnsForTcp",
+      "consistency": "SESSION",
+      "experiment": [
+        {
+          "name": "EnableIntermediateDnsResultsOnly_BETA_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004030",
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableIntermediateDnsResults"
+            ],
+            "disableFeature": [
+              "AdjustIPv6FallbackTime",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_BETA_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004031",
+          "param": [
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableIntermediateDnsResults",
+              "OptimisticDnsForTcp"
+            ],
+            "disableFeature": [
+              "AdjustIPv6FallbackTime",
+              "IPv6FallbackBasedOnRTT"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_100ms_BETA_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004032",
+          "param": [
+            {
+              "name": "fallback_time",
+              "value": "100ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "OptimisticDnsForTcp"
+            ],
+            "disableFeature": [
+              "IPv6FallbackBasedOnRTT"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_IPv6RTT_1_5_BETA_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004033",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.5"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ],
+            "disableFeature": [
+              "AdjustIPv6FallbackTime"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_50ms_IPv6RTT_1_1_BETA_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004034",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.1"
+            },
+            {
+              "name": "fallback_time",
+              "value": "50ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_1_BETA_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004035",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.1"
+            },
+            {
+              "name": "fallback_time",
+              "value": "100ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_50ms_IPv6RTT_1_2_BETA_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004036",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.2"
+            },
+            {
+              "name": "fallback_time",
+              "value": "50ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_2_BETA_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004037",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.2"
+            },
+            {
+              "name": "fallback_time",
+              "value": "100ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_5_BETA_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004038",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.5"
+            },
+            {
+              "name": "fallback_time",
+              "value": "100ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "Control_BETA_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004029",
+          "featureAssociation": {
+            "disableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AdjustIPv6FallbackTime",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AdjustIPv6FallbackTime"
+          }
+        },
+        {
+          "name": "ForcedOff_AdjustIPv6FallbackTime",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AdjustIPv6FallbackTime"
+          }
+        },
+        {
+          "name": "ForcedOn_EnableIntermediateDnsResults",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableIntermediateDnsResults"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableIntermediateDnsResults",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableIntermediateDnsResults"
+          }
+        },
+        {
+          "name": "ForcedOn_IPv6FallbackBasedOnRTT",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPv6FallbackBasedOnRTT"
+          }
+        },
+        {
+          "name": "ForcedOff_IPv6FallbackBasedOnRTT",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPv6FallbackBasedOnRTT"
+          }
+        },
+        {
+          "name": "ForcedOn_OptimisticDnsForTcp",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OptimisticDnsForTcp"
+          }
+        },
+        {
+          "name": "ForcedOff_OptimisticDnsForTcp",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OptimisticDnsForTcp"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7967.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1794959940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "OptimisticDnsForTcp",
+      "consistency": "SESSION",
+      "experiment": [
+        {
+          "name": "EnableIntermediateDnsResultsOnly_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004020",
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableIntermediateDnsResults"
+            ],
+            "disableFeature": [
+              "AdjustIPv6FallbackTime",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004021",
+          "param": [
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableIntermediateDnsResults",
+              "OptimisticDnsForTcp"
+            ],
+            "disableFeature": [
+              "AdjustIPv6FallbackTime",
+              "IPv6FallbackBasedOnRTT"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_100ms_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004022",
+          "param": [
+            {
+              "name": "fallback_time",
+              "value": "100ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "OptimisticDnsForTcp"
+            ],
+            "disableFeature": [
+              "IPv6FallbackBasedOnRTT"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_IPv6RTT_1_5_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004023",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.5"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ],
+            "disableFeature": [
+              "AdjustIPv6FallbackTime"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_50ms_IPv6RTT_1_1_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004024",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.1"
+            },
+            {
+              "name": "fallback_time",
+              "value": "50ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_1_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004025",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.1"
+            },
+            {
+              "name": "fallback_time",
+              "value": "100ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_50ms_IPv6RTT_1_2_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004026",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.2"
+            },
+            {
+              "name": "fallback_time",
+              "value": "50ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_2_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004027",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.2"
+            },
+            {
+              "name": "fallback_time",
+              "value": "100ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_5_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004028",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.5"
+            },
+            {
+              "name": "fallback_time",
+              "value": "100ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260903",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101004019",
+          "featureAssociation": {
+            "disableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AdjustIPv6FallbackTime",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AdjustIPv6FallbackTime"
+          }
+        },
+        {
+          "name": "ForcedOff_AdjustIPv6FallbackTime",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AdjustIPv6FallbackTime"
+          }
+        },
+        {
+          "name": "ForcedOn_EnableIntermediateDnsResults",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableIntermediateDnsResults"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableIntermediateDnsResults",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableIntermediateDnsResults"
+          }
+        },
+        {
+          "name": "ForcedOn_IPv6FallbackBasedOnRTT",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPv6FallbackBasedOnRTT"
+          }
+        },
+        {
+          "name": "ForcedOff_IPv6FallbackBasedOnRTT",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPv6FallbackBasedOnRTT"
+          }
+        },
+        {
+          "name": "ForcedOn_OptimisticDnsForTcp",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OptimisticDnsForTcp"
+          }
+        },
+        {
+          "name": "ForcedOff_OptimisticDnsForTcp",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OptimisticDnsForTcp"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7967.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1794959940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "OptimisticDnsForTcp",
+      "consistency": "SESSION",
+      "experiment": [
+        {
+          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_1_STABLE_30_20261019",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005592",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.1"
+            },
+            {
+              "name": "fallback_time",
+              "value": "100ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "Control_STABLE_30_20261019",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005591",
+          "featureAssociation": {
+            "disableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AdjustIPv6FallbackTime",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AdjustIPv6FallbackTime"
+          }
+        },
+        {
+          "name": "ForcedOff_AdjustIPv6FallbackTime",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AdjustIPv6FallbackTime"
+          }
+        },
+        {
+          "name": "ForcedOn_EnableIntermediateDnsResults",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableIntermediateDnsResults"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableIntermediateDnsResults",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableIntermediateDnsResults"
+          }
+        },
+        {
+          "name": "ForcedOn_IPv6FallbackBasedOnRTT",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPv6FallbackBasedOnRTT"
+          }
+        },
+        {
+          "name": "ForcedOff_IPv6FallbackBasedOnRTT",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPv6FallbackBasedOnRTT"
+          }
+        },
+        {
+          "name": "ForcedOn_OptimisticDnsForTcp",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OptimisticDnsForTcp"
+          }
+        },
+        {
+          "name": "ForcedOff_OptimisticDnsForTcp",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OptimisticDnsForTcp"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7967.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX",
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1794959940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "OptimisticDnsForTcp",
+      "consistency": "SESSION",
+      "experiment": [
+        {
+          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_1_STABLE_30_20261019",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005592",
+          "param": [
+            {
+              "name": "IPv6FallbackMax",
+              "value": "1500ms"
+            },
+            {
+              "name": "IPv6FallbackMin",
+              "value": "50ms"
+            },
+            {
+              "name": "IPv6FallbackRTTMultiplier",
+              "value": "1.1"
+            },
+            {
+              "name": "fallback_time",
+              "value": "100ms"
+            },
+            {
+              "name": "use_stale_connectors",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "Control_STABLE_30_20261019",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005591",
+          "featureAssociation": {
+            "disableFeature": [
+              "AdjustIPv6FallbackTime",
+              "EnableIntermediateDnsResults",
+              "IPv6FallbackBasedOnRTT",
+              "OptimisticDnsForTcp"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AdjustIPv6FallbackTime",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AdjustIPv6FallbackTime"
+          }
+        },
+        {
+          "name": "ForcedOff_AdjustIPv6FallbackTime",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AdjustIPv6FallbackTime"
+          }
+        },
+        {
+          "name": "ForcedOn_EnableIntermediateDnsResults",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableIntermediateDnsResults"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableIntermediateDnsResults",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableIntermediateDnsResults"
+          }
+        },
+        {
+          "name": "ForcedOn_IPv6FallbackBasedOnRTT",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPv6FallbackBasedOnRTT"
+          }
+        },
+        {
+          "name": "ForcedOff_IPv6FallbackBasedOnRTT",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPv6FallbackBasedOnRTT"
+          }
+        },
+        {
+          "name": "ForcedOn_OptimisticDnsForTcp",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OptimisticDnsForTcp"
+          }
+        },
+        {
+          "name": "ForcedOff_OptimisticDnsForTcp",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OptimisticDnsForTcp"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7967.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1794959940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "AndroidSystemFontPrewarming",
       "consistency": "PERMANENT",
       "experiment": [
@@ -4682,274 +5649,6 @@
         ],
         "endDate": "1796342340"
       }
-    },
-    {
-      "name": "EagerStorageAccessPermissionCheck",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260918",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260918",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_EagerStorageAccessPermissionCheck",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EagerStorageAccessPermissionCheck"
-          }
-        },
-        {
-          "name": "ForcedOff_EagerStorageAccessPermissionCheck",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EagerStorageAccessPermissionCheck"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7971.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1792972740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "EagerStorageAccessPermissionCheck",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260918",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260918",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_EagerStorageAccessPermissionCheck",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EagerStorageAccessPermissionCheck"
-          }
-        },
-        {
-          "name": "ForcedOff_EagerStorageAccessPermissionCheck",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EagerStorageAccessPermissionCheck"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7971.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1792972740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "EagerStorageAccessPermissionCheck",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260918",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004668",
-          "featureAssociation": {
-            "enableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260918",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004669",
-          "featureAssociation": {
-            "disableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_EagerStorageAccessPermissionCheck",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EagerStorageAccessPermissionCheck"
-          }
-        },
-        {
-          "name": "ForcedOff_EagerStorageAccessPermissionCheck",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EagerStorageAccessPermissionCheck"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7971.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1792972740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "EagerStorageAccessPermissionCheck",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260918",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004668",
-          "featureAssociation": {
-            "enableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260918",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004669",
-          "featureAssociation": {
-            "disableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "EagerStorageAccessPermissionCheck"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_EagerStorageAccessPermissionCheck",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EagerStorageAccessPermissionCheck"
-          }
-        },
-        {
-          "name": "ForcedOff_EagerStorageAccessPermissionCheck",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EagerStorageAccessPermissionCheck"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7971.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1792972740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "ReduceMojoURLLoaderFactoryCloning",
@@ -10962,34 +11661,370 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "DiscoverClankAggregatedHoldback",
+      "name": "LazyParseInlineStyleSheets",
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_prestable_20260915",
+          "name": "Enabled_20261014",
           "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101004858",
-          "googleWebVisibility": "FIRST_PARTY"
+          "featureAssociation": {
+            "enableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          }
         },
         {
-          "name": "Holdback_prestable_20260915",
+          "name": "Control_20261014",
           "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101004859",
-          "googleWebVisibility": "FIRST_PARTY"
+          "featureAssociation": {
+            "disableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "LazyParseInlineStyleSheets"
+          }
+        },
+        {
+          "name": "ForcedOff_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "LazyParseInlineStyleSheets"
+          }
         }
       ],
       "filter": {
-        "minVersion": "150.0.0.0",
+        "minVersion": "156.0.8076.0",
         "channel": [
-          "CANARY",
-          "DEV",
           "BETA"
         ],
         "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1800057540"
+        "endDate": "1796774340"
       },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "LazyParseInlineStyleSheets",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261014",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261014",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "LazyParseInlineStyleSheets"
+          }
+        },
+        {
+          "name": "ForcedOff_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "LazyParseInlineStyleSheets"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8076.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1796774340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "LazyParseInlineStyleSheets",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261014",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005427",
+          "featureAssociation": {
+            "enableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20261014",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005426",
+          "featureAssociation": {
+            "disableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "LazyParseInlineStyleSheets"
+          }
+        },
+        {
+          "name": "ForcedOff_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "LazyParseInlineStyleSheets"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8076.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1796774340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "LazyParseInlineStyleSheets",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261014",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005427",
+          "featureAssociation": {
+            "enableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20261014",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005426",
+          "featureAssociation": {
+            "disableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "LazyParseInlineStyleSheets"
+          }
+        },
+        {
+          "name": "ForcedOff_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "LazyParseInlineStyleSheets"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8076.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1796774340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "LazyParseInlineStyleSheets",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261014",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261014",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "LazyParseInlineStyleSheets"
+          }
+        },
+        {
+          "name": "ForcedOff_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "LazyParseInlineStyleSheets"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8076.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1796774340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "LazyParseInlineStyleSheets",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261014",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261014",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "LazyParseInlineStyleSheets"
+          }
+        },
+        {
+          "name": "ForcedOff_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "LazyParseInlineStyleSheets"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8076.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1796774340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "LazyParseInlineStyleSheets",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261014",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005427",
+          "featureAssociation": {
+            "enableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261014",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101005426",
+          "featureAssociation": {
+            "disableFeature": [
+              "LazyParseInlineStyleSheets"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "LazyParseInlineStyleSheets"
+          }
+        },
+        {
+          "name": "ForcedOff_LazyParseInlineStyleSheets",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "LazyParseInlineStyleSheets"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8076.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1796774340"
+      },
+      "randomizationSeed": 342232723,
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
@@ -12068,6 +13103,37 @@
           null
         ],
         "endDate": "1796774340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DiscoverClankAggregatedHoldback",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_prestable_20260915",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101004858",
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Holdback_prestable_20260915",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101004859",
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.0.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1800057540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -27177,7 +28243,7 @@
           "PLATFORM_MAC",
           "PLATFORM_LINUX"
         ],
-        "endDate": "1792627140"
+        "endDate": "1797379140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -27278,7 +28344,7 @@
         "platform": [
           "PLATFORM_LINUX"
         ],
-        "endDate": "1792627140"
+        "endDate": "1797379140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -42308,7 +43374,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1796515140"
+        "endDate": "1797551940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -42358,7 +43424,60 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1796515140"
+        "endDate": "1797551940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "AndroidStartupImprovements",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260928",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "AndroidStartupImprovements"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260928",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "AndroidStartupImprovements"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "ForcedOn_AndroidStartupImprovements",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AndroidStartupImprovements"
+          }
+        },
+        {
+          "name": "ForcedOff_AndroidStartupImprovements",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AndroidStartupImprovements"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8075.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1797551940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -48289,314 +49408,6 @@
           "PLATFORM_ANDROID"
         ]
       }
-    },
-    {
-      "name": "AsyncDnsQuicJob",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Enabled_FastFailFalse_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004005",
-          "param": [
-            {
-              "name": "AsyncDnsQuicJobFastFail",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_FastFailTrue_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004006",
-          "param": [
-            {
-              "name": "AsyncDnsQuicJobFastFail",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004004",
-          "featureAssociation": {
-            "disableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AsyncDnsQuicJob"
-          }
-        },
-        {
-          "name": "ForcedOff_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AsyncDnsQuicJob"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8030.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1792367940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "AsyncDnsQuicJob",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Enabled_FastFailFalse_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004002",
-          "param": [
-            {
-              "name": "AsyncDnsQuicJobFastFail",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_FastFailTrue_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004003",
-          "param": [
-            {
-              "name": "AsyncDnsQuicJobFastFail",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004001",
-          "featureAssociation": {
-            "disableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AsyncDnsQuicJob"
-          }
-        },
-        {
-          "name": "ForcedOff_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AsyncDnsQuicJob"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8030.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1792367940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "AsyncDnsQuicJob",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Enabled_FastFailFalse_WebView_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004014",
-          "param": [
-            {
-              "name": "AsyncDnsQuicJobFastFail",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_FastFailTrue_WebView_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004015",
-          "param": [
-            {
-              "name": "AsyncDnsQuicJobFastFail",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          }
-        },
-        {
-          "name": "Control_WebView_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004013",
-          "featureAssociation": {
-            "disableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AsyncDnsQuicJob"
-          }
-        },
-        {
-          "name": "ForcedOff_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AsyncDnsQuicJob"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8030.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1792367940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "AsyncDnsQuicJob",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Enabled_FastFailFalse_WebView_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004011",
-          "param": [
-            {
-              "name": "AsyncDnsQuicJobFastFail",
-              "value": "false"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_FastFailTrue_WebView_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004012",
-          "param": [
-            {
-              "name": "AsyncDnsQuicJobFastFail",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          }
-        },
-        {
-          "name": "Control_WebView_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004010",
-          "featureAssociation": {
-            "disableFeature": [
-              "AsyncDnsQuicJob"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AsyncDnsQuicJob"
-          }
-        },
-        {
-          "name": "ForcedOff_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AsyncDnsQuicJob"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8030.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1792367940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "AsyncDnsLinux",
@@ -121219,6 +122030,58 @@
       "filter": {
         "minVersion": "156.0.8071.0",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1795391940"
+      }
+    },
+    {
+      "name": "DeferredDownloadHistoryLoading",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260923",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "DeferredDownloadHistoryLoading"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260923",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "DeferredDownloadHistoryLoading"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_DeferredDownloadHistoryLoading",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DeferredDownloadHistoryLoading"
+          }
+        },
+        {
+          "name": "ForcedOff_DeferredDownloadHistoryLoading",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DeferredDownloadHistoryLoading"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8071.0",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -126400,6 +127263,60 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DeprecateUnloadHoldback",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Holdback_20261016",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "DeprecateUnload"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261016",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "DeprecateUnload"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_DeprecateUnload",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DeprecateUnload"
+          }
+        },
+        {
+          "name": "ForcedOff_DeprecateUnload",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DeprecateUnload"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "158.0.8107.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1801526340"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -140448,6 +141365,209 @@
           "PLATFORM_CHROMEOS"
         ]
       }
+    },
+    {
+      "name": "EagerStorageAccessPermissionCheck",
+      "consistency": "SESSION",
+      "experiment": [
+        {
+          "name": "Enabled_20261019",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "EagerStorageAccessPermissionCheck"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261019",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "EagerStorageAccessPermissionCheck"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "EagerStorageAccessPermissionCheck"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_EagerStorageAccessPermissionCheck",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EagerStorageAccessPermissionCheck"
+          }
+        },
+        {
+          "name": "ForcedOff_EagerStorageAccessPermissionCheck",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EagerStorageAccessPermissionCheck"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7971.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1794614340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "EagerStorageAccessPermissionCheck",
+      "consistency": "SESSION",
+      "experiment": [
+        {
+          "name": "Enabled_20261019",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "EagerStorageAccessPermissionCheck"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261019",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "EagerStorageAccessPermissionCheck"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "EagerStorageAccessPermissionCheck"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_EagerStorageAccessPermissionCheck",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EagerStorageAccessPermissionCheck"
+          }
+        },
+        {
+          "name": "ForcedOff_EagerStorageAccessPermissionCheck",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EagerStorageAccessPermissionCheck"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7971.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1794614340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "EagerStorageAccessPermissionCheck",
+      "consistency": "SESSION",
+      "experiment": [
+        {
+          "name": "Enabled_20261019",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101005593",
+          "featureAssociation": {
+            "enableFeature": [
+              "EagerStorageAccessPermissionCheck"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20261019",
+          "probabilityWeight": 5,
+          "googleWebExperimentId": "101005594",
+          "featureAssociation": {
+            "disableFeature": [
+              "EagerStorageAccessPermissionCheck"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 90
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "EagerStorageAccessPermissionCheck"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_EagerStorageAccessPermissionCheck",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EagerStorageAccessPermissionCheck"
+          }
+        },
+        {
+          "name": "ForcedOff_EagerStorageAccessPermissionCheck",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EagerStorageAccessPermissionCheck"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7971.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1794614340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "EagerlyResolveCoreDllsImports",
@@ -183995,7 +185115,7 @@
           "PLATFORM_ANDROID",
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1796515140"
+        "endDate": "1797379140"
       }
     },
     {
@@ -184045,7 +185165,60 @@
           "PLATFORM_ANDROID",
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1796515140"
+        "endDate": "1797379140"
+      }
+    },
+    {
+      "name": "HardenUrlProvisionFetcher",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260918",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "HardenUrlProvisionFetcher"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260918",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "HardenUrlProvisionFetcher"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "ForcedOn_HardenUrlProvisionFetcher",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "HardenUrlProvisionFetcher"
+          }
+        },
+        {
+          "name": "ForcedOff_HardenUrlProvisionFetcher",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "HardenUrlProvisionFetcher"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.*",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1797379140"
       }
     },
     {
@@ -222655,7 +223828,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260928",
+          "name": "Enabled_20261019",
           "probabilityWeight": 1,
           "featureAssociation": {
             "enableFeature": [
@@ -222664,7 +223837,7 @@
           }
         },
         {
-          "name": "Control_20260928",
+          "name": "Control_20261019",
           "probabilityWeight": 1,
           "featureAssociation": {
             "disableFeature": [
@@ -222677,7 +223850,8 @@
         "minVersion": "156.0.8067.0",
         "channel": [
           "CANARY",
-          "DEV"
+          "DEV",
+          "BETA"
         ],
         "platform": [
           "PLATFORM_WINDOWS",
@@ -222851,113 +224025,6 @@
         ]
       },
       "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "LazyParseInlineStyleSheets",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260929",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "LazyParseInlineStyleSheets"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260929",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "LazyParseInlineStyleSheets"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_LazyParseInlineStyleSheets",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "LazyParseInlineStyleSheets"
-          }
-        },
-        {
-          "name": "ForcedOff_LazyParseInlineStyleSheets",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "LazyParseInlineStyleSheets"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "156.0.8076.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC",
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1796774340"
-      }
-    },
-    {
-      "name": "LazyParseInlineStyleSheets",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260929",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "LazyParseInlineStyleSheets"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260929",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "LazyParseInlineStyleSheets"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_LazyParseInlineStyleSheets",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "LazyParseInlineStyleSheets"
-          }
-        },
-        {
-          "name": "ForcedOff_LazyParseInlineStyleSheets",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "LazyParseInlineStyleSheets"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "156.0.8076.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC",
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1796774340"
-      }
     },
     {
       "name": "LazyUpdateTranslateModel",
@@ -259061,2308 +260128,6 @@
       }
     },
     {
-      "name": "OptimisticDnsForQuic",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Quic_OptimisticDns_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003966",
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "Quic_OptimisticDns_AdjustTimer_50ms_TimerRTT_1_1_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003969",
-          "param": [
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.1"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic",
-              "QuicSlowTimerBasedOnRTT"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Quic_OptimisticDns_AdjustTimer_100ms_TimerRTT_1_1_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003970",
-          "param": [
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.1"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic",
-              "QuicSlowTimerBasedOnRTT"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Quic_OptimisticDns_AdjustTimer_50ms_TimerRTT_1_2_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003971",
-          "param": [
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic",
-              "QuicSlowTimerBasedOnRTT"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Quic_OptimisticDns_AdjustTimer_100ms_TimerRTT_1_2_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003972",
-          "param": [
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic",
-              "QuicSlowTimerBasedOnRTT"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Quic_OptimisticDns_AdjustTimer_100ms_TimerRTT_1_5_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003973",
-          "param": [
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.5"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic",
-              "QuicSlowTimerBasedOnRTT"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_OptimisticDns_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003974",
-          "param": [
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "IPv6FallbackBasedOnRTT",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_AdjustTimer_50ms_TimerRTT_1_1_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003977",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "fallback_time",
-              "value": "50ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_AdjustTimer_100ms_TimerRTT_1_1_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003978",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_AdjustTimer_50ms_TimerRTT_1_2_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003979",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "fallback_time",
-              "value": "50ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_AdjustTimer_100ms_TimerRTT_1_2_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003980",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_AdjustTimer_100ms_TimerRTT_1_5_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003981",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.5"
-            },
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.5"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "Control_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003965",
-          "featureAssociation": {
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AdjustIPv6FallbackTime",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AdjustIPv6FallbackTime"
-          }
-        },
-        {
-          "name": "ForcedOff_AdjustIPv6FallbackTime",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AdjustIPv6FallbackTime"
-          }
-        },
-        {
-          "name": "ForcedOn_AdjustQuicSlowTimerDelay",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AdjustQuicSlowTimerDelay"
-          }
-        },
-        {
-          "name": "ForcedOff_AdjustQuicSlowTimerDelay",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AdjustQuicSlowTimerDelay"
-          }
-        },
-        {
-          "name": "ForcedOn_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AsyncDnsQuicJob"
-          }
-        },
-        {
-          "name": "ForcedOff_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AsyncDnsQuicJob"
-          }
-        },
-        {
-          "name": "ForcedOn_EnableIntermediateDnsResults",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EnableIntermediateDnsResults"
-          }
-        },
-        {
-          "name": "ForcedOff_EnableIntermediateDnsResults",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EnableIntermediateDnsResults"
-          }
-        },
-        {
-          "name": "ForcedOn_IPv6FallbackBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IPv6FallbackBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOff_IPv6FallbackBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IPv6FallbackBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOn_OptimisticDnsForQuic",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OptimisticDnsForQuic"
-          }
-        },
-        {
-          "name": "ForcedOff_OptimisticDnsForQuic",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OptimisticDnsForQuic"
-          }
-        },
-        {
-          "name": "ForcedOn_OptimisticDnsForTcp",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OptimisticDnsForTcp"
-          }
-        },
-        {
-          "name": "ForcedOff_OptimisticDnsForTcp",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OptimisticDnsForTcp"
-          }
-        },
-        {
-          "name": "ForcedOn_QuicSlowTimerBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "QuicSlowTimerBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOff_QuicSlowTimerBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "QuicSlowTimerBasedOnRTT"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8038.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1792367940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "OptimisticDnsForQuic",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Quic_OptimisticDns_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003949",
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "Quic_OptimisticDns_AdjustTimer_50ms_TimerRTT_1_1_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003952",
-          "param": [
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.1"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic",
-              "QuicSlowTimerBasedOnRTT"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Quic_OptimisticDns_AdjustTimer_100ms_TimerRTT_1_1_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003953",
-          "param": [
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.1"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic",
-              "QuicSlowTimerBasedOnRTT"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Quic_OptimisticDns_AdjustTimer_50ms_TimerRTT_1_2_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003954",
-          "param": [
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic",
-              "QuicSlowTimerBasedOnRTT"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Quic_OptimisticDns_AdjustTimer_100ms_TimerRTT_1_2_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003955",
-          "param": [
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic",
-              "QuicSlowTimerBasedOnRTT"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Quic_OptimisticDns_AdjustTimer_100ms_TimerRTT_1_5_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003956",
-          "param": [
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.5"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "OptimisticDnsForQuic",
-              "QuicSlowTimerBasedOnRTT"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_OptimisticDns_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003957",
-          "param": [
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "IPv6FallbackBasedOnRTT",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_AdjustTimer_50ms_TimerRTT_1_1_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003960",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "fallback_time",
-              "value": "50ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_AdjustTimer_100ms_TimerRTT_1_1_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003961",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_AdjustTimer_50ms_TimerRTT_1_2_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003962",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "fallback_time",
-              "value": "50ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_AdjustTimer_100ms_TimerRTT_1_2_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003963",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "QuicAndTcp_AdjustTimer_100ms_TimerRTT_1_5_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003964",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.5"
-            },
-            {
-              "name": "QuicSlowTimerDelay",
-              "value": "100ms"
-            },
-            {
-              "name": "QuicSlowTimerMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "QuicSlowTimerMin",
-              "value": "50ms"
-            },
-            {
-              "name": "QuicSlowTimerRTTMultiplier",
-              "value": "1.5"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "Control_CANARY_DEV_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101003948",
-          "featureAssociation": {
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "AdjustQuicSlowTimerDelay",
-              "AsyncDnsQuicJob",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForQuic",
-              "OptimisticDnsForTcp",
-              "QuicSlowTimerBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AdjustIPv6FallbackTime",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AdjustIPv6FallbackTime"
-          }
-        },
-        {
-          "name": "ForcedOff_AdjustIPv6FallbackTime",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AdjustIPv6FallbackTime"
-          }
-        },
-        {
-          "name": "ForcedOn_AdjustQuicSlowTimerDelay",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AdjustQuicSlowTimerDelay"
-          }
-        },
-        {
-          "name": "ForcedOff_AdjustQuicSlowTimerDelay",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AdjustQuicSlowTimerDelay"
-          }
-        },
-        {
-          "name": "ForcedOn_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AsyncDnsQuicJob"
-          }
-        },
-        {
-          "name": "ForcedOff_AsyncDnsQuicJob",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AsyncDnsQuicJob"
-          }
-        },
-        {
-          "name": "ForcedOn_EnableIntermediateDnsResults",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EnableIntermediateDnsResults"
-          }
-        },
-        {
-          "name": "ForcedOff_EnableIntermediateDnsResults",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EnableIntermediateDnsResults"
-          }
-        },
-        {
-          "name": "ForcedOn_IPv6FallbackBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IPv6FallbackBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOff_IPv6FallbackBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IPv6FallbackBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOn_OptimisticDnsForQuic",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OptimisticDnsForQuic"
-          }
-        },
-        {
-          "name": "ForcedOff_OptimisticDnsForQuic",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OptimisticDnsForQuic"
-          }
-        },
-        {
-          "name": "ForcedOn_OptimisticDnsForTcp",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OptimisticDnsForTcp"
-          }
-        },
-        {
-          "name": "ForcedOff_OptimisticDnsForTcp",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OptimisticDnsForTcp"
-          }
-        },
-        {
-          "name": "ForcedOn_QuicSlowTimerBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "QuicSlowTimerBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOff_QuicSlowTimerBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "QuicSlowTimerBasedOnRTT"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8038.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1792367940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "OptimisticDnsForTcp",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "EnableIntermediateDnsResultsOnly_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004030",
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableIntermediateDnsResults"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004031",
-          "param": [
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableIntermediateDnsResults",
-              "OptimisticDnsForTcp"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "IPv6FallbackBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_100ms_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004032",
-          "param": [
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "OptimisticDnsForTcp"
-            ],
-            "disableFeature": [
-              "IPv6FallbackBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_IPv6RTT_1_5_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004033",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.5"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_50ms_IPv6RTT_1_1_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004034",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "fallback_time",
-              "value": "50ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_1_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004035",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_50ms_IPv6RTT_1_2_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004036",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "fallback_time",
-              "value": "50ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_2_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004037",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_5_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004038",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.5"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Control_BETA_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004029",
-          "featureAssociation": {
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AdjustIPv6FallbackTime",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AdjustIPv6FallbackTime"
-          }
-        },
-        {
-          "name": "ForcedOff_AdjustIPv6FallbackTime",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AdjustIPv6FallbackTime"
-          }
-        },
-        {
-          "name": "ForcedOn_EnableIntermediateDnsResults",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EnableIntermediateDnsResults"
-          }
-        },
-        {
-          "name": "ForcedOff_EnableIntermediateDnsResults",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EnableIntermediateDnsResults"
-          }
-        },
-        {
-          "name": "ForcedOn_IPv6FallbackBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IPv6FallbackBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOff_IPv6FallbackBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IPv6FallbackBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOn_OptimisticDnsForTcp",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OptimisticDnsForTcp"
-          }
-        },
-        {
-          "name": "ForcedOff_OptimisticDnsForTcp",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OptimisticDnsForTcp"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7967.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1793145540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "OptimisticDnsForTcp",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "EnableIntermediateDnsResultsOnly_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004020",
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableIntermediateDnsResults"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004021",
-          "param": [
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableIntermediateDnsResults",
-              "OptimisticDnsForTcp"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "IPv6FallbackBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_100ms_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004022",
-          "param": [
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "OptimisticDnsForTcp"
-            ],
-            "disableFeature": [
-              "IPv6FallbackBasedOnRTT"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_IPv6RTT_1_5_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004023",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.5"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ],
-            "disableFeature": [
-              "AdjustIPv6FallbackTime"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_50ms_IPv6RTT_1_1_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004024",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "fallback_time",
-              "value": "50ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_1_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004025",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_50ms_IPv6RTT_1_2_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004026",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "fallback_time",
-              "value": "50ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_2_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004027",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_5_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004028",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.5"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260903",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004019",
-          "featureAssociation": {
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AdjustIPv6FallbackTime",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AdjustIPv6FallbackTime"
-          }
-        },
-        {
-          "name": "ForcedOff_AdjustIPv6FallbackTime",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AdjustIPv6FallbackTime"
-          }
-        },
-        {
-          "name": "ForcedOn_EnableIntermediateDnsResults",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EnableIntermediateDnsResults"
-          }
-        },
-        {
-          "name": "ForcedOff_EnableIntermediateDnsResults",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EnableIntermediateDnsResults"
-          }
-        },
-        {
-          "name": "ForcedOn_IPv6FallbackBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IPv6FallbackBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOff_IPv6FallbackBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IPv6FallbackBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOn_OptimisticDnsForTcp",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OptimisticDnsForTcp"
-          }
-        },
-        {
-          "name": "ForcedOff_OptimisticDnsForTcp",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OptimisticDnsForTcp"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7967.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1793145540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "OptimisticDnsForTcp",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "OptimisticDns_AdjustIPv6_50ms_IPv6RTT_1_1_STABLE_10_20260908",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101004180",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "fallback_time",
-              "value": "50ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_1_STABLE_10_20260908",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101004181",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.1"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_50ms_IPv6RTT_1_2_STABLE_10_20260908",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101004182",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "fallback_time",
-              "value": "50ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_2_STABLE_10_20260908",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101004183",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.2"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "OptimisticDns_AdjustIPv6_100ms_IPv6RTT_1_5_STABLE_10_20260908",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101004184",
-          "param": [
-            {
-              "name": "IPv6FallbackMax",
-              "value": "1500ms"
-            },
-            {
-              "name": "IPv6FallbackMin",
-              "value": "50ms"
-            },
-            {
-              "name": "IPv6FallbackRTTMultiplier",
-              "value": "1.5"
-            },
-            {
-              "name": "fallback_time",
-              "value": "100ms"
-            },
-            {
-              "name": "use_stale_connectors",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Control_STABLE_10_20260908",
-          "probabilityWeight": 10,
-          "googleWebExperimentId": "101004179",
-          "featureAssociation": {
-            "disableFeature": [
-              "AdjustIPv6FallbackTime",
-              "EnableIntermediateDnsResults",
-              "IPv6FallbackBasedOnRTT",
-              "OptimisticDnsForTcp"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 40
-        },
-        {
-          "name": "ForcedOn_AdjustIPv6FallbackTime",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AdjustIPv6FallbackTime"
-          }
-        },
-        {
-          "name": "ForcedOff_AdjustIPv6FallbackTime",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AdjustIPv6FallbackTime"
-          }
-        },
-        {
-          "name": "ForcedOn_EnableIntermediateDnsResults",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EnableIntermediateDnsResults"
-          }
-        },
-        {
-          "name": "ForcedOff_EnableIntermediateDnsResults",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EnableIntermediateDnsResults"
-          }
-        },
-        {
-          "name": "ForcedOn_IPv6FallbackBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IPv6FallbackBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOff_IPv6FallbackBasedOnRTT",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IPv6FallbackBasedOnRTT"
-          }
-        },
-        {
-          "name": "ForcedOn_OptimisticDnsForTcp",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "OptimisticDnsForTcp"
-          }
-        },
-        {
-          "name": "ForcedOff_OptimisticDnsForTcp",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "OptimisticDnsForTcp"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7967.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1793145540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "OptimizationGuideHintsURLKeyedCacheDropFragments",
       "consistency": "PERMANENT",
       "experiment": [
@@ -279695,7 +278460,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1796515140",
+        "endDate": "1797551940",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -279797,7 +278562,108 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1796515140",
+        "endDate": "1797551940",
+        "excludeFormFactor": [
+          "DESKTOP"
+        ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "PeriodicScudoPurge",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_PeriodicAndBackground_20260928",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "ScudoBackgroundPurgeDelay",
+              "value": "10s"
+            },
+            {
+              "name": "ScudoEnableBackgroundPurge",
+              "value": "true"
+            },
+            {
+              "name": "ScudoEnableForegroundPeriodic",
+              "value": "true"
+            },
+            {
+              "name": "ScudoInitialPurgeDelay",
+              "value": "60s"
+            },
+            {
+              "name": "ScudoPeriodicPurgeInterval",
+              "value": "60s"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PeriodicScudoPurge"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_BackgroundOnly_20260928",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "ScudoBackgroundPurgeDelay",
+              "value": "10s"
+            },
+            {
+              "name": "ScudoEnableBackgroundPurge",
+              "value": "true"
+            },
+            {
+              "name": "ScudoEnableForegroundPeriodic",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PeriodicScudoPurge"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260928",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "PeriodicScudoPurge"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 97
+        },
+        {
+          "name": "ForcedOn_PeriodicScudoPurge",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PeriodicScudoPurge"
+          }
+        },
+        {
+          "name": "ForcedOff_PeriodicScudoPurge",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PeriodicScudoPurge"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8075.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1797551940",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -445936,78 +444802,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "WebViewPrefetchIntegrationAblation",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260827",
-          "probabilityWeight": 15,
-          "featureAssociation": {
-            "enableFeature": [
-              "NetworkQualityEstimatorAsyncNotifyStartTransaction",
-              "WebViewAddQuicHints",
-              "WebViewCacheSizeLimitDerivedFromAppCacheQuota"
-            ]
-          }
-        },
-        {
-          "name": "AblateQuicHints_20260827",
-          "probabilityWeight": 15,
-          "featureAssociation": {
-            "enableFeature": [
-              "NetworkQualityEstimatorAsyncNotifyStartTransaction",
-              "WebViewCacheSizeLimitDerivedFromAppCacheQuota"
-            ],
-            "disableFeature": [
-              "WebViewAddQuicHints"
-            ]
-          }
-        },
-        {
-          "name": "AblateHttpCacheSize_20260827",
-          "probabilityWeight": 15,
-          "featureAssociation": {
-            "enableFeature": [
-              "NetworkQualityEstimatorAsyncNotifyStartTransaction",
-              "WebViewAddQuicHints"
-            ],
-            "disableFeature": [
-              "WebViewCacheSizeLimitDerivedFromAppCacheQuota"
-            ]
-          }
-        },
-        {
-          "name": "AblateNqeAsync_20260827",
-          "probabilityWeight": 15,
-          "featureAssociation": {
-            "enableFeature": [
-              "WebViewAddQuicHints",
-              "WebViewCacheSizeLimitDerivedFromAppCacheQuota"
-            ],
-            "disableFeature": [
-              "NetworkQualityEstimatorAsyncNotifyStartTransaction"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 40
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8028.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1792540740"
-      }
-    },
-    {
       "name": "WebViewPrefetchNativeLibrary",
       "consistency": "PERMANENT",
       "experiment": [
@@ -474252,6 +473046,54 @@
       "filter": {
         "minVersion": "157.0.8079.0",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1796515140"
+      }
+    },
+    {
+      "name": "ZeroSuggestPrefetchOnPageLoadAndTabSwitch",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261006",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "ZeroSuggestPrefetchOnPageLoadAndTabSwitch"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261006",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "ZeroSuggestPrefetchOnPageLoadAndTabSwitch"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ZeroSuggestPrefetchOnPageLoadAndTabSwitch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ZeroSuggestPrefetchOnPageLoadAndTabSwitch"
+          }
+        },
+        {
+          "name": "ForcedOff_ZeroSuggestPrefetchOnPageLoadAndTabSwitch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ZeroSuggestPrefetchOnPageLoadAndTabSwitch"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8079.0",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -475480,5 +474322,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261018-030041.969000-production"
+  "version": "20261019-010044.269000-production"
 }
