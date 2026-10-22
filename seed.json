@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTAyMS0xNzAxMDQuODc2MDAwEgQgACgB#qXCfjZ4W8N4=",
+  "serialNumber": "SMChYyMDI2MTAyMi0wMTAwMzEuOTQ5MDAwEgQgACgB#p0qFxquMNgw=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -44,7 +44,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794527940"
+        "endDate": "1799971140"
       }
     },
     {
@@ -120,7 +120,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794527940"
+        "endDate": "1799971140"
       }
     },
     {
@@ -196,7 +196,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794527940"
+        "endDate": "1799971140"
       }
     },
     {
@@ -3146,9 +3146,92 @@
       "filter": {
         "minVersion": "156.0.8078.39",
         "channel": [
-          "CANARY",
-          "DEV",
           "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1795132740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NtpAurora",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Arm3_CanaryDev_20261021",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005717",
+          "param": [
+            {
+              "name": "change_button_color",
+              "value": "true"
+            },
+            {
+              "name": "padding_style",
+              "value": "1"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpAurora"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_Arm5_CanaryDev_20261021",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005718",
+          "param": [
+            {
+              "name": "change_button_color",
+              "value": "true"
+            },
+            {
+              "name": "padding_style",
+              "value": "3"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpAurora"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_CanaryDev_20261021",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005716",
+          "featureAssociation": {
+            "disableFeature": [
+              "NtpAurora"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_NtpAurora",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NtpAurora"
+          }
+        },
+        {
+          "name": "ForcedOff_NtpAurora",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NtpAurora"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8078.39",
+        "channel": [
+          "CANARY",
+          "DEV"
         ],
         "platform": [
           "PLATFORM_ANDROID"
@@ -4763,230 +4846,6 @@
           "PLATFORM_ANDROID"
         ],
         "endDate": "1792799940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260908",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101004154",
-          "featureAssociation": {
-            "enableFeature": [
-              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260908",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101004153",
-          "featureAssociation": {
-            "disableFeature": [
-              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8037.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793491140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260908",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101004154",
-          "featureAssociation": {
-            "enableFeature": [
-              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260908",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101004153",
-          "featureAssociation": {
-            "disableFeature": [
-              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8037.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793491140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260928",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004994",
-          "featureAssociation": {
-            "enableFeature": [
-              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260928",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004993",
-          "featureAssociation": {
-            "disableFeature": [
-              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8037.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1793491140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260928",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004994",
-          "featureAssociation": {
-            "enableFeature": [
-              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260928",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101004993",
-          "featureAssociation": {
-            "disableFeature": [
-              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8037.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1793491140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -9667,6 +9526,230 @@
         "endDate": "1794873540"
       },
       "randomizationSeed": 1966421420,
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260908",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004154",
+          "featureAssociation": {
+            "enableFeature": [
+              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260908",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004153",
+          "featureAssociation": {
+            "disableFeature": [
+              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+          }
+        },
+        {
+          "name": "ForcedOff_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8037.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1796774340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260908",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004154",
+          "featureAssociation": {
+            "enableFeature": [
+              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260908",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004153",
+          "featureAssociation": {
+            "disableFeature": [
+              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+          }
+        },
+        {
+          "name": "ForcedOff_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8037.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1796774340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261022",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005840",
+          "featureAssociation": {
+            "enableFeature": [
+              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20261022",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005839",
+          "featureAssociation": {
+            "disableFeature": [
+              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+          }
+        },
+        {
+          "name": "ForcedOff_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8037.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1796774340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261022",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005840",
+          "featureAssociation": {
+            "enableFeature": [
+              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20261022",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005839",
+          "featureAssociation": {
+            "disableFeature": [
+              "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+          }
+        },
+        {
+          "name": "ForcedOff_ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ServiceWorkerRaceNetworkRequestDeprecateTwoPhaseWrite"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8037.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1796774340"
+      },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
@@ -14635,8 +14718,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261015",
-          "probabilityWeight": 50,
+          "name": "Launched",
+          "probabilityWeight": 100,
           "param": [
             {
               "name": "histogram_name",
@@ -14664,19 +14747,6 @@
               "HappinessTrackingSystemSlowAndLaggyDeepDive"
             ]
           }
-        },
-        {
-          "name": "Disabled_20261015",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "HappinessTrackingSystemSlowAndLaggyDeepDive"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
         }
       ],
       "filter": {
@@ -14709,8 +14779,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261015",
-          "probabilityWeight": 50,
+          "name": "Launched",
+          "probabilityWeight": 100,
           "param": [
             {
               "name": "histogram_name",
@@ -14738,19 +14808,6 @@
               "HappinessTrackingSystemSlowAndLaggyDeepDive"
             ]
           }
-        },
-        {
-          "name": "Disabled_20261015",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "HappinessTrackingSystemSlowAndLaggyDeepDive"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
         }
       ],
       "filter": {
@@ -14783,8 +14840,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261015",
-          "probabilityWeight": 50,
+          "name": "Launched",
+          "probabilityWeight": 100,
           "param": [
             {
               "name": "histogram_name",
@@ -14812,19 +14869,6 @@
               "HappinessTrackingSystemSlowAndLaggyDeepDive"
             ]
           }
-        },
-        {
-          "name": "Disabled_20261015",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "HappinessTrackingSystemSlowAndLaggyDeepDive"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
         }
       ],
       "filter": {
@@ -14858,8 +14902,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261015",
-          "probabilityWeight": 50,
+          "name": "Launched",
+          "probabilityWeight": 100,
           "param": [
             {
               "name": "histogram_name",
@@ -14887,19 +14931,6 @@
               "HappinessTrackingSystemSlowAndLaggyDeepDive"
             ]
           }
-        },
-        {
-          "name": "Disabled_20261015",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "HappinessTrackingSystemSlowAndLaggyDeepDive"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
         }
       ],
       "filter": {
@@ -42692,7 +42723,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260901",
+          "name": "Enabled_20261021",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -42701,7 +42732,7 @@
           }
         },
         {
-          "name": "Control_20260901",
+          "name": "Control_20261021",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -42732,7 +42763,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1795132740",
+        "endDate": "1797465540",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -42743,7 +42774,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260901",
+          "name": "Enabled_20261021",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -42752,7 +42783,7 @@
           }
         },
         {
-          "name": "Control_20260901",
+          "name": "Control_20261021",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -42784,7 +42815,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1795132740",
+        "endDate": "1797465540",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -42795,8 +42826,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260901",
-          "probabilityWeight": 1,
+          "name": "Enabled_20261021",
+          "probabilityWeight": 10,
           "featureAssociation": {
             "enableFeature": [
               "AndroidFreLayoutUpdate"
@@ -42804,8 +42835,8 @@
           }
         },
         {
-          "name": "Control_20260901",
-          "probabilityWeight": 1,
+          "name": "Control_20261021",
+          "probabilityWeight": 10,
           "featureAssociation": {
             "disableFeature": [
               "AndroidFreLayoutUpdate"
@@ -42814,7 +42845,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 98
+          "probabilityWeight": 80
         },
         {
           "name": "ForcedOn_AndroidFreLayoutUpdate",
@@ -42839,7 +42870,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1795132740",
+        "endDate": "1797465540",
         "excludeFormFactor": [
           "DESKTOP"
         ]
@@ -47034,6 +47065,51 @@
         ],
         "platform": [
           "PLATFORM_ANDROID"
+        ]
+      }
+    },
+    {
+      "name": "AndroidSurfaceControlHdrOverlays",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledLaunch",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "enableFeature": [
+              "AndroidSurfaceControlHdrOverlays"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AndroidSurfaceControlHdrOverlays",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AndroidSurfaceControlHdrOverlays"
+          }
+        },
+        {
+          "name": "ForcedOff_AndroidSurfaceControlHdrOverlays",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AndroidSurfaceControlHdrOverlays"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8042.0",
+        "maxVersion": "158.0.8117.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "formFactor": [
+          null
         ]
       }
     },
@@ -116271,7 +116347,7 @@
         "country": [
           "us"
         ],
-        "endDate": "1793404740"
+        "endDate": "1800057540"
       },
       "randomizationSeed": 3310113727,
       "activationType": "ACTIVATE_ON_STARTUP"
@@ -116363,7 +116439,7 @@
         "country": [
           "us"
         ],
-        "endDate": "1793404740"
+        "endDate": "1800057540"
       },
       "randomizationSeed": 3310113727,
       "activationType": "ACTIVATE_ON_STARTUP"
@@ -252915,6 +252991,220 @@
       }
     },
     {
+      "name": "NtpAuroraV2",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledTightPadding_20261021",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005728",
+          "param": [
+            {
+              "name": "action_chips",
+              "value": "1"
+            },
+            {
+              "name": "change_button_color",
+              "value": "true"
+            },
+            {
+              "name": "padding_style",
+              "value": "1"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpAurora",
+              "NtpAuroraV2"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledLargePadding_20261021",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005729",
+          "param": [
+            {
+              "name": "action_chips",
+              "value": "1"
+            },
+            {
+              "name": "change_button_color",
+              "value": "true"
+            },
+            {
+              "name": "padding_style",
+              "value": "3"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpAurora",
+              "NtpAuroraV2"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledCreateImageTightPadding_20261021",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005730",
+          "param": [
+            {
+              "name": "action_chips",
+              "value": "2"
+            },
+            {
+              "name": "change_button_color",
+              "value": "true"
+            },
+            {
+              "name": "padding_style",
+              "value": "1"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpAurora",
+              "NtpAuroraV2"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledCreateImageLargePadding_20261021",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005731",
+          "param": [
+            {
+              "name": "action_chips",
+              "value": "2"
+            },
+            {
+              "name": "change_button_color",
+              "value": "true"
+            },
+            {
+              "name": "padding_style",
+              "value": "3"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpAurora",
+              "NtpAuroraV2"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledAddImageTightPadding_20261021",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005732",
+          "param": [
+            {
+              "name": "action_chips",
+              "value": "3"
+            },
+            {
+              "name": "change_button_color",
+              "value": "true"
+            },
+            {
+              "name": "padding_style",
+              "value": "1"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpAurora",
+              "NtpAuroraV2"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledAddImageLargePadding_20261021",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005733",
+          "param": [
+            {
+              "name": "action_chips",
+              "value": "3"
+            },
+            {
+              "name": "change_button_color",
+              "value": "true"
+            },
+            {
+              "name": "padding_style",
+              "value": "3"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpAurora",
+              "NtpAuroraV2"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20261021",
+          "probabilityWeight": 10,
+          "googleWebExperimentId": "101005727",
+          "featureAssociation": {
+            "disableFeature": [
+              "NtpAurora",
+              "NtpAuroraV2"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_NtpAurora",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NtpAurora"
+          }
+        },
+        {
+          "name": "ForcedOff_NtpAurora",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NtpAurora"
+          }
+        },
+        {
+          "name": "ForcedOn_NtpAuroraV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NtpAuroraV2"
+          }
+        },
+        {
+          "name": "ForcedOff_NtpAuroraV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NtpAuroraV2"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "158.0.8115.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1795132740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "NtpBrowserPromos",
       "consistency": "PERMANENT",
       "experiment": [
@@ -262319,7 +262609,7 @@
         "platform": [
           "PLATFORM_MAC"
         ],
-        "endDate": "1793145540"
+        "endDate": "1796947140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -262369,7 +262659,7 @@
         "platform": [
           "PLATFORM_MAC"
         ],
-        "endDate": "1793145540"
+        "endDate": "1796947140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -262422,7 +262712,7 @@
         "platform": [
           "PLATFORM_MAC"
         ],
-        "endDate": "1793145540"
+        "endDate": "1796947140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -323922,51 +324212,11 @@
     },
     {
       "name": "ServiceWorkerBackgroundUpdate",
-      "consistency": "SESSION",
+      "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "PreflightForDSE_Beta_20260903",
-          "probabilityWeight": 1500,
-          "featureAssociation": {
-            "enableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE"
-            ],
-            "disableFeature": [
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ]
-          }
-        },
-        {
-          "name": "BackgroundUpdateForScopeCache_Beta_20260903",
-          "probabilityWeight": 1500,
-          "featureAssociation": {
-            "enableFeature": [
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ],
-            "disableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE",
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl"
-            ]
-          }
-        },
-        {
-          "name": "BackgroundUpdateForRegistration_Beta_20260903",
-          "probabilityWeight": 1500,
-          "featureAssociation": {
-            "enableFeature": [
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ],
-            "disableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE",
-              "ServiceWorkerMergeFindRegistrationForClientUrl"
-            ]
-          }
-        },
-        {
-          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Beta_20260903",
-          "probabilityWeight": 1500,
+          "name": "PreflightForDSEAndBackgroundUpdateForRegistrationLaunch",
+          "probabilityWeight": 100,
           "featureAssociation": {
             "enableFeature": [
               "PrewarmServiceWorkerRegistrationForDSE",
@@ -323977,21 +324227,6 @@
               "ServiceWorkerMergeFindRegistrationForClientUrl"
             ]
           }
-        },
-        {
-          "name": "Control_Beta_20260903",
-          "probabilityWeight": 1500,
-          "featureAssociation": {
-            "disableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE",
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 500
         },
         {
           "name": "ForcedOn_PrewarmServiceWorkerRegistrationForDSE",
@@ -324052,155 +324287,12 @@
       ],
       "filter": {
         "minVersion": "150.0.7871.125",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793663940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ServiceWorkerBackgroundUpdate",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "PreflightForDSE_Dev_Canary_20260903",
-          "probabilityWeight": 1500,
-          "featureAssociation": {
-            "enableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE"
-            ],
-            "disableFeature": [
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ]
-          }
-        },
-        {
-          "name": "BackgroundUpdateForScopeCache_Dev_Canary_20260903",
-          "probabilityWeight": 1500,
-          "featureAssociation": {
-            "enableFeature": [
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ],
-            "disableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE",
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl"
-            ]
-          }
-        },
-        {
-          "name": "BackgroundUpdateForRegistration_Dev_Canary_20260903",
-          "probabilityWeight": 1500,
-          "featureAssociation": {
-            "enableFeature": [
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ],
-            "disableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE",
-              "ServiceWorkerMergeFindRegistrationForClientUrl"
-            ]
-          }
-        },
-        {
-          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Dev_Canary_20260903",
-          "probabilityWeight": 1500,
-          "featureAssociation": {
-            "enableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE",
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ],
-            "disableFeature": [
-              "ServiceWorkerMergeFindRegistrationForClientUrl"
-            ]
-          }
-        },
-        {
-          "name": "Control_Dev_Canary_20260903",
-          "probabilityWeight": 1500,
-          "featureAssociation": {
-            "disableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE",
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 500
-        },
-        {
-          "name": "ForcedOn_PrewarmServiceWorkerRegistrationForDSE",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PrewarmServiceWorkerRegistrationForDSE"
-          }
-        },
-        {
-          "name": "ForcedOff_PrewarmServiceWorkerRegistrationForDSE",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PrewarmServiceWorkerRegistrationForDSE"
-          }
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl"
-          }
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-          }
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerMergeFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerMergeFindRegistrationForClientUrl"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerMergeFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerMergeFindRegistrationForClientUrl"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.125",
+        "maxVersion": "157.0.8089.0",
         "channel": [
           "CANARY",
-          "DEV"
+          "DEV",
+          "BETA",
+          "STABLE"
         ],
         "platform": [
           "PLATFORM_WINDOWS",
@@ -324208,215 +324300,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793663940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ServiceWorkerBackgroundUpdate",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Stable_Android_20260903",
-          "probabilityWeight": 80,
-          "featureAssociation": {
-            "enableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE",
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ],
-            "disableFeature": [
-              "ServiceWorkerMergeFindRegistrationForClientUrl"
-            ]
-          }
-        },
-        {
-          "name": "Control_Stable_Android_20260903",
-          "probabilityWeight": 80,
-          "featureAssociation": {
-            "disableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE",
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 7840
-        },
-        {
-          "name": "ForcedOn_PrewarmServiceWorkerRegistrationForDSE",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PrewarmServiceWorkerRegistrationForDSE"
-          }
-        },
-        {
-          "name": "ForcedOff_PrewarmServiceWorkerRegistrationForDSE",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PrewarmServiceWorkerRegistrationForDSE"
-          }
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl"
-          }
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-          }
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerMergeFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerMergeFindRegistrationForClientUrl"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerMergeFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerMergeFindRegistrationForClientUrl"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.125",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793663940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "ServiceWorkerBackgroundUpdate",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "PreflightForDSEAndBackgroundUpdateForRegistration_Stable_Desktop_20260903",
-          "probabilityWeight": 80,
-          "featureAssociation": {
-            "enableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE",
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ],
-            "disableFeature": [
-              "ServiceWorkerMergeFindRegistrationForClientUrl"
-            ]
-          }
-        },
-        {
-          "name": "Control_Stable_Desktop_20260903",
-          "probabilityWeight": 80,
-          "featureAssociation": {
-            "disableFeature": [
-              "PrewarmServiceWorkerRegistrationForDSE",
-              "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-              "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 7840
-        },
-        {
-          "name": "ForcedOn_PrewarmServiceWorkerRegistrationForDSE",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PrewarmServiceWorkerRegistrationForDSE"
-          }
-        },
-        {
-          "name": "ForcedOff_PrewarmServiceWorkerRegistrationForDSE",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PrewarmServiceWorkerRegistrationForDSE"
-          }
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerBackgroundUpdateForFindRegistrationForClientUrl"
-          }
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerBackgroundUpdateForServiceWorkerScopeCache"
-          }
-        },
-        {
-          "name": "ForcedOn_ServiceWorkerMergeFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "ServiceWorkerMergeFindRegistrationForClientUrl"
-          }
-        },
-        {
-          "name": "ForcedOff_ServiceWorkerMergeFindRegistrationForClientUrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "ServiceWorkerMergeFindRegistrationForClientUrl"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.125",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1793663940"
+        ]
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -325321,9 +325205,9 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20261021_BETA",
+          "name": "Control_20261022_BETA",
           "probabilityWeight": 25,
-          "googleWebTriggerExperimentId": "101005422",
+          "googleWebTriggerExperimentId": "101005797",
           "featureAssociation": {
             "disableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325333,7 +325217,7 @@
           }
         },
         {
-          "name": "EnabledWithSkipUnnecessaryBuffering_20261021_BETA",
+          "name": "EnabledWithSkipUnnecessaryBuffering_20261022_BETA",
           "probabilityWeight": 25,
           "param": [
             {
@@ -325357,7 +325241,7 @@
               "value": "true"
             }
           ],
-          "googleWebTriggerExperimentId": "101005423",
+          "googleWebTriggerExperimentId": "101005798",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325369,7 +325253,7 @@
           }
         },
         {
-          "name": "EnabledWithDryRun_20261021_BETA",
+          "name": "EnabledWithDryRun_20261022_BETA",
           "probabilityWeight": 25,
           "param": [
             {
@@ -325397,7 +325281,7 @@
               "value": "false"
             }
           ],
-          "googleWebTriggerExperimentId": "101005424",
+          "googleWebTriggerExperimentId": "101005799",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325409,7 +325293,7 @@
           }
         },
         {
-          "name": "EnabledWithSkipUnnecessaryBufferingWithoutDryRun_20261021_BETA",
+          "name": "EnabledWithSkipUnnecessaryBufferingWithoutDryRun_20261022_BETA",
           "probabilityWeight": 25,
           "param": [
             {
@@ -325433,7 +325317,7 @@
               "value": "true"
             }
           ],
-          "googleWebTriggerExperimentId": "101005425",
+          "googleWebTriggerExperimentId": "101005800",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325522,9 +325406,9 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20261021_BETA",
+          "name": "Control_20261022_BETA",
           "probabilityWeight": 25,
-          "googleWebTriggerExperimentId": "101005422",
+          "googleWebTriggerExperimentId": "101005797",
           "featureAssociation": {
             "disableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325534,7 +325418,7 @@
           }
         },
         {
-          "name": "EnabledWithSkipUnnecessaryBuffering_20261021_BETA",
+          "name": "EnabledWithSkipUnnecessaryBuffering_20261022_BETA",
           "probabilityWeight": 25,
           "param": [
             {
@@ -325558,7 +325442,7 @@
               "value": "true"
             }
           ],
-          "googleWebTriggerExperimentId": "101005423",
+          "googleWebTriggerExperimentId": "101005798",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325570,7 +325454,7 @@
           }
         },
         {
-          "name": "EnabledWithDryRun_20261021_BETA",
+          "name": "EnabledWithDryRun_20261022_BETA",
           "probabilityWeight": 25,
           "param": [
             {
@@ -325598,7 +325482,7 @@
               "value": "false"
             }
           ],
-          "googleWebTriggerExperimentId": "101005424",
+          "googleWebTriggerExperimentId": "101005799",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325610,7 +325494,7 @@
           }
         },
         {
-          "name": "EnabledWithSkipUnnecessaryBufferingWithoutDryRun_20261021_BETA",
+          "name": "EnabledWithSkipUnnecessaryBufferingWithoutDryRun_20261022_BETA",
           "probabilityWeight": 25,
           "param": [
             {
@@ -325634,7 +325518,7 @@
               "value": "true"
             }
           ],
-          "googleWebTriggerExperimentId": "101005425",
+          "googleWebTriggerExperimentId": "101005800",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325726,9 +325610,9 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20261021_CANARY_DEV",
+          "name": "Control_20261022_CANARY_DEV",
           "probabilityWeight": 24,
-          "googleWebTriggerExperimentId": "101005416",
+          "googleWebTriggerExperimentId": "101005791",
           "featureAssociation": {
             "disableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325738,7 +325622,7 @@
           }
         },
         {
-          "name": "EnabledWithSkipUnnecessaryBuffering_20261021_CANARY_DEV",
+          "name": "EnabledWithSkipUnnecessaryBuffering_20261022_CANARY_DEV",
           "probabilityWeight": 24,
           "param": [
             {
@@ -325762,7 +325646,7 @@
               "value": "true"
             }
           ],
-          "googleWebTriggerExperimentId": "101005417",
+          "googleWebTriggerExperimentId": "101005792",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325774,9 +325658,9 @@
           }
         },
         {
-          "name": "ControlForDumpWithoutCrashing_20261021_CANARY_DEV",
+          "name": "ControlForDumpWithoutCrashing_20261022_CANARY_DEV",
           "probabilityWeight": 1,
-          "googleWebTriggerExperimentId": "101005418",
+          "googleWebTriggerExperimentId": "101005793",
           "featureAssociation": {
             "disableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325786,7 +325670,7 @@
           }
         },
         {
-          "name": "EnabledWithDumpWithoutCrashing_20261021_CANARY_DEV",
+          "name": "EnabledWithDumpWithoutCrashing_20261022_CANARY_DEV",
           "probabilityWeight": 1,
           "param": [
             {
@@ -325814,7 +325698,7 @@
               "value": "false"
             }
           ],
-          "googleWebTriggerExperimentId": "101005419",
+          "googleWebTriggerExperimentId": "101005794",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325826,7 +325710,7 @@
           }
         },
         {
-          "name": "EnabledWithDryRun_20261021_CANARY_DEV",
+          "name": "EnabledWithDryRun_20261022_CANARY_DEV",
           "probabilityWeight": 24,
           "param": [
             {
@@ -325854,7 +325738,7 @@
               "value": "false"
             }
           ],
-          "googleWebTriggerExperimentId": "101005420",
+          "googleWebTriggerExperimentId": "101005795",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325866,7 +325750,7 @@
           }
         },
         {
-          "name": "EnabledWithSkipUnnecessaryBufferingWithoutDryRun_20261021_CANARY_DEV",
+          "name": "EnabledWithSkipUnnecessaryBufferingWithoutDryRun_20261022_CANARY_DEV",
           "probabilityWeight": 24,
           "param": [
             {
@@ -325890,7 +325774,7 @@
               "value": "true"
             }
           ],
-          "googleWebTriggerExperimentId": "101005421",
+          "googleWebTriggerExperimentId": "101005796",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325980,9 +325864,9 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20261021_CANARY_DEV",
+          "name": "Control_20261022_CANARY_DEV",
           "probabilityWeight": 24,
-          "googleWebTriggerExperimentId": "101005416",
+          "googleWebTriggerExperimentId": "101005791",
           "featureAssociation": {
             "disableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -325992,7 +325876,7 @@
           }
         },
         {
-          "name": "EnabledWithSkipUnnecessaryBuffering_20261021_CANARY_DEV",
+          "name": "EnabledWithSkipUnnecessaryBuffering_20261022_CANARY_DEV",
           "probabilityWeight": 24,
           "param": [
             {
@@ -326016,7 +325900,7 @@
               "value": "true"
             }
           ],
-          "googleWebTriggerExperimentId": "101005417",
+          "googleWebTriggerExperimentId": "101005792",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -326028,9 +325912,9 @@
           }
         },
         {
-          "name": "ControlForDumpWithoutCrashing_20261021_CANARY_DEV",
+          "name": "ControlForDumpWithoutCrashing_20261022_CANARY_DEV",
           "probabilityWeight": 1,
-          "googleWebTriggerExperimentId": "101005418",
+          "googleWebTriggerExperimentId": "101005793",
           "featureAssociation": {
             "disableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -326040,7 +325924,7 @@
           }
         },
         {
-          "name": "EnabledWithDumpWithoutCrashing_20261021_CANARY_DEV",
+          "name": "EnabledWithDumpWithoutCrashing_20261022_CANARY_DEV",
           "probabilityWeight": 1,
           "param": [
             {
@@ -326068,7 +325952,7 @@
               "value": "false"
             }
           ],
-          "googleWebTriggerExperimentId": "101005419",
+          "googleWebTriggerExperimentId": "101005794",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -326080,7 +325964,7 @@
           }
         },
         {
-          "name": "EnabledWithDryRun_20261021_CANARY_DEV",
+          "name": "EnabledWithDryRun_20261022_CANARY_DEV",
           "probabilityWeight": 24,
           "param": [
             {
@@ -326108,7 +325992,7 @@
               "value": "false"
             }
           ],
-          "googleWebTriggerExperimentId": "101005420",
+          "googleWebTriggerExperimentId": "101005795",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -326120,7 +326004,7 @@
           }
         },
         {
-          "name": "EnabledWithSkipUnnecessaryBufferingWithoutDryRun_20261021_CANARY_DEV",
+          "name": "EnabledWithSkipUnnecessaryBufferingWithoutDryRun_20261022_CANARY_DEV",
           "probabilityWeight": 24,
           "param": [
             {
@@ -326144,7 +326028,7 @@
               "value": "true"
             }
           ],
-          "googleWebTriggerExperimentId": "101005421",
+          "googleWebTriggerExperimentId": "101005796",
           "featureAssociation": {
             "enableFeature": [
               "ServiceWorkerSyntheticResponse",
@@ -479923,5 +479807,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261021-170104.876000-production"
+  "version": "20261022-010031.949000-production"
 }
