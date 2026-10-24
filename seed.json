@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTAyMy0xNzAwNTMuMTI1MDAwEgQgACgB#upmfIu67ahI=",
+  "serialNumber": "SMChYyMDI2MTAyNC0wMzAwMzQuNjE0MDAwEgQgACgB#nW47yY8WSH0=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -140827,13 +140827,77 @@
       "filter": {
         "minVersion": "157.0.8101.0",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1799711940"
+      }
+    },
+    {
+      "name": "DiscardCompositionBackBuffersAndroid",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261012",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "PropagateOcclusionToVizAndroid",
+              "VizBufferQueueDiscardOnVisibilityChange"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261012",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "PropagateOcclusionToVizAndroid",
+              "VizBufferQueueDiscardOnVisibilityChange"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_PropagateOcclusionToVizAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PropagateOcclusionToVizAndroid"
+          }
+        },
+        {
+          "name": "ForcedOff_PropagateOcclusionToVizAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PropagateOcclusionToVizAndroid"
+          }
+        },
+        {
+          "name": "ForcedOn_VizBufferQueueDiscardOnVisibilityChange",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "VizBufferQueueDiscardOnVisibilityChange"
+          }
+        },
+        {
+          "name": "ForcedOff_VizBufferQueueDiscardOnVisibilityChange",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "VizBufferQueueDiscardOnVisibilityChange"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8101.0",
+        "channel": [
           "CANARY",
           "DEV"
         ],
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1797033540"
+        "endDate": "1799711940"
       }
     },
     {
@@ -149563,7 +149627,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_MAC"
         ],
-        "endDate": "1796774340"
+        "endDate": "1799711940"
       }
     },
     {
@@ -149614,7 +149678,61 @@
           "PLATFORM_LINUX",
           "PLATFORM_MAC"
         ],
-        "endDate": "1796774340"
+        "endDate": "1799711940"
+      }
+    },
+    {
+      "name": "EnableGlicAiAvatarRingInFloatyDesktop",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260928",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableGlicAiAvatarRing"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260928",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "EnableGlicAiAvatarRing"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "ForcedOn_EnableGlicAiAvatarRing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableGlicAiAvatarRing"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableGlicAiAvatarRing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableGlicAiAvatarRing"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8063.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC"
+        ],
+        "endDate": "1799711940"
       }
     },
     {
@@ -243559,167 +243677,6 @@
       }
     },
     {
-      "name": "NTPAndroidDesktopPMLoadingPageVoter",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260820",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "PMLoadingPageVoter"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260820",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "PMLoadingPageVoter"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_PMLoadingPageVoter",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PMLoadingPageVoter"
-          }
-        },
-        {
-          "name": "ForcedOff_PMLoadingPageVoter",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PMLoadingPageVoter"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8012.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "formFactor": [
-          "DESKTOP"
-        ],
-        "endDate": "1795132740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "NTPAndroidDesktopPMLoadingPageVoter",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260820",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "PMLoadingPageVoter"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260820",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "PMLoadingPageVoter"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_PMLoadingPageVoter",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PMLoadingPageVoter"
-          }
-        },
-        {
-          "name": "ForcedOff_PMLoadingPageVoter",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PMLoadingPageVoter"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8012.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "formFactor": [
-          "DESKTOP"
-        ],
-        "endDate": "1795132740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "NTPAndroidDesktopPMLoadingPageVoter",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20261009",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "enableFeature": [
-              "PMLoadingPageVoter"
-            ]
-          }
-        },
-        {
-          "name": "Control_20261009",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "disableFeature": [
-              "PMLoadingPageVoter"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 80
-        },
-        {
-          "name": "ForcedOn_PMLoadingPageVoter",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PMLoadingPageVoter"
-          }
-        },
-        {
-          "name": "ForcedOff_PMLoadingPageVoter",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PMLoadingPageVoter"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8012.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "formFactor": [
-          "DESKTOP"
-        ],
-        "endDate": "1795132740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "NTPArticleSuggestionsExpandableHeader",
       "consistency": "PERMANENT",
       "experiment": [
@@ -278952,23 +278909,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261015",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "text-annotations",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PdfInk2"
-            ]
-          }
-        },
-        {
-          "name": "EnabledExtraStyles_20261015",
-          "probabilityWeight": 33,
+          "name": "EnabledExtraStyles_20261019",
+          "probabilityWeight": 50,
           "param": [
             {
               "name": "text-annotations",
@@ -278986,134 +278928,7 @@
           }
         },
         {
-          "name": "Control_20261015",
-          "probabilityWeight": 33,
-          "featureAssociation": {
-            "enableFeature": [
-              "PdfInk2"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 1
-        },
-        {
-          "name": "ForcedOn_PdfInk2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PdfInk2"
-          }
-        },
-        {
-          "name": "ForcedOff_PdfInk2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PdfInk2"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7915.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1796947140"
-      }
-    },
-    {
-      "name": "PdfInkSignaturesTextAnnotations",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20261015",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "text-annotations",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PdfInk2"
-            ]
-          }
-        },
-        {
-          "name": "EnabledExtraStyles_20261015",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "text-annotations",
-              "value": "true"
-            },
-            {
-              "name": "text-annotations-extra-styles",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PdfInk2"
-            ]
-          }
-        },
-        {
-          "name": "Control_20261015",
-          "probabilityWeight": 33,
-          "featureAssociation": {
-            "enableFeature": [
-              "PdfInk2"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 1
-        },
-        {
-          "name": "ForcedOn_PdfInk2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PdfInk2"
-          }
-        },
-        {
-          "name": "ForcedOff_PdfInk2",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PdfInk2"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7915.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1796947140"
-      }
-    },
-    {
-      "name": "PdfInkSignaturesTextAnnotations",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260911_50",
+          "name": "Enabled_20261019",
           "probabilityWeight": 50,
           "param": [
             {
@@ -279121,15 +278936,6 @@
               "value": "true"
             }
           ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PdfInk2"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260911_50",
-          "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
               "PdfInk2"
@@ -279165,9 +278971,9 @@
         }
       ],
       "filter": {
-        "minVersion": "151.0.7915.0",
+        "minVersion": "155.0.8059.26",
         "channel": [
-          "STABLE"
+          "BETA"
         ],
         "platform": [
           "PLATFORM_WINDOWS",
@@ -279176,6 +278982,135 @@
           "PLATFORM_CHROMEOS"
         ],
         "endDate": "1796947140"
+      }
+    },
+    {
+      "name": "PdfInkSignaturesTextAnnotations",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledExtraStyles_20261019",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "text-annotations",
+              "value": "true"
+            },
+            {
+              "name": "text-annotations-extra-styles",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PdfInk2"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_20261019",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "text-annotations",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PdfInk2"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "PdfInk2"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_PdfInk2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PdfInk2"
+          }
+        },
+        {
+          "name": "ForcedOff_PdfInk2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PdfInk2"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8059.26",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1796947140"
+      }
+    },
+    {
+      "name": "PdfInkSignaturesTextAnnotations",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261019",
+          "probabilityWeight": 100,
+          "param": [
+            {
+              "name": "text-annotations",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PdfInk2"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_PdfInk2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "PdfInk2"
+          }
+        },
+        {
+          "name": "ForcedOff_PdfInk2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "PdfInk2"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8059.26",
+        "maxVersion": "158.0.8110.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ]
       }
     },
     {
@@ -450820,7 +450755,7 @@
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1797033540"
+        "endDate": "1799711940"
       }
     },
     {
@@ -450856,7 +450791,7 @@
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1797033540"
+        "endDate": "1799711940"
       },
       "randomizationSeed": 1126424675,
       "activationType": "ACTIVATE_ON_STARTUP"
@@ -479202,5 +479137,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261023-170053.125000-production"
+  "version": "20261024-030034.614000-production"
 }
