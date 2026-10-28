@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTAyOC0wMTAxMDMuMTg3MDAwEgQgACgB#xX39TjXcX9o=",
+  "serialNumber": "SMChYyMDI2MTAyOC0wOTAwNTUuODEzMDAwEgQgACgB#cTQKsu5DHaQ=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -5744,7 +5744,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1793491200"
+        "endDate": "1795132740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -60465,7 +60465,7 @@
           "PLATFORM_ANDROID",
           "PLATFORM_IOS"
         ],
-        "endDate": "1797033540"
+        "endDate": "1799366340"
       }
     },
     {
@@ -60532,7 +60532,73 @@
           "PLATFORM_ANDROID",
           "PLATFORM_IOS"
         ],
-        "endDate": "1797033540"
+        "endDate": "1799366340"
+      }
+    },
+    {
+      "name": "AutofillDisallowCountryCodeFilling",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261012",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillDisallowCountryCodeFilling"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261012",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillDisallowCountryCodeFilling"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillDisallowCountryCodeFilling"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillDisallowCountryCodeFilling",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillDisallowCountryCodeFilling"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillDisallowCountryCodeFilling",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillDisallowCountryCodeFilling"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8088.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1799366340"
       }
     },
     {
@@ -68043,19 +68109,10 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260731",
-          "probabilityWeight": 50,
+          "name": "EnabledLaunch",
+          "probabilityWeight": 100,
           "featureAssociation": {
             "enableFeature": [
-              "AutofillFixLabelGenerationForStreetAddress"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260731",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
               "AutofillFixLabelGenerationForStreetAddress"
             ]
           }
@@ -68077,118 +68134,11 @@
       ],
       "filter": {
         "minVersion": "153.0.7983.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC",
-          "PLATFORM_IOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793836740"
-      }
-    },
-    {
-      "name": "AutofillFixLabelGenerationForStreetAddress",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260731",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "AutofillFixLabelGenerationForStreetAddress"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260731",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "AutofillFixLabelGenerationForStreetAddress"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillFixLabelGenerationForStreetAddress",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillFixLabelGenerationForStreetAddress"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillFixLabelGenerationForStreetAddress",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillFixLabelGenerationForStreetAddress"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.7983.0",
+        "maxVersion": "158.0.8117.0",
         "channel": [
           "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC",
-          "PLATFORM_IOS",
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793836740"
-      }
-    },
-    {
-      "name": "AutofillFixLabelGenerationForStreetAddress",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260731",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "enableFeature": [
-              "AutofillFixLabelGenerationForStreetAddress"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260731",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "disableFeature": [
-              "AutofillFixLabelGenerationForStreetAddress"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 98
-        },
-        {
-          "name": "ForcedOn_AutofillFixLabelGenerationForStreetAddress",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillFixLabelGenerationForStreetAddress"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillFixLabelGenerationForStreetAddress",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillFixLabelGenerationForStreetAddress"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.7983.0",
-        "channel": [
+          "DEV",
+          "BETA",
           "STABLE"
         ],
         "platform": [
@@ -68198,8 +68148,7 @@
           "PLATFORM_MAC",
           "PLATFORM_IOS",
           "PLATFORM_ANDROID"
-        ],
-        "endDate": "1793836740"
+        ]
       }
     },
     {
@@ -71916,7 +71865,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261015",
+          "name": "Enabled_20261028",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -71925,7 +71874,7 @@
           }
         },
         {
-          "name": "Control_20261015",
+          "name": "Control_20261028",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -71982,7 +71931,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261015",
+          "name": "Enabled_20261028",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -71991,7 +71940,7 @@
           }
         },
         {
-          "name": "Control_20261015",
+          "name": "Control_20261028",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -72049,8 +71998,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261015",
-          "probabilityWeight": 10,
+          "name": "Enabled_20261028",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
               "AutofillNewSuggestionGeneration"
@@ -72058,8 +72007,8 @@
           }
         },
         {
-          "name": "Control_20261015",
-          "probabilityWeight": 10,
+          "name": "Control_20261028",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
               "AutofillNewSuggestionGeneration"
@@ -72068,7 +72017,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 80
+          "probabilityWeight": 0
         },
         {
           "name": "_Activation",
@@ -147678,6 +147627,58 @@
       }
     },
     {
+      "name": "EnableEwalletNewAccountLinking",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261026",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableEwalletNewAccountLinking"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261026",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "EnableEwalletNewAccountLinking"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_EnableEwalletNewAccountLinking",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableEwalletNewAccountLinking"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableEwalletNewAccountLinking",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableEwalletNewAccountLinking"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "158.0.8118.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "formFactor": [
+          "PHONE"
+        ],
+        "endDate": "1799711940"
+      }
+    },
+    {
       "name": "EnableEwalletPayFlow",
       "consistency": "PERMANENT",
       "experiment": [
@@ -174700,10 +174701,11 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20260930",
+          "name": "Enabled_20261027",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
+              "ActorLiveNotification",
               "ActorNotificationIntentRouting",
               "ActorStepProgressNotification",
               "GlicBackgroundActuation",
@@ -174712,10 +174714,11 @@
           }
         },
         {
-          "name": "Control_20260930",
+          "name": "Control_20261027",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
+              "ActorLiveNotification",
               "ActorNotificationIntentRouting",
               "ActorStepProgressNotification",
               "GlicBackgroundActuation",
@@ -174732,11 +174735,26 @@
           "probabilityWeight": 0,
           "featureAssociation": {
             "disableFeature": [
+              "ActorLiveNotification",
               "ActorNotificationIntentRouting",
               "ActorStepProgressNotification",
               "GlicBackgroundActuation",
               "GlicBackgroundActuationTabGroupSync"
             ]
+          }
+        },
+        {
+          "name": "ForcedOn_ActorLiveNotification",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ActorLiveNotification"
+          }
+        },
+        {
+          "name": "ForcedOff_ActorLiveNotification",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ActorLiveNotification"
           }
         },
         {
@@ -174797,7 +174815,7 @@
         }
       ],
       "filter": {
-        "minVersion": "154.0.8037.41",
+        "minVersion": "157.0.8103.0",
         "channel": [
           "CANARY",
           "DEV"
@@ -189980,7 +189998,7 @@
           "PLATFORM_ANDROID",
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1796774340"
+        "endDate": "1800403140"
       }
     },
     {
@@ -190034,7 +190052,7 @@
           "PLATFORM_ANDROID",
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1796774340"
+        "endDate": "1800403140"
       }
     },
     {
@@ -190042,8 +190060,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Disabled_20260919",
-          "probabilityWeight": 1,
+          "name": "Disabled_20261028",
+          "probabilityWeight": 5,
           "featureAssociation": {
             "disableFeature": [
               "HeapVectorPromptlyFree"
@@ -190051,8 +190069,8 @@
           }
         },
         {
-          "name": "Control_20260919",
-          "probabilityWeight": 1,
+          "name": "Control_20261028",
+          "probabilityWeight": 5,
           "featureAssociation": {
             "enableFeature": [
               "HeapVectorPromptlyFree"
@@ -190061,7 +190079,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 98
+          "probabilityWeight": 90
         },
         {
           "name": "ForcedOn_HeapVectorPromptlyFree",
@@ -190091,7 +190109,7 @@
           "PLATFORM_ANDROID",
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1796774340"
+        "endDate": "1800403140"
       },
       "randomizationSeed": 2008301203
     },
@@ -318076,6 +318094,68 @@
       }
     },
     {
+      "name": "ScrollJankV4MetricReportAndroidAppJankStats",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "ScrollJankV4MetricReportAndroidAppJankStats"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "ScrollJankV4MetricReportAndroidAppJankStats"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "ScrollJankV4MetricReportAndroidAppJankStats"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ScrollJankV4MetricReportAndroidAppJankStats",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ScrollJankV4MetricReportAndroidAppJankStats"
+          }
+        },
+        {
+          "name": "ForcedOff_ScrollJankV4MetricReportAndroidAppJankStats",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ScrollJankV4MetricReportAndroidAppJankStats"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.8009.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1799711940"
+      }
+    },
+    {
       "name": "ScrollJankV4SlowPathScrollHandling",
       "consistency": "PERMANENT",
       "experiment": [
@@ -413459,7 +413539,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261014",
+          "name": "Enabled_20261027",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -413468,7 +413548,7 @@
           }
         },
         {
-          "name": "Control_20261014",
+          "name": "Control_20261027",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -413520,7 +413600,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261014",
+          "name": "Enabled_20261027",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -413529,7 +413609,7 @@
           }
         },
         {
-          "name": "Control_20261014",
+          "name": "Control_20261027",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -413582,8 +413662,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261014",
-          "probabilityWeight": 1,
+          "name": "Enabled_20261027",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
               "EnableUnexportableKeysSpareKeyPool"
@@ -413591,8 +413671,8 @@
           }
         },
         {
-          "name": "Control_20261014",
-          "probabilityWeight": 1,
+          "name": "Control_20261027",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
               "EnableUnexportableKeysSpareKeyPool"
@@ -413601,7 +413681,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 98
+          "probabilityWeight": 0
         },
         {
           "name": "_Activation",
@@ -478342,5 +478422,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261028-010103.187000-production"
+  "version": "20261028-090055.813000-production"
 }
