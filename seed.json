@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTEwMy0wMTAwMzMuNzA5MDAwEgQgACgB#7AC+yiH+1xk=",
+  "serialNumber": "SMChYyMDI2MTEwMy0wOTAxMDMuNjM3MDAwEgQgACgB#/d3Jy3Z1ybg=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -43047,6 +43047,69 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "AndroidSelectPasswordContextMenu",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "AndroidSelectPasswordContextMenu"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "AndroidSelectPasswordContextMenu"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AndroidSelectPasswordContextMenu"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AndroidSelectPasswordContextMenu",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AndroidSelectPasswordContextMenu"
+          }
+        },
+        {
+          "name": "ForcedOff_AndroidSelectPasswordContextMenu",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AndroidSelectPasswordContextMenu"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "158.0.8110.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1801612740"
+      }
+    },
+    {
       "name": "AndroidSetupList",
       "consistency": "PERMANENT",
       "experiment": [
@@ -50816,1341 +50879,6 @@
       }
     },
     {
-      "name": "AtMemoryDogfood",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "at_memory_eligible_tiers",
-              "value": ""
-            },
-            {
-              "name": "state",
-              "value": "2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AtMemoryMqlsLogging",
-              "AutofillAtMemory",
-              "AutofillAtMemoryDoubleCtrl",
-              "AutofillAtMemorySupportContenteditableOnAndroid",
-              "AutofillAtMemoryTriggerShortcut",
-              "AutofillEnableKeyboardAccessoryOnSearchFields",
-              "AutofillKeydownEditableElement",
-              "AutofillSupportContentEditableIos",
-              "IPH_AutofillAtMemory",
-              "PersonalContextForceEnablementState"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOff_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOn_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PersonalContextForceEnablementState"
-          }
-        },
-        {
-          "name": "ForcedOff_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PersonalContextForceEnablementState"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8058.0",
-        "maxVersion": "155.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA",
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "locale": [
-          "en-US",
-          "en-CA",
-          "en-UK",
-          "en-GB",
-          "en-AU",
-          "en-IN",
-          "en"
-        ],
-        "endDate": "1796687940",
-        "excludeFormFactor": [
-          "DESKTOP"
-        ]
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "AtMemoryDogfood",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "at_memory_eligible_tiers",
-              "value": ""
-            },
-            {
-              "name": "state",
-              "value": "2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AtMemoryMqlsLogging",
-              "AutofillAtMemory",
-              "AutofillAtMemoryDoubleCtrl",
-              "AutofillAtMemoryPreviouslyFilled",
-              "AutofillAtMemorySearchStatefulness",
-              "AutofillAtMemorySupportContenteditableOnAndroid",
-              "AutofillAtMemoryTriggerShortcut",
-              "AutofillEnableKeyboardAccessoryOnSearchFields",
-              "AutofillKeydownEditableElement",
-              "AutofillSupportContentEditableIos",
-              "IPH_AutofillAtMemory",
-              "PersonalContextForceEnablementState"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOff_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryPreviouslyFilled",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryPreviouslyFilled"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryPreviouslyFilled",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryPreviouslyFilled"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemorySearchStatefulness",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemorySearchStatefulness"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemorySearchStatefulness",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemorySearchStatefulness"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOn_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PersonalContextForceEnablementState"
-          }
-        },
-        {
-          "name": "ForcedOff_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PersonalContextForceEnablementState"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "156.0.8074.0",
-        "maxVersion": "157.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA",
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "locale": [
-          "en-US",
-          "en-CA",
-          "en-UK",
-          "en-GB",
-          "en-AU",
-          "en-IN",
-          "en"
-        ],
-        "endDate": "1796687940",
-        "excludeFormFactor": [
-          "DESKTOP"
-        ]
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "AtMemoryDogfood",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "at_memory_eligible_tiers",
-              "value": ""
-            },
-            {
-              "name": "state",
-              "value": "2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AtMemoryMqlsLogging",
-              "AutofillAtMemory",
-              "AutofillAtMemoryDoubleCtrl",
-              "AutofillAtMemoryPreviouslyFilled",
-              "AutofillAtMemorySearchStatefulness",
-              "AutofillAtMemorySupportContenteditableOnAndroid",
-              "AutofillAtMemorySupportTextAreaOnAndroid",
-              "AutofillAtMemoryTriggerShortcut",
-              "AutofillEnableKeyboardAccessoryOnSearchFields",
-              "AutofillKeydownEditableElement",
-              "AutofillSupportContentEditableIos",
-              "IPH_AutofillAtMemory",
-              "PersonalContextForceEnablementState"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOff_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryPreviouslyFilled",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryPreviouslyFilled"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryPreviouslyFilled",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryPreviouslyFilled"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemorySearchStatefulness",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemorySearchStatefulness"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemorySearchStatefulness",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemorySearchStatefulness"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemorySupportTextAreaOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemorySupportTextAreaOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemorySupportTextAreaOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemorySupportTextAreaOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOn_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PersonalContextForceEnablementState"
-          }
-        },
-        {
-          "name": "ForcedOff_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PersonalContextForceEnablementState"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "158.0.8106.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA",
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "locale": [
-          "en-US",
-          "en-CA",
-          "en-UK",
-          "en-GB",
-          "en-AU",
-          "en-IN",
-          "en"
-        ],
-        "endDate": "1796687940",
-        "excludeFormFactor": [
-          "DESKTOP"
-        ]
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "AtMemoryDogfood",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "at_memory_eligible_tiers",
-              "value": ""
-            },
-            {
-              "name": "state",
-              "value": "2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AtMemoryMqlsLogging",
-              "AutofillAtMemory",
-              "AutofillAtMemoryDoubleCtrl",
-              "AutofillAtMemorySupportContenteditableOnAndroid",
-              "AutofillAtMemoryTriggerShortcut",
-              "AutofillEnableKeyboardAccessoryOnSearchFields",
-              "AutofillKeydownEditableElement",
-              "AutofillSupportContentEditableIos",
-              "IPH_AutofillAtMemory",
-              "PersonalContextForceEnablementState"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOff_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOn_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PersonalContextForceEnablementState"
-          }
-        },
-        {
-          "name": "ForcedOff_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PersonalContextForceEnablementState"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8058.0",
-        "maxVersion": "155.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA",
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "locale": [
-          "en-US",
-          "en-CA",
-          "en-UK",
-          "en-GB",
-          "en-AU",
-          "en-IN",
-          "en"
-        ],
-        "endDate": "1796687940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "AtMemoryDogfood",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "at_memory_eligible_tiers",
-              "value": ""
-            },
-            {
-              "name": "state",
-              "value": "2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AtMemoryMqlsLogging",
-              "AutofillAtMemory",
-              "AutofillAtMemoryDoubleCtrl",
-              "AutofillAtMemoryPreviouslyFilled",
-              "AutofillAtMemorySearchStatefulness",
-              "AutofillAtMemorySupportContenteditableOnAndroid",
-              "AutofillAtMemoryTriggerShortcut",
-              "AutofillEnableKeyboardAccessoryOnSearchFields",
-              "AutofillKeydownEditableElement",
-              "AutofillSupportContentEditableIos",
-              "IPH_AutofillAtMemory",
-              "PersonalContextForceEnablementState"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOff_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryPreviouslyFilled",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryPreviouslyFilled"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryPreviouslyFilled",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryPreviouslyFilled"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemorySearchStatefulness",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemorySearchStatefulness"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemorySearchStatefulness",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemorySearchStatefulness"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOn_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PersonalContextForceEnablementState"
-          }
-        },
-        {
-          "name": "ForcedOff_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PersonalContextForceEnablementState"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "156.0.8074.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA",
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "locale": [
-          "en-US",
-          "en-CA",
-          "en-UK",
-          "en-GB",
-          "en-AU",
-          "en-IN",
-          "en"
-        ],
-        "endDate": "1796687940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "AtMemoryDogfood",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "at_memory_eligible_tiers",
-              "value": ""
-            },
-            {
-              "name": "state",
-              "value": "2"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AtMemoryMqlsLogging",
-              "AutofillAtMemory",
-              "AutofillAtMemoryDoubleCtrl",
-              "AutofillAtMemoryPreviouslyFilled",
-              "AutofillAtMemorySearchStatefulness",
-              "AutofillAtMemorySupportContenteditableOnAndroid",
-              "AutofillAtMemoryTriggerShortcut",
-              "AutofillEnableKeyboardAccessoryOnSearchFields",
-              "AutofillKeydownEditableElement",
-              "AutofillSupportContentEditableIos",
-              "IPH_AutofillAtMemory",
-              "PersonalContextForceEnablementState"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOff_AtMemoryMqlsLogging",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AtMemoryMqlsLogging"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryDoubleCtrl",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryDoubleCtrl"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryPreviouslyFilled",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryPreviouslyFilled"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryPreviouslyFilled",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryPreviouslyFilled"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemorySearchStatefulness",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemorySearchStatefulness"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemorySearchStatefulness",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemorySearchStatefulness"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemorySupportContenteditableOnAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemorySupportContenteditableOnAndroid"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillAtMemoryTriggerShortcut",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillAtMemoryTriggerShortcut"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillEnableKeyboardAccessoryOnSearchFields",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillEnableKeyboardAccessoryOnSearchFields"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillKeydownEditableElement",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillKeydownEditableElement"
-          }
-        },
-        {
-          "name": "ForcedOn_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOff_AutofillSupportContentEditableIos",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AutofillSupportContentEditableIos"
-          }
-        },
-        {
-          "name": "ForcedOn_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOff_IPH_AutofillAtMemory",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IPH_AutofillAtMemory"
-          }
-        },
-        {
-          "name": "ForcedOn_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "PersonalContextForceEnablementState"
-          }
-        },
-        {
-          "name": "ForcedOff_PersonalContextForceEnablementState",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "PersonalContextForceEnablementState"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "156.0.8074.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA",
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "locale": [
-          "en-US",
-          "en-CA",
-          "en-UK",
-          "en-GB",
-          "en-AU",
-          "en-IN",
-          "en"
-        ],
-        "endDate": "1796687940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "PrivacySandboxAttestationsDefaultDeny",
       "consistency": "PERMANENT",
       "experiment": [
@@ -56307,12 +55035,26 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Preperiod_Enabled",
-          "probabilityWeight": 50
+          "name": "Enabled_20261103",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101004637",
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillAiWalletShopping",
+              "AutofillEnableAutofillSettingsEnterprisePolicy"
+            ]
+          }
         },
         {
-          "name": "Preperiod_Disabled",
-          "probabilityWeight": 50
+          "name": "Disabled_20261103",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101005659",
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillAiWalletShopping",
+              "AutofillEnableAutofillSettingsEnterprisePolicy"
+            ]
+          }
         },
         {
           "name": "Default",
@@ -56371,6 +55113,9 @@
           null,
           "PLATFORM_IOS"
         ],
+        "country": [
+          "us"
+        ],
         "endDate": "1796947140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
@@ -56380,7 +55125,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261021",
+          "name": "Enabled_20261103",
           "probabilityWeight": 50,
           "googleWebTriggerExperimentId": "101004637",
           "featureAssociation": {
@@ -56391,7 +55136,7 @@
           }
         },
         {
-          "name": "Disabled_20261021",
+          "name": "Disabled_20261103",
           "probabilityWeight": 50,
           "googleWebTriggerExperimentId": "101005659",
           "featureAssociation": {
@@ -56458,6 +55203,9 @@
           "PLATFORM_ANDROID",
           null,
           "PLATFORM_IOS"
+        ],
+        "country": [
+          "us"
         ],
         "endDate": "1796947140"
       },
@@ -56531,6 +55279,9 @@
           "PLATFORM_ANDROID",
           null,
           "PLATFORM_IOS"
+        ],
+        "country": [
+          "us"
         ],
         "endDate": "1796947140"
       },
@@ -74470,6 +73221,75 @@
           "PLATFORM_IOS",
           "PLATFORM_ANDROID_WEBVIEW"
         ]
+      }
+    },
+    {
+      "name": "AutofillStricterPhoneExtensionRegex",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillStricterPhoneExtensionRegex"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillStricterPhoneExtensionRegex"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillStricterPhoneExtensionRegex"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillStricterPhoneExtensionRegex",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillStricterPhoneExtensionRegex"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillStricterPhoneExtensionRegex",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillStricterPhoneExtensionRegex"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8132.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          null,
+          "PLATFORM_ANDROID_WEBVIEW",
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1802735940"
       }
     },
     {
@@ -148745,6 +147565,68 @@
       }
     },
     {
+      "name": "EnableFullscreenToAnyScreenAndroid",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableFullscreenToAnyScreenAndroid"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "EnableFullscreenToAnyScreenAndroid"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "EnableFullscreenToAnyScreenAndroid"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_EnableFullscreenToAnyScreenAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableFullscreenToAnyScreenAndroid"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableFullscreenToAnyScreenAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableFullscreenToAnyScreenAndroid"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "142.*",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1799711940"
+      }
+    },
+    {
       "name": "EnableGetNetworkConnectivityHintAPIKillSwitch",
       "consistency": "PERMANENT",
       "experiment": [
@@ -202648,7 +201530,7 @@
         "platform": [
           "PLATFORM_IOS"
         ],
-        "endDate": "1793923140",
+        "endDate": "1801699140",
         "minOsVersion": "17.0.0"
       }
     },
@@ -202711,7 +201593,7 @@
         "platform": [
           "PLATFORM_IOS"
         ],
-        "endDate": "1793923140",
+        "endDate": "1801699140",
         "minOsVersion": "17.0.0"
       }
     },
@@ -202773,9 +201655,9 @@
         "platform": [
           "PLATFORM_IOS"
         ],
-        "endDate": "1793923140",
+        "endDate": "1801699140",
         "minOsVersion": "17.0.0",
-        "maxOsVersion": "26.6.*"
+        "maxOsVersion": "27.0.*"
       }
     },
     {
@@ -242205,271 +241087,6 @@
           "PLATFORM_ANDROID"
         ],
         "endDate": "1794614340"
-      }
-    },
-    {
-      "name": "MetricsLogTrimmingLimitsWebView",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260901",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "log_bytes_trim_threshold",
-              "value": "3145728"
-            },
-            {
-              "name": "max_ongoing_log_size_bytes",
-              "value": "1048576"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AwMetricsLogTrimming",
-              "MetricsLogTrimming"
-            ]
-          }
-        },
-        {
-          "name": "TrimmingDisabled_20260901",
-          "probabilityWeight": 33,
-          "featureAssociation": {
-            "disableFeature": [
-              "AwMetricsLogTrimming",
-              "MetricsLogTrimming"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260901",
-          "probabilityWeight": 33,
-          "featureAssociation": {
-            "enableFeature": [
-              "AwMetricsLogTrimming",
-              "MetricsLogTrimming"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 1
-        },
-        {
-          "name": "ForcedOn_AwMetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AwMetricsLogTrimming"
-          }
-        },
-        {
-          "name": "ForcedOff_AwMetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AwMetricsLogTrimming"
-          }
-        },
-        {
-          "name": "ForcedOn_MetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "MetricsLogTrimming"
-          }
-        },
-        {
-          "name": "ForcedOff_MetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "MetricsLogTrimming"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "148.*",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1796774340"
-      }
-    },
-    {
-      "name": "MetricsLogTrimmingLimitsWebView",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260901",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "log_bytes_trim_threshold",
-              "value": "3145728"
-            },
-            {
-              "name": "max_ongoing_log_size_bytes",
-              "value": "1048576"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AwMetricsLogTrimming",
-              "MetricsLogTrimming"
-            ]
-          }
-        },
-        {
-          "name": "TrimmingDisabled_20260901",
-          "probabilityWeight": 33,
-          "featureAssociation": {
-            "disableFeature": [
-              "AwMetricsLogTrimming",
-              "MetricsLogTrimming"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260901",
-          "probabilityWeight": 33,
-          "featureAssociation": {
-            "enableFeature": [
-              "AwMetricsLogTrimming",
-              "MetricsLogTrimming"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 1
-        },
-        {
-          "name": "ForcedOn_AwMetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AwMetricsLogTrimming"
-          }
-        },
-        {
-          "name": "ForcedOff_AwMetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AwMetricsLogTrimming"
-          }
-        },
-        {
-          "name": "ForcedOn_MetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "MetricsLogTrimming"
-          }
-        },
-        {
-          "name": "ForcedOff_MetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "MetricsLogTrimming"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "148.*",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1796774340"
-      }
-    },
-    {
-      "name": "MetricsLogTrimmingLimitsWebView",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260901",
-          "probabilityWeight": 1,
-          "param": [
-            {
-              "name": "log_bytes_trim_threshold",
-              "value": "3145728"
-            },
-            {
-              "name": "max_ongoing_log_size_bytes",
-              "value": "1048576"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "AwMetricsLogTrimming",
-              "MetricsLogTrimming"
-            ]
-          }
-        },
-        {
-          "name": "TrimmingDisabled_20260901",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "disableFeature": [
-              "AwMetricsLogTrimming",
-              "MetricsLogTrimming"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260901",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "enableFeature": [
-              "AwMetricsLogTrimming",
-              "MetricsLogTrimming"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 97
-        },
-        {
-          "name": "ForcedOn_AwMetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "AwMetricsLogTrimming"
-          }
-        },
-        {
-          "name": "ForcedOff_AwMetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "AwMetricsLogTrimming"
-          }
-        },
-        {
-          "name": "ForcedOn_MetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "MetricsLogTrimming"
-          }
-        },
-        {
-          "name": "ForcedOff_MetricsLogTrimming",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "MetricsLogTrimming"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "148.*",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1796774340"
       }
     },
     {
@@ -287392,11 +286009,11 @@
       "experiment": [
         {
           "name": "OutOfReportingSample",
-          "probabilityWeight": 10,
+          "probabilityWeight": 5,
           "param": [
             {
               "name": "sampling_rate_per_mille",
-              "value": "10"
+              "value": "5"
             }
           ],
           "featureAssociation": {
@@ -287407,7 +286024,7 @@
         },
         {
           "name": "Oversampled",
-          "probabilityWeight": 10,
+          "probabilityWeight": 5,
           "param": [
             {
               "name": "disable_crashes",
@@ -287415,7 +286032,7 @@
             },
             {
               "name": "sampling_rate_per_mille",
-              "value": "10"
+              "value": "5"
             }
           ],
           "featureAssociation": {
@@ -287426,11 +286043,11 @@
         },
         {
           "name": "InReportingSample",
-          "probabilityWeight": 980,
+          "probabilityWeight": 990,
           "param": [
             {
               "name": "sampling_rate_per_mille",
-              "value": "980"
+              "value": "990"
             }
           ],
           "featureAssociation": {
@@ -299965,18 +298582,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "EnabledQuicUseReadMultipleAndUdpGro_20261001",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableUdpGro",
-              "QuicUseReadMultiple"
-            ]
-          }
-        },
-        {
-          "name": "EnabledQuicUseReadMultipleOnly_20261001",
-          "probabilityWeight": 25,
+          "name": "EnabledQuicUseReadMultipleOnly",
+          "probabilityWeight": 100,
           "featureAssociation": {
             "enableFeature": [
               "QuicUseReadMultiple"
@@ -299985,20 +298592,6 @@
               "EnableUdpGro"
             ]
           }
-        },
-        {
-          "name": "Control_20261001",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "disableFeature": [
-              "EnableUdpGro",
-              "QuicUseReadMultiple"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 25
         },
         {
           "name": "ForcedOn_EnableUdpGro",
@@ -300031,174 +298624,11 @@
       ],
       "filter": {
         "minVersion": "153.0.7980.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1794787140"
-      }
-    },
-    {
-      "name": "EnableQuicReadMultipleAndUdpGRO",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "EnabledQuicUseReadMultipleAndUdpGro_20261001",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableUdpGro",
-              "QuicUseReadMultiple"
-            ]
-          }
-        },
-        {
-          "name": "EnabledQuicUseReadMultipleOnly_20261001",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "enableFeature": [
-              "QuicUseReadMultiple"
-            ],
-            "disableFeature": [
-              "EnableUdpGro"
-            ]
-          }
-        },
-        {
-          "name": "Control_20261001",
-          "probabilityWeight": 25,
-          "featureAssociation": {
-            "disableFeature": [
-              "EnableUdpGro",
-              "QuicUseReadMultiple"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 25
-        },
-        {
-          "name": "ForcedOn_EnableUdpGro",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EnableUdpGro"
-          }
-        },
-        {
-          "name": "ForcedOff_EnableUdpGro",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EnableUdpGro"
-          }
-        },
-        {
-          "name": "ForcedOn_QuicUseReadMultiple",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "QuicUseReadMultiple"
-          }
-        },
-        {
-          "name": "ForcedOff_QuicUseReadMultiple",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "QuicUseReadMultiple"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.7980.0",
+        "maxVersion": "158.0.8113.*",
         "channel": [
           "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID",
-          "PLATFORM_ANDROID_WEBVIEW",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1794787140"
-      }
-    },
-    {
-      "name": "EnableQuicReadMultipleAndUdpGRO",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "EnabledQuicUseReadMultipleAndUdpGro_20261001",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "enableFeature": [
-              "EnableUdpGro",
-              "QuicUseReadMultiple"
-            ]
-          }
-        },
-        {
-          "name": "EnabledQuicUseReadMultipleOnly_20261001",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "enableFeature": [
-              "QuicUseReadMultiple"
-            ],
-            "disableFeature": [
-              "EnableUdpGro"
-            ]
-          }
-        },
-        {
-          "name": "Control_20261001",
-          "probabilityWeight": 10,
-          "featureAssociation": {
-            "disableFeature": [
-              "EnableUdpGro",
-              "QuicUseReadMultiple"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 70
-        },
-        {
-          "name": "ForcedOn_EnableUdpGro",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "EnableUdpGro"
-          }
-        },
-        {
-          "name": "ForcedOff_EnableUdpGro",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "EnableUdpGro"
-          }
-        },
-        {
-          "name": "ForcedOn_QuicUseReadMultiple",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "QuicUseReadMultiple"
-          }
-        },
-        {
-          "name": "ForcedOff_QuicUseReadMultiple",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "QuicUseReadMultiple"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.7980.0",
-        "channel": [
+          "DEV",
+          "BETA",
           "STABLE"
         ],
         "platform": [
@@ -300206,8 +298636,7 @@
           "PLATFORM_ANDROID_WEBVIEW",
           "PLATFORM_CHROMEOS",
           "PLATFORM_LINUX"
-        ],
-        "endDate": "1794787140"
+        ]
       }
     },
     {
@@ -332165,7 +330594,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794614340"
+        "endDate": "1797033540"
       }
     },
     {
@@ -332214,7 +330643,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794614340"
+        "endDate": "1797033540"
       }
     },
     {
@@ -332262,7 +330691,7 @@
         "platform": [
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794614340"
+        "endDate": "1797033540"
       }
     },
     {
@@ -338726,6 +337155,7 @@
               "GlicSelectionSuggestions",
               "GlicSuggestionContextMenu",
               "LensSelectionSuggestions",
+              "SmartSelectionServerPrewarmAuthToken",
               "SmartSelectionServerSuggestions"
             ]
           }
@@ -338798,6 +337228,20 @@
           "probabilityWeight": 0,
           "featureAssociation": {
             "forcingFeatureOff": "LensSelectionSuggestions"
+          }
+        },
+        {
+          "name": "ForcedOn_SmartSelectionServerPrewarmAuthToken",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SmartSelectionServerPrewarmAuthToken"
+          }
+        },
+        {
+          "name": "ForcedOff_SmartSelectionServerPrewarmAuthToken",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SmartSelectionServerPrewarmAuthToken"
           }
         },
         {
@@ -415194,6 +413638,158 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
+          "name": "Downsampled_202309",
+          "probabilityWeight": 100,
+          "param": [
+            {
+              "name": "ChromeOSApp.InputEvent",
+              "value": "ChromeOSApp"
+            },
+            {
+              "name": "ChromeOSApp.InstalledApp",
+              "value": "ChromeOSApp"
+            },
+            {
+              "name": "ChromeOSApp.Launch",
+              "value": "ChromeOSApp"
+            },
+            {
+              "name": "ChromeOSApp.UninstallApp",
+              "value": "ChromeOSApp"
+            },
+            {
+              "name": "ChromeOSApp.UsageTime",
+              "value": "ChromeOSApp"
+            },
+            {
+              "name": "ChromeOSApp.UsageTimeReusedSourceId",
+              "value": "ChromeOSApp"
+            },
+            {
+              "name": "Download.Completed",
+              "value": "Download"
+            },
+            {
+              "name": "Download.Interrupted",
+              "value": "Download"
+            },
+            {
+              "name": "Download.Resumed",
+              "value": "Download"
+            },
+            {
+              "name": "Download.Started",
+              "value": "Download"
+            },
+            {
+              "name": "Media.BasicPlayback",
+              "value": "Media"
+            },
+            {
+              "name": "Media.WebAudio.AudioContext.AudibleTime",
+              "value": "Media"
+            },
+            {
+              "name": "Media.WebMediaPlayerState",
+              "value": "Media"
+            },
+            {
+              "name": "NavigationPredictorAnchorElementMetrics",
+              "value": "NavigationPredictor"
+            },
+            {
+              "name": "NavigationPredictorPageLinkClick",
+              "value": "NavigationPredictor"
+            },
+            {
+              "name": "NavigationPredictorPageLinkMetrics",
+              "value": "NavigationPredictor"
+            },
+            {
+              "name": "NavigationPredictorPreloadOnHover",
+              "value": "NavigationPredictor"
+            },
+            {
+              "name": "NavigationPredictorUserInteractions",
+              "value": "NavigationPredictor"
+            },
+            {
+              "name": "PerformanceAPI.LongAnimationFrame",
+              "value": "3"
+            },
+            {
+              "name": "PerformanceAPI.Memory.Legacy",
+              "value": "3"
+            },
+            {
+              "name": "Popup.Closed",
+              "value": "Popup"
+            },
+            {
+              "name": "Popup.Page",
+              "value": "Popup"
+            },
+            {
+              "name": "Preloading.Attempt",
+              "value": "PreloadingAttempt"
+            },
+            {
+              "name": "Preloading.Attempt.PreviousPrimaryPage",
+              "value": "PreloadingAttempt"
+            },
+            {
+              "name": "V8.Wasm.ModuleCompiled",
+              "value": "V8.Wasm"
+            },
+            {
+              "name": "V8.Wasm.ModuleDecoded",
+              "value": "V8.Wasm"
+            },
+            {
+              "name": "V8.Wasm.ModuleInstantiated",
+              "value": "V8.Wasm"
+            },
+            {
+              "name": "_default_sampling",
+              "value": "1"
+            },
+            {
+              "name": "_webdx_features_sampling",
+              "value": "1"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "UkmSamplingRate"
+            ]
+          }
+        },
+        {
+          "name": "Everything",
+          "probabilityWeight": 0
+        }
+      ],
+      "filter": {
+        "minVersion": "159.*",
+        "maxVersion": "159.*",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_IOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_WINDOWS"
+        ]
+      }
+    },
+    {
+      "name": "UkmSamplingRate",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
           "name": "Sampled",
           "probabilityWeight": 100,
           "param": [
@@ -431205,6 +429801,7 @@
       ],
       "filter": {
         "minVersion": "145.*",
+        "maxVersion": "159.*",
         "channel": [
           "CANARY",
           "DEV",
@@ -431215,8 +429812,7 @@
           "PLATFORM_WINDOWS",
           "PLATFORM_LINUX",
           "PLATFORM_MAC"
-        ],
-        "endDate": "1793750340"
+        ]
       }
     },
     {
@@ -436134,115 +434730,6 @@
       }
     },
     {
-      "name": "VariationsFeatureAccessLogging",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260901_WebView",
-          "probabilityWeight": 50,
-          "param": [
-            {
-              "name": "histogram_denylist",
-              "value": "\"\""
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "HistogramDenylist"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260901_WebView",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "HistogramDenylist"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_HistogramDenylist",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "HistogramDenylist"
-          }
-        },
-        {
-          "name": "ForcedOff_HistogramDenylist",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "HistogramDenylist"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1797379140"
-      }
-    },
-    {
-      "name": "VariationsFeatureAccessLogging",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260901_WebView",
-          "probabilityWeight": 50,
-          "param": [
-            {
-              "name": "histogram_denylist",
-              "value": "\"\""
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "HistogramDenylist"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260901_WebView",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "HistogramDenylist"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_HistogramDenylist",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "HistogramDenylist"
-          }
-        },
-        {
-          "name": "ForcedOff_HistogramDenylist",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "HistogramDenylist"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.*",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1797379140"
-      }
-    },
-    {
       "name": "VariationsGoogleGroupFiltering",
       "consistency": "PERMANENT",
       "experiment": [
@@ -440727,8 +439214,8 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled_10",
-          "probabilityWeight": 10,
+          "name": "Enabled_50",
+          "probabilityWeight": 50,
           "googleWebExperimentId": "101005375",
           "featureAssociation": {
             "enableFeature": [
@@ -440738,8 +439225,8 @@
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Control_10",
-          "probabilityWeight": 10,
+          "name": "Control_50",
+          "probabilityWeight": 50,
           "googleWebExperimentId": "101005376",
           "featureAssociation": {
             "disableFeature": [
@@ -440750,7 +439237,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 80
+          "probabilityWeight": 0
         },
         {
           "name": "_Activation",
@@ -452293,6 +450780,7 @@
       ],
       "filter": {
         "minVersion": "152.0.7941.0",
+        "maxVersion": "159.0.8134.0",
         "channel": [
           "CANARY",
           "DEV",
@@ -452301,8 +450789,7 @@
         ],
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1797033540"
+        ]
       }
     },
     {
@@ -481856,5 +480343,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261103-010033.709000-production"
+  "version": "20261103-090103.637000-production"
 }
