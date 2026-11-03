@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTEwMi0xNzAwNTIuNDU3MDAwEgQgACgB#txPLtO0obo8=",
+  "serialNumber": "SMChYyMDI2MTEwMy0wMTAwMzMuNzA5MDAwEgQgACgB#7AC+yiH+1xk=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -7469,29 +7469,54 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "leak_sanitized_object_20261029",
-          "probabilityWeight": 18,
+          "name": "complete_launch_unlimited_20261102",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
             },
             {
               "name": "enabled-processes",
-              "value": "browser-only"
+              "value": "all-processes"
             }
           ],
           "featureAssociation": {
             "enableFeature": [
               "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
               "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
             ]
           }
         },
         {
-          "name": "browser_enabled_unlimited_20261029",
-          "probabilityWeight": 18,
+          "name": "gpu_and_browser_unlimited_20261102",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-and-gpu"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "browser_enabled_unlimited_20261102",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
@@ -7513,8 +7538,8 @@
           }
         },
         {
-          "name": "browser_ipc_only_enabled_unlimited_20261029",
-          "probabilityWeight": 18,
+          "name": "browser_ipc_only_enabled_unlimited_20261102",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
@@ -7536,8 +7561,50 @@
           }
         },
         {
-          "name": "mo_holdback_disabled_20261029",
-          "probabilityWeight": 18,
+          "name": "gpu_all_threads_enabled_unlimited_20261102",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-and-gpu"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "renderer_enabled_unlimited_20261102",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-and-renderer"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "mo_holdback_disabled_20261102",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
@@ -7557,8 +7624,8 @@
           }
         },
         {
-          "name": "current_large_ram_launch_20261029",
-          "probabilityWeight": 18,
+          "name": "current_large_ram_launch_20261102",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
@@ -7579,7 +7646,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 10
+          "probabilityWeight": 20
         }
       ],
       "filter": {
@@ -7600,37 +7667,16 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "leak_sanitized_object_20261029",
-          "probabilityWeight": 18,
+          "name": "complete_launch_unlimited_20261102",
+          "probabilityWeight": 12,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}}}"
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
             },
             {
               "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "browser_enabled_512K_20261029",
-          "probabilityWeight": 18,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
+              "value": "all-processes"
             }
           ],
           "featureAssociation": {
@@ -7644,8 +7690,31 @@
           }
         },
         {
-          "name": "browser_enabled_unlimited_20261029",
-          "probabilityWeight": 18,
+          "name": "gpu_and_browser_unlimited_20261102",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-and-gpu"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "browser_enabled_unlimited_20261102",
+          "probabilityWeight": 12,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
@@ -7667,8 +7736,8 @@
           }
         },
         {
-          "name": "browser_ipc_only_enabled_unlimited_20261029",
-          "probabilityWeight": 18,
+          "name": "browser_ipc_only_enabled_unlimited_20261102",
+          "probabilityWeight": 12,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
@@ -7690,8 +7759,50 @@
           }
         },
         {
-          "name": "disabled_small_ram_20261029",
-          "probabilityWeight": 18,
+          "name": "gpu_all_threads_enabled_unlimited_20261102",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-and-gpu"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "renderer_enabled_unlimited_20261102",
+          "probabilityWeight": 12,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-and-renderer"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
+              "PartitionAllocWithAdvancedChecks"
+            ]
+          }
+        },
+        {
+          "name": "disabled_small_ram_20261102",
+          "probabilityWeight": 12,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
@@ -7712,7 +7823,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 10
+          "probabilityWeight": 16
         }
       ],
       "filter": {
@@ -18437,139 +18548,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "GlicContextMenuAblationV2",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20261014",
-          "probabilityWeight": 33,
-          "googleWebExperimentId": "101005497",
-          "param": [
-            {
-              "name": "variant",
-              "value": "arm3"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "GlicContextMenu",
-              "GlicTextSelectionContextMenu"
-            ],
-            "disableFeature": [
-              "GlicContextMenuBelowSearch"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Arm1_BelowSearch_20261014",
-          "probabilityWeight": 33,
-          "googleWebExperimentId": "101005498",
-          "param": [
-            {
-              "name": "variant",
-              "value": "arm3"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "GlicContextMenu",
-              "GlicContextMenuBelowSearch",
-              "GlicTextSelectionContextMenu"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Arm2_Holdback_20261014",
-          "probabilityWeight": 33,
-          "googleWebExperimentId": "101005499",
-          "featureAssociation": {
-            "disableFeature": [
-              "GlicContextMenu",
-              "GlicContextMenuBelowSearch",
-              "GlicTextSelectionContextMenu"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default_20261014",
-          "probabilityWeight": 1,
-          "param": [
-            {
-              "name": "variant",
-              "value": "arm3"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "GlicContextMenu",
-              "GlicTextSelectionContextMenu"
-            ],
-            "disableFeature": [
-              "GlicContextMenuBelowSearch"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_GlicContextMenu",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "GlicContextMenu"
-          }
-        },
-        {
-          "name": "ForcedOff_GlicContextMenu",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "GlicContextMenu"
-          }
-        },
-        {
-          "name": "ForcedOn_GlicContextMenuBelowSearch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "GlicContextMenuBelowSearch"
-          }
-        },
-        {
-          "name": "ForcedOff_GlicContextMenuBelowSearch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "GlicContextMenuBelowSearch"
-          }
-        },
-        {
-          "name": "ForcedOn_GlicTextSelectionContextMenu",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "GlicTextSelectionContextMenu"
-          }
-        },
-        {
-          "name": "ForcedOff_GlicTextSelectionContextMenu",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "GlicTextSelectionContextMenu"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8013.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC"
-        ],
-        "endDate": "1799884740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "NtpNextScaledAIMerch",
       "consistency": "PERMANENT",
       "experiment": [
@@ -24122,463 +24100,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "NtpGoogleLogo26",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NtpGoogleLogo26"
-          }
-        },
-        {
-          "name": "ForcedOff_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NtpGoogleLogo26"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7967.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "formFactor": [
-          "DESKTOP"
-        ],
-        "endDate": "1796601540"
-      }
-    },
-    {
-      "name": "NtpGoogleLogo26",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NtpGoogleLogo26"
-          }
-        },
-        {
-          "name": "ForcedOff_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NtpGoogleLogo26"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7967.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "formFactor": [
-          "DESKTOP"
-        ],
-        "endDate": "1796601540"
-      }
-    },
-    {
-      "name": "NtpGoogleLogo26",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "enableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 98
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NtpGoogleLogo26"
-          }
-        },
-        {
-          "name": "ForcedOff_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NtpGoogleLogo26"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7967.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "formFactor": [
-          "DESKTOP"
-        ],
-        "endDate": "1796601540"
-      }
-    },
-    {
-      "name": "NtpGoogleLogo26",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NtpGoogleLogo26"
-          }
-        },
-        {
-          "name": "ForcedOff_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NtpGoogleLogo26"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7967.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1796601540"
-      }
-    },
-    {
-      "name": "NtpGoogleLogo26",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "Control",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NtpGoogleLogo26"
-          }
-        },
-        {
-          "name": "ForcedOff_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NtpGoogleLogo26"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7967.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1796601540"
-      }
-    },
-    {
-      "name": "NtpGoogleLogo26",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20261009",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101005221",
-          "featureAssociation": {
-            "enableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20261009",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101005222",
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NtpGoogleLogo26"
-          }
-        },
-        {
-          "name": "ForcedOff_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NtpGoogleLogo26"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7967.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1796601540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "NtpGoogleLogo26",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20261009",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101005221",
-          "featureAssociation": {
-            "enableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20261009",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101005222",
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "NtpGoogleLogo26"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "NtpGoogleLogo26"
-          }
-        },
-        {
-          "name": "ForcedOff_NtpGoogleLogo26",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "NtpGoogleLogo26"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "152.0.7967.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1796601540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "SearchPromotionIPH",
       "consistency": "PERMANENT",
       "experiment": [
@@ -27531,6 +27052,106 @@
         ],
         "endDate": "1794873540"
       },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DiscoverEnableSkinnerOnBling",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20261026",
+          "probabilityWeight": 33,
+          "googleWebExperimentId": "101005941",
+          "featureAssociation": {
+            "disableFeature": [
+              "IOSGCR_allow_unsorted_cache_index",
+              "IOSGCR_data_load_strategy_send_updates_when_no_reload",
+              "IOSGCR_disable_data_store_card_cache_expired_check",
+              "IOSGCR_disable_memory_card_cache_clear_cache_on_open_if_expired",
+              "IOSGCR_disable_open_expired_persistent_cache_check",
+              "IOSGCR_do_not_short_circuit_on_feed_operations_generator_failure",
+              "IOSGCR_dsc_enable_synchronous_feed_sourcer_observer_registration",
+              "IOSGCR_enable_data_loading_strategy",
+              "IOSGCR_enable_persisted_feed_deferred_disk_writes",
+              "IOSGCR_handle_feed_sourcer_processing_errors",
+              "IOSGCR_notify_collection_model_of_account_change",
+              "IOSGCR_notify_on_canceled_reload_by_cache",
+              "IOSGCR_reset_sourcer_on_account_switch",
+              "IOSGCR_use_live_feed_sourcer"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledHardened_20261026",
+          "probabilityWeight": 33,
+          "googleWebExperimentId": "101005942",
+          "featureAssociation": {
+            "enableFeature": [
+              "IOSGCR_allow_unsorted_cache_index",
+              "IOSGCR_disable_data_store_card_cache_expired_check",
+              "IOSGCR_do_not_short_circuit_on_feed_operations_generator_failure",
+              "IOSGCR_dsc_enable_synchronous_feed_sourcer_observer_registration",
+              "IOSGCR_enable_persisted_feed_deferred_disk_writes",
+              "IOSGCR_handle_feed_sourcer_processing_errors",
+              "IOSGCR_notify_on_canceled_reload_by_cache",
+              "IOSGCR_use_live_feed_sourcer"
+            ],
+            "disableFeature": [
+              "IOSGCR_data_load_strategy_send_updates_when_no_reload",
+              "IOSGCR_disable_memory_card_cache_clear_cache_on_open_if_expired",
+              "IOSGCR_disable_open_expired_persistent_cache_check",
+              "IOSGCR_enable_data_loading_strategy",
+              "IOSGCR_notify_collection_model_of_account_change",
+              "IOSGCR_reset_sourcer_on_account_switch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledDLS_20261026",
+          "probabilityWeight": 33,
+          "googleWebExperimentId": "101005943",
+          "featureAssociation": {
+            "enableFeature": [
+              "IOSGCR_allow_unsorted_cache_index",
+              "IOSGCR_data_load_strategy_send_updates_when_no_reload",
+              "IOSGCR_disable_data_store_card_cache_expired_check",
+              "IOSGCR_disable_memory_card_cache_clear_cache_on_open_if_expired",
+              "IOSGCR_disable_open_expired_persistent_cache_check",
+              "IOSGCR_do_not_short_circuit_on_feed_operations_generator_failure",
+              "IOSGCR_dsc_enable_synchronous_feed_sourcer_observer_registration",
+              "IOSGCR_enable_data_loading_strategy",
+              "IOSGCR_enable_persisted_feed_deferred_disk_writes",
+              "IOSGCR_handle_feed_sourcer_processing_errors",
+              "IOSGCR_use_live_feed_sourcer"
+            ],
+            "disableFeature": [
+              "IOSGCR_notify_collection_model_of_account_change",
+              "IOSGCR_notify_on_canceled_reload_by_cache",
+              "IOSGCR_reset_sourcer_on_account_switch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 1
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.0.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1796515140"
+      },
+      "randomizationSeed": 3397545247,
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
@@ -83134,6 +82755,65 @@
       }
     },
     {
+      "name": "BindURLLoaderFactoryToHighPriorityTaskRunner",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261102",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101006265",
+          "featureAssociation": {
+            "enableFeature": [
+              "BindURLLoaderFactoryToHighPriorityTaskRunner"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20261102",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101006264",
+          "featureAssociation": {
+            "disableFeature": [
+              "BindURLLoaderFactoryToHighPriorityTaskRunner"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_BindURLLoaderFactoryToHighPriorityTaskRunner",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "BindURLLoaderFactoryToHighPriorityTaskRunner"
+          }
+        },
+        {
+          "name": "ForcedOff_BindURLLoaderFactoryToHighPriorityTaskRunner",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "BindURLLoaderFactoryToHighPriorityTaskRunner"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8026.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1799711940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "BiometricAuthPwdFillAndroid",
       "consistency": "PERMANENT",
       "experiment": [
@@ -111095,6 +110775,71 @@
       "filter": {
         "minVersion": "157.0.8092.0",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "formFactor": [
+          "DESKTOP"
+        ],
+        "endDate": "1800057540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ComposeboxUnselectMatchOnTabExit",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "ComposeboxUnselectMatchOnTabExit"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "ComposeboxUnselectMatchOnTabExit"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "ComposeboxUnselectMatchOnTabExit"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ComposeboxUnselectMatchOnTabExit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ComposeboxUnselectMatchOnTabExit"
+          }
+        },
+        {
+          "name": "ForcedOff_ComposeboxUnselectMatchOnTabExit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ComposeboxUnselectMatchOnTabExit"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8092.0",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -111103,6 +110848,71 @@
         ],
         "formFactor": [
           "DESKTOP"
+        ],
+        "endDate": "1800057540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ComposeboxUnselectMatchOnTabExit",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "ComposeboxUnselectMatchOnTabExit"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "ComposeboxUnselectMatchOnTabExit"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "ComposeboxUnselectMatchOnTabExit"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ComposeboxUnselectMatchOnTabExit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ComposeboxUnselectMatchOnTabExit"
+          }
+        },
+        {
+          "name": "ForcedOff_ComposeboxUnselectMatchOnTabExit",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ComposeboxUnselectMatchOnTabExit"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8092.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
         ],
         "endDate": "1800057540"
       },
@@ -141014,106 +140824,6 @@
           "PLATFORM_IOS"
         ]
       },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DiscoverEnableSkinnerOnBling",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20261026",
-          "probabilityWeight": 33,
-          "googleWebExperimentId": "101005941",
-          "featureAssociation": {
-            "disableFeature": [
-              "IOSGCR_allow_unsorted_cache_index",
-              "IOSGCR_data_load_strategy_send_updates_when_no_reload",
-              "IOSGCR_disable_data_store_card_cache_expired_check",
-              "IOSGCR_disable_memory_card_cache_clear_cache_on_open_if_expired",
-              "IOSGCR_disable_open_expired_persistent_cache_check",
-              "IOSGCR_do_not_short_circuit_on_feed_operations_generator_failure",
-              "IOSGCR_dsc_enable_synchronous_feed_sourcer_observer_registration",
-              "IOSGCR_enable_data_loading_strategy",
-              "IOSGCR_enable_persisted_feed_deferred_disk_writes",
-              "IOSGCR_handle_feed_sourcer_processing_errors",
-              "IOSGCR_notify_collection_model_of_account_change",
-              "IOSGCR_notify_on_canceled_reload_by_cache",
-              "IOSGCR_reset_sourcer_on_account_switch",
-              "IOSGCR_use_live_feed_sourcer"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "EnabledHardened_20261026",
-          "probabilityWeight": 33,
-          "googleWebExperimentId": "101005942",
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_allow_unsorted_cache_index",
-              "IOSGCR_disable_data_store_card_cache_expired_check",
-              "IOSGCR_do_not_short_circuit_on_feed_operations_generator_failure",
-              "IOSGCR_dsc_enable_synchronous_feed_sourcer_observer_registration",
-              "IOSGCR_enable_persisted_feed_deferred_disk_writes",
-              "IOSGCR_handle_feed_sourcer_processing_errors",
-              "IOSGCR_notify_on_canceled_reload_by_cache",
-              "IOSGCR_use_live_feed_sourcer"
-            ],
-            "disableFeature": [
-              "IOSGCR_data_load_strategy_send_updates_when_no_reload",
-              "IOSGCR_disable_memory_card_cache_clear_cache_on_open_if_expired",
-              "IOSGCR_disable_open_expired_persistent_cache_check",
-              "IOSGCR_enable_data_loading_strategy",
-              "IOSGCR_notify_collection_model_of_account_change",
-              "IOSGCR_reset_sourcer_on_account_switch"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "EnabledDLS_20261026",
-          "probabilityWeight": 33,
-          "googleWebExperimentId": "101005943",
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_allow_unsorted_cache_index",
-              "IOSGCR_data_load_strategy_send_updates_when_no_reload",
-              "IOSGCR_disable_data_store_card_cache_expired_check",
-              "IOSGCR_disable_memory_card_cache_clear_cache_on_open_if_expired",
-              "IOSGCR_disable_open_expired_persistent_cache_check",
-              "IOSGCR_do_not_short_circuit_on_feed_operations_generator_failure",
-              "IOSGCR_dsc_enable_synchronous_feed_sourcer_observer_registration",
-              "IOSGCR_enable_data_loading_strategy",
-              "IOSGCR_enable_persisted_feed_deferred_disk_writes",
-              "IOSGCR_handle_feed_sourcer_processing_errors",
-              "IOSGCR_use_live_feed_sourcer"
-            ],
-            "disableFeature": [
-              "IOSGCR_notify_collection_model_of_account_change",
-              "IOSGCR_notify_on_canceled_reload_by_cache",
-              "IOSGCR_reset_sourcer_on_account_switch"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 1
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.0.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1796515140"
-      },
-      "randomizationSeed": 3397545247,
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
@@ -174771,6 +174481,577 @@
       "filter": {
         "minVersion": "153.*",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "locale": [
+          "af",
+          "am",
+          "bg",
+          "bn",
+          "ca",
+          "cs",
+          "da",
+          "de",
+          "el",
+          "es",
+          "es-419",
+          "et",
+          "fi",
+          "fil",
+          "fr",
+          "gu",
+          "hi",
+          "hr",
+          "hu",
+          "id",
+          "it",
+          "ja",
+          "kn",
+          "ko",
+          "lt",
+          "lv",
+          "ml",
+          "mr",
+          "ms",
+          "nl",
+          "no",
+          "pl",
+          "pt-BR",
+          "pt-PT",
+          "ro",
+          "ru",
+          "sk",
+          "sl",
+          "sr",
+          "sv",
+          "sw",
+          "ta",
+          "te",
+          "th",
+          "tr",
+          "uk",
+          "vi",
+          "zh-CN",
+          "zh-TW",
+          "en-GB",
+          "en-US"
+        ],
+        "formFactor": [
+          "PHONE",
+          null
+        ],
+        "country": [
+          "ca",
+          "nz",
+          "as",
+          "au",
+          "bd",
+          "bt",
+          "bn",
+          "kh",
+          "cx",
+          "cc",
+          "ck",
+          "fj",
+          "pf",
+          "gu",
+          "hm",
+          "hk",
+          "id",
+          "ki",
+          "la",
+          "mo",
+          "my",
+          "mv",
+          "mh",
+          "fm",
+          "mn",
+          "mm",
+          "nr",
+          "np",
+          "nc",
+          "nu",
+          "nf",
+          "mp",
+          "pw",
+          "pg",
+          "ph",
+          "pk",
+          "pn",
+          "ws",
+          "sg",
+          "sb",
+          "lk",
+          "tw",
+          "th",
+          "tl",
+          "tk",
+          "to",
+          "tv",
+          "vu",
+          "vn",
+          "wf",
+          "kr",
+          "ag",
+          "ar",
+          "bb",
+          "bz",
+          "bo",
+          "br",
+          "cl",
+          "co",
+          "cr",
+          "dm",
+          "do",
+          "ec",
+          "sv",
+          "gd",
+          "gt",
+          "gy",
+          "ht",
+          "hn",
+          "jm",
+          "mx",
+          "ni",
+          "pa",
+          "py",
+          "pe",
+          "kn",
+          "lc",
+          "vc",
+          "sr",
+          "bs",
+          "tt",
+          "uy",
+          "ve",
+          "ae",
+          "am",
+          "ao",
+          "aq",
+          "az",
+          "ba",
+          "bf",
+          "bh",
+          "bi",
+          "bj",
+          "bw",
+          "cd",
+          "cf",
+          "cg",
+          "ci",
+          "cm",
+          "cv",
+          "dj",
+          "dz",
+          "eg",
+          "eh",
+          "er",
+          "et",
+          "ga",
+          "ge",
+          "gh",
+          "gm",
+          "gn",
+          "gq",
+          "gw",
+          "il",
+          "iq",
+          "jo",
+          "ke",
+          "kg",
+          "km",
+          "kw",
+          "kz",
+          "lb",
+          "lr",
+          "ls",
+          "ly",
+          "ma",
+          "md",
+          "me",
+          "mg",
+          "mk",
+          "ml",
+          "mr",
+          "mu",
+          "mw",
+          "mz",
+          "na",
+          "ne",
+          "ng",
+          "om",
+          "pr",
+          "ps",
+          "qa",
+          "rs",
+          "rw",
+          "sa",
+          "sc",
+          "sd",
+          "sl",
+          "sn",
+          "so",
+          "ss",
+          "st",
+          "sz",
+          "td",
+          "tg",
+          "tj",
+          "tm",
+          "tn",
+          "tz",
+          "ua",
+          "ug",
+          "um",
+          "uz",
+          "vi",
+          "xk",
+          "ye",
+          "za",
+          "zm",
+          "zw",
+          "ai",
+          "bm",
+          "fk",
+          "gb",
+          "gg",
+          "gi",
+          "gs",
+          "im",
+          "io",
+          "je",
+          "ky",
+          "ms",
+          "sh",
+          "tc",
+          "vg"
+        ],
+        "endDate": "1799884740"
+      }
+    },
+    {
+      "name": "GlicAndroidPublicLocales",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Arm4_7dLimits_prefixed_NoActor_20261027_countries_bb",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_availability",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocked_by",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocking",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_1",
+              "value": "name:adaptive_toolbar_customization_new_tab_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_2",
+              "value": "name:adaptive_toolbar_customization_open_in_browser_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_3",
+              "value": "name:adaptive_toolbar_customization_share_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_4",
+              "value": "name:adaptive_toolbar_customization_voice_search_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_5",
+              "value": "name:adaptive_toolbar_customization_translate_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_6",
+              "value": "name:adaptive_toolbar_customization_read_aloud_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_7",
+              "value": "name:adaptive_toolbar_customization_add_to_bookmarks_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_trigger",
+              "value": "name:adaptive_toolbar_glic_iph_trigger;comparator:==0;window:3650;storage:3650"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_used",
+              "value": "name:adaptive_toolbar_customization_glic_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate_impact",
+              "value": "none"
+            },
+            {
+              "name": "dont_show_fusebox",
+              "value": "true"
+            },
+            {
+              "name": "enabled_countries",
+              "value": "us,in,ca,nz,as,au,bd,bt,bn,kh,cx,cc,ck,fj,pf,gu,hm,hk,id,ki,la,mo,my,mv,mh,fm,mn,mm,nr,np,nc,nu,nf,mp,pw,pg,ph,pk,pn,ws,sg,sb,lk,tw,th,tl,tk,to,tv,vu,vn,wf,kr,ag,ar,bb,bz,bo,br,cl,co,cr,dm,do,ec,sv,gd,gt,gy,ht,hn,jm,mx,ni,pa,py,pe,kn,lc,vc,sr,bs,tt,uy,ve,ae,am,ao,aq,az,ba,bf,bh,bi,bj,bw,cd,cf,cg,ci,cm,cv,dj,dz,eg,eh,er,et,ga,ge,gh,gm,gn,gq,gw,il,iq,jo,ke,kg,km,kw,kz,lb,lr,ls,ly,ma,md,me,mg,mk,ml,mr,mu,mw,mz,na,ne,ng,om,pr,ps,qa,rs,rw,sa,sc,sd,sl,sn,so,ss,st,sz,td,tg,tj,tm,tn,tz,ua,ug,um,uz,vi,xk,ye,za,zm,zw,ai,bm,fk,gb,gg,gi,gs,im,io,je,ky,ms,sh,tc,vg"
+            },
+            {
+              "name": "enabled_locales",
+              "value": "af,am,bg,bn,ca,cs,da,de,el,es,es-419,et,fi,fil,fr,gu,hi,hr,hu,id,it,ja,kn,ko,lt,lv,ml,mr,ms,nl,no,pl,pt-BR,pt-PT,ro,ru,sk,sl,sr,sv,sw,ta,te,th,tr,uk,vi,zh-CN,zh-TW,en-GB,en-US"
+            },
+            {
+              "name": "glic-bottom-sheet-promo",
+              "value": "false"
+            },
+            {
+              "name": "glic-min-required-ram-mb",
+              "value": "3600"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicCountryFiltering",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ],
+            "disableFeature": [
+              "GlicActor",
+              "GlicDefaultToLastActiveConversation",
+              "GlicTieredRolloutV2"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261027_countries_bb",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicDefaultToLastActiveConversation",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "GlicTieredRolloutV2",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicDefaultToLastActiveConversation",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "GlicTieredRolloutV2",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ContextualCueing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ContextualCueing"
+          }
+        },
+        {
+          "name": "ForcedOff_ContextualCueing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ContextualCueing"
+          }
+        },
+        {
+          "name": "ForcedOn_FedCmEmbedderInitiatedLogin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "FedCmEmbedderInitiatedLogin"
+          }
+        },
+        {
+          "name": "ForcedOff_FedCmEmbedderInitiatedLogin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "FedCmEmbedderInitiatedLogin"
+          }
+        },
+        {
+          "name": "ForcedOn_Glic",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "Glic"
+          }
+        },
+        {
+          "name": "ForcedOff_Glic",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "Glic"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicActor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicActor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicCountryFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicCountryFiltering"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicCountryFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicCountryFiltering"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicDefaultToLastActiveConversation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicDefaultToLastActiveConversation"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicDefaultToLastActiveConversation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicDefaultToLastActiveConversation"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicLocaleFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicLocaleFiltering"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicLocaleFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicLocaleFiltering"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicRollout"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicRollout"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicTieredRolloutV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicTieredRolloutV2"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicTieredRolloutV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicTieredRolloutV2"
+          }
+        },
+        {
+          "name": "ForcedOn_IPH_AdaptiveButtonPinGlicToolbarButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPH_AdaptiveButtonPinGlicToolbarButton"
+          }
+        },
+        {
+          "name": "ForcedOff_IPH_AdaptiveButtonPinGlicToolbarButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPH_AdaptiveButtonPinGlicToolbarButton"
+          }
+        },
+        {
+          "name": "ForcedOn_IPH_GlicPromoAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPH_GlicPromoAndroid"
+          }
+        },
+        {
+          "name": "ForcedOff_IPH_GlicPromoAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPH_GlicPromoAndroid"
+          }
+        },
+        {
+          "name": "ForcedOn_TabBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "TabBottomSheet"
+          }
+        },
+        {
+          "name": "ForcedOff_TabBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "TabBottomSheet"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.*",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -175019,6 +175300,378 @@
           "sh",
           "tc",
           "vg"
+        ],
+        "endDate": "1799884740"
+      }
+    },
+    {
+      "name": "GlicAndroidPublicLocales",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Arm4_7dLimits_prefixed_NoActor_20261002_in_bb",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_availability",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocked_by",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocking",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_1",
+              "value": "name:adaptive_toolbar_customization_new_tab_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_2",
+              "value": "name:adaptive_toolbar_customization_open_in_browser_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_3",
+              "value": "name:adaptive_toolbar_customization_share_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_4",
+              "value": "name:adaptive_toolbar_customization_voice_search_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_5",
+              "value": "name:adaptive_toolbar_customization_translate_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_6",
+              "value": "name:adaptive_toolbar_customization_read_aloud_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_7",
+              "value": "name:adaptive_toolbar_customization_add_to_bookmarks_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_trigger",
+              "value": "name:adaptive_toolbar_glic_iph_trigger;comparator:==0;window:3650;storage:3650"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_used",
+              "value": "name:adaptive_toolbar_customization_glic_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate_impact",
+              "value": "none"
+            },
+            {
+              "name": "dont_show_fusebox",
+              "value": "true"
+            },
+            {
+              "name": "enabled_countries",
+              "value": "us,in"
+            },
+            {
+              "name": "enabled_locales",
+              "value": "af,am,bg,bn,ca,cs,da,de,el,es,es-419,et,fi,fil,fr,gu,hi,hr,hu,id,it,ja,kn,ko,lt,lv,ml,mr,ms,nl,no,pl,pt-BR,pt-PT,ro,ru,sk,sl,sr,sv,sw,ta,te,th,tr,uk,vi,zh-CN,zh-TW,en-GB,en-US"
+            },
+            {
+              "name": "glic-bottom-sheet-promo",
+              "value": "false"
+            },
+            {
+              "name": "glic-min-required-ram-mb",
+              "value": "3600"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicCountryFiltering",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ],
+            "disableFeature": [
+              "GlicActor",
+              "GlicDefaultToLastActiveConversation",
+              "GlicTieredRolloutV2"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261002_in_bb",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicDefaultToLastActiveConversation",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "GlicTieredRolloutV2",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicDefaultToLastActiveConversation",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "GlicTieredRolloutV2",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ContextualCueing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ContextualCueing"
+          }
+        },
+        {
+          "name": "ForcedOff_ContextualCueing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ContextualCueing"
+          }
+        },
+        {
+          "name": "ForcedOn_FedCmEmbedderInitiatedLogin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "FedCmEmbedderInitiatedLogin"
+          }
+        },
+        {
+          "name": "ForcedOff_FedCmEmbedderInitiatedLogin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "FedCmEmbedderInitiatedLogin"
+          }
+        },
+        {
+          "name": "ForcedOn_Glic",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "Glic"
+          }
+        },
+        {
+          "name": "ForcedOff_Glic",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "Glic"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicActor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicActor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicCountryFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicCountryFiltering"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicCountryFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicCountryFiltering"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicDefaultToLastActiveConversation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicDefaultToLastActiveConversation"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicDefaultToLastActiveConversation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicDefaultToLastActiveConversation"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicLocaleFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicLocaleFiltering"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicLocaleFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicLocaleFiltering"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicRollout"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicRollout"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicTieredRolloutV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicTieredRolloutV2"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicTieredRolloutV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicTieredRolloutV2"
+          }
+        },
+        {
+          "name": "ForcedOn_IPH_AdaptiveButtonPinGlicToolbarButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPH_AdaptiveButtonPinGlicToolbarButton"
+          }
+        },
+        {
+          "name": "ForcedOff_IPH_AdaptiveButtonPinGlicToolbarButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPH_AdaptiveButtonPinGlicToolbarButton"
+          }
+        },
+        {
+          "name": "ForcedOn_IPH_GlicPromoAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPH_GlicPromoAndroid"
+          }
+        },
+        {
+          "name": "ForcedOff_IPH_GlicPromoAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPH_GlicPromoAndroid"
+          }
+        },
+        {
+          "name": "ForcedOn_TabBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "TabBottomSheet"
+          }
+        },
+        {
+          "name": "ForcedOff_TabBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "TabBottomSheet"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.*",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "locale": [
+          "af",
+          "am",
+          "bg",
+          "bn",
+          "ca",
+          "cs",
+          "da",
+          "de",
+          "el",
+          "et",
+          "fi",
+          "fil",
+          "gu",
+          "hr",
+          "hu",
+          "it",
+          "kn",
+          "lt",
+          "lv",
+          "ml",
+          "mr",
+          "ms",
+          "nl",
+          "no",
+          "pl",
+          "ro",
+          "sk",
+          "sl",
+          "sr",
+          "sv",
+          "sw",
+          "ta",
+          "te",
+          "tr",
+          "uk"
+        ],
+        "formFactor": [
+          "PHONE",
+          null
+        ],
+        "country": [
+          "in"
         ],
         "endDate": "1799884740"
       }
@@ -175716,6 +176369,357 @@
       "filter": {
         "minVersion": "153.*",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "locale": [
+          "es",
+          "es-419",
+          "fr",
+          "hi",
+          "id",
+          "ja",
+          "ko",
+          "pt-BR",
+          "pt-PT",
+          "ru",
+          "th",
+          "vi",
+          "zh-CN",
+          "zh-TW"
+        ],
+        "formFactor": [
+          "PHONE",
+          null
+        ],
+        "country": [
+          "in"
+        ],
+        "endDate": "1799884740"
+      }
+    },
+    {
+      "name": "GlicAndroidPublicLocales",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Arm4_7dLimits_prefixed_20261002_in_bd",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_availability",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocked_by",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocking",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_1",
+              "value": "name:adaptive_toolbar_customization_new_tab_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_2",
+              "value": "name:adaptive_toolbar_customization_open_in_browser_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_3",
+              "value": "name:adaptive_toolbar_customization_share_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_4",
+              "value": "name:adaptive_toolbar_customization_voice_search_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_5",
+              "value": "name:adaptive_toolbar_customization_translate_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_6",
+              "value": "name:adaptive_toolbar_customization_read_aloud_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_7",
+              "value": "name:adaptive_toolbar_customization_add_to_bookmarks_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_trigger",
+              "value": "name:adaptive_toolbar_glic_iph_trigger;comparator:==0;window:3650;storage:3650"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_used",
+              "value": "name:adaptive_toolbar_customization_glic_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate_impact",
+              "value": "none"
+            },
+            {
+              "name": "dont_show_fusebox",
+              "value": "true"
+            },
+            {
+              "name": "enabled_countries",
+              "value": "us,in"
+            },
+            {
+              "name": "enabled_locales",
+              "value": "af,am,bg,bn,ca,cs,da,de,el,es,es-419,et,fi,fil,fr,gu,hi,hr,hu,id,it,ja,kn,ko,lt,lv,ml,mr,ms,nl,no,pl,pt-BR,pt-PT,ro,ru,sk,sl,sr,sv,sw,ta,te,th,tr,uk,vi,zh-CN,zh-TW,en-GB,en-US"
+            },
+            {
+              "name": "glic-bottom-sheet-promo",
+              "value": "false"
+            },
+            {
+              "name": "glic-min-required-ram-mb",
+              "value": "3600"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ],
+            "disableFeature": [
+              "GlicDefaultToLastActiveConversation",
+              "GlicTieredRolloutV2"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261002_in_bd",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicDefaultToLastActiveConversation",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "GlicTieredRolloutV2",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicDefaultToLastActiveConversation",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "GlicTieredRolloutV2",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ContextualCueing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ContextualCueing"
+          }
+        },
+        {
+          "name": "ForcedOff_ContextualCueing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ContextualCueing"
+          }
+        },
+        {
+          "name": "ForcedOn_FedCmEmbedderInitiatedLogin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "FedCmEmbedderInitiatedLogin"
+          }
+        },
+        {
+          "name": "ForcedOff_FedCmEmbedderInitiatedLogin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "FedCmEmbedderInitiatedLogin"
+          }
+        },
+        {
+          "name": "ForcedOn_Glic",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "Glic"
+          }
+        },
+        {
+          "name": "ForcedOff_Glic",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "Glic"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicActor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicActor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicCountryFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicCountryFiltering"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicCountryFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicCountryFiltering"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicDefaultToLastActiveConversation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicDefaultToLastActiveConversation"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicDefaultToLastActiveConversation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicDefaultToLastActiveConversation"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicLocaleFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicLocaleFiltering"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicLocaleFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicLocaleFiltering"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicRollout"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicRollout"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicTieredRolloutV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicTieredRolloutV2"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicTieredRolloutV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicTieredRolloutV2"
+          }
+        },
+        {
+          "name": "ForcedOn_IPH_AdaptiveButtonPinGlicToolbarButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPH_AdaptiveButtonPinGlicToolbarButton"
+          }
+        },
+        {
+          "name": "ForcedOff_IPH_AdaptiveButtonPinGlicToolbarButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPH_AdaptiveButtonPinGlicToolbarButton"
+          }
+        },
+        {
+          "name": "ForcedOn_IPH_GlicPromoAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPH_GlicPromoAndroid"
+          }
+        },
+        {
+          "name": "ForcedOff_IPH_GlicPromoAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPH_GlicPromoAndroid"
+          }
+        },
+        {
+          "name": "ForcedOn_TabBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "TabBottomSheet"
+          }
+        },
+        {
+          "name": "ForcedOff_TabBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "TabBottomSheet"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.*",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -175744,6 +176748,378 @@
         ],
         "country": [
           "in"
+        ],
+        "endDate": "1799884740"
+      }
+    },
+    {
+      "name": "GlicAndroidPublicLocales",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Arm4_7dLimits_prefixed_NoActor_20261002_us_bb",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_availability",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocked_by",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocking",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_1",
+              "value": "name:adaptive_toolbar_customization_new_tab_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_2",
+              "value": "name:adaptive_toolbar_customization_open_in_browser_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_3",
+              "value": "name:adaptive_toolbar_customization_share_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_4",
+              "value": "name:adaptive_toolbar_customization_voice_search_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_5",
+              "value": "name:adaptive_toolbar_customization_translate_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_6",
+              "value": "name:adaptive_toolbar_customization_read_aloud_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_7",
+              "value": "name:adaptive_toolbar_customization_add_to_bookmarks_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_trigger",
+              "value": "name:adaptive_toolbar_glic_iph_trigger;comparator:==0;window:3650;storage:3650"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_used",
+              "value": "name:adaptive_toolbar_customization_glic_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate_impact",
+              "value": "none"
+            },
+            {
+              "name": "dont_show_fusebox",
+              "value": "true"
+            },
+            {
+              "name": "enabled_countries",
+              "value": "us,in"
+            },
+            {
+              "name": "enabled_locales",
+              "value": "af,am,bg,bn,ca,cs,da,de,el,es,es-419,et,fi,fil,fr,gu,hi,hr,hu,id,it,ja,kn,ko,lt,lv,ml,mr,ms,nl,no,pl,pt-BR,pt-PT,ro,ru,sk,sl,sr,sv,sw,ta,te,th,tr,uk,vi,zh-CN,zh-TW,en-GB,en-US"
+            },
+            {
+              "name": "glic-bottom-sheet-promo",
+              "value": "false"
+            },
+            {
+              "name": "glic-min-required-ram-mb",
+              "value": "3600"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicCountryFiltering",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ],
+            "disableFeature": [
+              "GlicActor",
+              "GlicDefaultToLastActiveConversation",
+              "GlicTieredRolloutV2"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261002_us_bb",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicDefaultToLastActiveConversation",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "GlicTieredRolloutV2",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicDefaultToLastActiveConversation",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "GlicTieredRolloutV2",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ContextualCueing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ContextualCueing"
+          }
+        },
+        {
+          "name": "ForcedOff_ContextualCueing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ContextualCueing"
+          }
+        },
+        {
+          "name": "ForcedOn_FedCmEmbedderInitiatedLogin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "FedCmEmbedderInitiatedLogin"
+          }
+        },
+        {
+          "name": "ForcedOff_FedCmEmbedderInitiatedLogin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "FedCmEmbedderInitiatedLogin"
+          }
+        },
+        {
+          "name": "ForcedOn_Glic",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "Glic"
+          }
+        },
+        {
+          "name": "ForcedOff_Glic",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "Glic"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicActor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicActor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicCountryFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicCountryFiltering"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicCountryFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicCountryFiltering"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicDefaultToLastActiveConversation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicDefaultToLastActiveConversation"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicDefaultToLastActiveConversation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicDefaultToLastActiveConversation"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicLocaleFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicLocaleFiltering"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicLocaleFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicLocaleFiltering"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicRollout"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicRollout"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicTieredRolloutV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicTieredRolloutV2"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicTieredRolloutV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicTieredRolloutV2"
+          }
+        },
+        {
+          "name": "ForcedOn_IPH_AdaptiveButtonPinGlicToolbarButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPH_AdaptiveButtonPinGlicToolbarButton"
+          }
+        },
+        {
+          "name": "ForcedOff_IPH_AdaptiveButtonPinGlicToolbarButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPH_AdaptiveButtonPinGlicToolbarButton"
+          }
+        },
+        {
+          "name": "ForcedOn_IPH_GlicPromoAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPH_GlicPromoAndroid"
+          }
+        },
+        {
+          "name": "ForcedOff_IPH_GlicPromoAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPH_GlicPromoAndroid"
+          }
+        },
+        {
+          "name": "ForcedOn_TabBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "TabBottomSheet"
+          }
+        },
+        {
+          "name": "ForcedOff_TabBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "TabBottomSheet"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.*",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "locale": [
+          "af",
+          "am",
+          "bg",
+          "bn",
+          "ca",
+          "cs",
+          "da",
+          "de",
+          "el",
+          "et",
+          "fi",
+          "fil",
+          "gu",
+          "hr",
+          "hu",
+          "it",
+          "kn",
+          "lt",
+          "lv",
+          "ml",
+          "mr",
+          "ms",
+          "nl",
+          "no",
+          "pl",
+          "ro",
+          "sk",
+          "sl",
+          "sr",
+          "sv",
+          "sw",
+          "ta",
+          "te",
+          "tr",
+          "uk"
+        ],
+        "formFactor": [
+          "PHONE",
+          null
+        ],
+        "country": [
+          "us"
         ],
         "endDate": "1799884740"
       }
@@ -176110,6 +177486,357 @@
           "te",
           "tr",
           "uk"
+        ],
+        "formFactor": [
+          "PHONE",
+          null
+        ],
+        "country": [
+          "us"
+        ],
+        "endDate": "1799884740"
+      }
+    },
+    {
+      "name": "GlicAndroidPublicLocales",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Arm4_7dLimits_prefixed_20261002_us_bd",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_availability",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocked_by",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_blocking",
+              "value": "none"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_1",
+              "value": "name:adaptive_toolbar_customization_new_tab_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_2",
+              "value": "name:adaptive_toolbar_customization_open_in_browser_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_3",
+              "value": "name:adaptive_toolbar_customization_share_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_4",
+              "value": "name:adaptive_toolbar_customization_voice_search_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_5",
+              "value": "name:adaptive_toolbar_customization_translate_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_6",
+              "value": "name:adaptive_toolbar_customization_read_aloud_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_7",
+              "value": "name:adaptive_toolbar_customization_add_to_bookmarks_opened;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_trigger",
+              "value": "name:adaptive_toolbar_glic_iph_trigger;comparator:==0;window:3650;storage:3650"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_event_used",
+              "value": "name:adaptive_toolbar_customization_glic_clicked;comparator:==0;window:7;storage:360"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate",
+              "value": "any"
+            },
+            {
+              "name": "IPH_AdaptiveButtonPinGlicToolbarButton_session_rate_impact",
+              "value": "none"
+            },
+            {
+              "name": "dont_show_fusebox",
+              "value": "true"
+            },
+            {
+              "name": "enabled_countries",
+              "value": "us,in"
+            },
+            {
+              "name": "enabled_locales",
+              "value": "af,am,bg,bn,ca,cs,da,de,el,es,es-419,et,fi,fil,fr,gu,hi,hr,hu,id,it,ja,kn,ko,lt,lv,ml,mr,ms,nl,no,pl,pt-BR,pt-PT,ro,ru,sk,sl,sr,sv,sw,ta,te,th,tr,uk,vi,zh-CN,zh-TW,en-GB,en-US"
+            },
+            {
+              "name": "glic-bottom-sheet-promo",
+              "value": "false"
+            },
+            {
+              "name": "glic-min-required-ram-mb",
+              "value": "3600"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ],
+            "disableFeature": [
+              "GlicDefaultToLastActiveConversation",
+              "GlicTieredRolloutV2"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261002_us_bd",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicDefaultToLastActiveConversation",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "GlicTieredRolloutV2",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualCueing",
+              "FedCmEmbedderInitiatedLogin",
+              "Glic",
+              "GlicActor",
+              "GlicCountryFiltering",
+              "GlicDefaultToLastActiveConversation",
+              "GlicLocaleFiltering",
+              "GlicRollout",
+              "GlicTieredRolloutV2",
+              "IPH_AdaptiveButtonPinGlicToolbarButton",
+              "IPH_GlicPromoAndroid",
+              "TabBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ContextualCueing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ContextualCueing"
+          }
+        },
+        {
+          "name": "ForcedOff_ContextualCueing",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ContextualCueing"
+          }
+        },
+        {
+          "name": "ForcedOn_FedCmEmbedderInitiatedLogin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "FedCmEmbedderInitiatedLogin"
+          }
+        },
+        {
+          "name": "ForcedOff_FedCmEmbedderInitiatedLogin",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "FedCmEmbedderInitiatedLogin"
+          }
+        },
+        {
+          "name": "ForcedOn_Glic",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "Glic"
+          }
+        },
+        {
+          "name": "ForcedOff_Glic",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "Glic"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicActor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicActor",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicActor"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicCountryFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicCountryFiltering"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicCountryFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicCountryFiltering"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicDefaultToLastActiveConversation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicDefaultToLastActiveConversation"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicDefaultToLastActiveConversation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicDefaultToLastActiveConversation"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicLocaleFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicLocaleFiltering"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicLocaleFiltering",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicLocaleFiltering"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicRollout"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicRollout"
+          }
+        },
+        {
+          "name": "ForcedOn_GlicTieredRolloutV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicTieredRolloutV2"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicTieredRolloutV2",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicTieredRolloutV2"
+          }
+        },
+        {
+          "name": "ForcedOn_IPH_AdaptiveButtonPinGlicToolbarButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPH_AdaptiveButtonPinGlicToolbarButton"
+          }
+        },
+        {
+          "name": "ForcedOff_IPH_AdaptiveButtonPinGlicToolbarButton",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPH_AdaptiveButtonPinGlicToolbarButton"
+          }
+        },
+        {
+          "name": "ForcedOn_IPH_GlicPromoAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IPH_GlicPromoAndroid"
+          }
+        },
+        {
+          "name": "ForcedOff_IPH_GlicPromoAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IPH_GlicPromoAndroid"
+          }
+        },
+        {
+          "name": "ForcedOn_TabBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "TabBottomSheet"
+          }
+        },
+        {
+          "name": "ForcedOff_TabBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "TabBottomSheet"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.*",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "locale": [
+          "es",
+          "es-419",
+          "fr",
+          "hi",
+          "id",
+          "ja",
+          "ko",
+          "pt-BR",
+          "pt-PT",
+          "ru",
+          "th",
+          "vi",
+          "zh-CN",
+          "zh-TW"
         ],
         "formFactor": [
           "PHONE",
@@ -186315,6 +188042,101 @@
         "country": [
           "us"
         ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "GlicTextSelectionContextMenuV2",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20261029",
+          "probabilityWeight": 25,
+          "googleWebExperimentId": "101006149",
+          "featureAssociation": {
+            "enableFeature": [
+              "GlicTextSelectionContextMenu"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Arm1_ChipSubmit_20261029",
+          "probabilityWeight": 25,
+          "googleWebExperimentId": "101006150",
+          "featureAssociation": {
+            "enableFeature": [
+              "GlicTextSelectionContextMenu"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Arm2_MessageFirstFre_20261029",
+          "probabilityWeight": 25,
+          "googleWebExperimentId": "101006151",
+          "param": [
+            {
+              "name": "message_first_fre",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "GlicTextSelectionContextMenu"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Arm3_AutoSubmit_20261029",
+          "probabilityWeight": 25,
+          "googleWebExperimentId": "101006152",
+          "param": [
+            {
+              "name": "auto_submit",
+              "value": "true"
+            },
+            {
+              "name": "message_first_fre",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "GlicTextSelectionContextMenu"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_GlicTextSelectionContextMenu",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicTextSelectionContextMenu"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicTextSelectionContextMenu",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicTextSelectionContextMenu"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "158.0.8105.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1799884740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -253307,6 +255129,98 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "NtpGoogleLogo26",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledLaunch",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpGoogleLogo26"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_NtpGoogleLogo26",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NtpGoogleLogo26"
+          }
+        },
+        {
+          "name": "ForcedOff_NtpGoogleLogo26",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NtpGoogleLogo26"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7967.0",
+        "maxVersion": "159.0.8133.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "formFactor": [
+          "DESKTOP"
+        ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NtpGoogleLogo26",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledLaunch",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpGoogleLogo26"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_NtpGoogleLogo26",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NtpGoogleLogo26"
+          }
+        },
+        {
+          "name": "ForcedOff_NtpGoogleLogo26",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NtpGoogleLogo26"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "152.0.7967.0",
+        "maxVersion": "159.0.8133.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "IframeOneGoogleBarDesktopLaunch",
       "consistency": "PERMANENT",
       "experiment": [
@@ -253349,6 +255263,64 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS"
         ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NtpLazyLoadComposebox",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "NtpLazyLoadComposebox"
+            ]
+          }
+        },
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpLazyLoadComposebox"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_NtpLazyLoadComposebox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NtpLazyLoadComposebox"
+          }
+        },
+        {
+          "name": "ForcedOff_NtpLazyLoadComposebox",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NtpLazyLoadComposebox"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8134.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "formFactor": [
+          "DESKTOP"
+        ],
+        "endDate": "1801439940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -355423,6 +357395,73 @@
       }
     },
     {
+      "name": "TrackAnimatedSourcesForInheritedProperties",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "TrackAnimatedSourcesForInheritedProperties"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "TrackAnimatedSourcesForInheritedProperties"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "TrackAnimatedSourcesForInheritedProperties"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_TrackAnimatedSourcesForInheritedProperties",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "TrackAnimatedSourcesForInheritedProperties"
+          }
+        },
+        {
+          "name": "ForcedOff_TrackAnimatedSourcesForInheritedProperties",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "TrackAnimatedSourcesForInheritedProperties"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "158.*",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1801439940"
+      }
+    },
+    {
       "name": "TransactionsShadowDomSupport",
       "consistency": "PERMANENT",
       "experiment": [
@@ -355504,7 +357543,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_eadt_20261026",
+          "name": "Control_ests_20261102",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -355513,8 +357552,91 @@
           }
         },
         {
-          "name": "Enabled_eadt_20261026",
+          "name": "Enabled_ests_20261102",
           "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "ef",
+              "value": "ests"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "TranslateElementExperimentFeatures"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_TranslateElementExperimentFeatures",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "TranslateElementExperimentFeatures"
+          }
+        },
+        {
+          "name": "ForcedOff_TranslateElementExperimentFeatures",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "TranslateElementExperimentFeatures"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.0.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_IOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_WINDOWS"
+        ],
+        "endDate": "1800057540"
+      }
+    },
+    {
+      "name": "TranslateElementFeatures",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_eadt_20261103",
+          "probabilityWeight": 40,
+          "featureAssociation": {
+            "disableFeature": [
+              "TranslateElementExperimentFeatures"
+            ]
+          }
+        },
+        {
+          "name": "Control_ests_20261102",
+          "probabilityWeight": 10,
+          "featureAssociation": {
+            "disableFeature": [
+              "TranslateElementExperimentFeatures"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_ests_20261102",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "ef",
+              "value": "ests"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "TranslateElementExperimentFeatures"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_eadt_20261103",
+          "probabilityWeight": 40,
           "param": [
             {
               "name": "ef",
@@ -355599,6 +357721,69 @@
           "CANARY",
           "DEV",
           "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_IOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_WINDOWS"
+        ],
+        "endDate": "1800057540"
+      }
+    },
+    {
+      "name": "TranslateElementFeatures",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_ests_20261102",
+          "probabilityWeight": 25,
+          "featureAssociation": {
+            "disableFeature": [
+              "TranslateElementExperimentFeatures"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_ests_20261102",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "ef",
+              "value": "ests"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "TranslateElementExperimentFeatures"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "ForcedOn_TranslateElementExperimentFeatures",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "TranslateElementExperimentFeatures"
+          }
+        },
+        {
+          "name": "ForcedOff_TranslateElementExperimentFeatures",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "TranslateElementExperimentFeatures"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.0.0",
+        "channel": [
           "STABLE"
         ],
         "platform": [
@@ -479671,5 +481856,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261102-170052.457000-production"
+  "version": "20261103-010033.709000-production"
 }
