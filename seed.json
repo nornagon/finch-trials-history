@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTEwNC0wMTAwMzIuNzc1MDAwEgQgACgB#9XX0W5hOLMA=",
+  "serialNumber": "SMChYyMDI2MTEwNC0wOTAwNDYuMzA4MDAwEgQgACgB#5ey65t5JBqs=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -56153,6 +56153,173 @@
         "endDate": "1796947140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "AutofillAiPrivateInferenceNoticeBottomSheet",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Preperiod_Enabled_20261103",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "Preperiod_Control_20261103",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillAiPrivateInferenceNoticeBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillAiPrivateInferenceNoticeBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillAiPrivateInferenceNoticeBottomSheet"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillAiPrivateInferenceNoticeBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillAiPrivateInferenceNoticeBottomSheet"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8097.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1799798340"
+      }
+    },
+    {
+      "name": "AutofillAiPrivateInferenceNoticeBottomSheet",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261103",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillAiPrivateInferenceNoticeBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261103",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillAiPrivateInferenceNoticeBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillAiPrivateInferenceNoticeBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillAiPrivateInferenceNoticeBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillAiPrivateInferenceNoticeBottomSheet"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillAiPrivateInferenceNoticeBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillAiPrivateInferenceNoticeBottomSheet"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8097.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1799798340"
+      }
+    },
+    {
+      "name": "AutofillAiPrivateInferenceNoticeBottomSheet",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Preperiod_Enabled_20261103",
+          "probabilityWeight": 1
+        },
+        {
+          "name": "Preperiod_Control_20261103",
+          "probabilityWeight": 1
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillAiPrivateInferenceNoticeBottomSheet"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillAiPrivateInferenceNoticeBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillAiPrivateInferenceNoticeBottomSheet"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillAiPrivateInferenceNoticeBottomSheet",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillAiPrivateInferenceNoticeBottomSheet"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8097.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1799798340"
+      }
     },
     {
       "name": "AutofillAiServerModelUseCacheResults",
@@ -136344,8 +136511,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_Post149Split_RestrictedOnly",
-          "probabilityWeight": 50,
+          "name": "Enabled",
+          "probabilityWeight": 100,
           "featureAssociation": {
             "enableFeature": [
               "DeviceBoundSessionsForRestrictedSites",
@@ -136356,160 +136523,74 @@
           }
         },
         {
-          "name": "Control_Post149Split_RestrictedOnly",
-          "probabilityWeight": 50,
+          "name": "ForcedOn_DeviceBoundSessionsForRestrictedSites",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "disableFeature": [
-              "DeviceBoundSessionsForRestrictedSites",
-              "EnableChromeRefreshTokenBinding",
-              "EnableOAuthMultiloginStandardCookiesBinding",
-              "EnableOAuthMultiloginStandardCookiesBindingForSecondaryPartitions"
-            ]
+            "forcingFeatureOn": "DeviceBoundSessionsForRestrictedSites"
+          }
+        },
+        {
+          "name": "ForcedOff_DeviceBoundSessionsForRestrictedSites",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DeviceBoundSessionsForRestrictedSites"
+          }
+        },
+        {
+          "name": "ForcedOn_EnableChromeRefreshTokenBinding",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableChromeRefreshTokenBinding"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableChromeRefreshTokenBinding",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableChromeRefreshTokenBinding"
+          }
+        },
+        {
+          "name": "ForcedOn_EnableOAuthMultiloginStandardCookiesBinding",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableOAuthMultiloginStandardCookiesBinding"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableOAuthMultiloginStandardCookiesBinding",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableOAuthMultiloginStandardCookiesBinding"
+          }
+        },
+        {
+          "name": "ForcedOn_EnableOAuthMultiloginStandardCookiesBindingForSecondaryPartitions",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableOAuthMultiloginStandardCookiesBindingForSecondaryPartitions"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableOAuthMultiloginStandardCookiesBindingForSecondaryPartitions",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableOAuthMultiloginStandardCookiesBindingForSecondaryPartitions"
           }
         }
       ],
       "filter": {
         "minVersion": "149.0.7815.0",
+        "maxVersion": "159.0.8140.0",
         "channel": [
           "CANARY",
           "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_MAC"
-        ],
-        "endDate": "1796428740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DeviceBoundSessionCredentialsMac",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_Post149Split_RestrictedOnly_30pct",
-          "probabilityWeight": 30,
-          "featureAssociation": {
-            "enableFeature": [
-              "DeviceBoundSessionsForRestrictedSites",
-              "EnableChromeRefreshTokenBinding",
-              "EnableOAuthMultiloginStandardCookiesBinding",
-              "EnableOAuthMultiloginStandardCookiesBindingForSecondaryPartitions"
-            ]
-          }
-        },
-        {
-          "name": "Control_Post149Split_RestrictedOnly_30pct",
-          "probabilityWeight": 30,
-          "featureAssociation": {
-            "disableFeature": [
-              "DeviceBoundSessionsForRestrictedSites",
-              "EnableChromeRefreshTokenBinding",
-              "EnableOAuthMultiloginStandardCookiesBinding",
-              "EnableOAuthMultiloginStandardCookiesBindingForSecondaryPartitions"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 40
-        }
-      ],
-      "filter": {
-        "minVersion": "149.0.7815.0",
-        "channel": [
+          "BETA",
           "STABLE"
         ],
         "platform": [
           "PLATFORM_MAC"
-        ],
-        "endDate": "1796428740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DeviceBoundSessionCredentialsMac",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_Pre149Split_RestrictedOnly",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "DeviceBoundSessionsForRestrictedSites",
-              "EnableChromeRefreshTokenBinding",
-              "EnableOAuthMultiloginStandardCookiesBinding"
-            ]
-          }
-        },
-        {
-          "name": "Control_Pre149Split_RestrictedOnly",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "DeviceBoundSessionsForRestrictedSites",
-              "EnableChromeRefreshTokenBinding",
-              "EnableOAuthMultiloginStandardCookiesBinding"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "147.0.7723.0",
-        "maxVersion": "149.0.7814.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_MAC"
-        ],
-        "endDate": "1796428740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DeviceBoundSessionCredentialsMac",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_Pre149Split_RestrictedOnly_5pct",
-          "probabilityWeight": 5,
-          "featureAssociation": {
-            "enableFeature": [
-              "DeviceBoundSessionsForRestrictedSites",
-              "EnableChromeRefreshTokenBinding",
-              "EnableOAuthMultiloginStandardCookiesBinding"
-            ]
-          }
-        },
-        {
-          "name": "Control_Pre149Split_RestrictedOnly_5pct",
-          "probabilityWeight": 5,
-          "featureAssociation": {
-            "disableFeature": [
-              "DeviceBoundSessionsForRestrictedSites",
-              "EnableChromeRefreshTokenBinding",
-              "EnableOAuthMultiloginStandardCookiesBinding"
-            ]
-          }
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 90
-        }
-      ],
-      "filter": {
-        "minVersion": "147.0.7723.0",
-        "maxVersion": "149.0.7814.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_MAC"
-        ],
-        "endDate": "1796428740"
+        ]
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -143894,6 +143975,69 @@
         "platform": [
           "PLATFORM_ANDROID"
         ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "DynamicPatching",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "DynamicPatching"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "DynamicPatching"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "DynamicPatching"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_DynamicPatching",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DynamicPatching"
+          }
+        },
+        {
+          "name": "ForcedOff_DynamicPatching",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DynamicPatching"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8130.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS"
+        ],
+        "endDate": "1796947140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -222856,6 +223000,48 @@
       }
     },
     {
+      "name": "ImportExportFlags",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Dogfood",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "enableFeature": [
+              "ImportExportFlags"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ImportExportFlags",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ImportExportFlags"
+          }
+        },
+        {
+          "name": "ForcedOff_ImportExportFlags",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ImportExportFlags"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8078.3",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1823385540"
+      }
+    },
+    {
       "name": "ImprovedCookieControlsStudy",
       "consistency": "PERMANENT",
       "experiment": [
@@ -279237,7 +279423,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS"
         ],
-        "endDate": "1794959940"
+        "endDate": "1799711940"
       }
     },
     {
@@ -279311,7 +279497,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS"
         ],
-        "endDate": "1794959940"
+        "endDate": "1799711940"
       }
     },
     {
@@ -279358,7 +279544,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS"
         ],
-        "endDate": "1794959940"
+        "endDate": "1799711940"
       }
     },
     {
@@ -285348,7 +285534,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794182340"
+        "endDate": "1801612740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -285415,7 +285601,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794182340"
+        "endDate": "1801612740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -285481,7 +285667,7 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ],
-        "endDate": "1794182340"
+        "endDate": "1801612740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -430867,6 +431053,60 @@
       "filter": {
         "minVersion": "158.*",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_ANDROID",
+          "PLATFORM_ANDROID_WEBVIEW",
+          null
+        ],
+        "endDate": "1799711940"
+      }
+    },
+    {
+      "name": "V8CodeCacheSourceHashSha256",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261029",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "V8Flag_code_cache_source_hash_sha256"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261029",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "V8Flag_code_cache_source_hash_sha256"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_V8Flag_code_cache_source_hash_sha256",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "V8Flag_code_cache_source_hash_sha256"
+          }
+        },
+        {
+          "name": "ForcedOff_V8Flag_code_cache_source_hash_sha256",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "V8Flag_code_cache_source_hash_sha256"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "158.*",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -480996,5 +481236,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261104-010032.775000-production"
+  "version": "20261104-090046.308000-production"
 }
