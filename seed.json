@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTEwNi0wMTAxMTAuNDkyMDAwEgQgACgB#kPGoan5qbYY=",
+  "serialNumber": "SMChYyMDI2MTEwNi0wOTAwNDEuOTk4MDAwEgQgACgB#7gySLWOcQxY=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -9437,132 +9437,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "HomeButtonRemoval",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "EnabledRemoveEverywhere_20260611",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101001340",
-          "param": [
-            {
-              "name": "remove_home_button_everywhere",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "HomeButtonRemoval"
-            ],
-            "disableFeature": [
-              "DisablePartnerHomepageAndroid"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "EnabledKeepOnNtp_20260611",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101001341",
-          "param": [
-            {
-              "name": "keep_home_button_on_ntp",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "HomeButtonRemoval"
-            ],
-            "disableFeature": [
-              "DisablePartnerHomepageAndroid"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "EnabledDisablePartnerHomepage_20260611",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101001342",
-          "param": [
-            {
-              "name": "disable_partner_homepage_android_for_zero_tabs",
-              "value": "true"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "DisablePartnerHomepageAndroid"
-            ],
-            "disableFeature": [
-              "HomeButtonRemoval"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20260611",
-          "probabilityWeight": 20,
-          "googleWebExperimentId": "101001339",
-          "featureAssociation": {
-            "disableFeature": [
-              "DisablePartnerHomepageAndroid",
-              "HomeButtonRemoval"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 20
-        },
-        {
-          "name": "ForcedOn_DisablePartnerHomepageAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "DisablePartnerHomepageAndroid"
-          }
-        },
-        {
-          "name": "ForcedOff_DisablePartnerHomepageAndroid",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "DisablePartnerHomepageAndroid"
-          }
-        },
-        {
-          "name": "ForcedOn_HomeButtonRemoval",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "HomeButtonRemoval"
-          }
-        },
-        {
-          "name": "ForcedOff_HomeButtonRemoval",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "HomeButtonRemoval"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "151.0.7872.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "country": [
-          "us"
-        ],
-        "endDate": "1794095940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "IncreaseAmplificationFactor",
       "consistency": "SESSION",
       "experiment": [
@@ -14909,6 +14783,124 @@
           null
         ],
         "endDate": "1797379140"
+      }
+    },
+    {
+      "name": "DeferLayoutDuringBrowserStartupStudy",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261106",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "DeferLayoutDuringBrowserStartup"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261106",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "DeferLayoutDuringBrowserStartup"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8103.9",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1799711940"
+      }
+    },
+    {
+      "name": "DeferLayoutDuringBrowserStartupStudy",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261106",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "DeferLayoutDuringBrowserStartup"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261106",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "DeferLayoutDuringBrowserStartup"
+            ]
+          }
+        },
+        {
+          "name": "Default_20261106",
+          "probabilityWeight": 88
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8103.9",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1799711940"
+      }
+    },
+    {
+      "name": "DeferLayoutDuringBrowserStartupStudy",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261106",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "DeferLayoutDuringBrowserStartup"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261106",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "DeferLayoutDuringBrowserStartup"
+            ]
+          }
+        },
+        {
+          "name": "Default_20261106",
+          "probabilityWeight": 88
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8103.9",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1799711940"
       }
     },
     {
@@ -28686,6 +28678,49 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "IOSDiscoverChromeInfiniteFeedDataSource",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261023",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101005869",
+          "featureAssociation": {
+            "enableFeature": [
+              "IOSGCR_discover_enable_full_reload_error_state_fix",
+              "IOSGCR_use_infinite_feed_data_source"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20261023",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101005870",
+          "featureAssociation": {
+            "disableFeature": [
+              "IOSGCR_discover_enable_full_reload_error_state_fix",
+              "IOSGCR_use_infinite_feed_data_source"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "157.*",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1800057540"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "DiscoverImprovedPaginationLookaheadBling",
       "consistency": "PERMANENT",
       "experiment": [
@@ -28729,49 +28764,6 @@
           "PLATFORM_IOS"
         ],
         "endDate": "1796515140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IOSDiscoverChromeInfiniteFeedDataSource",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20261023",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101005869",
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_discover_enable_full_reload_error_state_fix",
-              "IOSGCR_use_infinite_feed_data_source"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_20261023",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101005870",
-          "featureAssociation": {
-            "disableFeature": [
-              "IOSGCR_discover_enable_full_reload_error_state_fix",
-              "IOSGCR_use_infinite_feed_data_source"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "157.*",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1800057540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -33392,8 +33384,12 @@
           "probabilityWeight": 100,
           "param": [
             {
-              "name": "enable_page_tools",
+              "name": "enable_next",
               "value": "true"
+            },
+            {
+              "name": "enable_page_tools",
+              "value": "false"
             },
             {
               "name": "use_mes",
@@ -48336,7 +48332,8 @@
           "STABLE"
         ],
         "platform": [
-          "PLATFORM_ANDROID"
+          "PLATFORM_ANDROID",
+          null
         ],
         "endDate": "1799711940",
         "minOsVersion": "16.*"
@@ -117806,16 +117803,22 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261102",
-          "probabilityWeight": 100,
-          "param": [
-            {
-              "name": "lightware-taurusUCXHC60-firmware",
-              "value": "2.23.1.2"
-            }
-          ],
+          "name": "Preperiod_Enabled_20261106",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "Preperiod_Control_20261106",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
           "featureAssociation": {
-            "enableFeature": [
+            "disableFeature": [
               "CrOSLateBootCfmTargetVersions"
             ]
           }
@@ -117838,8 +117841,179 @@
       "filter": {
         "minVersion": "150.*",
         "channel": [
-          "CANARY",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1808956740"
+      }
+    },
+    {
+      "name": "CrOSLateBootCfmTargetVersions",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261106",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "CrOSLateBootCfmTargetVersions"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261106",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "CrOSLateBootCfmTargetVersions"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "CrOSLateBootCfmTargetVersions"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_CrOSLateBootCfmTargetVersions",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "CrOSLateBootCfmTargetVersions"
+          }
+        },
+        {
+          "name": "ForcedOff_CrOSLateBootCfmTargetVersions",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "CrOSLateBootCfmTargetVersions"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "CANARY"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1808956740"
+      }
+    },
+    {
+      "name": "CrOSLateBootCfmTargetVersions",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Preperiod_Enabled_20261106",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "Preperiod_Control_20261106",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "CrOSLateBootCfmTargetVersions"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_CrOSLateBootCfmTargetVersions",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "CrOSLateBootCfmTargetVersions"
+          }
+        },
+        {
+          "name": "ForcedOff_CrOSLateBootCfmTargetVersions",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "CrOSLateBootCfmTargetVersions"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
           "DEV"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1808956740"
+      }
+    },
+    {
+      "name": "CrOSLateBootCfmTargetVersions",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Preperiod_Enabled_20261106",
+          "probabilityWeight": 1
+        },
+        {
+          "name": "Preperiod_Control_20261106",
+          "probabilityWeight": 1
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "CrOSLateBootCfmTargetVersions"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_CrOSLateBootCfmTargetVersions",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "CrOSLateBootCfmTargetVersions"
+          }
+        },
+        {
+          "name": "ForcedOff_CrOSLateBootCfmTargetVersions",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "CrOSLateBootCfmTargetVersions"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "STABLE"
         ],
         "platform": [
           "PLATFORM_CHROMEOS"
@@ -127356,45 +127530,6 @@
         ]
       },
       "randomizationSeed": 1757348644
-    },
-    {
-      "name": "DeferLayoutDuringBrowserStartupStudy",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20261006",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "enableFeature": [
-              "DeferLayoutDuringBrowserStartup"
-            ]
-          }
-        },
-        {
-          "name": "Control_20261006",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "disableFeature": [
-              "DeferLayoutDuringBrowserStartup"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8059.21",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1799711940"
-      }
     },
     {
       "name": "DeferSpellcheckInitializationStudy",
@@ -201310,6 +201445,132 @@
       }
     },
     {
+      "name": "HomeButtonRemoval",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnabledRemoveEverywhere_20260611",
+          "probabilityWeight": 20,
+          "googleWebExperimentId": "101001340",
+          "param": [
+            {
+              "name": "remove_home_button_everywhere",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "HomeButtonRemoval"
+            ],
+            "disableFeature": [
+              "DisablePartnerHomepageAndroid"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledKeepOnNtp_20260611",
+          "probabilityWeight": 20,
+          "googleWebExperimentId": "101001341",
+          "param": [
+            {
+              "name": "keep_home_button_on_ntp",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "HomeButtonRemoval"
+            ],
+            "disableFeature": [
+              "DisablePartnerHomepageAndroid"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledDisablePartnerHomepage_20260611",
+          "probabilityWeight": 20,
+          "googleWebExperimentId": "101001342",
+          "param": [
+            {
+              "name": "disable_partner_homepage_android_for_zero_tabs",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "DisablePartnerHomepageAndroid"
+            ],
+            "disableFeature": [
+              "HomeButtonRemoval"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20260611",
+          "probabilityWeight": 20,
+          "googleWebExperimentId": "101001339",
+          "featureAssociation": {
+            "disableFeature": [
+              "DisablePartnerHomepageAndroid",
+              "HomeButtonRemoval"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 20
+        },
+        {
+          "name": "ForcedOn_DisablePartnerHomepageAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DisablePartnerHomepageAndroid"
+          }
+        },
+        {
+          "name": "ForcedOff_DisablePartnerHomepageAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DisablePartnerHomepageAndroid"
+          }
+        },
+        {
+          "name": "ForcedOn_HomeButtonRemoval",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "HomeButtonRemoval"
+          }
+        },
+        {
+          "name": "ForcedOff_HomeButtonRemoval",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "HomeButtonRemoval"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "151.0.7872.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "country": [
+          "us"
+        ],
+        "endDate": "1799366340"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "HorizontalTabStripComboButton",
       "consistency": "PERMANENT",
       "experiment": [
@@ -204843,7 +205104,7 @@
         "platform": [
           "PLATFORM_IOS"
         ],
-        "endDate": "1795132740"
+        "endDate": "1801785540"
       }
     },
     {
@@ -204916,7 +205177,7 @@
         "platform": [
           "PLATFORM_IOS"
         ],
-        "endDate": "1795132740"
+        "endDate": "1801785540"
       }
     },
     {
@@ -240671,6 +240932,69 @@
       "filter": {
         "minVersion": "158.0.8116.0",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1800403140"
+      },
+      "randomizationSeed": 1587630200,
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "MakeIdentityManagerSourceOfAccountsAndroidPart1",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261030",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "MakeIdentityManagerSourceOfAccounts"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261030",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "MakeIdentityManagerSourceOfAccounts"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "MakeIdentityManagerSourceOfAccounts"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_MakeIdentityManagerSourceOfAccounts",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "MakeIdentityManagerSourceOfAccounts"
+          }
+        },
+        {
+          "name": "ForcedOff_MakeIdentityManagerSourceOfAccounts",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "MakeIdentityManagerSourceOfAccounts"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "158.0.8116.0",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -266354,6 +266678,113 @@
       }
     },
     {
+      "name": "OmniboxPrerenderOnTouchDown",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261102",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101006254",
+          "featureAssociation": {
+            "enableFeature": [
+              "OmniboxPrerenderOnTouchDown"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20261102",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101006253",
+          "featureAssociation": {
+            "disableFeature": [
+              "OmniboxPrerenderOnTouchDown"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_OmniboxPrerenderOnTouchDown",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OmniboxPrerenderOnTouchDown"
+          }
+        },
+        {
+          "name": "ForcedOff_OmniboxPrerenderOnTouchDown",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OmniboxPrerenderOnTouchDown"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.*",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1799711940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "OmniboxPrerenderOnTouchDown",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261102",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101006254",
+          "featureAssociation": {
+            "enableFeature": [
+              "OmniboxPrerenderOnTouchDown"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_20261102",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101006253",
+          "featureAssociation": {
+            "disableFeature": [
+              "OmniboxPrerenderOnTouchDown"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_OmniboxPrerenderOnTouchDown",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "OmniboxPrerenderOnTouchDown"
+          }
+        },
+        {
+          "name": "ForcedOff_OmniboxPrerenderOnTouchDown",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "OmniboxPrerenderOnTouchDown"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.*",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1799711940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "OmniboxRTLImprovements",
       "consistency": "PERMANENT",
       "experiment": [
@@ -274648,7 +275079,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_MAC"
         ],
-        "endDate": "1795132740"
+        "endDate": "1799711940"
       }
     },
     {
@@ -274716,7 +275147,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_MAC"
         ],
-        "endDate": "1795132740"
+        "endDate": "1799711940"
       }
     },
     {
@@ -274783,7 +275214,7 @@
           "PLATFORM_LINUX",
           "PLATFORM_MAC"
         ],
-        "endDate": "1795132740"
+        "endDate": "1799711940"
       }
     },
     {
@@ -440295,7 +440726,6 @@
           "BETA"
         ],
         "platform": [
-          "PLATFORM_IOS",
           "PLATFORM_ANDROID",
           null
         ],
@@ -440352,9 +440782,176 @@
           "DEV"
         ],
         "platform": [
-          "PLATFORM_IOS",
           "PLATFORM_ANDROID",
           null
+        ],
+        "endDate": "1797379140"
+      }
+    },
+    {
+      "name": "VariationsFeatureAccessLogging",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261106_Mobile",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "histogram_denylist",
+              "value": "\"\""
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "HistogramDenylist"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261106_Mobile",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "HistogramDenylist"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "ForcedOn_HistogramDenylist",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "HistogramDenylist"
+          }
+        },
+        {
+          "name": "ForcedOff_HistogramDenylist",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "HistogramDenylist"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1797379140"
+      }
+    },
+    {
+      "name": "VariationsFeatureAccessLogging",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260901_Mobile",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "histogram_denylist",
+              "value": "\"\""
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "HistogramDenylist"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260901_Mobile",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "HistogramDenylist"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_HistogramDenylist",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "HistogramDenylist"
+          }
+        },
+        {
+          "name": "ForcedOff_HistogramDenylist",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "HistogramDenylist"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1797379140"
+      }
+    },
+    {
+      "name": "VariationsFeatureAccessLogging",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20260901_Mobile",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "histogram_denylist",
+              "value": "\"\""
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "HistogramDenylist"
+            ]
+          }
+        },
+        {
+          "name": "Control_20260901_Mobile",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "HistogramDenylist"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_HistogramDenylist",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "HistogramDenylist"
+          }
+        },
+        {
+          "name": "ForcedOff_HistogramDenylist",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "HistogramDenylist"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.*",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
         ],
         "endDate": "1797379140"
       }
@@ -486402,5 +486999,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261106-010110.492000-production"
+  "version": "20261106-090041.998000-production"
 }
