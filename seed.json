@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTExMS0xNzAwNDkuMzkzMDAwEgQgACgB#Wcr4sQ5U3HU=",
+  "serialNumber": "SMChYyMDI2MTExMi0wMTAwMzcuOTE5MDAwEgQgACgB#itnAEKTZfgQ=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -17139,6 +17139,53 @@
       }
     },
     {
+      "name": "DiscoverImprovedPaginationLookaheadBling",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_50_prestable_20260921",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004140",
+          "param": [
+            {
+              "name": "dsc_load_more_card_index_offset",
+              "value": "5"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IOSGCR_dsc_load_more_card_index_offset"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_50_prestable_20260921",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004139",
+          "featureAssociation": {
+            "disableFeature": [
+              "IOSGCR_dsc_load_more_card_index_offset"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.0.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1796515140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "IOSComposeboxAimRichAPCExtraction",
       "consistency": "PERMANENT",
       "experiment": [
@@ -18086,53 +18133,6 @@
           "PLATFORM_IOS"
         ],
         "endDate": "1796428740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "DiscoverImprovedPaginationLookaheadBling",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_50_prestable_20260921",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101004140",
-          "param": [
-            {
-              "name": "dsc_load_more_card_index_offset",
-              "value": "5"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IOSGCR_dsc_load_more_card_index_offset"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_50_prestable_20260921",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101004139",
-          "featureAssociation": {
-            "disableFeature": [
-              "IOSGCR_dsc_load_more_card_index_offset"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.0.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_IOS"
-        ],
-        "endDate": "1796515140"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -21068,6 +21068,99 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
+          "name": "Enabled_20261006",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "enableFeature": [
+              "PrioritizeResizeTaskRunnerOnStartup"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261006",
+          "probabilityWeight": 1,
+          "featureAssociation": {
+            "disableFeature": [
+              "PrioritizeResizeTaskRunnerOnStartup"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8059.12",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1797379140"
+      }
+    },
+    {
+      "name": "PrioritizeResizeTaskRunnerOnStartupStudy",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261111",
+          "probabilityWeight": 17,
+          "featureAssociation": {
+            "enableFeature": [
+              "PrioritizeResizeTaskRunnerOnStartup"
+            ],
+            "disableFeature": [
+              "PrioritizeCompositorTaskRunnerOnStartup"
+            ]
+          }
+        },
+        {
+          "name": "EnabledWithCompositor_20261111",
+          "probabilityWeight": 17,
+          "featureAssociation": {
+            "enableFeature": [
+              "PrioritizeCompositorTaskRunnerOnStartup",
+              "PrioritizeResizeTaskRunnerOnStartup"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261111",
+          "probabilityWeight": 17,
+          "featureAssociation": {
+            "disableFeature": [
+              "PrioritizeCompositorTaskRunnerOnStartup",
+              "PrioritizeResizeTaskRunnerOnStartup"
+            ]
+          }
+        },
+        {
+          "name": "Default_20261111",
+          "probabilityWeight": 1
+        }
+      ],
+      "filter": {
+        "minVersion": "160.0.8155.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1797379140"
+      }
+    },
+    {
+      "name": "PrioritizeResizeTaskRunnerOnStartupStudy",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
           "name": "Enabled_20261106",
           "probabilityWeight": 50,
           "featureAssociation": {
@@ -21131,45 +21224,6 @@
           "PLATFORM_ANDROID_WEBVIEW"
         ],
         "endDate": "1799711940"
-      }
-    },
-    {
-      "name": "PrioritizeResizeTaskRunnerOnStartupStudy",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20261006",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "enableFeature": [
-              "PrioritizeResizeTaskRunnerOnStartup"
-            ]
-          }
-        },
-        {
-          "name": "Control_20261006",
-          "probabilityWeight": 1,
-          "featureAssociation": {
-            "disableFeature": [
-              "PrioritizeResizeTaskRunnerOnStartup"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8059.12",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1797379140"
       }
     },
     {
@@ -21821,6 +21875,408 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "BrowserStratus",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260811",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003088",
+          "featureAssociation": {
+            "disableFeature": [
+              "ChromeDarkNeutrals26"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_20260811",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003089",
+          "featureAssociation": {
+            "enableFeature": [
+              "ChromeDarkNeutrals26"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "154.0.8037.17",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1796428740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "BrowserStratus",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260811",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003088",
+          "featureAssociation": {
+            "disableFeature": [
+              "ChromeDarkNeutrals26"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_20260811",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101003089",
+          "featureAssociation": {
+            "enableFeature": [
+              "ChromeDarkNeutrals26"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "155.0.8041.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1796428740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "BrowserStratus",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20261110",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101006736",
+          "featureAssociation": {
+            "disableFeature": [
+              "ChromeDarkNeutrals26"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_20261110",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101006737",
+          "featureAssociation": {
+            "enableFeature": [
+              "ChromeDarkNeutrals26"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.8010.44",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1796428740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "BrowserStratus",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20261110",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101006736",
+          "featureAssociation": {
+            "disableFeature": [
+              "ChromeDarkNeutrals26"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_20261110",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101006737",
+          "featureAssociation": {
+            "enableFeature": [
+              "ChromeDarkNeutrals26"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.8010.44",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1796428740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "GlicPdfSummarizeButton",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260723_V2",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003454",
+          "featureAssociation": {
+            "disableFeature": [
+              "PdfGlicSummarize"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_Arm3_20260723_V2",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003455",
+          "param": [
+            {
+              "name": "arm",
+              "value": "3"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PdfGlicSummarize"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7871.94",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX"
+        ],
+        "locale": [
+          "en-US"
+        ],
+        "excludeCountry": [
+          "kr"
+        ],
+        "endDate": "1801439940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "GlicPdfSummarizeButton",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260723_V2",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003452",
+          "featureAssociation": {
+            "disableFeature": [
+              "PdfGlicSummarize"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_Arm3_20260723_V2",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101003453",
+          "param": [
+            {
+              "name": "arm",
+              "value": "3"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PdfGlicSummarize"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7871.94",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX"
+        ],
+        "locale": [
+          "en-US"
+        ],
+        "excludeCountry": [
+          "kr"
+        ],
+        "endDate": "1801439940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "GlicPdfSummarizeButton",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Disabled_20260723_V2",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "disableFeature": [
+              "PdfGlicSummarize"
+            ]
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7871.94",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "locale": [
+          "en-US"
+        ],
+        "excludeCountry": [
+          "kr"
+        ],
+        "endDate": "1801439940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "GlicPdfSummarizeButton",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260928_V3",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004901",
+          "featureAssociation": {
+            "disableFeature": [
+              "PdfGlicSummarize"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_Arm3_20260928_V3",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "101004902",
+          "param": [
+            {
+              "name": "arm",
+              "value": "3"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PdfGlicSummarize"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.7871.94",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "locale": [
+          "en-US"
+        ],
+        "excludeCountry": [
+          "kr"
+        ],
+        "endDate": "1801439940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "GlicDisableCaaGuestError_Allowlisted",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Disabled_Allowlisted",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "disableFeature": [
+              "GlicCaaGuestError"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_GlicCaaGuestError",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GlicCaaGuestError"
+          }
+        },
+        {
+          "name": "ForcedOff_GlicCaaGuestError",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GlicCaaGuestError"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "145.0.7632.159",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1799884740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "GlicEmbeddedPdfBytesExtraction",
       "consistency": "PERMANENT",
       "experiment": [
@@ -22141,242 +22597,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "GlicPdfSummarizeButton",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260723_V2",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003454",
-          "featureAssociation": {
-            "disableFeature": [
-              "PdfGlicSummarize"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_Arm3_20260723_V2",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003455",
-          "param": [
-            {
-              "name": "arm",
-              "value": "3"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PdfGlicSummarize"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.94",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX"
-        ],
-        "locale": [
-          "en-US"
-        ],
-        "excludeCountry": [
-          "kr"
-        ],
-        "endDate": "1801439940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "GlicPdfSummarizeButton",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260723_V2",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003452",
-          "featureAssociation": {
-            "disableFeature": [
-              "PdfGlicSummarize"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_Arm3_20260723_V2",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101003453",
-          "param": [
-            {
-              "name": "arm",
-              "value": "3"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PdfGlicSummarize"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.94",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX"
-        ],
-        "locale": [
-          "en-US"
-        ],
-        "excludeCountry": [
-          "kr"
-        ],
-        "endDate": "1801439940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "GlicPdfSummarizeButton",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Disabled_20260723_V2",
-          "probabilityWeight": 100,
-          "featureAssociation": {
-            "disableFeature": [
-              "PdfGlicSummarize"
-            ]
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.94",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "locale": [
-          "en-US"
-        ],
-        "excludeCountry": [
-          "kr"
-        ],
-        "endDate": "1801439940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "GlicPdfSummarizeButton",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260928_V3",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101004901",
-          "featureAssociation": {
-            "disableFeature": [
-              "PdfGlicSummarize"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_Arm3_20260928_V3",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101004902",
-          "param": [
-            {
-              "name": "arm",
-              "value": "3"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PdfGlicSummarize"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.94",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "locale": [
-          "en-US"
-        ],
-        "excludeCountry": [
-          "kr"
-        ],
-        "endDate": "1801439940"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "GlicDisableCaaGuestError_Allowlisted",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Disabled_Allowlisted",
-          "probabilityWeight": 100,
-          "featureAssociation": {
-            "disableFeature": [
-              "GlicCaaGuestError"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_GlicCaaGuestError",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "GlicCaaGuestError"
-          }
-        },
-        {
-          "name": "ForcedOff_GlicCaaGuestError",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "GlicCaaGuestError"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "145.0.7632.159",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA",
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1799884740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "GlicContextMenuAblationV2",
       "consistency": "PERMANENT",
       "experiment": [
@@ -22507,6 +22727,325 @@
         "endDate": "1799884740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "SearchPrefetchHighPriorityPrefetches",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Beta_20261013",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "3397013",
+          "featureAssociation": {
+            "enableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_Beta_20261013",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "3397012",
+          "featureAssociation": {
+            "disableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SearchNavigationPrefetch"
+          }
+        },
+        {
+          "name": "ForcedOff_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SearchNavigationPrefetch"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8077.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1797379140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "SearchPrefetchHighPriorityPrefetches",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Dev_Canary_20261009",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "3396122",
+          "featureAssociation": {
+            "enableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_Dev_Canary_20261009",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "3396121",
+          "featureAssociation": {
+            "disableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SearchNavigationPrefetch"
+          }
+        },
+        {
+          "name": "ForcedOff_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SearchNavigationPrefetch"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8077.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ],
+        "endDate": "1797379140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "SearchPrefetchHighPriorityPrefetches",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Stable_20261111",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "3398859",
+          "featureAssociation": {
+            "enableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_Stable_20261111",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "3398861",
+          "featureAssociation": {
+            "disableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SearchNavigationPrefetch"
+          }
+        },
+        {
+          "name": "ForcedOff_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SearchNavigationPrefetch"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8077.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX"
+        ],
+        "endDate": "1797379140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "SearchPrefetchHighPriorityPrefetches",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Stable_20261111",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "3398859",
+          "featureAssociation": {
+            "enableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Control_Stable_20261111",
+          "probabilityWeight": 50,
+          "googleWebExperimentId": "3398861",
+          "featureAssociation": {
+            "disableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SearchNavigationPrefetch"
+          }
+        },
+        {
+          "name": "ForcedOff_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SearchNavigationPrefetch"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "156.0.8077.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1797379140"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "KillSwitch_SearchNavigationPrefetch",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Disabled_EmergencyKillSwitch",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "disableFeature": [
+              "SearchNavigationPrefetch"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SearchNavigationPrefetch"
+          }
+        },
+        {
+          "name": "ForcedOff_SearchNavigationPrefetch",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SearchNavigationPrefetch"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "146.0.7680.71",
+        "maxVersion": "156.0.8076.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS"
+        ]
+      }
     },
     {
       "name": "GlicHorizontalTabToolbarButton",
@@ -24669,325 +25208,6 @@
       }
     },
     {
-      "name": "SearchPrefetchHighPriorityPrefetches",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_Beta_20261013",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "3397013",
-          "featureAssociation": {
-            "enableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_Beta_20261013",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "3397012",
-          "featureAssociation": {
-            "disableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_SearchNavigationPrefetch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "SearchNavigationPrefetch"
-          }
-        },
-        {
-          "name": "ForcedOff_SearchNavigationPrefetch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "SearchNavigationPrefetch"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "156.0.8077.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1797379140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "SearchPrefetchHighPriorityPrefetches",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_Dev_Canary_20261009",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "3396122",
-          "featureAssociation": {
-            "enableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_Dev_Canary_20261009",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "3396121",
-          "featureAssociation": {
-            "disableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_SearchNavigationPrefetch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "SearchNavigationPrefetch"
-          }
-        },
-        {
-          "name": "ForcedOff_SearchNavigationPrefetch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "SearchNavigationPrefetch"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "156.0.8077.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1797379140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "SearchPrefetchHighPriorityPrefetches",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_Stable_20261105",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "3398859",
-          "featureAssociation": {
-            "enableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_Stable_20261105",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "3398861",
-          "featureAssociation": {
-            "disableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_SearchNavigationPrefetch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "SearchNavigationPrefetch"
-          }
-        },
-        {
-          "name": "ForcedOff_SearchNavigationPrefetch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "SearchNavigationPrefetch"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "156.0.8077.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1797379140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "SearchPrefetchHighPriorityPrefetches",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_Stable_20261105",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "3398859",
-          "featureAssociation": {
-            "enableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control_Stable_20261105",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "3398861",
-          "featureAssociation": {
-            "disableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        },
-        {
-          "name": "_Activation",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "disableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_SearchNavigationPrefetch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "SearchNavigationPrefetch"
-          }
-        },
-        {
-          "name": "ForcedOff_SearchNavigationPrefetch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "SearchNavigationPrefetch"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "156.0.8077.0",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1797379140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "KillSwitch_SearchNavigationPrefetch",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Disabled_EmergencyKillSwitch",
-          "probabilityWeight": 100,
-          "featureAssociation": {
-            "disableFeature": [
-              "SearchNavigationPrefetch"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_SearchNavigationPrefetch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "SearchNavigationPrefetch"
-          }
-        },
-        {
-          "name": "ForcedOff_SearchNavigationPrefetch",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "SearchNavigationPrefetch"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "146.0.7680.71",
-        "maxVersion": "156.0.8076.0",
-        "channel": [
-          "CANARY",
-          "DEV",
-          "BETA",
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ]
-      }
-    },
-    {
       "name": "NtpNextScaledAIMerch",
       "consistency": "PERMANENT",
       "experiment": [
@@ -26746,9 +26966,9 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20261102",
+          "name": "Control_20261111",
           "probabilityWeight": 1,
-          "googleWebExperimentId": "101005979",
+          "googleWebExperimentId": "101006773",
           "featureAssociation": {
             "disableFeature": [
               "BypassOutdatedSurfaceActivation",
@@ -26756,6 +26976,8 @@
               "DeferLayoutDuringBrowserStartup",
               "DeferSessionStorageScavengingOnStartup",
               "DeferSpellcheckInitialization",
+              "GpuPersistentCacheAsyncInitialize",
+              "GtkPrefetchNavButtonIcons",
               "InitialWebUI",
               "InitialWebUISurfaceSync",
               "InitialWebUIWithoutExtensions",
@@ -26764,10 +26986,12 @@
               "LazyKeyedServiceInstantiation",
               "OmniboxAimPopupDeferCreation",
               "OmniboxWebUIPopupDeferCreation",
+              "OptimizeVariationsIpc",
               "PerDependencyDeadlines",
               "PrioritizeResizeTaskRunnerOnStartup",
               "SendGPUChannelEarly",
               "SkipIPCChannelPausingForNonGuests",
+              "TopChromeWebUISharedRenderer",
               "WebUIBackForwardButton",
               "WebUIBundledCodeCache",
               "WebUIBypassMojoConnections",
@@ -26783,9 +27007,9 @@
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Enabled_157_20261102",
+          "name": "Enabled_157_20261111",
           "probabilityWeight": 1,
-          "googleWebExperimentId": "101005980",
+          "googleWebExperimentId": "101006745",
           "param": [
             {
               "name": "WebUIReloadButtonBypassLoaderThrottles",
@@ -26853,16 +27077,20 @@
               "WebiumMetricsMapping"
             ],
             "disableFeature": [
+              "GpuPersistentCacheAsyncInitialize",
+              "GtkPrefetchNavButtonIcons",
               "OmniboxAimPopupDeferCreation",
-              "OmniboxWebUIPopupDeferCreation"
+              "OmniboxWebUIPopupDeferCreation",
+              "OptimizeVariationsIpc",
+              "TopChromeWebUISharedRenderer"
             ]
           },
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Enabled_158_WithLocationBar_20261102",
+          "name": "Enabled_158_WithLocationBar_20261111",
           "probabilityWeight": 1,
-          "googleWebExperimentId": "101005972",
+          "googleWebExperimentId": "101006746",
           "param": [
             {
               "name": "WebUIReloadButtonBypassLoaderThrottles",
@@ -26930,14 +27158,20 @@
               "WebUISplitTabsButton",
               "WebUIToolbarFrameEvictionOptOut",
               "WebiumMetricsMapping"
+            ],
+            "disableFeature": [
+              "GpuPersistentCacheAsyncInitialize",
+              "GtkPrefetchNavButtonIcons",
+              "OptimizeVariationsIpc",
+              "TopChromeWebUISharedRenderer"
             ]
           },
           "googleWebVisibility": "FIRST_PARTY"
         },
         {
-          "name": "Enabled_158_WithoutLocationBar_20261102",
+          "name": "Enabled_158_WithoutLocationBar_20261111",
           "probabilityWeight": 1,
-          "googleWebExperimentId": "101005970",
+          "googleWebExperimentId": "101006747",
           "param": [
             {
               "name": "WebUIReloadButtonBypassLoaderThrottles",
@@ -26995,6 +27229,170 @@
               "PrioritizeResizeTaskRunnerOnStartup",
               "SendGPUChannelEarly",
               "SkipIPCChannelPausingForNonGuests",
+              "WebUIBackForwardButton",
+              "WebUIBundledCodeCache",
+              "WebUIBypassMojoConnections",
+              "WebUIHomeButton",
+              "WebUIInProcessResourceLoadingV2",
+              "WebUIReloadButton",
+              "WebUISplitTabsButton",
+              "WebUIToolbarFrameEvictionOptOut",
+              "WebiumMetricsMapping"
+            ],
+            "disableFeature": [
+              "GpuPersistentCacheAsyncInitialize",
+              "GtkPrefetchNavButtonIcons",
+              "OptimizeVariationsIpc",
+              "TopChromeWebUISharedRenderer",
+              "WebUILocationBar"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_159_WithLocationBar_20261111",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101006743",
+          "param": [
+            {
+              "name": "WebUIReloadButtonBypassLoaderThrottles",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonDeferBrowserViewShow",
+              "value": "false"
+            },
+            {
+              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsive",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
+              "value": "5s"
+            },
+            {
+              "name": "config",
+              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
+            },
+            {
+              "name": "deadline_in_frames",
+              "value": "12000"
+            },
+            {
+              "name": "high_stream_priority",
+              "value": "true"
+            },
+            {
+              "name": "renderer_commit_delay_ms",
+              "value": "100000"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "BypassOutdatedSurfaceActivation",
+              "DeferHistoryBackendInit",
+              "DeferLayoutDuringBrowserStartup",
+              "DeferSessionStorageScavengingOnStartup",
+              "DeferSpellcheckInitialization",
+              "GpuPersistentCacheAsyncInitialize",
+              "GtkPrefetchNavButtonIcons",
+              "InitialWebUI",
+              "InitialWebUISurfaceSync",
+              "InitialWebUIWithoutExtensions",
+              "InitialWebUIWithoutSpellCheckForNtp",
+              "InitialWebUIWithoutTranslateForNtp",
+              "LazyKeyedServiceInstantiation",
+              "OmniboxAimPopupDeferCreation",
+              "OmniboxWebUIPopupDeferCreation",
+              "OptimizeVariationsIpc",
+              "PerDependencyDeadlines",
+              "PrioritizeResizeTaskRunnerOnStartup",
+              "SendGPUChannelEarly",
+              "SkipIPCChannelPausingForNonGuests",
+              "TopChromeWebUISharedRenderer",
+              "WebUIBackForwardButton",
+              "WebUIBundledCodeCache",
+              "WebUIBypassMojoConnections",
+              "WebUIHomeButton",
+              "WebUIInProcessResourceLoadingV2",
+              "WebUILocationBar",
+              "WebUIReloadButton",
+              "WebUISplitTabsButton",
+              "WebUIToolbarFrameEvictionOptOut",
+              "WebiumMetricsMapping"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "Enabled_159_WithoutLocationBar_20261111",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101006744",
+          "param": [
+            {
+              "name": "WebUIReloadButtonBypassLoaderThrottles",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonDeferBrowserViewShow",
+              "value": "false"
+            },
+            {
+              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsive",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
+              "value": "5s"
+            },
+            {
+              "name": "config",
+              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
+            },
+            {
+              "name": "deadline_in_frames",
+              "value": "12000"
+            },
+            {
+              "name": "high_stream_priority",
+              "value": "true"
+            },
+            {
+              "name": "renderer_commit_delay_ms",
+              "value": "100000"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "BypassOutdatedSurfaceActivation",
+              "DeferHistoryBackendInit",
+              "DeferLayoutDuringBrowserStartup",
+              "DeferSessionStorageScavengingOnStartup",
+              "DeferSpellcheckInitialization",
+              "GpuPersistentCacheAsyncInitialize",
+              "GtkPrefetchNavButtonIcons",
+              "InitialWebUI",
+              "InitialWebUISurfaceSync",
+              "InitialWebUIWithoutExtensions",
+              "InitialWebUIWithoutSpellCheckForNtp",
+              "InitialWebUIWithoutTranslateForNtp",
+              "LazyKeyedServiceInstantiation",
+              "OmniboxAimPopupDeferCreation",
+              "OmniboxWebUIPopupDeferCreation",
+              "OptimizeVariationsIpc",
+              "PerDependencyDeadlines",
+              "PrioritizeResizeTaskRunnerOnStartup",
+              "SendGPUChannelEarly",
+              "SkipIPCChannelPausingForNonGuests",
+              "TopChromeWebUISharedRenderer",
               "WebUIBackForwardButton",
               "WebUIBundledCodeCache",
               "WebUIBypassMojoConnections",
@@ -27013,7 +27411,7 @@
         }
       ],
       "filter": {
-        "minVersion": "157.0.8103.5",
+        "minVersion": "159.0.8154.0",
         "channel": [
           "BETA"
         ],
@@ -27031,7 +27429,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20261110",
+          "name": "Control_20261111",
           "probabilityWeight": 1,
           "featureAssociation": {
             "disableFeature": [
@@ -27052,6 +27450,7 @@
               "OmniboxWebUIPopupDeferCreation",
               "OptimizeVariationsIpc",
               "PerDependencyDeadlines",
+              "PrioritizeCompositorTaskRunnerOnStartup",
               "PrioritizeResizeTaskRunnerOnStartup",
               "SendGPUChannelEarly",
               "SkipIPCChannelPausingForNonGuests",
@@ -27070,7 +27469,7 @@
           }
         },
         {
-          "name": "Enabled_157_20261110",
+          "name": "Enabled_157_20261111",
           "probabilityWeight": 1,
           "param": [
             {
@@ -27144,12 +27543,13 @@
               "OmniboxAimPopupDeferCreation",
               "OmniboxWebUIPopupDeferCreation",
               "OptimizeVariationsIpc",
+              "PrioritizeCompositorTaskRunnerOnStartup",
               "TopChromeWebUISharedRenderer"
             ]
           }
         },
         {
-          "name": "Enabled_158_WithLocationBar_20261110",
+          "name": "Enabled_158_WithLocationBar_20261111",
           "probabilityWeight": 1,
           "param": [
             {
@@ -27223,12 +27623,13 @@
               "GpuPersistentCacheAsyncInitialize",
               "GtkPrefetchNavButtonIcons",
               "OptimizeVariationsIpc",
+              "PrioritizeCompositorTaskRunnerOnStartup",
               "TopChromeWebUISharedRenderer"
             ]
           }
         },
         {
-          "name": "Enabled_158_WithoutLocationBar_20261110",
+          "name": "Enabled_158_WithoutLocationBar_20261111",
           "probabilityWeight": 1,
           "param": [
             {
@@ -27301,171 +27702,14 @@
               "GpuPersistentCacheAsyncInitialize",
               "GtkPrefetchNavButtonIcons",
               "OptimizeVariationsIpc",
+              "PrioritizeCompositorTaskRunnerOnStartup",
               "TopChromeWebUISharedRenderer",
               "WebUILocationBar"
             ]
           }
         },
         {
-          "name": "Enabled_158_WithLocationBar_SharedRenderer_20261110",
-          "probabilityWeight": 1,
-          "param": [
-            {
-              "name": "WebUIReloadButtonBypassLoaderThrottles",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonDeferBrowserViewShow",
-              "value": "false"
-            },
-            {
-              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonRestartUnresponsive",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
-              "value": "5s"
-            },
-            {
-              "name": "config",
-              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
-            },
-            {
-              "name": "deadline_in_frames",
-              "value": "12000"
-            },
-            {
-              "name": "high_stream_priority",
-              "value": "true"
-            },
-            {
-              "name": "renderer_commit_delay_ms",
-              "value": "100000"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "BypassOutdatedSurfaceActivation",
-              "DeferHistoryBackendInit",
-              "DeferLayoutDuringBrowserStartup",
-              "DeferSessionStorageScavengingOnStartup",
-              "DeferSpellcheckInitialization",
-              "InitialWebUI",
-              "InitialWebUISurfaceSync",
-              "InitialWebUIWithoutExtensions",
-              "InitialWebUIWithoutSpellCheckForNtp",
-              "InitialWebUIWithoutTranslateForNtp",
-              "LazyKeyedServiceInstantiation",
-              "OmniboxAimPopupDeferCreation",
-              "OmniboxWebUIPopupDeferCreation",
-              "PerDependencyDeadlines",
-              "PrioritizeResizeTaskRunnerOnStartup",
-              "SendGPUChannelEarly",
-              "SkipIPCChannelPausingForNonGuests",
-              "TopChromeWebUISharedRenderer",
-              "WebUIBackForwardButton",
-              "WebUIBundledCodeCache",
-              "WebUIBypassMojoConnections",
-              "WebUIHomeButton",
-              "WebUIInProcessResourceLoadingV2",
-              "WebUILocationBar",
-              "WebUIReloadButton",
-              "WebUISplitTabsButton",
-              "WebUIToolbarFrameEvictionOptOut",
-              "WebiumMetricsMapping"
-            ],
-            "disableFeature": [
-              "GpuPersistentCacheAsyncInitialize",
-              "GtkPrefetchNavButtonIcons",
-              "OptimizeVariationsIpc"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_158_WithoutLocationBar_SharedRenderer_20261110",
-          "probabilityWeight": 1,
-          "param": [
-            {
-              "name": "WebUIReloadButtonBypassLoaderThrottles",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonDeferBrowserViewShow",
-              "value": "false"
-            },
-            {
-              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonRestartUnresponsive",
-              "value": "true"
-            },
-            {
-              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
-              "value": "5s"
-            },
-            {
-              "name": "config",
-              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
-            },
-            {
-              "name": "deadline_in_frames",
-              "value": "12000"
-            },
-            {
-              "name": "high_stream_priority",
-              "value": "true"
-            },
-            {
-              "name": "renderer_commit_delay_ms",
-              "value": "100000"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "BypassOutdatedSurfaceActivation",
-              "DeferHistoryBackendInit",
-              "DeferLayoutDuringBrowserStartup",
-              "DeferSessionStorageScavengingOnStartup",
-              "DeferSpellcheckInitialization",
-              "InitialWebUI",
-              "InitialWebUISurfaceSync",
-              "InitialWebUIWithoutExtensions",
-              "InitialWebUIWithoutSpellCheckForNtp",
-              "InitialWebUIWithoutTranslateForNtp",
-              "LazyKeyedServiceInstantiation",
-              "OmniboxAimPopupDeferCreation",
-              "OmniboxWebUIPopupDeferCreation",
-              "PerDependencyDeadlines",
-              "PrioritizeResizeTaskRunnerOnStartup",
-              "SendGPUChannelEarly",
-              "SkipIPCChannelPausingForNonGuests",
-              "TopChromeWebUISharedRenderer",
-              "WebUIBackForwardButton",
-              "WebUIBundledCodeCache",
-              "WebUIBypassMojoConnections",
-              "WebUIHomeButton",
-              "WebUIInProcessResourceLoadingV2",
-              "WebUIReloadButton",
-              "WebUISplitTabsButton",
-              "WebUIToolbarFrameEvictionOptOut",
-              "WebiumMetricsMapping"
-            ],
-            "disableFeature": [
-              "GpuPersistentCacheAsyncInitialize",
-              "GtkPrefetchNavButtonIcons",
-              "OptimizeVariationsIpc",
-              "WebUILocationBar"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_159_WithLocationBar_20261110",
+          "name": "Enabled_159_WithLocationBar_20261111",
           "probabilityWeight": 1,
           "param": [
             {
@@ -27538,11 +27782,14 @@
               "WebUISplitTabsButton",
               "WebUIToolbarFrameEvictionOptOut",
               "WebiumMetricsMapping"
+            ],
+            "disableFeature": [
+              "PrioritizeCompositorTaskRunnerOnStartup"
             ]
           }
         },
         {
-          "name": "Enabled_159_WithoutLocationBar_20261110",
+          "name": "Enabled_159_WithoutLocationBar_20261111",
           "probabilityWeight": 1,
           "param": [
             {
@@ -27616,13 +27863,96 @@
               "WebiumMetricsMapping"
             ],
             "disableFeature": [
+              "PrioritizeCompositorTaskRunnerOnStartup",
               "WebUILocationBar"
             ]
           }
+        },
+        {
+          "name": "Enabled_160_20261111",
+          "probabilityWeight": 1,
+          "param": [
+            {
+              "name": "WebUIReloadButtonBypassLoaderThrottles",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonDeferBrowserViewShow",
+              "value": "false"
+            },
+            {
+              "name": "WebUIReloadButtonKeepVisibleUntilPaint",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsive",
+              "value": "true"
+            },
+            {
+              "name": "WebUIReloadButtonRestartUnresponsiveRenderersTimeout",
+              "value": "5s"
+            },
+            {
+              "name": "config",
+              "value": "CjsKOUV2ZW50TGF0ZW5jeS5HZXN0dXJlU2Nyb2xsVXBkYXRlLlRvdWNoc2NyZWVuLlRvdGFsTGF0ZW5jeQooCiZQYWdlTG9hZC5JbnRlcmFjdGl2ZVRpbWluZy5JbnB1dERlbGF5Mwo4CjZHcmFwaGljcy5TbW9vdGhuZXNzLlBlcmNlbnREcm9wcGVkRnJhbWVzMy5BbGxTZXF1ZW5jZXM="
+            },
+            {
+              "name": "deadline_in_frames",
+              "value": "12000"
+            },
+            {
+              "name": "high_stream_priority",
+              "value": "true"
+            },
+            {
+              "name": "renderer_commit_delay_ms",
+              "value": "100000"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "BypassOutdatedSurfaceActivation",
+              "DeferHistoryBackendInit",
+              "DeferLayoutDuringBrowserStartup",
+              "DeferSessionStorageScavengingOnStartup",
+              "DeferSpellcheckInitialization",
+              "GpuPersistentCacheAsyncInitialize",
+              "GtkPrefetchNavButtonIcons",
+              "InitialWebUI",
+              "InitialWebUISurfaceSync",
+              "InitialWebUIWithoutExtensions",
+              "InitialWebUIWithoutSpellCheckForNtp",
+              "InitialWebUIWithoutTranslateForNtp",
+              "LazyKeyedServiceInstantiation",
+              "OmniboxAimPopupDeferCreation",
+              "OmniboxWebUIPopupDeferCreation",
+              "OptimizeVariationsIpc",
+              "PerDependencyDeadlines",
+              "PrioritizeCompositorTaskRunnerOnStartup",
+              "PrioritizeResizeTaskRunnerOnStartup",
+              "SendGPUChannelEarly",
+              "SkipIPCChannelPausingForNonGuests",
+              "TopChromeWebUISharedRenderer",
+              "WebUIBackForwardButton",
+              "WebUIBundledCodeCache",
+              "WebUIBypassMojoConnections",
+              "WebUIHomeButton",
+              "WebUIInProcessResourceLoadingV2",
+              "WebUILocationBar",
+              "WebUIReloadButton",
+              "WebUISplitTabsButton",
+              "WebUIToolbarFrameEvictionOptOut",
+              "WebiumMetricsMapping"
+            ]
+          }
+        },
+        {
+          "name": "Default_20261111",
+          "probabilityWeight": 1
         }
       ],
       "filter": {
-        "minVersion": "159.0.8154.0",
+        "minVersion": "160.0.8155.0",
         "channel": [
           "CANARY",
           "DEV"
@@ -31211,172 +31541,6 @@
           null
         ],
         "endDate": "1797379140"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "BrowserStratus",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260811",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003088",
-          "featureAssociation": {
-            "disableFeature": [
-              "ChromeDarkNeutrals26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_20260811",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003089",
-          "featureAssociation": {
-            "enableFeature": [
-              "ChromeDarkNeutrals26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "154.0.8037.17",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1796428740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "BrowserStratus",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260811",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003088",
-          "featureAssociation": {
-            "disableFeature": [
-              "ChromeDarkNeutrals26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_20260811",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101003089",
-          "featureAssociation": {
-            "enableFeature": [
-              "ChromeDarkNeutrals26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "155.0.8041.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_MAC",
-          "PLATFORM_LINUX",
-          "PLATFORM_CHROMEOS"
-        ],
-        "endDate": "1796428740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "BrowserStratus",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20261016",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101005576",
-          "featureAssociation": {
-            "disableFeature": [
-              "ChromeDarkNeutrals26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_20261016",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101005577",
-          "featureAssociation": {
-            "enableFeature": [
-              "ChromeDarkNeutrals26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.8010.44",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_LINUX"
-        ],
-        "endDate": "1796428740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "BrowserStratus",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20261016",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101005576",
-          "featureAssociation": {
-            "disableFeature": [
-              "ChromeDarkNeutrals26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Enabled_20261016",
-          "probabilityWeight": 50,
-          "googleWebTriggerExperimentId": "101005577",
-          "featureAssociation": {
-            "enableFeature": [
-              "ChromeDarkNeutrals26"
-            ]
-          },
-          "googleWebVisibility": "FIRST_PARTY"
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.8010.44",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_CHROMEOS"
-        ],
-        "formFactor": [
-          null
-        ],
-        "endDate": "1796428740"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -49051,6 +49215,55 @@
       "filter": {
         "minVersion": "159.0.8132.0",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1801439940"
+      }
+    },
+    {
+      "name": "AndroidProgressBarCancelOnWindowInvisible",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261030",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "AndroidProgressBarCancelOnWindowInvisible"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261030",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "AndroidProgressBarCancelOnWindowInvisible"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AndroidProgressBarCancelOnWindowInvisible",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AndroidProgressBarCancelOnWindowInvisible"
+          }
+        },
+        {
+          "name": "ForcedOff_AndroidProgressBarCancelOnWindowInvisible",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AndroidProgressBarCancelOnWindowInvisible"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8132.0",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -51269,6 +51482,55 @@
           "TABLET"
         ]
       }
+    },
+    {
+      "name": "AndroidTabPersistentStoreActiveTabPrefs",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261029",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "AndroidTabPersistentStoreActiveTabPrefs"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261029",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "AndroidTabPersistentStoreActiveTabPrefs"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AndroidTabPersistentStoreActiveTabPrefs",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AndroidTabPersistentStoreActiveTabPrefs"
+          }
+        },
+        {
+          "name": "ForcedOff_AndroidTabPersistentStoreActiveTabPrefs",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AndroidTabPersistentStoreActiveTabPrefs"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8131.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1799711940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "AndroidTabPersistentStoreActiveTabPrefs",
@@ -71543,7 +71805,7 @@
         "country": [
           "us"
         ],
-        "endDate": "1795132740"
+        "endDate": "1801353540"
       }
     },
     {
@@ -71551,8 +71813,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_Tabs_20261019",
-          "probabilityWeight": 1,
+          "name": "Enabled_Tabs_20261104",
+          "probabilityWeight": 10,
           "featureAssociation": {
             "enableFeature": [
               "AutofillEnableAiBasedAmountExtraction",
@@ -71563,12 +71825,8 @@
           }
         },
         {
-          "name": "PaddingForEnabled_9_20261019",
-          "probabilityWeight": 9
-        },
-        {
-          "name": "Control_20261019",
-          "probabilityWeight": 1,
+          "name": "Control_20261104",
+          "probabilityWeight": 10,
           "featureAssociation": {
             "enableFeature": [
               "AutofillEnableAiBasedAmountExtraction",
@@ -71582,11 +71840,11 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 88
+          "probabilityWeight": 70
         },
         {
-          "name": "Holdback_NoBnpl_20261019",
-          "probabilityWeight": 1,
+          "name": "Holdback_NoBnpl_20261104",
+          "probabilityWeight": 10,
           "featureAssociation": {
             "disableFeature": [
               "AutofillEnableAiBasedAmountExtraction",
@@ -71667,7 +71925,7 @@
         "country": [
           "us"
         ],
-        "endDate": "1795132740"
+        "endDate": "1801353540"
       }
     },
     {
@@ -124808,6 +125066,127 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
+          "name": "EnabledWithSidePanelRouting_20261106",
+          "probabilityWeight": 18,
+          "googleWebExperimentId": "101006468",
+          "param": [
+            {
+              "name": "ContextualTasksContextMenuRouteAskGoogleToOmnibox",
+              "value": "false"
+            },
+            {
+              "name": "ContextualTasksContextMenuShowAskGoogle",
+              "value": "true"
+            },
+            {
+              "name": "ContextualTasksContextMenuSubmenu",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksUpdatedEntryPoints"
+            ]
+          }
+        },
+        {
+          "name": "EnabledWithVisualSelectionOnly_20261106",
+          "probabilityWeight": 18,
+          "googleWebExperimentId": "101006469",
+          "param": [
+            {
+              "name": "ContextualTasksContextMenuRouteAskGoogleToOmnibox",
+              "value": "false"
+            },
+            {
+              "name": "ContextualTasksContextMenuShowAskGoogle",
+              "value": "false"
+            },
+            {
+              "name": "ContextualTasksContextMenuSubmenu",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksUpdatedEntryPoints"
+            ]
+          }
+        },
+        {
+          "name": "EnabledWithSubmenu_20261106",
+          "probabilityWeight": 18,
+          "googleWebExperimentId": "101006471",
+          "param": [
+            {
+              "name": "ContextualTasksContextMenuRouteAskGoogleToOmnibox",
+              "value": "false"
+            },
+            {
+              "name": "ContextualTasksContextMenuShowAskGoogle",
+              "value": "true"
+            },
+            {
+              "name": "ContextualTasksContextMenuSubmenu",
+              "value": "true"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksUpdatedEntryPoints"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261106",
+          "probabilityWeight": 18,
+          "googleWebExperimentId": "101006467",
+          "featureAssociation": {
+            "disableFeature": [
+              "ContextualTasksUpdatedEntryPoints"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 28
+        },
+        {
+          "name": "ForcedOn_ContextualTasksUpdatedEntryPoints",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ContextualTasksUpdatedEntryPoints"
+          }
+        },
+        {
+          "name": "ForcedOff_ContextualTasksUpdatedEntryPoints",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ContextualTasksUpdatedEntryPoints"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "158.0.8127.29",
+        "maxVersion": "158.*",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC"
+        ],
+        "endDate": "1800316740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ContextualTasksUpdatedEntryPoints",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
           "name": "Enabled_Teamfood",
           "probabilityWeight": 100,
           "param": [
@@ -124847,6 +125226,67 @@
       ],
       "filter": {
         "minVersion": "159.0.8144.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC"
+        ],
+        "endDate": "1800316740"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "ContextualTasksUpdatedEntryPoints",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_Teamfood",
+          "probabilityWeight": 100,
+          "param": [
+            {
+              "name": "ContextualTasksContextMenuRouteAskGoogleToOmnibox",
+              "value": "false"
+            },
+            {
+              "name": "ContextualTasksContextMenuShowAskGoogle",
+              "value": "true"
+            },
+            {
+              "name": "ContextualTasksContextMenuSubmenu",
+              "value": "false"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "ContextualTasksUpdatedEntryPoints"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_ContextualTasksUpdatedEntryPoints",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "ContextualTasksUpdatedEntryPoints"
+          }
+        },
+        {
+          "name": "ForcedOff_ContextualTasksUpdatedEntryPoints",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "ContextualTasksUpdatedEntryPoints"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "158.0.8127.29",
+        "maxVersion": "158.*",
         "channel": [
           "CANARY",
           "DEV",
@@ -125100,7 +125540,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20261105_CanaryDev",
+          "name": "Control_20261111_CanaryDev",
           "probabilityWeight": 18,
           "googleWebTriggerExperimentId": "101006379"
         },
@@ -125109,7 +125549,7 @@
           "probabilityWeight": 10
         },
         {
-          "name": "ColorfulSuperG_20261105_CanaryDev",
+          "name": "ColorfulSuperG_20261111_CanaryDev",
           "probabilityWeight": 18,
           "param": [
             {
@@ -125156,6 +125596,7 @@
               "ContextualTasksEphemeralBrandedEntryPoint",
               "ContextualTasksEphemeralButtonAutoDismiss",
               "ContextualTasksEphemeralButtonContextMenu",
+              "ContextualTasksEphemeralPinButtonRefactor",
               "ContextualTasksPinnedButtonActiveIndicator",
               "ContextualTasksPinningStringVariants",
               "ContextualTasksPinningV2",
@@ -125165,14 +125606,13 @@
               "EnableContextualTasksPinButtonOnSrp"
             ],
             "disableFeature": [
-              "ContextualTasksEphemeralPinButtonRefactor",
               "ContextualTasksHideMenuOnAiPage",
               "EphemeralPinningVisibleWhenPermanentlyPinned"
             ]
           }
         },
         {
-          "name": "GraySuperG_20261105_CanaryDev",
+          "name": "GraySuperG_20261111_CanaryDev",
           "probabilityWeight": 18,
           "param": [
             {
@@ -125219,6 +125659,7 @@
               "ContextualTasksEphemeralBrandedEntryPoint",
               "ContextualTasksEphemeralButtonAutoDismiss",
               "ContextualTasksEphemeralButtonContextMenu",
+              "ContextualTasksEphemeralPinButtonRefactor",
               "ContextualTasksPinnedButtonActiveIndicator",
               "ContextualTasksPinningStringVariants",
               "ContextualTasksPinningV2",
@@ -125228,14 +125669,13 @@
               "EnableContextualTasksPinButtonOnSrp"
             ],
             "disableFeature": [
-              "ContextualTasksEphemeralPinButtonRefactor",
               "ContextualTasksHideMenuOnAiPage",
               "EphemeralPinningVisibleWhenPermanentlyPinned"
             ]
           }
         },
         {
-          "name": "SparkLoop_20261105_CanaryDev",
+          "name": "SparkLoop_20261111_CanaryDev",
           "probabilityWeight": 18,
           "param": [
             {
@@ -125282,6 +125722,7 @@
               "ContextualTasksEphemeralBrandedEntryPoint",
               "ContextualTasksEphemeralButtonAutoDismiss",
               "ContextualTasksEphemeralButtonContextMenu",
+              "ContextualTasksEphemeralPinButtonRefactor",
               "ContextualTasksPinnedButtonActiveIndicator",
               "ContextualTasksPinningStringVariants",
               "ContextualTasksPinningV2",
@@ -125291,14 +125732,13 @@
               "EnableContextualTasksPinButtonOnSrp"
             ],
             "disableFeature": [
-              "ContextualTasksEphemeralPinButtonRefactor",
               "ContextualTasksHideMenuOnAiPage",
               "EphemeralPinningVisibleWhenPermanentlyPinned"
             ]
           }
         },
         {
-          "name": "RhsControl_20261105_CanaryDev",
+          "name": "RhsControl_20261111_CanaryDev",
           "probabilityWeight": 18,
           "googleWebTriggerExperimentId": "101006383",
           "featureAssociation": {
@@ -128796,7 +129236,8 @@
         "minVersion": "157.0.8094.0",
         "channel": [
           "CANARY",
-          "DEV"
+          "DEV",
+          "BETA"
         ],
         "platform": [
           "PLATFORM_ANDROID"
@@ -136073,6 +136514,55 @@
           "PLATFORM_ANDROID"
         ]
       }
+    },
+    {
+      "name": "DeferArchivedTabModelCreation",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261104",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "DeferArchivedTabModelCreation"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261104",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "DeferArchivedTabModelCreation"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_DeferArchivedTabModelCreation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DeferArchivedTabModelCreation"
+          }
+        },
+        {
+          "name": "ForcedOff_DeferArchivedTabModelCreation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DeferArchivedTabModelCreation"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8140.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1799711940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "DeferArchivedTabModelCreation",
@@ -157633,6 +158123,91 @@
           "PLATFORM_ANDROID"
         ],
         "endDate": "1796428740"
+      }
+    },
+    {
+      "name": "EnableAccountPreviewPreferredAccountFREIOS",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_1s_20261110",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "AccountPreviewPreferredAccountFREFetchTimeout",
+              "value": "1s"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableAccountPreviewPreferredAccountFRE"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_2s_20261110",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "AccountPreviewPreferredAccountFREFetchTimeout",
+              "value": "2s"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableAccountPreviewPreferredAccountFRE"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_3s_20261110",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "AccountPreviewPreferredAccountFREFetchTimeout",
+              "value": "3s"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableAccountPreviewPreferredAccountFRE"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261110",
+          "probabilityWeight": 25,
+          "featureAssociation": {
+            "disableFeature": [
+              "EnableAccountPreviewPreferredAccountFRE"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_EnableAccountPreviewPreferredAccountFRE",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableAccountPreviewPreferredAccountFRE"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableAccountPreviewPreferredAccountFRE",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableAccountPreviewPreferredAccountFRE"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8145.1",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1799711940"
       }
     },
     {
@@ -181133,6 +181708,55 @@
           "PLATFORM_ANDROID_WEBVIEW"
         ]
       }
+    },
+    {
+      "name": "GateMemoryMetricsOnVisibility",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261104",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "GateMemoryMetricsOnVisibility"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261104",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "GateMemoryMetricsOnVisibility"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_GateMemoryMetricsOnVisibility",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "GateMemoryMetricsOnVisibility"
+          }
+        },
+        {
+          "name": "ForcedOff_GateMemoryMetricsOnVisibility",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "GateMemoryMetricsOnVisibility"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8142.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID"
+        ],
+        "endDate": "1799711940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
       "name": "GateMemoryMetricsOnVisibility",
@@ -259719,6 +260343,68 @@
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS"
         ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "NTPThreadsRail",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "EnableHybrid_20261106",
+          "probabilityWeight": 50,
+          "param": [
+            {
+              "name": "NtpThreadsRailHybridParam",
+              "value": "true"
+            }
+          ],
+          "googleWebTriggerExperimentId": "101006459",
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpThreadsRail"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261106",
+          "probabilityWeight": 50,
+          "googleWebTriggerExperimentId": "101006458",
+          "featureAssociation": {
+            "disableFeature": [
+              "NtpThreadsRail"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_NtpThreadsRail",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NtpThreadsRail"
+          }
+        },
+        {
+          "name": "ForcedOff_NtpThreadsRail",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NtpThreadsRail"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8146.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          null
+        ],
+        "endDate": "1803945540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -350997,6 +351683,55 @@
         "platform": [
           "PLATFORM_ANDROID",
           "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1799711940"
+      }
+    },
+    {
+      "name": "SkipDuplicateOnUrlUpdated",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261102",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "SkipDuplicateOnUrlUpdated"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261102",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "SkipDuplicateOnUrlUpdated"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_SkipDuplicateOnUrlUpdated",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "SkipDuplicateOnUrlUpdated"
+          }
+        },
+        {
+          "name": "ForcedOff_SkipDuplicateOnUrlUpdated",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "SkipDuplicateOnUrlUpdated"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8134.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          null
         ],
         "endDate": "1799711940"
       }
@@ -446089,6 +446824,75 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
+      "name": "UseWebUiNtp3PDseAndroid",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261110",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "NtpEnableInstantApiAndroid",
+              "UseWebUiNtp3PDSE"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261110",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "NtpEnableInstantApiAndroid",
+              "UseWebUiNtp3PDSE"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_NtpEnableInstantApiAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "NtpEnableInstantApiAndroid"
+          }
+        },
+        {
+          "name": "ForcedOff_NtpEnableInstantApiAndroid",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "NtpEnableInstantApiAndroid"
+          }
+        },
+        {
+          "name": "ForcedOn_UseWebUiNtp3PDSE",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "UseWebUiNtp3PDSE"
+          }
+        },
+        {
+          "name": "ForcedOff_UseWebUiNtp3PDSE",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "UseWebUiNtp3PDSE"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8148.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          null
+        ],
+        "formFactor": [
+          "DESKTOP"
+        ],
+        "endDate": "1799711940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
       "name": "UseWebUiNtpAndroid",
       "consistency": "PERMANENT",
       "experiment": [
@@ -475847,6 +476651,92 @@
       "filter": {
         "minVersion": "159.0.8142.0",
         "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          "PLATFORM_ANDROID_WEBVIEW",
+          null
+        ],
+        "endDate": "1799711940"
+      }
+    },
+    {
+      "name": "YieldToLooperPeriodically",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_100ms_20261104",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "YieldToLooperPeriod",
+              "value": "100ms"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "YieldToLooperPeriodically"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_200ms_20261104",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "YieldToLooperPeriod",
+              "value": "200ms"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "YieldToLooperPeriodically"
+            ]
+          }
+        },
+        {
+          "name": "Enabled_400ms_20261104",
+          "probabilityWeight": 25,
+          "param": [
+            {
+              "name": "YieldToLooperPeriod",
+              "value": "400ms"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "YieldToLooperPeriodically"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261104",
+          "probabilityWeight": 25,
+          "featureAssociation": {
+            "disableFeature": [
+              "YieldToLooperPeriodically"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_YieldToLooperPeriodically",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "YieldToLooperPeriodically"
+          }
+        },
+        {
+          "name": "ForcedOff_YieldToLooperPeriodically",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "YieldToLooperPeriodically"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8142.0",
+        "channel": [
           "CANARY",
           "DEV"
         ],
@@ -497870,5 +498760,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261111-170049.393000-production"
+  "version": "20261112-010037.919000-production"
 }
