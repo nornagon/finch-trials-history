@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTExNi0wMTAwMzUuNjg1MDAwEgQgACgB#TWZf8nUSRpw=",
+  "serialNumber": "SMChYyMDI2MTExNi0wOTAwNDguNjM2MDAwEgQgACgB#UFK9WxJQLgY=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -2205,6 +2205,470 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ]
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IdbSqliteOnDiskRollout",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260817",
+          "probabilityWeight": 33,
+          "featureAssociation": {
+            "disableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "EnabledLevelDB_20260817",
+          "probabilityWeight": 33,
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseLevelDbAsControl"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "EnabledSQLite_20260817",
+          "probabilityWeight": 33,
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseSqliteForNewStores"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "Default_20260817",
+          "probabilityWeight": 1
+        },
+        {
+          "name": "ForcedOn_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IdbSqliteOnDiskRollout"
+          }
+        },
+        {
+          "name": "ForcedOff_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IdbSqliteOnDiskRollout"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.7982.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1802303940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IdbSqliteOnDiskRollout",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260817",
+          "probabilityWeight": 33,
+          "featureAssociation": {
+            "disableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "EnabledLevelDB_20260817",
+          "probabilityWeight": 33,
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseLevelDbAsControl"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "EnabledSQLite_20260817",
+          "probabilityWeight": 33,
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseSqliteForNewStores"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "Default_20260817",
+          "probabilityWeight": 1
+        },
+        {
+          "name": "ForcedOn_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IdbSqliteOnDiskRollout"
+          }
+        },
+        {
+          "name": "ForcedOff_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IdbSqliteOnDiskRollout"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.7982.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_LINUX",
+          "PLATFORM_MAC",
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1802303940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IdbSqliteOnDiskRollout",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260817",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101006526",
+          "featureAssociation": {
+            "disableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledLevelDB_20260817",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101006527",
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseLevelDbAsControl"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledSQLite_20260817",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101006528",
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseSqliteForNewStores"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IdbSqliteOnDiskRollout"
+          }
+        },
+        {
+          "name": "ForcedOff_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IdbSqliteOnDiskRollout"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8154.5",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_LINUX",
+          null
+        ],
+        "endDate": "1802303940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IdbSqliteOnDiskRollout",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260817",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101006526",
+          "featureAssociation": {
+            "disableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledLevelDB_20260817",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101006527",
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseLevelDbAsControl"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "EnabledSQLite_20260817",
+          "probabilityWeight": 1,
+          "googleWebExperimentId": "101006528",
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseSqliteForNewStores"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          },
+          "googleWebVisibility": "FIRST_PARTY"
+        },
+        {
+          "name": "ForcedOn_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IdbSqliteOnDiskRollout"
+          }
+        },
+        {
+          "name": "ForcedOff_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IdbSqliteOnDiskRollout"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "159.0.8154.5",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_CHROMEOS"
+        ],
+        "formFactor": [
+          null
+        ],
+        "endDate": "1802303940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IdbSqliteOnDiskRollout",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260817",
+          "probabilityWeight": 33,
+          "featureAssociation": {
+            "disableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "EnabledLevelDB_20260817",
+          "probabilityWeight": 33,
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseLevelDbAsControl"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "EnabledSQLite_20260817",
+          "probabilityWeight": 33,
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseSqliteForNewStores"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "Default_20260817",
+          "probabilityWeight": 1
+        },
+        {
+          "name": "ForcedOn_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IdbSqliteOnDiskRollout"
+          }
+        },
+        {
+          "name": "ForcedOff_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IdbSqliteOnDiskRollout"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.7982.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1802303940"
+      },
+      "activationType": "ACTIVATE_ON_STARTUP"
+    },
+    {
+      "name": "IdbSqliteOnDiskRollout",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Control_20260817",
+          "probabilityWeight": 33,
+          "featureAssociation": {
+            "disableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "EnabledLevelDB_20260817",
+          "probabilityWeight": 33,
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseLevelDbAsControl"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "EnabledSQLite_20260817",
+          "probabilityWeight": 33,
+          "param": [
+            {
+              "name": "stage",
+              "value": "UseSqliteForNewStores"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "IdbSqliteOnDiskRollout"
+            ]
+          }
+        },
+        {
+          "name": "Default_20260817",
+          "probabilityWeight": 1
+        },
+        {
+          "name": "ForcedOn_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "IdbSqliteOnDiskRollout"
+          }
+        },
+        {
+          "name": "ForcedOff_IdbSqliteOnDiskRollout",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "IdbSqliteOnDiskRollout"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "153.0.7982.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "endDate": "1802303940"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -82277,6 +82741,185 @@
       }
     },
     {
+      "name": "AutofillOnTypingIgnoresAutocompleteOff",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Preperiod_Enabled",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "Preperiod_Control",
+          "probabilityWeight": 50
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillOnTypingIgnoresAutocompleteOff"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillOnTypingIgnoresAutocompleteOff",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillOnTypingIgnoresAutocompleteOff"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillOnTypingIgnoresAutocompleteOff",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillOnTypingIgnoresAutocompleteOff"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "160.0.8161.0",
+        "channel": [
+          "BETA"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1800057540"
+      }
+    },
+    {
+      "name": "AutofillOnTypingIgnoresAutocompleteOff",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "enableFeature": [
+              "AutofillOnTypingIgnoresAutocompleteOff"
+            ]
+          }
+        },
+        {
+          "name": "Control",
+          "probabilityWeight": 50,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillOnTypingIgnoresAutocompleteOff"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 0
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillOnTypingIgnoresAutocompleteOff"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillOnTypingIgnoresAutocompleteOff",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillOnTypingIgnoresAutocompleteOff"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillOnTypingIgnoresAutocompleteOff",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillOnTypingIgnoresAutocompleteOff"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "160.0.8161.0",
+        "channel": [
+          "CANARY",
+          "DEV"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1800057540"
+      }
+    },
+    {
+      "name": "AutofillOnTypingIgnoresAutocompleteOff",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Preperiod_Enabled",
+          "probabilityWeight": 1
+        },
+        {
+          "name": "Preperiod_Control",
+          "probabilityWeight": 1
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 98
+        },
+        {
+          "name": "_Activation",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "disableFeature": [
+              "AutofillOnTypingIgnoresAutocompleteOff"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_AutofillOnTypingIgnoresAutocompleteOff",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "AutofillOnTypingIgnoresAutocompleteOff"
+          }
+        },
+        {
+          "name": "ForcedOff_AutofillOnTypingIgnoresAutocompleteOff",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "AutofillOnTypingIgnoresAutocompleteOff"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "160.0.8161.0",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          null
+        ],
+        "endDate": "1800057540"
+      }
+    },
+    {
       "name": "AutofillOnlyCacheIsAutofilledOnFill",
       "consistency": "PERMANENT",
       "experiment": [
@@ -161351,7 +161994,7 @@
         "platform": [
           "PLATFORM_IOS"
         ],
-        "endDate": "1796428740"
+        "endDate": "1800057540"
       }
     },
     {
@@ -161400,7 +162043,59 @@
         "platform": [
           "PLATFORM_IOS"
         ],
-        "endDate": "1796428740"
+        "endDate": "1800057540"
+      }
+    },
+    {
+      "name": "EnableAccountPreviewPreferredAccountIOS",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Enabled_20261022",
+          "probabilityWeight": 5,
+          "featureAssociation": {
+            "enableFeature": [
+              "EnableAccountPreviewPreferredAccount"
+            ]
+          }
+        },
+        {
+          "name": "Control_20261022",
+          "probabilityWeight": 5,
+          "featureAssociation": {
+            "disableFeature": [
+              "EnableAccountPreviewPreferredAccount"
+            ]
+          }
+        },
+        {
+          "name": "Default",
+          "probabilityWeight": 90
+        },
+        {
+          "name": "ForcedOn_EnableAccountPreviewPreferredAccount",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "EnableAccountPreviewPreferredAccount"
+          }
+        },
+        {
+          "name": "ForcedOff_EnableAccountPreviewPreferredAccount",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "EnableAccountPreviewPreferredAccount"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "157.0.8103.5",
+        "channel": [
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_IOS"
+        ],
+        "endDate": "1800057540"
       }
     },
     {
@@ -237964,314 +238659,6 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
-      "name": "IdbSqliteOnDiskRollout",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260817",
-          "probabilityWeight": 33,
-          "featureAssociation": {
-            "disableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "EnabledLevelDB_20260817",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "stage",
-              "value": "UseLevelDbAsControl"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "EnabledSQLite_20260817",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "stage",
-              "value": "UseSqliteForNewStores"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "Default_20260817",
-          "probabilityWeight": 1
-        },
-        {
-          "name": "ForcedOn_IdbSqliteOnDiskRollout",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IdbSqliteOnDiskRollout"
-          }
-        },
-        {
-          "name": "ForcedOff_IdbSqliteOnDiskRollout",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IdbSqliteOnDiskRollout"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.7982.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC",
-          "PLATFORM_ANDROID",
-          null
-        ],
-        "endDate": "1799625540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IdbSqliteOnDiskRollout",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260817",
-          "probabilityWeight": 33,
-          "featureAssociation": {
-            "disableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "EnabledLevelDB_20260817",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "stage",
-              "value": "UseLevelDbAsControl"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "EnabledSQLite_20260817",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "stage",
-              "value": "UseSqliteForNewStores"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "Default_20260817",
-          "probabilityWeight": 1
-        },
-        {
-          "name": "ForcedOn_IdbSqliteOnDiskRollout",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IdbSqliteOnDiskRollout"
-          }
-        },
-        {
-          "name": "ForcedOff_IdbSqliteOnDiskRollout",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IdbSqliteOnDiskRollout"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.7982.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC",
-          "PLATFORM_ANDROID",
-          null
-        ],
-        "endDate": "1799625540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IdbSqliteOnDiskRollout",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260817",
-          "probabilityWeight": 33,
-          "featureAssociation": {
-            "disableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "EnabledLevelDB_20260817",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "stage",
-              "value": "UseLevelDbAsControl"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "EnabledSQLite_20260817",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "stage",
-              "value": "UseSqliteForNewStores"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "Default_20260817",
-          "probabilityWeight": 1
-        },
-        {
-          "name": "ForcedOn_IdbSqliteOnDiskRollout",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IdbSqliteOnDiskRollout"
-          }
-        },
-        {
-          "name": "ForcedOff_IdbSqliteOnDiskRollout",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IdbSqliteOnDiskRollout"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.7982.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1799625540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "IdbSqliteOnDiskRollout",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Control_20260817",
-          "probabilityWeight": 33,
-          "featureAssociation": {
-            "disableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "EnabledLevelDB_20260817",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "stage",
-              "value": "UseLevelDbAsControl"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "EnabledSQLite_20260817",
-          "probabilityWeight": 33,
-          "param": [
-            {
-              "name": "stage",
-              "value": "UseSqliteForNewStores"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "IdbSqliteOnDiskRollout"
-            ]
-          }
-        },
-        {
-          "name": "Default_20260817",
-          "probabilityWeight": 1
-        },
-        {
-          "name": "ForcedOn_IdbSqliteOnDiskRollout",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "IdbSqliteOnDiskRollout"
-          }
-        },
-        {
-          "name": "ForcedOff_IdbSqliteOnDiskRollout",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "IdbSqliteOnDiskRollout"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "153.0.7982.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1799625540"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
       "name": "IdentityAwareness",
       "consistency": "PERMANENT",
       "experiment": [
@@ -294055,7 +294442,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "complete_launch_unlimited_20261102",
+          "name": "gpu_and_renderer_enabled_20261116",
           "probabilityWeight": 10,
           "param": [
             {
@@ -294073,12 +294460,37 @@
               "PartitionAllocWithAdvancedChecks"
             ],
             "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
               "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
             ]
           }
         },
         {
-          "name": "gpu_and_browser_unlimited_20261102",
+          "name": "gpu_and_renderer_zap_64_20261116",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true,\"zap-max\":64}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true,\"zap-max\":64}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true,\"zap-max\":64}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "all-processes"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "gpu_enabled_20261116",
           "probabilityWeight": 10,
           "param": [
             {
@@ -294096,63 +294508,18 @@
               "PartitionAllocWithAdvancedChecks"
             ],
             "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
               "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
             ]
           }
         },
         {
-          "name": "browser_enabled_unlimited_20261102",
+          "name": "gpu_zap_64_20261116",
           "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "browser_ipc_only_enabled_unlimited_20261102",
-          "probabilityWeight": 10,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"exclude-non-ipc-tasks\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "gpu_all_threads_enabled_unlimited_20261102",
-          "probabilityWeight": 10,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true,\"zap-max\":64}}}"
             },
             {
               "name": "enabled-processes",
@@ -294162,60 +294529,45 @@
           "featureAssociation": {
             "enableFeature": [
               "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
               "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
             ]
           }
         },
         {
-          "name": "renderer_enabled_unlimited_20261102",
+          "name": "gpu_no_oop_r_20261116",
           "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
             },
             {
               "name": "enabled-processes",
-              "value": "browser-and-renderer"
+              "value": "browser-and-gpu"
             }
           ],
           "featureAssociation": {
             "enableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
               "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
               "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
             ]
           }
         },
         {
-          "name": "mo_holdback_disabled_20261102",
+          "name": "browser_zap_64_20261116",
           "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
-              "PartitionAllocWithAdvancedChecks"
-            ]
-          }
-        },
-        {
-          "name": "current_large_ram_launch_20261102",
-          "probabilityWeight": 10,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true,\"zap-max\":64}}}"
             },
             {
               "name": "enabled-processes",
@@ -294225,8 +294577,59 @@
           "featureAssociation": {
             "enableFeature": [
               "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
               "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "mo_holdback_disabled_20261116",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "default_browser_enabled_20261116",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
             ]
           }
         },
@@ -294236,7 +294639,7 @@
         }
       ],
       "filter": {
-        "minVersion": "154.0.8030.0",
+        "minVersion": "159.0.8149.0",
         "channel": [
           "BETA"
         ],
@@ -294253,8 +294656,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "complete_launch_unlimited_20261102",
-          "probabilityWeight": 12,
+          "name": "gpu_and_renderer_enabled_20261116",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
@@ -294271,13 +294674,38 @@
               "PartitionAllocWithAdvancedChecks"
             ],
             "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
               "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
             ]
           }
         },
         {
-          "name": "gpu_and_browser_unlimited_20261102",
-          "probabilityWeight": 12,
+          "name": "gpu_and_renderer_zap_64_20261116",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true,\"zap-max\":64}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true,\"zap-max\":64}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true,\"zap-max\":64}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "all-processes"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "gpu_enabled_20261116",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
@@ -294294,63 +294722,18 @@
               "PartitionAllocWithAdvancedChecks"
             ],
             "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
               "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
             ]
           }
         },
         {
-          "name": "browser_enabled_unlimited_20261102",
-          "probabilityWeight": 12,
+          "name": "gpu_zap_64_20261116",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "browser_ipc_only_enabled_unlimited_20261102",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"exclude-non-ipc-tasks\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
-            },
-            {
-              "name": "enabled-processes",
-              "value": "browser-only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocWithAdvancedChecks"
-            ],
-            "disableFeature": [
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
-            ]
-          }
-        },
-        {
-          "name": "gpu_all_threads_enabled_unlimited_20261102",
-          "probabilityWeight": 12,
-          "param": [
-            {
-              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true,\"zap-max\":64}}}"
             },
             {
               "name": "enabled-processes",
@@ -294360,39 +294743,45 @@
           "featureAssociation": {
             "enableFeature": [
               "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
               "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
             ]
           }
         },
         {
-          "name": "renderer_enabled_unlimited_20261102",
-          "probabilityWeight": 12,
+          "name": "gpu_no_oop_r_20261116",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}},\"renderer\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}},\"gpu-process\":{\"*\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
             },
             {
               "name": "enabled-processes",
-              "value": "browser-and-renderer"
+              "value": "browser-and-gpu"
             }
           ],
           "featureAssociation": {
             "enableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
               "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
               "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
             ]
           }
         },
         {
-          "name": "disabled_small_ram_20261102",
-          "probabilityWeight": 12,
+          "name": "browser_zap_64_20261116",
+          "probabilityWeight": 10,
           "param": [
             {
               "name": "PartitionAllocSchedulerLoopQuarantineConfig",
-              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":false}}}"
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true,\"zap-max\":64}}}"
             },
             {
               "name": "enabled-processes",
@@ -294402,18 +294791,69 @@
           "featureAssociation": {
             "enableFeature": [
               "PartitionAllocSchedulerLoopQuarantine",
-              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread",
               "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "mo_holdback_disabled_20261116",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
+            ]
+          }
+        },
+        {
+          "name": "default_browser_enabled_20261116",
+          "probabilityWeight": 10,
+          "param": [
+            {
+              "name": "PartitionAllocSchedulerLoopQuarantineConfig",
+              "value": "{\"*\":{\"amsc\":{\"branch-capacity-in-bytes\":524288,\"enable-quarantine\":true,\"enable-zapping\":true,\"leak-on-destruction\":true}},\"browser\":{\"main\":{\"branch-capacity-in-bytes\":2147483647,\"enable-quarantine\":true,\"enable-task-controlled-purge\":true,\"enable-zapping\":true,\"leak-on-destruction\":false,\"pause-in-between-tasks\":true}}}"
+            },
+            {
+              "name": "enabled-processes",
+              "value": "browser-only"
+            }
+          ],
+          "featureAssociation": {
+            "enableFeature": [
+              "PartitionAllocSchedulerLoopQuarantine",
+              "PartitionAllocWithAdvancedChecks"
+            ],
+            "disableFeature": [
+              "ExcludeOopRasterizationFromSafetyChecks",
+              "PartitionAllocSchedulerLoopQuarantineTaskObserverForBrowserUIThread"
             ]
           }
         },
         {
           "name": "Default",
-          "probabilityWeight": 16
+          "probabilityWeight": 20
         }
       ],
       "filter": {
-        "minVersion": "154.0.8030.0",
+        "minVersion": "159.0.8149.0",
         "channel": [
           "BETA"
         ],
@@ -437076,11 +437516,11 @@
             },
             {
               "name": "Autofill.FieldTypeValidation",
-              "value": "300"
+              "value": "330"
             },
             {
               "name": "Autofill.FormEvent",
-              "value": "35"
+              "value": "40"
             },
             {
               "name": "Autofill.SyntheticSelect",
@@ -437164,7 +437604,7 @@
             },
             {
               "name": "ClientRenderingAPI",
-              "value": "900"
+              "value": "950"
             },
             {
               "name": "Clipboard.CopyPasteEvent",
@@ -437180,7 +437620,7 @@
             },
             {
               "name": "ContextualCueing.NudgeDecision",
-              "value": "16"
+              "value": "18"
             },
             {
               "name": "Cookies.Blocked.DueToOriginMismatch",
@@ -437208,7 +437648,7 @@
             },
             {
               "name": "DomDistiller.ModelResult.Distillable",
-              "value": "40"
+              "value": "45"
             },
             {
               "name": "Download.Completed",
@@ -437232,7 +437672,7 @@
             },
             {
               "name": "Extensions.WebRequest.KeepaliveRequestFinished",
-              "value": "200"
+              "value": "220"
             },
             {
               "name": "GeneratedNavigation",
@@ -437299,6 +437739,10 @@
               "value": "2"
             },
             {
+              "name": "Media.EME.Usage",
+              "value": "2"
+            },
+            {
               "name": "Media.VideoDecodePerfRecord",
               "value": "18"
             },
@@ -437340,7 +437784,7 @@
             },
             {
               "name": "NavigationPredictor",
-              "value": "160"
+              "value": "180"
             },
             {
               "name": "NavigationPredictorAnchorElementMetrics",
@@ -437432,7 +437876,7 @@
             },
             {
               "name": "PerformanceAPI.Memory.Legacy",
-              "value": "4300"
+              "value": "4400"
             },
             {
               "name": "PerformanceManager.FreezingEligibility",
@@ -437492,7 +437936,7 @@
             },
             {
               "name": "SMSReceiver",
-              "value": "2"
+              "value": "3"
             },
             {
               "name": "SamesiteRedirectContextDowngrade",
@@ -437512,15 +437956,15 @@
             },
             {
               "name": "Site.Install",
-              "value": "18"
+              "value": "20"
             },
             {
               "name": "Site.Manifest",
-              "value": "18"
+              "value": "20"
             },
             {
               "name": "Site.Quality",
-              "value": "18"
+              "value": "20"
             },
             {
               "name": "SiteFamiliarityHeuristicResult",
@@ -437532,7 +437976,7 @@
             },
             {
               "name": "SubresourceLoad.ZstdContentEncoding",
-              "value": "850"
+              "value": "900"
             },
             {
               "name": "TabManager.TabLifetime",
@@ -437560,7 +438004,7 @@
             },
             {
               "name": "V8.GC.FullCycle",
-              "value": "80"
+              "value": "70"
             },
             {
               "name": "V8.Wasm",
@@ -437822,11 +438266,11 @@
             },
             {
               "name": "Autofill.FieldTypeValidation",
-              "value": "300"
+              "value": "330"
             },
             {
               "name": "Autofill.FormEvent",
-              "value": "35"
+              "value": "40"
             },
             {
               "name": "Autofill.SyntheticSelect",
@@ -437910,7 +438354,7 @@
             },
             {
               "name": "ClientRenderingAPI",
-              "value": "900"
+              "value": "950"
             },
             {
               "name": "Clipboard.CopyPasteEvent",
@@ -437926,7 +438370,7 @@
             },
             {
               "name": "ContextualCueing.NudgeDecision",
-              "value": "16"
+              "value": "18"
             },
             {
               "name": "Cookies.Blocked.DueToOriginMismatch",
@@ -437954,7 +438398,7 @@
             },
             {
               "name": "DomDistiller.ModelResult.Distillable",
-              "value": "40"
+              "value": "45"
             },
             {
               "name": "Download.Completed",
@@ -437978,7 +438422,7 @@
             },
             {
               "name": "Extensions.WebRequest.KeepaliveRequestFinished",
-              "value": "200"
+              "value": "220"
             },
             {
               "name": "GeneratedNavigation",
@@ -438045,6 +438489,10 @@
               "value": "2"
             },
             {
+              "name": "Media.EME.Usage",
+              "value": "2"
+            },
+            {
               "name": "Media.VideoDecodePerfRecord",
               "value": "18"
             },
@@ -438086,7 +438534,7 @@
             },
             {
               "name": "NavigationPredictor",
-              "value": "160"
+              "value": "180"
             },
             {
               "name": "NavigationPredictorAnchorElementMetrics",
@@ -438178,7 +438626,7 @@
             },
             {
               "name": "PerformanceAPI.Memory.Legacy",
-              "value": "4300"
+              "value": "4400"
             },
             {
               "name": "PerformanceManager.FreezingEligibility",
@@ -438238,7 +438686,7 @@
             },
             {
               "name": "SMSReceiver",
-              "value": "2"
+              "value": "3"
             },
             {
               "name": "SamesiteRedirectContextDowngrade",
@@ -438258,15 +438706,15 @@
             },
             {
               "name": "Site.Install",
-              "value": "18"
+              "value": "20"
             },
             {
               "name": "Site.Manifest",
-              "value": "18"
+              "value": "20"
             },
             {
               "name": "Site.Quality",
-              "value": "18"
+              "value": "20"
             },
             {
               "name": "SiteFamiliarityHeuristicResult",
@@ -438278,7 +438726,7 @@
             },
             {
               "name": "SubresourceLoad.ZstdContentEncoding",
-              "value": "850"
+              "value": "900"
             },
             {
               "name": "TabManager.TabLifetime",
@@ -438306,7 +438754,7 @@
             },
             {
               "name": "V8.GC.FullCycle",
-              "value": "80"
+              "value": "70"
             },
             {
               "name": "V8.Wasm",
@@ -438568,11 +439016,11 @@
             },
             {
               "name": "Autofill.FieldTypeValidation",
-              "value": "300"
+              "value": "330"
             },
             {
               "name": "Autofill.FormEvent",
-              "value": "35"
+              "value": "40"
             },
             {
               "name": "Autofill.SyntheticSelect",
@@ -438656,7 +439104,7 @@
             },
             {
               "name": "ClientRenderingAPI",
-              "value": "900"
+              "value": "950"
             },
             {
               "name": "Clipboard.CopyPasteEvent",
@@ -438672,7 +439120,7 @@
             },
             {
               "name": "ContextualCueing.NudgeDecision",
-              "value": "16"
+              "value": "18"
             },
             {
               "name": "Cookies.Blocked.DueToOriginMismatch",
@@ -438700,7 +439148,7 @@
             },
             {
               "name": "DomDistiller.ModelResult.Distillable",
-              "value": "40"
+              "value": "45"
             },
             {
               "name": "Download.Completed",
@@ -438724,7 +439172,7 @@
             },
             {
               "name": "Extensions.WebRequest.KeepaliveRequestFinished",
-              "value": "200"
+              "value": "220"
             },
             {
               "name": "GeneratedNavigation",
@@ -438791,6 +439239,10 @@
               "value": "2"
             },
             {
+              "name": "Media.EME.Usage",
+              "value": "2"
+            },
+            {
               "name": "Media.VideoDecodePerfRecord",
               "value": "18"
             },
@@ -438832,7 +439284,7 @@
             },
             {
               "name": "NavigationPredictor",
-              "value": "160"
+              "value": "180"
             },
             {
               "name": "NavigationPredictorAnchorElementMetrics",
@@ -438924,7 +439376,7 @@
             },
             {
               "name": "PerformanceAPI.Memory.Legacy",
-              "value": "4300"
+              "value": "4400"
             },
             {
               "name": "PerformanceManager.FreezingEligibility",
@@ -438984,7 +439436,7 @@
             },
             {
               "name": "SMSReceiver",
-              "value": "2"
+              "value": "3"
             },
             {
               "name": "SamesiteRedirectContextDowngrade",
@@ -439004,15 +439456,15 @@
             },
             {
               "name": "Site.Install",
-              "value": "18"
+              "value": "20"
             },
             {
               "name": "Site.Manifest",
-              "value": "18"
+              "value": "20"
             },
             {
               "name": "Site.Quality",
-              "value": "18"
+              "value": "20"
             },
             {
               "name": "SiteFamiliarityHeuristicResult",
@@ -439024,7 +439476,7 @@
             },
             {
               "name": "SubresourceLoad.ZstdContentEncoding",
-              "value": "850"
+              "value": "900"
             },
             {
               "name": "TabManager.TabLifetime",
@@ -439052,7 +439504,7 @@
             },
             {
               "name": "V8.GC.FullCycle",
-              "value": "80"
+              "value": "70"
             },
             {
               "name": "V8.Wasm",
@@ -445196,7 +445648,8 @@
           "PLATFORM_MAC",
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
+          "PLATFORM_ANDROID",
+          null
         ],
         "endDate": "1801007940"
       },
@@ -445207,7 +445660,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261014",
+          "name": "Enabled_20261116",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -445217,7 +445670,7 @@
           }
         },
         {
-          "name": "Control_20261014",
+          "name": "Control_20261116",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -445279,7 +445732,8 @@
           "PLATFORM_MAC",
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
+          "PLATFORM_ANDROID",
+          null
         ],
         "endDate": "1801007940"
       },
@@ -445290,7 +445744,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261014",
+          "name": "Enabled_20261116",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -445300,7 +445754,7 @@
           }
         },
         {
-          "name": "Control_20261014",
+          "name": "Control_20261116",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -445363,7 +445817,8 @@
           "PLATFORM_MAC",
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
+          "PLATFORM_ANDROID",
+          null
         ],
         "endDate": "1801007940"
       },
@@ -445374,8 +445829,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261014",
-          "probabilityWeight": 1,
+          "name": "Enabled_20261116",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
               "GlobalPrivacyControlApi",
@@ -445384,8 +445839,8 @@
           }
         },
         {
-          "name": "Control_20261014",
-          "probabilityWeight": 1,
+          "name": "Control_20261116",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
               "GlobalPrivacyControlApi",
@@ -445395,7 +445850,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 98
+          "probabilityWeight": 0
         },
         {
           "name": "_Activation",
@@ -445446,7 +445901,8 @@
           "PLATFORM_MAC",
           "PLATFORM_LINUX",
           "PLATFORM_CHROMEOS",
-          "PLATFORM_ANDROID"
+          "PLATFORM_ANDROID",
+          null
         ],
         "endDate": "1801007940"
       },
@@ -445540,7 +445996,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261014",
+          "name": "Enabled_20261116",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -445549,7 +446005,7 @@
           }
         },
         {
-          "name": "Control_20261014",
+          "name": "Control_20261116",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -445602,7 +446058,7 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261014",
+          "name": "Enabled_20261116",
           "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
@@ -445611,7 +446067,7 @@
           }
         },
         {
-          "name": "Control_20261014",
+          "name": "Control_20261116",
           "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
@@ -445665,8 +446121,8 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_20261014",
-          "probabilityWeight": 1,
+          "name": "Enabled_20261116",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "enableFeature": [
               "UniversalOptOutSettings"
@@ -445674,8 +446130,8 @@
           }
         },
         {
-          "name": "Control_20261014",
-          "probabilityWeight": 1,
+          "name": "Control_20261116",
+          "probabilityWeight": 50,
           "featureAssociation": {
             "disableFeature": [
               "UniversalOptOutSettings"
@@ -445684,7 +446140,7 @@
         },
         {
           "name": "Default",
-          "probabilityWeight": 98
+          "probabilityWeight": 0
         },
         {
           "name": "_Activation",
@@ -470664,158 +471120,23 @@
       "consistency": "SESSION",
       "experiment": [
         {
-          "name": "Enabled,_20261029",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101006114",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control,_20261029",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101006115",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
+          "name": "Enabled_Launch",
+          "probabilityWeight": 100
         }
       ],
       "filter": {
         "minVersion": "150.0.7871.46",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1799452740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "WebRTC-RFC8888CongestionControlFeedback",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Enabled,_20261029",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101006112",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control,_20261029",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101006113",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.46",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1799452740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "WebRTC-RFC8888CongestionControlFeedback",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Enabled,_20261029",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101006116",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Control,_20261029",
-          "probabilityWeight": 50,
-          "googleWebExperimentId": "101006117",
-          "googleWebVisibility": "FIRST_PARTY"
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.46",
-        "channel": [
-          "STABLE"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID"
-        ],
-        "endDate": "1799452740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "WebRTC-RFC8888CongestionControlFeedback",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Enabled,_20261029",
-          "probabilityWeight": 50
-        },
-        {
-          "name": "Control,_20261029",
-          "probabilityWeight": 50
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.46",
+        "maxVersion": "160.0.8165.0",
         "channel": [
           "CANARY",
           "DEV",
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1799452740"
-      },
-      "activationType": "ACTIVATE_ON_STARTUP"
-    },
-    {
-      "name": "WebRTC-RFC8888CongestionControlFeedback",
-      "consistency": "SESSION",
-      "experiment": [
-        {
-          "name": "Enabled,_20261029",
-          "probabilityWeight": 50
-        },
-        {
-          "name": "Control,_20261029",
-          "probabilityWeight": 50
-        },
-        {
-          "name": "Default",
-          "probabilityWeight": 0
-        }
-      ],
-      "filter": {
-        "minVersion": "150.0.7871.46",
-        "channel": [
+          "BETA",
           "STABLE"
         ],
         "platform": [
+          "PLATFORM_ANDROID",
           "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1799452740"
+        ]
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -477462,7 +477783,7 @@
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1797033540"
+        "endDate": "1800057540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -477552,7 +477873,7 @@
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1797033540"
+        "endDate": "1800057540"
       },
       "activationType": "ACTIVATE_ON_STARTUP"
     },
@@ -477561,25 +477882,9 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Enabled_EventsOnly_20261109",
+          "name": "Enabled_TimerOnly_20261116",
           "probabilityWeight": 1,
-          "googleWebExperimentId": "101006511",
-          "param": [
-            {
-              "name": "CleanupMode",
-              "value": "events_only"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "WebViewPrewarmDictionaryOnPreconnect"
-            ]
-          }
-        },
-        {
-          "name": "Enabled_TimerOnly_20261109",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101006512",
+          "googleWebExperimentId": "101006987",
           "param": [
             {
               "name": "CleanupMode",
@@ -477593,25 +477898,9 @@
           }
         },
         {
-          "name": "Enabled_Hybrid_20261109",
+          "name": "Control_20261116",
           "probabilityWeight": 1,
-          "googleWebExperimentId": "101006513",
-          "param": [
-            {
-              "name": "CleanupMode",
-              "value": "hybrid"
-            }
-          ],
-          "featureAssociation": {
-            "enableFeature": [
-              "WebViewPrewarmDictionaryOnPreconnect"
-            ]
-          }
-        },
-        {
-          "name": "Control_20261109",
-          "probabilityWeight": 1,
-          "googleWebExperimentId": "101006510",
+          "googleWebExperimentId": "101006986",
           "featureAssociation": {
             "disableFeature": [
               "WebViewPrewarmDictionaryOnPreconnect"
@@ -477641,9 +477930,9 @@
         "platform": [
           "PLATFORM_ANDROID_WEBVIEW"
         ],
-        "endDate": "1797033540"
+        "endDate": "1800057540"
       },
-      "randomizationSeed": 4059506743,
+      "randomizationSeed": 4004660054,
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
@@ -478636,9 +478925,9 @@
       "consistency": "PERMANENT",
       "experiment": [
         {
-          "name": "Control_20260902",
+          "name": "Control_20261113",
           "probabilityWeight": 1,
-          "googleWebExperimentId": "101003918",
+          "googleWebExperimentId": "101006872",
           "featureAssociation": {
             "disableFeature": [
               "WebViewStaticMethodsNotTriggerStartup"
@@ -478646,9 +478935,9 @@
           }
         },
         {
-          "name": "Enabled_20260902",
+          "name": "Enabled_20261113",
           "probabilityWeight": 1,
-          "googleWebExperimentId": "101003919",
+          "googleWebExperimentId": "101006873",
           "featureAssociation": {
             "enableFeature": [
               "WebViewStaticMethodsNotTriggerStartup"
@@ -478657,7 +478946,7 @@
         }
       ],
       "filter": {
-        "minVersion": "150.0.7828.0",
+        "minVersion": "158.0.8127.37",
         "channel": [
           "STABLE"
         ],
@@ -478666,7 +478955,6 @@
         ],
         "endDate": "1799279940"
       },
-      "randomizationSeed": 801876287,
       "activationType": "ACTIVATE_ON_STARTUP"
     },
     {
@@ -506531,5 +506819,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261116-010035.685000-production"
+  "version": "20261116-090048.636000-production"
 }
