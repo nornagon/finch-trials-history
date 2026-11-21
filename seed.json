@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTExOS0wNDAwNDMuMDMwMDAwEgQgACgB#tKREtPh/0ow=",
+  "serialNumber": "SMChYyMDI2MTEyMC0xNTM0NDAuNTU0MDAwEgQgACgB#i9kljpoqaWI=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -160732,6 +160732,51 @@
           "TABLET"
         ],
         "minOsVersion": "8.*"
+      }
+    },
+    {
+      "name": "DragThresholdRequiresMouseMovementKillSwitch",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Disabled_EmergencyKillSwitch",
+          "probabilityWeight": 100,
+          "featureAssociation": {
+            "disableFeature": [
+              "DragThresholdRequiresMouseMovement"
+            ]
+          }
+        },
+        {
+          "name": "ForcedOn_DragThresholdRequiresMouseMovement",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOn": "DragThresholdRequiresMouseMovement"
+          }
+        },
+        {
+          "name": "ForcedOff_DragThresholdRequiresMouseMovement",
+          "probabilityWeight": 0,
+          "featureAssociation": {
+            "forcingFeatureOff": "DragThresholdRequiresMouseMovement"
+          }
+        }
+      ],
+      "filter": {
+        "minVersion": "158.0.8113.0",
+        "maxVersion": "160.0.8173.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_ANDROID",
+          null,
+          "PLATFORM_ANDROID_WEBVIEW"
+        ],
+        "policyRestriction": "CRITICAL"
       }
     },
     {
@@ -510713,5 +510758,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261119-040043.030000-production"
+  "version": "20261120-153440.554000-production"
 }
