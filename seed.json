@@ -1,5 +1,5 @@
 {
-  "serialNumber": "SMChYyMDI2MTEyMy0xMTEyMDEuOTMxMDAwEgQgACgB#Xac7l0zWhd4=",
+  "serialNumber": "SMChYyMDI2MTEyNC0xMjE1MzUuMjgwMDAwEgQgACgB#Ouf/5VsvF20=",
   "study": [
     {
       "name": "AndroidTipsNotifications",
@@ -220597,6 +220597,36 @@
           "PLATFORM_CHROMEOS",
           "PLATFORM_ANDROID"
         ]
+      }
+    },
+    {
+      "name": "HybridSeedSigningStressTest",
+      "consistency": "PERMANENT",
+      "experiment": [
+        {
+          "name": "Noop_20261124_2",
+          "probabilityWeight": 100
+        }
+      ],
+      "filter": {
+        "minVersion": "150.0.0.0",
+        "channel": [
+          "CANARY",
+          "DEV",
+          "BETA",
+          "STABLE"
+        ],
+        "platform": [
+          "PLATFORM_WINDOWS",
+          "PLATFORM_MAC",
+          "PLATFORM_LINUX",
+          "PLATFORM_CHROMEOS",
+          "PLATFORM_ANDROID",
+          "PLATFORM_IOS",
+          "PLATFORM_ANDROID_WEBVIEW",
+          null
+        ],
+        "endDate": "1796774340"
       }
     },
     {
@@ -458030,117 +458060,6 @@
       }
     },
     {
-      "name": "UseRustCborParser",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260916",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "UseRustCborParser"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260916",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "UseRustCborParser"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_UseRustCborParser",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "UseRustCborParser"
-          }
-        },
-        {
-          "name": "ForcedOff_UseRustCborParser",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "UseRustCborParser"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "156.0.8062.0",
-        "channel": [
-          "BETA"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC",
-          "PLATFORM_IOS",
-          "PLATFORM_ANDROID",
-          null,
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1795478340"
-      }
-    },
-    {
-      "name": "UseRustCborParser",
-      "consistency": "PERMANENT",
-      "experiment": [
-        {
-          "name": "Enabled_20260916",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "enableFeature": [
-              "UseRustCborParser"
-            ]
-          }
-        },
-        {
-          "name": "Control_20260916",
-          "probabilityWeight": 50,
-          "featureAssociation": {
-            "disableFeature": [
-              "UseRustCborParser"
-            ]
-          }
-        },
-        {
-          "name": "ForcedOn_UseRustCborParser",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOn": "UseRustCborParser"
-          }
-        },
-        {
-          "name": "ForcedOff_UseRustCborParser",
-          "probabilityWeight": 0,
-          "featureAssociation": {
-            "forcingFeatureOff": "UseRustCborParser"
-          }
-        }
-      ],
-      "filter": {
-        "minVersion": "156.0.8062.0",
-        "channel": [
-          "CANARY",
-          "DEV"
-        ],
-        "platform": [
-          "PLATFORM_WINDOWS",
-          "PLATFORM_CHROMEOS",
-          "PLATFORM_LINUX",
-          "PLATFORM_MAC",
-          "PLATFORM_IOS",
-          "PLATFORM_ANDROID",
-          null,
-          "PLATFORM_ANDROID_WEBVIEW"
-        ],
-        "endDate": "1795478340"
-      }
-    },
-    {
       "name": "UseRustCborWriter",
       "consistency": "PERMANENT",
       "experiment": [
@@ -510758,5 +510677,5 @@
       "activationType": "ACTIVATE_ON_STARTUP"
     }
   ],
-  "version": "20261123-111201.931000-production"
+  "version": "20261124-121535.280000-production"
 }
